@@ -1,0 +1,199 @@
+/**
+ * eu-ai-act-conversation-worker-test
+ * -----------------------------------
+ * EXPERIMENTAL / TEST WORKER — DOES NOT REPLACE eu-ai-act-search-api
+ *
+ * This is a clone of the deployed eu-ai-act-search-api Worker
+ * (worker_eu-ai-act-search-api.txt, verified 118 lines) with exactly
+ * ONE addition: a generation step inserted after D1 retrieval, using
+ * Cloudflare Workers AI (env.AI.run) to turn retrieved chunks into a
+ * human-readable answer.
+ *
+ * Everything above and below that insertion point is UNCHANGED from
+ * the production Worker, on purpose — this keeps the diff small and
+ * auditable against the frozen baseline.
+ *
+ * Deployment requirements (not yet done — draft only):
+ *   1. Create as a NEW, separate Worker named eu-ai-act-conversation-worker-test
+ *   2. Bind the same D1 database as eu-ai-act-search-api (binding name: DB)
+ *   3. Add a Workers AI binding named AI in this Worker's settings
+ *      (wrangler.toml equivalent: [ai] binding = "AI")
+ *   4. Do NOT bind any route on eu-ai-act-ready.eu until verified —
+ *      test via the workers.dev URL first
+ */
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
+      });
+    }
+
+    if (url.pathname === "/search") {
+      let query = "";
+
+      if (request.method === "POST") {
+        try {
+          const body = await request.json();
+          query = body.q || body.query || body.text || "";
+        } catch (e) {}
+      }
+
+      if (!query) {
+        query =
+          url.searchParams.get("q") ||
+          url.searchParams.get("query") ||
+          url.searchParams.get("term") ||
+          "";
+      }
+
+      query = query.trim();
+
+      let formattedResults = [];
+      let generatedAnswer = null;
+      let generationError = null;
+
+      try {
+        let dbResult;
+        const cleanQuery = query.toLowerCase();
+        const digits = cleanQuery.match(/\d+/);
+        const searchNumber = digits ? digits[0] : null;
+
+        if (query && searchNumber) {
+
+          dbResult = await env.DB.prepare(
+            `SELECT id, text_content 
+             FROM ai_act_chunks 
+             WHERE text_content LIKE ?
+                OR text_content LIKE ?
+                OR id LIKE ?
+             LIMIT 4`
+          )
+          .bind(
+            `%Articolul ${searchNumber}%`,
+            `%articolul ${searchNumber}%`,
+            `%${searchNumber}%`
+          )
+          .all();
+
+        } else if (query) {
+
+          const firstWord = cleanQuery.split(" ")[0];
+
+          dbResult = await env.DB.prepare(
+            "SELECT id, text_content FROM ai_act_chunks WHERE text_content LIKE ? OR id LIKE ? LIMIT 4"
+          )
+          .bind(`%${firstWord}%`, `%${firstWord}%`)
+          .all();
+
+        } else {
+
+          dbResult = await env.DB.prepare(
+            "SELECT id, text_content FROM ai_act_chunks LIMIT 4"
+          )
+          .all();
+        }
+
+        const dbRows = dbResult.results || [];
+
+        formattedResults = dbRows.map(row => {
+
+          const displayTitle = row.id
+            ? row.id.replace(/_/g, " ").toUpperCase()
+            : "ALINIAT REGULAMENT";
+
+          const snippet = row.text_content
+            ? row.text_content.substring(0, 160).trim() + "..."
+            : "Scurtă previzualizare a conținutului structural.";
+
+          return {
+            id: row.id || "ID-DEFAULT",
+            title: displayTitle,
+            snippet: snippet
+          };
+        });
+
+        // =====================================================
+        // NEW BLOCK — the only functional addition vs. production.
+        // Inserted exactly where the plan specified: after dbRows
+        // is resolved, before the response is built.
+        // =====================================================
+        if (query && dbRows.length > 0) {
+          try {
+            const context = dbRows
+              .map(row => {
+                const label = row.id
+                  ? row.id.replace(/_/g, " ").toUpperCase()
+                  : "ALINIAT REGULAMENT";
+                return `[${label}]\n${row.text_content || ""}`;
+              })
+              .join("\n\n");
+
+            const aiResponse = await env.AI.run(
+              "@cf/meta/llama-3.1-8b-instruct",
+              {
+                messages: [
+                  {
+                    role: "system",
+                    content:
+                      "You are the EU AI Act Ready™ assistant. Answer ONLY using the " +
+                      "provided EU AI Act excerpts below. If the excerpts do not contain " +
+                      "the answer, say so plainly instead of guessing. Keep answers concise " +
+                      "and cite the article/source labels shown in brackets. Never state or " +
+                      "imply that using this platform satisfies or certifies EU AI Act " +
+                      "compliance — it supports readiness only."
+                  },
+                  {
+                    role: "user",
+                    content:
+                      `Question: ${query}\n\nEU AI Act excerpts:\n${context}`
+                  }
+                ]
+              }
+            );
+
+            generatedAnswer =
+              aiResponse && aiResponse.response
+                ? aiResponse.response.trim()
+                : null;
+
+          } catch (aiError) {
+            console.error("Workers AI generation error:", aiError);
+            generationError = "Generation temporarily unavailable.";
+          }
+        }
+        // =====================================================
+        // END NEW BLOCK
+        // =====================================================
+
+      } catch (dbError) {
+        console.error("D1 Universal Fetch Error:", dbError);
+      }
+
+      return new Response(
+        JSON.stringify({
+          query: query || "Toate documentele",
+          results: formattedResults,
+          more: formattedResults.length > 0,
+          generated_answer: generatedAnswer,
+          generation_error: generationError
+        }),
+        {
+          headers: {
+            "content-type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+          }
+        }
+      );
+    }
+
+    return new Response("EU AI Act Conversation API Test — Multi-Protocol Live");
+  }
+};
