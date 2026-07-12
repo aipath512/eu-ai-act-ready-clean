@@ -1,0 +1,118 @@
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
+      });
+    }
+
+    if (url.pathname === "/search") {
+      let query = "";
+
+      if (request.method === "POST") {
+        try {
+          const body = await request.json();
+          query = body.q || body.query || body.text || "";
+        } catch (e) {}
+      }
+
+      if (!query) {
+        query =
+          url.searchParams.get("q") ||
+          url.searchParams.get("query") ||
+          url.searchParams.get("term") ||
+          "";
+      }
+
+      query = query.trim();
+
+      let formattedResults = [];
+
+      try {
+        let dbResult;
+        const cleanQuery = query.toLowerCase();
+        const digits = cleanQuery.match(/\d+/);
+        const searchNumber = digits ? digits[0] : null;
+
+        if (query && searchNumber) {
+
+          dbResult = await env.DB.prepare(
+            `SELECT id, text_content 
+             FROM ai_act_chunks 
+             WHERE text_content LIKE ?
+                OR text_content LIKE ?
+                OR id LIKE ?
+             LIMIT 4`
+          )
+          .bind(
+            `%Articolul ${searchNumber}%`,
+            `%articolul ${searchNumber}%`,
+            `%${searchNumber}%`
+          )
+          .all();
+
+        } else if (query) {
+
+          const firstWord = cleanQuery.split(" ")[0];
+
+          dbResult = await env.DB.prepare(
+            "SELECT id, text_content FROM ai_act_chunks WHERE text_content LIKE ? OR id LIKE ? LIMIT 4"
+          )
+          .bind(`%${firstWord}%`, `%${firstWord}%`)
+          .all();
+
+        } else {
+
+          dbResult = await env.DB.prepare(
+            "SELECT id, text_content FROM ai_act_chunks LIMIT 4"
+          )
+          .all();
+        }
+
+        const dbRows = dbResult.results || [];
+
+        formattedResults = dbRows.map(row => {
+
+          const displayTitle = row.id
+            ? row.id.replace(/_/g, " ").toUpperCase()
+            : "ALINIAT REGULAMENT";
+
+          const snippet = row.text_content
+            ? row.text_content.substring(0, 160).trim() + "..."
+            : "Scurtă previzualizare a conținutului structural.";
+
+          return {
+            id: row.id || "ID-DEFAULT",
+            title: displayTitle,
+            snippet: snippet
+          };
+        });
+
+      } catch (dbError) {
+        console.error("D1 Universal Fetch Error:", dbError);
+      }
+
+      return new Response(
+        JSON.stringify({
+          query: query || "Toate documentele",
+          results: formattedResults,
+          more: formattedResults.length > 0
+        }),
+        {
+          headers: {
+            "content-type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+          }
+        }
+      );
+    }
+
+    return new Response("EU AI Act API Multi-Protocol Live");
+  }
+};
