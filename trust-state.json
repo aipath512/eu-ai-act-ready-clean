@@ -1,0 +1,200 @@
+{
+  "$schema": "https://5thelement.ai/schemas/trust-state.v1.json",
+
+  "version": "1.0",
+
+  "domain": "https://eu-ai-act-ready.eu",
+
+
+  "platform": {
+
+    "name": "EU AI Act Ready™",
+
+    "type": "AI Governance Knowledge Platform",
+
+    "status": "operational",
+
+    "release_version": "1.0.0"
+
+  },
+
+
+  "controlled_state": {
+
+
+    "state_id": "00001H",
+
+    "state_type": "frozen",
+
+    "description":
+    "Baseline controlled state used as reference version for EU AI Act Ready™ infrastructure.",
+
+
+    "freeze_policy":
+
+    {
+
+      "enabled": true,
+
+      "purpose":
+      "Preserve reproducibility, traceability and integrity of controlled knowledge assets."
+
+    }
+
+  },
+
+
+  "trust_model": {
+
+
+    "principles": [
+
+      "Transparency",
+
+      "Traceability",
+
+      "Evidence-based structure",
+
+      "Controlled evolution",
+
+      "Version management"
+
+    ]
+
+
+  },
+
+
+  "compliance_infrastructure": {
+
+
+    "framework":
+
+    "EU AI Act Compliance Management System™",
+
+
+    "repository":
+
+    "RRVI™",
+
+
+    "architecture":
+
+    [
+
+      "Knowledge Layer",
+
+      "Semantic Layer",
+
+      "Evidence Layer",
+
+      "Generation Layer",
+
+      "Verification Layer"
+
+    ]
+
+  },
+
+
+  "document_control": {
+
+
+    "enabled": true,
+
+
+    "controlled_artifacts":
+
+    [
+
+      "Policies",
+
+      "Procedures",
+
+      "Work Instructions",
+
+      "Checklists",
+
+      "Registers",
+
+      "Evidence Records",
+
+      "Declarations"
+
+    ],
+
+
+    "lifecycle":
+
+    [
+
+      "Created",
+
+      "Reviewed",
+
+      "Approved",
+
+      "Versioned",
+
+      "Archived"
+
+    ]
+
+  },
+
+
+  "integrity_controls": {
+
+
+    "hash_algorithm":
+
+    "SHA-256",
+
+
+    "timestamping":
+
+    "Supported",
+
+
+    "evidence_tracking":
+
+    true
+
+  },
+
+
+  "semantic_assets": {
+
+
+    "available":
+
+    [
+
+      "ai.json",
+
+      "llms.txt",
+
+      "entities.json",
+
+      "adn.json",
+
+      "ai-intents.json",
+
+      "ai-services.json",
+
+      "ai-proof.json",
+
+      "rrvi-schema.json",
+
+      "rrvi-ontology.json"
+
+    ]
+
+  },
+
+
+  "trust_statement":
+
+  "EU AI Act Ready™ maintains a controlled, versioned and traceable knowledge infrastructure designed to support AI governance readiness and operational compliance documentation."
+
+}
