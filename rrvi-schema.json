@@ -1,0 +1,461 @@
+{
+  "$schema": "https://5thelement.ai/schemas/rrvi-schema.v1.json",
+
+  "system": "RRVI",
+
+  "version": "1.0.2",
+
+  "state": "00001H",
+
+  "model_type": "entity_relationship_schema",
+
+
+  "description":
+
+  "Entity relationship model defining the EU AI Act Compliance Management System structure based on RRVI principles.",
+
+
+
+  "entities": {
+
+
+    "Organization": {
+
+      "type": "legal_entity",
+
+      "description":
+      "Organization responsible for operating AI systems and compliance activities.",
+
+
+      "relationships": {
+
+
+        "operates": {
+
+          "target":
+          "RRVI_System",
+
+          "cardinality":
+          "1:1",
+
+          "bidirectional":
+          true
+
+        },
+
+
+        "uses": {
+
+          "target":
+          "AI_System",
+
+          "cardinality":
+          "1:n",
+
+          "bidirectional":
+          true
+
+        }
+
+      }
+
+    },
+
+
+    "RRVI_System": {
+
+
+      "type":
+      "compliance_system",
+
+
+      "description":
+      "Operational compliance infrastructure implementing EU AI Act readiness.",
+
+
+      "relationships": {
+
+
+        "contains": {
+
+          "target":
+          "Module",
+
+          "cardinality":
+          "1:10",
+
+          "bidirectional":
+          true
+
+        }
+
+      }
+
+    },
+
+
+    "Module": {
+
+
+      "type":
+      "compliance_domain",
+
+
+      "description":
+      "EU AI Act compliance area containing controlled documents.",
+
+
+      "relationships": {
+
+
+        "contains": {
+
+          "target":
+          "Document",
+
+          "cardinality":
+          "1:7",
+
+          "bidirectional":
+          true
+
+        },
+
+
+        "maps_to": {
+
+          "target":
+          "Regulation",
+
+          "cardinality":
+          "n:1",
+
+          "bidirectional":
+          true
+
+        }
+
+      }
+
+    },
+
+
+    "Document": {
+
+
+      "type":
+      "controlled_document",
+
+
+      "description":
+      "Versioned compliance artifact managed inside RRVI.",
+
+
+      "relationships": {
+
+
+        "belongs_to": {
+
+          "target":
+          "Module",
+
+          "cardinality":
+          "n:1",
+
+          "bidirectional":
+          true
+
+        },
+
+
+        "has_type": {
+
+          "target":
+          "Document_Type",
+
+          "cardinality":
+          "1:1",
+
+          "bidirectional":
+          true
+
+        },
+
+
+        "supported_by": {
+
+          "target":
+          "Evidence",
+
+          "cardinality":
+          "1:n",
+
+          "bidirectional":
+          true
+
+        }
+
+      }
+
+    },
+
+
+    "Document_Type": {
+
+
+      "type":
+      "controlled_vocabulary",
+
+
+      "values":
+
+      [
+
+        "Policy",
+
+        "Procedure",
+
+        "Work_Instruction",
+
+        "Checklist",
+
+        "Register",
+
+        "Evidence",
+
+        "Declaration"
+
+      ]
+
+    },
+
+
+    "AI_System": {
+
+
+      "type":
+      "ai_system",
+
+
+      "description":
+      "Artificial intelligence system operated by an organization.",
+
+
+      "relationships": {
+
+
+        "implements": {
+
+          "target":
+          "AI_Use_Case",
+
+          "cardinality":
+          "1:n",
+
+          "bidirectional":
+          true
+
+        },
+
+
+        "controlled_by": {
+
+          "target":
+          "Human_Oversight",
+
+          "cardinality":
+          "1:n",
+
+          "bidirectional":
+          true
+
+        },
+
+
+        "generates": {
+
+          "target":
+          "Incident",
+
+          "cardinality":
+          "1:n",
+
+          "bidirectional":
+          true
+
+        }
+
+      }
+
+    },
+
+
+    "AI_Use_Case": {
+
+
+      "type":
+      "business_use_case",
+
+
+      "relationships": {
+
+
+        "classified_as": {
+
+          "target":
+          "Risk_Category",
+
+          "cardinality":
+          "n:1",
+
+          "bidirectional":
+          true
+
+        }
+
+      }
+
+    },
+
+
+    "Risk_Category": {
+
+
+      "type":
+      "classification",
+
+
+      "values":
+
+      [
+
+        "minimal",
+
+        "limited",
+
+        "high-risk",
+
+        "prohibited"
+
+      ]
+
+    },
+
+
+    "Human_Oversight": {
+
+
+      "type":
+      "governance_control"
+
+    },
+
+
+    "Evidence": {
+
+
+      "type":
+      "proof_object",
+
+
+      "description":
+      "Objective information demonstrating compliance activity execution.",
+
+
+      "relationships": {
+
+
+        "supports": {
+
+          "target":
+          "Document",
+
+          "cardinality":
+          "n:1",
+
+          "bidirectional":
+          true
+
+        }
+
+      }
+
+    },
+
+
+    "Incident": {
+
+
+      "type":
+      "operational_event",
+
+
+      "relationships": {
+
+
+        "originates_from": {
+
+          "target":
+          "AI_System",
+
+          "cardinality":
+          "n:1",
+
+          "bidirectional":
+          true
+
+        }
+
+      }
+
+    },
+
+
+    "Regulation": {
+
+
+      "type":
+      "legal_framework",
+
+
+      "values":
+
+      [
+
+        "EU AI Act 2024/1689",
+
+        "GDPR",
+
+        "NIS2",
+
+        "ISO 27001",
+
+        "ISO 42001"
+
+      ]
+
+    }
+
+
+  },
+
+
+  "global_relationship_rules": [
+
+
+    "Every Document must belong to exactly one Module",
+
+    "Every Evidence object must reference at least one Document",
+
+    "Every AI System must have at least one AI Use Case",
+
+    "Every AI Use Case must map to one Risk Category",
+
+    "All critical relationships are bidirectional",
+
+    "No orphan entities allowed"
+
+
+  ]
+
+}

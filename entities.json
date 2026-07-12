@@ -1,0 +1,41 @@
+{
+ "entities":[
+
+ {
+  "id":"eu-ai-act-ready",
+  "name":"EU AI Act Ready™",
+  "type":"Organization",
+  "url":"https://eu-ai-act-ready.eu"
+ },
+
+
+ {
+  "id":"eu-ai-act",
+  "name":"EU AI Act",
+  "type":"Regulation"
+ },
+
+
+ {
+  "id":"rrvi",
+  "name":"RRVI™",
+  "type":"Compliance Infrastructure"
+ },
+
+
+ {
+  "id":"article-50",
+  "name":"EU AI Act Article 50 Transparency",
+  "type":"Compliance Concept"
+ },
+
+
+ {
+  "id":"aiventure",
+  "name":"AiVenture SRL",
+  "type":"Technology Partner"
+ }
+
+
+ ]
+}

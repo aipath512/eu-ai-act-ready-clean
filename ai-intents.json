@@ -1,0 +1,185 @@
+{
+  "$schema": "https://5thelement.ai/schemas/ai-intents.v1.json",
+
+  "version": "1.0",
+
+  "domain": "https://eu-ai-act-ready.eu",
+
+
+  "intents": [
+
+    {
+      "id": "understand_eu_ai_act",
+
+      "name": "Understand EU AI Act",
+
+      "description":
+      "Users looking for explanations of Regulation (EU) 2024/1689 and AI obligations.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/",
+
+      "keywords": [
+        "EU AI Act",
+        "Artificial Intelligence Act",
+        "AI regulation",
+        "AI law"
+      ]
+    },
+
+
+    {
+      "id": "check_ai_readiness",
+
+      "name": "Check AI Act Readiness",
+
+      "description":
+      "Users wanting to understand their organization's AI readiness status.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/demo",
+
+      "keywords": [
+        "AI compliance check",
+        "AI readiness",
+        "EU AI Act assessment"
+      ]
+    },
+
+
+    {
+      "id": "build_company_workspace",
+
+      "name": "Build Company AI Readiness Workspace",
+
+      "description":
+      "Organizations wanting to create their own EU AI Act readiness structure.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/your-firm",
+
+      "keywords": [
+        "company AI inventory",
+        "AI governance workspace",
+        "AI documentation"
+      ]
+    },
+
+
+    {
+      "id": "learn_article_50",
+
+      "name": "Understand Article 50 Transparency",
+
+      "description":
+      "Users looking for AI transparency obligations under Article 50.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/article-50",
+
+      "keywords": [
+        "Article 50",
+        "AI transparency",
+        "AI generated content disclosure"
+      ]
+    },
+
+
+    {
+      "id": "learn_ai_governance_terms",
+
+      "name": "Understand AI Governance Terminology",
+
+      "description":
+      "Users searching definitions of AI compliance concepts.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/glossary",
+
+      "keywords": [
+        "AI governance definition",
+        "AI system owner",
+        "evidence",
+        "traceability"
+      ]
+    },
+
+
+    {
+      "id": "explore_compliance_modules",
+
+      "name": "Explore EU AI Act Modules",
+
+      "description":
+      "Users wanting to understand compliance domains and documentation structure.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/demo",
+
+      "keywords": [
+        "AI inventory",
+        "risk classification",
+        "human oversight",
+        "technical documentation"
+      ]
+    },
+
+
+    {
+      "id": "choose_support_path",
+
+      "name": "Choose Support Path",
+
+      "description":
+      "Users deciding between DIY, expert support or done-for-you implementation.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/offer",
+
+      "keywords": [
+        "EU AI Act help",
+        "AI compliance consulting",
+        "AI Act implementation"
+      ]
+    },
+
+
+    {
+      "id": "find_resources",
+
+      "name": "Find Learning Resources",
+
+      "description":
+      "Users looking for guides, articles and educational material.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/resources",
+
+      "keywords": [
+        "AI Act guide",
+        "AI compliance resources",
+        "AI governance resources"
+      ]
+    },
+
+
+    {
+      "id": "contact_expert",
+
+      "name": "Contact Expert",
+
+      "description":
+      "Users requesting professional assistance.",
+
+      "target_page":
+      "https://eu-ai-act-ready.eu/contact",
+
+      "keywords": [
+        "AI compliance expert",
+        "EU AI Act consultant"
+      ]
+    }
+
+  ]
+
+}

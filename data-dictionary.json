@@ -1,0 +1,300 @@
+{
+  "system": "RRVI",
+  "version": "1.0.2",
+  "state": "00001H",
+
+  "purpose": "Semantic data dictionary defining entities, attributes and controlled vocabulary used by the EU AI Act Compliance Management System™.",
+
+
+  "entities": {
+
+
+    "Organization": {
+
+      "definition": "Legal entity operating AI systems and responsible for compliance activities.",
+
+      "attributes": {
+
+        "organization_id": {
+          "type": "identifier",
+          "required": true
+        },
+
+        "legal_name": {
+          "type": "string",
+          "required": true
+        },
+
+        "country": {
+          "type": "string",
+          "required": true
+        },
+
+        "industry": {
+          "type": "string",
+          "required": false
+        }
+
+      }
+
+    },
+
+
+    "AI_System": {
+
+      "definition": "Machine-based system capable of generating outputs such as predictions, recommendations, decisions or content.",
+
+      "attributes": {
+
+        "ai_system_id": {
+          "type": "identifier",
+          "required": true
+        },
+
+        "name": {
+          "type": "string",
+          "required": true
+        },
+
+        "provider": {
+          "type": "string",
+          "required": false
+        },
+
+        "model_version": {
+          "type": "string",
+          "required": false
+        },
+
+        "lifecycle_status": {
+          "type": "enum",
+          "values": [
+            "design",
+            "development",
+            "deployment",
+            "operation",
+            "retired"
+          ]
+        }
+
+      }
+
+    },
+
+
+    "AI_Use_Case": {
+
+      "definition": "Business scenario where an AI system is applied.",
+
+      "attributes": {
+
+        "use_case_id": {
+          "type": "identifier",
+          "required": true
+        },
+
+        "name": {
+          "type": "string",
+          "required": true
+        },
+
+        "business_process": {
+          "type": "string",
+          "required": true
+        }
+
+      }
+
+    },
+
+
+    "Risk_Category": {
+
+      "definition": "EU AI Act risk classification.",
+
+      "values": [
+
+        "prohibited",
+
+        "high-risk",
+
+        "limited",
+
+        "minimal"
+
+      ]
+
+    },
+
+
+    "Module": {
+
+      "definition": "EU AI Act compliance domain.",
+
+      "attributes": {
+
+        "module_id": {
+          "type": "identifier",
+          "required": true
+        },
+
+        "name": {
+          "type": "string",
+          "required": true
+        },
+
+        "status": {
+          "type": "enum",
+          "values": [
+            "planned",
+            "active",
+            "completed",
+            "reviewed"
+          ]
+        }
+
+      }
+
+    },
+
+
+    "Document": {
+
+      "definition": "Controlled compliance document.",
+
+      "attributes": {
+
+        "document_id": {
+          "type": "identifier",
+          "required": true
+        },
+
+        "title": {
+          "type": "string",
+          "required": true
+        },
+
+        "document_type": {
+          "type": "enum",
+          "values": [
+            "Policy",
+            "Procedure",
+            "Work Instruction",
+            "Checklist",
+            "Register",
+            "Evidence",
+            "Declaration"
+          ]
+        },
+
+        "version": {
+          "type": "string",
+          "required": true
+        },
+
+        "sha256": {
+          "type": "hash",
+          "required": false
+        }
+
+      }
+
+    },
+
+
+    "Evidence": {
+
+      "definition": "Proof object supporting compliance activities.",
+
+      "attributes": {
+
+        "evidence_id": {
+          "type": "identifier",
+          "required": true
+        },
+
+        "description": {
+          "type": "string",
+          "required": true
+        },
+
+        "source": {
+          "type": "string",
+          "required": false
+        },
+
+        "timestamp": {
+          "type": "datetime",
+          "required": false
+        }
+
+      }
+
+    },
+
+
+    "Incident": {
+
+      "definition": "Operational event affecting AI system compliance or performance.",
+
+      "attributes": {
+
+        "incident_id": {
+          "type": "identifier",
+          "required": true
+        },
+
+        "severity": {
+          "type": "enum",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+
+        "status": {
+          "type": "enum",
+          "values": [
+            "open",
+            "investigating",
+            "resolved"
+          ]
+        }
+
+      }
+
+    }
+
+  },
+
+
+  "controlled_vocabulary": {
+
+
+    "document_types": [
+
+      "Policy",
+      "Procedure",
+      "Work Instruction",
+      "Checklist",
+      "Register",
+      "Evidence",
+      "Declaration"
+
+    ],
+
+
+    "risk_categories": [
+
+      "prohibited",
+      "high-risk",
+      "limited",
+      "minimal"
+
+    ]
+
+  }
+
+}

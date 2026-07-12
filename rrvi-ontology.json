@@ -1,0 +1,418 @@
+{
+  "$schema": "https://5theelement.ai/schemas/rrvi-ontology.v1.json",
+
+  "ontology": "RRVI",
+
+  "version": "1.0.2",
+
+  "state": "00001H",
+
+
+  "description":
+
+  "Semantic ontology defining concepts, entities and relationships within the EU AI Act Compliance Management System.",
+
+
+
+  "namespace": {
+
+    "name":
+    "Remote Regulatory Verification Infrastructure™",
+
+    "acronym":
+    "RRVI",
+
+    "domain":
+    "EU AI Act Compliance Management System™"
+
+  },
+
+
+  "classes": {
+
+
+    "Organization": {
+
+      "type":
+      "legal_entity",
+
+
+      "definition":
+
+      "A legal organization responsible for operating AI systems and implementing compliance activities.",
+
+
+      "examples":
+
+      [
+
+        "Company",
+
+        "SME",
+
+        "Enterprise",
+
+        "Public organization"
+
+      ]
+
+    },
+
+
+    "RRVI_System": {
+
+      "type":
+      "compliance_infrastructure",
+
+
+      "definition":
+
+      "A structured system used to organize AI governance obligations, controls, documents and evidence.",
+
+
+      "purpose":
+
+      "Enable operational readiness and verification."
+
+    },
+
+
+    "AI_System": {
+
+      "type":
+      "technology_entity",
+
+
+      "definition":
+
+      "A machine-based system capable of generating outputs such as predictions, recommendations, decisions or content.",
+
+
+      "lifecycle":
+
+      [
+
+        "Design",
+
+        "Development",
+
+        "Deployment",
+
+        "Operation",
+
+        "Monitoring",
+
+        "Retirement"
+
+      ]
+
+    },
+
+
+    "AI_Use_Case": {
+
+      "type":
+      "business_context",
+
+
+      "definition":
+
+      "A specific business scenario where an AI system is used."
+
+
+    },
+
+
+    "Module": {
+
+      "type":
+      "compliance_domain",
+
+
+      "definition":
+
+      "A structured EU AI Act governance area containing requirements, controls and documentation."
+
+
+    },
+
+
+    "Document": {
+
+      "type":
+      "controlled_artifact",
+
+
+      "definition":
+
+      "A uniquely identified, versioned and managed compliance document."
+
+
+    },
+
+
+    "Document_Type": {
+
+      "type":
+      "controlled_vocabulary",
+
+
+      "definition":
+
+      "Classification of compliance document formats.",
+
+
+      "values":
+
+      [
+
+        "Policy",
+
+        "Procedure",
+
+        "Work Instruction",
+
+        "Checklist",
+
+        "Register",
+
+        "Evidence",
+
+        "Declaration"
+
+      ]
+
+    },
+
+
+    "Evidence": {
+
+      "type":
+      "proof_object",
+
+
+      "definition":
+
+      "Objective information demonstrating that a compliance activity has been performed."
+
+
+    },
+
+
+    "Risk": {
+
+      "type":
+      "governance_object",
+
+
+      "definition":
+
+      "Potential impact, obligation or uncertainty related to AI usage."
+
+
+    },
+
+
+    "Risk_Category": {
+
+      "type":
+      "classification",
+
+
+      "definition":
+
+      "EU AI Act risk level assigned to an AI use case.",
+
+
+      "values":
+
+      [
+
+        "minimal",
+
+        "limited",
+
+        "high-risk",
+
+        "prohibited"
+
+      ]
+
+    },
+
+
+    "Human_Oversight": {
+
+      "type":
+      "governance_control",
+
+
+      "definition":
+
+      "Measures ensuring appropriate human supervision of AI system operation."
+
+    },
+
+
+    "Incident": {
+
+      "type":
+      "operational_event",
+
+
+      "definition":
+
+      "An event affecting AI system compliance, safety, availability or integrity."
+
+    },
+
+
+    "Regulation": {
+
+      "type":
+      "legal_framework",
+
+
+      "definition":
+
+      "External legal or regulatory framework mapped to compliance obligations."
+
+    }
+
+
+  },
+
+
+  "semantic_relationships": [
+
+
+    {
+
+      "subject":
+      "Organization",
+
+      "predicate":
+      "operates",
+
+      "object":
+      "AI_System"
+
+    },
+
+
+    {
+
+      "subject":
+      "AI_System",
+
+      "predicate":
+      "implements",
+
+      "object":
+      "AI_Use_Case"
+
+    },
+
+
+    {
+
+      "subject":
+      "AI_Use_Case",
+
+      "predicate":
+      "classified_as",
+
+      "object":
+      "Risk_Category"
+
+    },
+
+
+    {
+
+      "subject":
+      "RRVI_System",
+
+      "predicate":
+      "contains",
+
+      "object":
+      "Module"
+
+    },
+
+
+    {
+
+      "subject":
+      "Module",
+
+      "predicate":
+      "contains",
+
+      "object":
+      "Document"
+
+    },
+
+
+    {
+
+      "subject":
+      "Document",
+
+      "predicate":
+      "supported_by",
+
+      "object":
+      "Evidence"
+
+    }
+
+
+  ],
+
+
+  "ontology_rules": [
+
+
+    "Every AI System must have an operational owner.",
+
+
+    "Every AI Use Case must have a risk classification.",
+
+
+    "Every compliance document must belong to a module.",
+
+
+    "Every evidence object must support a compliance statement.",
+
+
+    "Every relationship must maintain traceability.",
+
+
+    "No orphan compliance objects are permitted."
+
+
+  ],
+
+
+  "core_principles": [
+
+
+    "Traceability",
+
+    "Transparency",
+
+    "Evidence-based compliance",
+
+    "Controlled lifecycle",
+
+    "Version management",
+
+    "Human accountability"
+
+  ]
+
+
+}

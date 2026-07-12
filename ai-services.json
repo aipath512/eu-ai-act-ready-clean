@@ -1,0 +1,233 @@
+{
+  "$schema": "https://5theelement.ai/schemas/ai-services.v1.json",
+
+  "version": "1.0",
+
+  "domain": "https://eu-ai-act-ready.eu",
+
+
+  "service_catalog": [
+
+
+    {
+      "id": "demo-workspace",
+
+      "name": "EU AI Act Ready™ Demo Workspace",
+
+      "type": "demonstration",
+
+      "access": "public",
+
+      "url":
+      "https://eu-ai-act-ready.eu/demo",
+
+      "description":
+      "Explore a sample EU AI Act readiness workspace showing modules, documents, evidence structure and compliance organization.",
+
+      "audience": [
+        "SME owners",
+        "AI professionals",
+        "Consultants",
+        "Lawyers"
+      ],
+
+      "features": [
+
+        "10 EU AI Act compliance modules",
+
+        "Document structure preview",
+
+        "Evidence model demonstration",
+
+        "RRVI™ compliance infrastructure example"
+
+      ]
+
+    },
+
+
+    {
+      "id": "your-firm-workspace",
+
+      "name": "Your Firm™ Workspace",
+
+      "type": "future_platform",
+
+      "access": "login_required",
+
+      "url":
+      "https://eu-ai-act-ready.eu/your-firm",
+
+      "description":
+      "Company-specific workspace for creating an AI Act readiness structure based on organization data and AI usage context.",
+
+      "audience": [
+        "Companies",
+        "SMEs",
+        "Organizations"
+      ],
+
+      "features": [
+
+        "Company profile",
+
+        "AI system inventory",
+
+        "Risk assessment",
+
+        "Document generation",
+
+        "Evidence management",
+
+        "Version tracking"
+
+      ]
+
+    },
+
+
+    {
+      "id": "diy-free",
+
+      "name": "DIY FREE",
+
+      "type": "self_service",
+
+      "access": "free",
+
+      "url":
+      "https://eu-ai-act-ready.eu/offer",
+
+      "description":
+      "Free resources allowing organizations to understand EU AI Act requirements and begin their readiness journey.",
+
+      "price": {
+
+        "currency": "EUR",
+
+        "amount": 0
+
+      },
+
+      "features": [
+
+        "EU AI Act knowledge",
+
+        "FAQ access",
+
+        "Glossary",
+
+        "Resources",
+
+        "Demo exploration"
+
+      ]
+
+    },
+
+
+    {
+      "id": "help-support",
+
+      "name": "HELP",
+
+      "type": "expert_support",
+
+      "access": "paid",
+
+      "url":
+      "https://eu-ai-act-ready.eu/offer",
+
+      "price": {
+
+        "currency": "EUR",
+
+        "amount": 49,
+
+        "unit": "hour"
+
+      },
+
+      "description":
+      "Expert assistance for organizations needing guidance during EU AI Act readiness activities.",
+
+      "features": [
+
+        "Clarification of obligations",
+
+        "Readiness guidance",
+
+        "Review of approach",
+
+        "Implementation support"
+
+      ]
+
+    },
+
+
+    {
+      "id": "done-for-you",
+
+      "name": "DONE FOR YOU",
+
+      "type": "managed_service",
+
+      "access": "commercial",
+
+      "url":
+      "https://eu-ai-act-ready.eu/offer",
+
+      "description":
+      "Complete implementation service creating an organization-specific EU AI Act readiness package.",
+
+      "features": [
+
+        "Company-specific assessment",
+
+        "AI inventory creation",
+
+        "Risk classification",
+
+        "Compliance documentation",
+
+        "Evidence structure",
+
+        "Readiness package"
+
+      ]
+
+    }
+
+
+  ],
+
+
+  "service_relationships": [
+
+    {
+      "from": "DIY FREE",
+
+      "next_step":
+      "HELP"
+    },
+
+
+    {
+      "from": "HELP",
+
+      "next_step":
+      "DONE FOR YOU"
+    },
+
+
+    {
+      "from": "DEMO",
+
+      "next_step":
+      "YOUR FIRM WORKSPACE"
+    }
+
+  ]
+
+}

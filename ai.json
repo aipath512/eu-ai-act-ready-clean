@@ -1,0 +1,230 @@
+{
+  "$schema": "https://5theelement.ai/schemas/ai.v1.json",
+
+  "version": "1.0",
+
+  "identity": {
+
+    "name": "EU AI Act Ready™",
+
+    "domain": "https://eu-ai-act-ready.eu",
+
+    "type": "AI Governance Knowledge Platform",
+
+    "category": [
+      "EU AI Act Compliance",
+      "AI Governance",
+      "AI Risk Management",
+      "Regulatory Technology",
+      "Compliance Infrastructure"
+    ],
+
+    "description":
+    "EU AI Act Ready™ is a knowledge and operational readiness platform helping organizations understand, structure and demonstrate AI Act readiness based on Regulation (EU) 2024/1689."
+  },
+
+
+  "legal_reference": {
+
+    "primary_regulation":
+    "Regulation (EU) 2024/1689 - Artificial Intelligence Act",
+
+    "official_reference":
+    "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+
+  },
+
+
+  "knowledge_domains": [
+
+    {
+      "name": "AI System Inventory",
+      "url": "/faq/ai-system-inventory"
+    },
+
+    {
+      "name": "Risk Classification",
+      "url": "/faq/risk-classification"
+    },
+
+    {
+      "name": "AI Literacy",
+      "url": "/faq/ai-literacy"
+    },
+
+    {
+      "name": "Prohibited Practices",
+      "url": "/faq/prohibited-practices"
+    },
+
+    {
+      "name": "High-Risk AI Systems",
+      "url": "/faq/high-risk-systems"
+    },
+
+    {
+      "name": "Technical Documentation",
+      "url": "/faq/technical-documentation"
+    },
+
+    {
+      "name": "Human Oversight",
+      "url": "/faq/human-oversight"
+    },
+
+    {
+      "name": "Data Governance",
+      "url": "/faq/data-governance"
+    },
+
+    {
+      "name": "Logging and Monitoring",
+      "url": "/faq/logging-monitoring"
+    },
+
+    {
+      "name": "Incident Reporting",
+      "url": "/faq/incident-reporting"
+    },
+
+    {
+      "name": "Article 50 Transparency",
+      "url": "/article-50"
+    }
+
+  ],
+
+
+  "semantic_models": {
+
+    "rrvi_schema":
+    "https://eu-ai-act-ready.eu/rrvi-schema.json",
+
+    "rrvi_ontology":
+    "https://eu-ai-act-ready.eu/rrvi-ontology.json",
+
+    "glossary":
+    "https://eu-ai-act-ready.eu/rrvi-glossary.md"
+
+  },
+
+
+  "main_pages": [
+
+    {
+      "name": "Home",
+      "url": "https://eu-ai-act-ready.eu/"
+    },
+
+    {
+      "name": "Demo Workspace",
+      "url": "https://eu-ai-act-ready.eu/demo"
+    },
+
+    {
+      "name": "Your Firm Workspace",
+      "url": "https://eu-ai-act-ready.eu/your-firm"
+    },
+
+    {
+      "name": "Offer",
+      "url": "https://eu-ai-act-ready.eu/offer"
+    },
+
+    {
+      "name": "FAQ",
+      "url": "https://eu-ai-act-ready.eu/faq"
+    },
+
+    {
+      "name": "Glossary",
+      "url": "https://eu-ai-act-ready.eu/glossary"
+    },
+
+    {
+      "name": "Article 50",
+      "url": "https://eu-ai-act-ready.eu/article-50"
+    }
+
+  ],
+
+
+  "entities": [
+
+    "EU AI Act Ready™",
+
+    "EU AI Act",
+
+    "RRVI™",
+
+    "AI Governance",
+
+    "AI System",
+
+    "Risk Classification",
+
+    "Human Oversight",
+
+    "Evidence",
+
+    "Traceability"
+
+  ],
+
+
+  "technology_partner": {
+
+    "name": "AiVenture SRL",
+
+    "website":
+    "https://aiventure.ro",
+
+    "category":
+    "AI Delivery Infrastructure",
+
+    "network":
+    "AiVenture ADI Network",
+
+    "root_domain":
+    "https://5theelement.ai"
+
+  },
+
+
+  "languages": [
+
+    "en",
+    "ro",
+    "fr",
+    "de",
+    "es",
+    "it"
+
+  ],
+
+
+  "trust_signals": [
+
+    "Version Control",
+
+    "Evidence Management",
+
+    "SHA-256 Integrity",
+
+    "Timestamping",
+
+    "Traceability",
+
+    "Controlled Documents"
+
+  ],
+
+
+  "contact": {
+
+    "email":
+    "contact@5theelement.ai"
+
+  }
+
+}

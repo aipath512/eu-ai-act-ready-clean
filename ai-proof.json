@@ -1,0 +1,254 @@
+{
+  "$schema": "https://5thelement.ai/schemas/ai-proof.v1.json",
+
+  "version": "1.0",
+
+  "domain": "https://eu-ai-act-ready.eu",
+
+
+  "proof_model": {
+
+
+    "name": "EU AI Act Ready™ Proof Layer",
+
+    "purpose":
+    "Provide integrity, provenance and traceability information for AI governance knowledge and compliance artifacts."
+
+  },
+
+
+  "integrity_controls": [
+
+    {
+
+      "id": "sha256",
+
+      "name": "SHA-256 Integrity",
+
+      "type": "cryptographic_hash",
+
+      "description":
+      "Controlled documents and compliance artifacts can be identified through SHA-256 digital fingerprints."
+
+    },
+
+
+    {
+
+      "id": "timestamp",
+
+      "name": "Trusted Timestamp",
+
+      "type": "time_proof",
+
+      "description":
+      "Document versions can be associated with creation and verification timestamps."
+
+    },
+
+
+    {
+
+      "id": "version-control",
+
+      "name": "Version Control",
+
+      "type": "lifecycle_management",
+
+      "description":
+      "Compliance artifacts are managed through controlled versions and states."
+
+    }
+
+  ],
+
+
+  "evidence_model": {
+
+
+    "name": "RRVI Evidence Model",
+
+
+    "principles": [
+
+      "Every compliance statement should have supporting evidence",
+
+      "Every evidence object should reference a controlled document",
+
+      "Every document should belong to a compliance module",
+
+      "All relationships should remain traceable"
+
+    ]
+
+  },
+
+
+  "traceability": {
+
+
+    "enabled": true,
+
+
+    "model":
+
+    [
+
+      {
+
+        "entity":
+        "Organization",
+
+        "relationship":
+        "operates",
+
+        "target":
+        "AI_System"
+
+      },
+
+
+      {
+
+        "entity":
+        "AI_System",
+
+        "relationship":
+        "implements",
+
+        "target":
+        "AI_Use_Case"
+
+      },
+
+
+      {
+
+        "entity":
+        "Module",
+
+        "relationship":
+        "contains",
+
+        "target":
+        "Document"
+
+      },
+
+
+      {
+
+        "entity":
+        "Document",
+
+        "relationship":
+        "supported_by",
+
+        "target":
+        "Evidence"
+
+      }
+
+    ]
+
+  },
+
+
+  "controlled_documents": {
+
+
+    "document_types": [
+
+      "Policy",
+
+      "Procedure",
+
+      "Work Instruction",
+
+      "Checklist",
+
+      "Register",
+
+      "Evidence",
+
+      "Declaration"
+
+    ],
+
+
+    "management":
+
+    [
+
+      "Identification",
+
+      "Approval",
+
+      "Versioning",
+
+      "Review",
+
+      "Retention"
+
+    ]
+
+  },
+
+
+  "rrvi_reference": {
+
+
+    "name":
+    "Remote Regulatory Verification Infrastructure™",
+
+    "url":
+    "https://eu-ai-act-ready.eu/rrvi-schema.json",
+
+
+    "purpose":
+    "Structure compliance information into verifiable entities, relationships and evidence objects."
+
+  },
+
+
+  "verification_package": {
+
+
+    "possible_outputs":
+
+    [
+
+      "PDF compliance package",
+
+      "Controlled document archive",
+
+      "Evidence register",
+
+      "Version history",
+
+      "SHA-256 manifest"
+
+    ]
+
+  },
+
+
+  "trust_signals":
+
+  [
+
+    "Traceability",
+
+    "Evidence-based compliance",
+
+    "Controlled documents",
+
+    "Cryptographic integrity",
+
+    "Version management",
+
+    "Semantic relationships"
+
+  ]
+
+}

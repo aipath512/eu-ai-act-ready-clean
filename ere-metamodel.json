@@ -1,0 +1,363 @@
+{
+  "system": "RRVI",
+  "version": "1.0.2",
+  "state": "00001H",
+
+  "model_type": "Entity Relationship Metamodel",
+
+  "description": "Bidirectional entity relationship model defining the operational structure of the EU AI Act Compliance Management System™.",
+
+
+  "entities": {
+
+
+    "Organization": {
+
+      "type": "legal_entity",
+
+      "relationships": {
+
+        "operates": {
+
+          "target": "RRVI_System",
+
+          "cardinality": "1:1",
+
+          "direction": "bidirectional"
+
+        },
+
+        "owns": {
+
+          "target": "AI_System",
+
+          "cardinality": "1:n",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "RRVI_System": {
+
+      "type": "compliance_infrastructure",
+
+      "relationships": {
+
+        "contains": {
+
+          "target": "Module",
+
+          "cardinality": "1:10",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "Module": {
+
+      "type": "compliance_domain",
+
+      "relationships": {
+
+        "contains": {
+
+          "target": "Document",
+
+          "cardinality": "1:7",
+
+          "direction": "bidirectional"
+
+        },
+
+        "maps_to": {
+
+          "target": "Regulation",
+
+          "cardinality": "n:1",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "Document": {
+
+      "type": "controlled_document",
+
+      "relationships": {
+
+        "belongs_to": {
+
+          "target": "Module",
+
+          "cardinality": "n:1",
+
+          "direction": "bidirectional"
+
+        },
+
+        "supported_by": {
+
+          "target": "Evidence",
+
+          "cardinality": "1:n",
+
+          "direction": "bidirectional"
+
+        },
+
+        "has_type": {
+
+          "target": "Document_Type",
+
+          "cardinality": "1:1",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "Evidence": {
+
+      "type": "proof_object",
+
+      "relationships": {
+
+        "supports": {
+
+          "target": "Document",
+
+          "cardinality": "n:1",
+
+          "direction": "bidirectional"
+
+        },
+
+        "recorded_in": {
+
+          "target": "Register",
+
+          "cardinality": "n:1",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "AI_System": {
+
+      "type": "artificial_intelligence_system",
+
+      "relationships": {
+
+        "implements": {
+
+          "target": "AI_Use_Case",
+
+          "cardinality": "1:n",
+
+          "direction": "bidirectional"
+
+        },
+
+        "controlled_by": {
+
+          "target": "Human_Oversight",
+
+          "cardinality": "1:n",
+
+          "direction": "bidirectional"
+
+        },
+
+        "generates": {
+
+          "target": "Incident",
+
+          "cardinality": "1:n",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "AI_Use_Case": {
+
+      "type": "business_use_case",
+
+      "relationships": {
+
+        "classified_as": {
+
+          "target": "Risk_Category",
+
+          "cardinality": "n:1",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "Risk_Category": {
+
+      "type": "classification",
+
+      "values": [
+
+        "prohibited",
+
+        "high-risk",
+
+        "limited",
+
+        "minimal"
+
+      ]
+
+    },
+
+
+    "Human_Oversight": {
+
+      "type": "governance_control"
+
+    },
+
+
+    "Incident": {
+
+      "type": "operational_event",
+
+      "relationships": {
+
+        "originates_from": {
+
+          "target": "AI_System",
+
+          "cardinality": "n:1",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "Register": {
+
+      "type": "operational_record",
+
+      "relationships": {
+
+        "contains": {
+
+          "target": "Evidence",
+
+          "cardinality": "1:n",
+
+          "direction": "bidirectional"
+
+        }
+
+      }
+
+    },
+
+
+    "Regulation": {
+
+      "type": "legal_framework",
+
+      "values": [
+
+        "EU AI Act 2024/1689",
+
+        "GDPR",
+
+        "NIS2",
+
+        "ISO 27001",
+
+        "ISO 42001"
+
+      ]
+
+    },
+
+
+    "Document_Type": {
+
+      "type": "controlled_vocabulary",
+
+      "values": [
+
+        "Policy",
+
+        "Procedure",
+
+        "Work Instruction",
+
+        "Checklist",
+
+        "Register",
+
+        "Evidence",
+
+        "Declaration"
+
+      ]
+
+    }
+
+  },
+
+
+  "global_rules": [
+
+    "Every Document must belong to exactly one Module",
+
+    "Every Evidence object must reference at least one Document",
+
+    "Every AI System must have at least one AI Use Case",
+
+    "Every AI Use Case must have one Risk Category",
+
+    "Every relationship must support traceability",
+
+    "No orphan entities allowed"
+
+  ]
+
+}

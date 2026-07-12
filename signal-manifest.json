@@ -1,0 +1,243 @@
+{
+  "$schema": "https://5thelement.ai/schemas/signal-manifest.v1.json",
+
+  "version": "1.0",
+
+  "domain": "https://eu-ai-act-ready.eu",
+
+
+  "manifest": {
+
+
+    "name":
+    "EU AI Act Ready™ AI Signal Manifest",
+
+
+    "purpose":
+    "Registry of machine-readable identity, semantic and trust signals published by EU AI Act Ready™.",
+
+
+    "status":
+    "active"
+
+
+  },
+
+
+  "signals": [
+
+
+    {
+
+      "id": "identity",
+
+      "file":
+      "https://eu-ai-act-ready.eu/ai.json",
+
+      "type":
+      "AI Identity Signal",
+
+      "purpose":
+      "Defines platform identity, domain, category and knowledge areas."
+
+    },
+
+
+    {
+
+      "id": "crawler-policy",
+
+      "file":
+      "https://eu-ai-act-ready.eu/robots.txt",
+
+      "type":
+      "Crawler Access Signal",
+
+      "purpose":
+      "Defines public crawling permissions and sitemap discovery."
+
+    },
+
+
+    {
+
+      "id": "llm-instructions",
+
+      "file":
+      "https://eu-ai-act-ready.eu/llms.txt",
+
+      "type":
+      "AI Reading Instruction Signal",
+
+      "purpose":
+      "Provides guidance for AI models interpreting platform content."
+
+    },
+
+
+    {
+
+      "id": "entities",
+
+      "file":
+      "https://eu-ai-act-ready.eu/entities.json",
+
+      "type":
+      "Entity Identity Signal",
+
+      "purpose":
+      "Defines core recognized entities."
+
+    },
+
+
+    {
+
+      "id": "network-identity",
+
+      "file":
+      "https://eu-ai-act-ready.eu/adn.json",
+
+      "type":
+      "Network Identity Signal",
+
+      "purpose":
+      "Defines organizational and technology relationships."
+
+    },
+
+
+    {
+
+      "id": "intents",
+
+      "file":
+      "https://eu-ai-act-ready.eu/ai-intents.json",
+
+      "type":
+      "Intent Discovery Signal",
+
+      "purpose":
+      "Maps user intentions to relevant platform resources."
+
+    },
+
+
+    {
+
+      "id": "services",
+
+      "file":
+      "https://eu-ai-act-ready.eu/ai-services.json",
+
+      "type":
+      "Service Discovery Signal",
+
+      "purpose":
+      "Defines available services and user paths."
+
+    },
+
+
+    {
+
+      "id": "proof",
+
+      "file":
+      "https://eu-ai-act-ready.eu/ai-proof.json",
+
+      "type":
+      "Trust Evidence Signal",
+
+      "purpose":
+      "Defines integrity, evidence and traceability principles."
+
+    },
+
+
+    {
+
+      "id": "trust-state",
+
+      "file":
+      "https://eu-ai-act-ready.eu/trust-state.json",
+
+      "type":
+      "Platform State Signal",
+
+      "purpose":
+      "Defines controlled version and trust state."
+
+    },
+
+
+    {
+
+      "id": "rrvi-schema",
+
+      "file":
+      "https://eu-ai-act-ready.eu/rrvi-schema.json",
+
+      "type":
+      "Semantic Model Signal",
+
+      "purpose":
+      "Defines RRVI entity relationships and structure."
+
+    },
+
+
+    {
+
+      "id": "rrvi-ontology",
+
+      "file":
+      "https://eu-ai-act-ready.eu/rrvi-ontology.json",
+
+      "type":
+      "Semantic Meaning Signal",
+
+      "purpose":
+      "Defines RRVI concepts and relationships."
+
+    }
+
+
+  ],
+
+
+  "verification": {
+
+
+    "integrity":
+
+    [
+
+      "Public availability",
+
+      "Version identification",
+
+      "Stable URLs",
+
+      "Controlled updates"
+
+    ],
+
+
+    "recommended_checks":
+
+    [
+
+      "HTTP availability",
+
+      "JSON validity",
+
+      "Schema conformity",
+
+      "Version consistency"
+
+    ]
+
+  }
+
+}
