@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EU AI Act Ask & Generator™ | EU AI Act Ready™</title>
+
+<meta
+  name="description"
+  content="Ask the EU AI Act and generate structured compliance readiness guidance with EU AI Act Ready™."
+>
+
+<style>
+:root{
+  --black:#000;
+  --panel:#090909;
+  --panel2:#111;
+  --white:#fff;
+  --muted:#a8a8a8;
+  --border:#2a2a2a;
+  --red:#c90016;
+  --red2:#ef001c;
+}
+
+*{
+  box-sizing:border-box;
+}
+html{
+  background:#000;
+  color-scheme:dark;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+  
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(
+      circle at 50% 22%,
+      rgba(120,0,0,.12),
+      transparent 34%
+    ),
+    #000;
+  color:#fff;
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  zoom:0.80;
+}
+
+a{
+  color:inherit;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+/* HEADER */
+
+.site-header{
+  min-height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 22px;
+  border-bottom:1px solid var(--border);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+
+.brand-mark{
+  width:56px;
+  height:56px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--red);
+  font-size:25px;
+}
+
+.brand-name{
+  display:flex;
+  flex-direction:column;
+  font-weight:900;
+  line-height:.92;
+  font-size:20px;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.login{
+  border:1px solid #777;
+  padding:11px 18px;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+.menu{
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* NEWS AND COUNTRY STREAM */
+
+.stream{
+  border-bottom:1px solid var(--border);
+}
+
+.news,
+.countries{
+  heigh:48px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-bottom:1px solid var(--border);
+}
+
+.news{
+  height:56px;
+}
+
+.news-label{
+  flex:0 0 auto;
+  margin-left:18px;
+  padding:10px 13px;
+  background:var(--red);
+  border-radius:4px;
+  font-size:14px;
+  font-weight:900;
+  z-index:2;
+}
+
+.viewport{
+  overflow:hidden;
+  min-width:0;
+}
+
+.news-track{
+  width:max-content;
+  display:flex;
+  gap:18px;
+  align-items:center;
+  padding-left:22px;
+  white-space:nowrap;
+  animation:news 28s linear infinite;
+}
+
+.dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--red);
+  display:inline-block;
+}
+.country-track{
+  width:max-content;
+  display:flex;
+  gap:24px;
+  white-space:nowrap;
+  animation:countries 60s linear infinite;
+  transform:translateX(0);
+}
+
+
+/* MAIN */
+
+main{
+  width:min(100%,1080px);
+  margin:0 auto;
+  padding:48px 22px 24px;
+}
+
+/* HERO */
+
+.hero{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.hero-title{
+  width:100%;
+  max-width:900px;
+  background:#fff;
+  color:#000;
+  text-align:center;
+  font-family:Impact,"Arial Narrow",sans-serif;
+  font-size:clamp(50px,9vw,112px);
+  line-height:.9;
+  letter-spacing:-.03em;
+  padding:22px 18px 17px;
+  text-transform:uppercase;
+}
+
+.hero-subtitle{
+  margin-top:-2px;
+  background:linear-gradient(#d90018,#a30010);
+  color:#fff;
+  text-align:center;
+  font-family:Impact,"Arial Narrow",sans-serif;
+  font-size:clamp(31px,5vw,64px);
+  line-height:1;
+  padding:16px 30px;
+  text-transform:uppercase;
+  box-shadow:0 14px 32px rgba(200,0,20,.2);
+}
+
+/* Ask */
+
+.Ask-wrap{
+  padding-top:42px;
+}
+
+.Ask-shell{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:14px;
+  align-items:center;
+  min-height:82px;
+  padding:12px 14px 12px 22px;
+  border:1px solid #5b000a;
+  border-radius:20px;
+  background:rgba(8,8,8,.9);
+  box-shadow:
+    0 0 0 1px rgba(255,0,25,.08),
+    0 0 28px rgba(255,0,25,.12);
+}
+
+.Ask-icon{
+  font-size:32px;
+}
+
+.Ask-shell input{
+  width:100%;
+  min-width:0;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:#fff;
+  font-size:20px;
+}
+
+.Ask-shell input::placeholder{
+  color:#8d8d8d;
+}
+
+.Ask-shell button{
+  min-height:54px;
+  border:0;
+  border-radius:14px;
+  padding:0 24px;
+  background:var(--red);
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* DEMO AND FIRM LINKS */
+
+.links{
+   display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  margin:38px auto 0;
+}
+.links a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:180px;
+  height:80px;
+  gap:7px;
+  border:2px solid var(--red);
+  border-radius:0px;
+  background:#090909;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+  font-size:16px;
+  text-decoration:none;
+  font-weight:900;
+  transition:.2s;
+}
+
+.links a:hover{
+  background:var(--red);
+}
+
+
+.links strong{
+  font-size:16px;
+  font-weight:900
+}
+
+.links span{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.divider{
+  width:1px;
+  height:72px;
+  background:var(--border);
+}
+
+/* POPULAR AskES */
+
+.popular{
+  margin-top:44px;
+  padding:20px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:rgba(5,5,5,.78);
+}
+
+.popular h2{
+  margin:0 0 16px;
+  color:var(--red2);
+  font-size:16px;
+  text-transform:uppercase;
+}
+
+.chips{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
+
+.chips button{
+  min-height:84px;
+  border:1px solid #333;
+  border-radius:6px;
+  background:#0b0b0b;
+  color:#fff;
+  padding:12px;
+  cursor:pointer;
+}
+
+.chips button:hover{
+  border-color:var(--red);
+  background:#140004;
+}
+
+/* ANSWER AREA */
+
+.answers{
+  margin-top:56px;
+}
+
+.answers h2{
+  margin:0;
+  font-size:clamp(34px,6vw,58px);
+  letter-spacing:-.03em;
+}
+
+.redline{
+  width:72px;
+  height:4px;
+  background:var(--red);
+  margin-top:14px;
+}
+
+.answer-box{
+  min-height:170px;
+  margin-top:24px;
+  padding:28px;
+  border:1px solid #333;
+  border-radius:10px;
+  background:linear-gradient(#090909,#050505);
+  color:#d0d0d0;
+  font-size:18px;
+  line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+  width:min(100%,1080px);
+  margin:0 auto;
+  padding:28px 22px 40px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+  color:#aaa;
+  font-size:14px;
+}
+
+/* ANIMATIONS */
+
+@keyframes news{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-45%);
+  }
+}
+@keyframes countries{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-45%);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:720px){
+
+  .site-header{
+    min-height:76px;
+    padding:15px;
+  }
+
+  .brand-mark{
+    width:48px;
+    height:48px;
+  }
+
+  .brand-name{
+    font-size:17px;
+  }
+
+  .login{
+    padding:9px 14px;
+  }
+
+  main{
+    padding:38px 16px 22px;
+  }
+
+  .hero-title{
+    font-size:clamp(48px,13vw,76px);
+    padding:18px 10px 14px;
+  }
+
+  .hero-subtitle{
+    max-width:88%;
+    font-size:clamp(28px,7vw,43px);
+    padding:13px 18px;
+  }
+
+  .Ask-shell{
+    min-height:74px;
+    padding-left:16px;
+  }
+
+  .Ask-shell button{
+    min-height:50px;
+    padding:0 16px;
+  }
+
+  .links{
+    gap:14px;
+  }
+
+  .chips{
+    display:flex;
+    overflow-x:auto;
+    padding-bottom:6px;
+  }
+
+  .chips button{
+    flex:0 0 145px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  .news-track,
+  .country-track{
+    animation:none;
+  }
+}
+  .country-track{
+  width:max-content;
+  display:flex;
+  gap:24px;
+  white-space:nowrap;
+  animation:countries 60s linear infinite;
+  transform:translateX(0);
+}
+
+.country-track span{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.country-track img{
+  width:16px;
+  height:11px;
+  object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <a class="brand" href="#">
+    <div class="brand-mark">✦</div>
+
+    <div class="brand-name">
+      <span>5thelement.AI</span>
+    </div>
+  </a>
+
+  <div class="actions">
+    <a class="login" href="#">Login</a>
+
+    <button class="menu" aria-label="Menu">
+      ☰
+    </button>
+  </div>
+
+</header>
+
+<section class="stream">
+
+  <div class="news">
+
+    <span class="news-label">
+      ⚡  NEW GUIDANCE
+    </span>
+
+    <div class="viewport">
+
+      <div class="news-track">
+        <span>EU AI Act regulatory intelligence</span>
+        <span class="dot"></span>
+
+        <span>High-risk obligations guidance updated</span>
+        <span class="dot"></span>
+
+        <span>National authority developments</span>
+        <span class="dot"></span>
+
+        <span>Article 50 transparency requirements</span>
+        <span class="dot"></span>
+
+        <span>EU AI Act regulatory intelligence</span>
+      </div>
+
+    </div>
+
+  </div>
+<div class="countries">
+
+  <div class="country-track">
+
+    <span><img src="assets/flags/at.svg"> AT</span>
+    <span><img src="assets/flags/be.svg"> BE</span>
+    <span><img src="assets/flags/bg.svg"> BG</span>
+    <span><img src="assets/flags/hr.svg"> HR</span>
+    <span><img src="assets/flags/cy.svg"> CY</span>
+    <span><img src="assets/flags/cz.svg"> CZ</span>
+    <span><img src="assets/flags/dk.svg"> DK</span>
+    <span><img src="assets/flags/ee.svg"> EE</span>
+    <span><img src="assets/flags/fi.svg"> FI</span>
+    <span><img src="assets/flags/fr.svg"> FR</span>
+    <span><img src="assets/flags/de.svg"> DE</span>
+    <span><img src="assets/flags/gr.svg"> GR</span>
+    <span><img src="assets/flags/hu.svg"> HU</span>
+    <span><img src="assets/flags/ie.svg"> IE</span>
+    <span><img src="assets/flags/it.svg"> IT</span>
+    <span><img src="assets/flags/lv.svg"> LV</span>
+    <span><img src="assets/flags/lt.svg"> LT</span>
+    <span><img src="assets/flags/lu.svg"> LU</span>
+    <span><img src="assets/flags/mt.svg"> MT</span>
+    <span><img src="assets/flags/nl.svg"> NL</span>
+    <span><img src="assets/flags/pl.svg"> PL</span>
+    <span><img src="assets/flags/pt.svg"> PT</span>
+    <span><img src="assets/flags/ro.svg"> RO</span>
+    <span><img src="assets/flags/sk.svg"> SK</span>
+    <span><img src="assets/flags/si.svg"> SI</span>
+    <span><img src="assets/flags/es.svg"> ES</span>
+    <span><img src="assets/flags/se.svg"> SE</span>
+
+  </div>
+
+</div>
+</section>
+
+<main>
+
+  <section class="hero">
+
+    <div class="hero-title">
+      EU AI ACT READY™
+    </div>
+
+    <div class="hero-subtitle">
+      Ask &amp; GENERATOR™
+    </div>
+
+  </section>
+
+  <section class="Ask-wrap">
+
+    <div class="Ask-shell">
+
+      <span class="Ask-icon">
+        ⌕
+      </span>
+
+      <input
+        id="question"
+        type="text"
+        placeholder="Ask anything about the EU AI Act..."
+        autocomplete="off"
+      >
+
+      <button id="ask">
+        ASK ⚡
+      </button>
+
+    </div>
+
+    <div class="links">
+
+  <a href="demo.html">
+    <strong>🎯 DEMO</strong>
+  </a>
+
+  <a href="your-firm.html">
+    <strong>💻 YOUR FIRM</strong>
+  </a>
+
+</div>
+
+  </section>
+
+  <section class="popular">
+
+    <h2>
+      ↗ Popular Askes
+    </h2>
+
+    <div class="chips">
+
+      <button
+        data-q="What does Article 4 require for AI literacy?"
+      >
+        Article 4<br>
+        AI Literacy
+      </button>
+
+      <button
+        data-q="How do I classify a high-risk AI system?"
+      >
+        High-Risk<br>
+        Classification
+      </button>
+   
+     <button
+  data-q="What are Article 53 GPAI provider obligations under the EU AI Act?">
+  GPAI<br>
+  Obligations
+</button>
+
+      
+      <button
+        data-q="What does Article 50 require?"
+      >
+        Article 50<br>
+        Transparency
+      </button>
+
+      <button
+        data-q="How should I create an AI inventory?"
+      >
+        AI<br>
+        Inventory
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="answers">
+
+    <h2>
+      EU AI Act Answers
+    </h2>
+
+    <div class="redline"></div>
+
+    <div
+      id="answer"
+      class="answer-box"
+    >
+      Your answer appears here...
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <span>
+    © 2026 5thelement.AI
+  </span>
+
+  <span class="dot"></span>
+
+  <span>
+    EU AI Act Ready™
+  </span>
+
+  <span class="dot"></span>
+
+  <span>
+    Ask &amp; Generator™
+  </span>
+
+</footer>
+<script>
+
+const API =
+"https://eu-ai-act-search-api.aipath512.workers.dev/search?q=";
+const questionInput =
+document.getElementById("question");
+
+const answerBox =
+document.getElementById("answer");
+
+const askButton =
+document.getElementById("ask");
+
+
+async function ask(){
+
+const question =
+questionInput.value.trim();
+
+
+if(!question){
+
+answerBox.textContent =
+"Please ask a question first.";
+
+return;
+
+}
+
+
+askButton.disabled=true;
+askButton.textContent="ASKING...";
+
+
+try{
+
+const response =
+await fetch(
+API + encodeURIComponent(question)
+);
+
+
+const data =
+await response.json();
+
+
+const results =
+data.results || [];
+
+
+answerBox.innerHTML =
+results.map((x)=>
+
+`<div>
+${x.snippet || ""}
+</div>`
+
+).join("")
+
+||
+
+"No answer found.";
+
+
+}
+
+catch(error){
+
+answerBox.textContent =
+error.message;
+
+}
+
+
+askButton.disabled=false;
+askButton.textContent="ASK ⚡";
+
+}
+
+
+
+askButton.addEventListener(
+"click",
+ask
+);
+
+
+questionInput.addEventListener(
+"keydown",
+(e)=>{
+
+if(e.key==="Enter"){
+ask();
+}
+
+});
+document.querySelectorAll(".chips button").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    questionInput.value = button.dataset.q;
+
+    ask();
+
+  });
+
+});
+
+</script>
+
+  
+
+</body>
+</html>
