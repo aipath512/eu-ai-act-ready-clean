@@ -1,0 +1,20 @@
+{
+  "system": "RRVI",
+  "version": "1.0.2",
+  "state": "00001H",
+  "entities": [
+    "Organization",
+    "AI_System",
+    "Module",
+    "Document",
+    "Evidence",
+    "Risk",
+    "Incident"
+  ],
+  "relationships": [
+    "Module contains Document",
+    "Document supports Evidence",
+    "AI_System generates Incident",
+    "Organization operates AI_System"
+  ]
+}

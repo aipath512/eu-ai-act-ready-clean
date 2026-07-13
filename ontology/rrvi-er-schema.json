@@ -1,0 +1,178 @@
+{
+  "system": "RRVI",
+  "version": "1.0.2",
+  "model_type": "entity_relationship_schema",
+
+  "entities": {
+    "Organization": {
+      "type": "legal_entity",
+      "relationships": {
+        "operates": {
+          "target": "RRVI_System",
+          "cardinality": "1:1",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "RRVI_System": {
+      "type": "compliance_system",
+      "relationships": {
+        "contains": {
+          "target": "Module",
+          "cardinality": "1:10",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "Module": {
+      "type": "compliance_domain",
+      "relationships": {
+        "contains": {
+          "target": "Document",
+          "cardinality": "1:7",
+          "bidirectional": true
+        },
+        "maps_to": {
+          "target": "Regulation",
+          "cardinality": "n:1",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "Document": {
+      "type": "controlled_document",
+      "relationships": {
+        "is_of_type": {
+          "target": "Document_Type",
+          "cardinality": "1:1",
+          "bidirectional": true
+        },
+        "supported_by": {
+          "target": "Evidence",
+          "cardinality": "1:n",
+          "bidirectional": true
+        },
+        "belongs_to": {
+          "target": "Module",
+          "cardinality": "n:1",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "Document_Type": {
+      "type": "enum",
+      "values": [
+        "Policy",
+        "Procedure",
+        "Work_Instruction",
+        "Checklist",
+        "Register",
+        "Evidence",
+        "Declaration"
+      ]
+    },
+
+    "AI_System": {
+      "type": "ai_system",
+      "relationships": {
+        "implements": {
+          "target": "AI_Use_Case",
+          "cardinality": "1:n",
+          "bidirectional": true
+        },
+        "controlled_by": {
+          "target": "Human_Oversight",
+          "cardinality": "1:n",
+          "bidirectional": true
+        },
+        "generates": {
+          "target": "Incident",
+          "cardinality": "1:n",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "AI_Use_Case": {
+      "type": "use_case",
+      "relationships": {
+        "classified_as": {
+          "target": "Risk_Category",
+          "cardinality": "n:1",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "Risk_Category": {
+      "type": "classification",
+      "values": [
+        "minimal",
+        "limited",
+        "high-risk",
+        "prohibited"
+      ]
+    },
+
+    "Human_Oversight": {
+      "type": "governance_control"
+    },
+
+    "Evidence": {
+      "type": "proof_object",
+      "relationships": {
+        "supports": {
+          "target": "Document",
+          "cardinality": "n:1",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "Register": {
+      "type": "operational_record",
+      "relationships": {
+        "records": {
+          "target": "Evidence",
+          "cardinality": "1:n",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "Incident": {
+      "type": "event",
+      "relationships": {
+        "originates_from": {
+          "target": "AI_System",
+          "cardinality": "n:1",
+          "bidirectional": true
+        }
+      }
+    },
+
+    "Regulation": {
+      "type": "legal_framework",
+      "values": [
+        "EU AI Act 2024/1689",
+        "GDPR",
+        "NIS2",
+        "ISO 27001",
+        "ISO 42001"
+      ]
+    }
+  },
+
+  "global_relationship_rules": [
+    "Every Document must belong to exactly one Module",
+    "Every Evidence must reference at least one Document",
+    "Every AI_System must have at least one Use Case",
+    "Every Use Case must map to one Risk Category",
+    "All relationships are bidirectional for traceability",
+    "No orphan entities allowed"
+  ]
+}
