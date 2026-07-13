@@ -512,8 +512,47 @@ footer{
   object-fit:cover;
 }
 </style>
-</head>
 
+  
+</head>
+<style>
+    /* ... tot CSS-ul tău de la :root până la .country-track ... */
+    .country-track img{
+      width:16px;
+      height:11px;
+      object-fit:cover;
+    }
+  </style>
+
+  <!-- Aici începe zona de date structurate -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://eu-ai-act-ready.eu/",
+        "name": "EU AI Act Ready",
+        "description": "Infrastructură AI-FIRST pentru conformitate și guvernanță în ecosistemul digital european.",
+        "inLanguage": "en-EU",
+        "publisher": { "@id": "#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "#organization",
+        "name": "EU AI Act Ready™",
+        "url": "https://eu-ai-act-ready.eu/",
+        "foundingDate": "2026",
+        "keywords": [
+          "EU AI Act", "AI Compliance", "AI Governance", 
+          "Regulatory Intelligence", "GPAI Obligations", "AI Inventory"
+        ]
+      }
+    ]
+  }
+  </script>
+
+</head>
 <body>
 
 <header class="site-header">
