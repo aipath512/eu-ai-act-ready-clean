@@ -12,7 +12,7 @@
 | Title | Prohibited Practices Register |
 | Repository | RRVI™ |
 | Module | 04 – Prohibited Practices |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Register |
 
@@ -22,7 +22,7 @@
 
 This register records the assessment of every Artificial Intelligence system against the prohibited AI practices defined by Regulation (EU) 2024/1689 (EU AI Act).
 
-It provides objective evidence that AiVenture SRL has evaluated each AI system before operational deployment.
+It provides objective evidence that {{COMPANY_NAME}} has evaluated each AI system before operational deployment.
 
 ---
 
@@ -30,22 +30,22 @@ It provides objective evidence that AiVenture SRL has evaluated each AI system b
 
 | AI ID | AI System | Assessment Result | Prohibited Practice Identified | Justification | Assessment Date | Reviewer | Status |
 |-------|-----------|-------------------|-------------------------------|---------------|-----------------|----------|--------|
-| AI-001 | ChatGPT | PASS | No | Used for documentation and engineering with mandatory human oversight | 2026-07-02 | Dan Ionescu | Approved |
-| AI-002 | Gemini | PASS | No | Used for research and technical validation | 2026-07-02 | Dan Ionescu | Approved |
-| AI-003 | Claude | PASS | No | Used for technical writing and architecture | 2026-07-02 | Dan Ionescu | Approved |
-| AI-004 | DeepSeek | PASS | No | Used as software engineering assistant | 2026-07-02 | Dan Ionescu | Approved |
-| AI-005 | Perplexity | PASS | No | Used for information retrieval | 2026-07-02 | Dan Ionescu | Approved |
-| AI-006 | Cloudflare Workers AI | PASS | No | Planned infrastructure component | 2026-07-02 | Dan Ionescu | Planned |
-| AI-007 | Cloudflare Vectorize | PASS | No | Semantic retrieval platform | 2026-07-02 | Dan Ionescu | POC |
-| AI-008 | GitHub Copilot | PASS | No | Developer assistance only | 2026-07-02 | Dan Ionescu | Optional |
-| AI-009 | EU-112™ AI Governance Agent | Pending | TBD | Product under design | 2026-07-02 | Dan Ionescu | Design |
-| AI-010 | Economic Twins™ Engine | Pending | TBD | Product under design | 2026-07-02 | Dan Ionescu | Design |
-| AI-011 | Business Discovery Engine™ | Pending | TBD | Product under design | 2026-07-02 | Dan Ionescu | Design |
-| AI-012 | Business Change Intelligence™ | Pending | TBD | Product under design | 2026-07-02 | Dan Ionescu | Design |
-| AI-013 | AI Market Intelligence Agent™ | Pending | TBD | Product under design | 2026-07-02 | Dan Ionescu | Design |
-| AI-014 | EU AI Act Intelligence Agent™ | Pending | TBD | Product under design | 2026-07-02 | Dan Ionescu | Design |
-| AI-015 | Remote Inspection Agent™ | Pending | TBD | Product under design | 2026-07-02 | Dan Ionescu | Concept |
-| AI-016 | Compliance Documentation Generator™ | Pending | TBD | Product under design | 2026-07-02 | Dan Ionescu | Concept |
+| AI-001 | ChatGPT | PASS | No | Used for documentation and engineering with mandatory human oversight | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
+| AI-002 | Gemini | PASS | No | Used for research and technical validation | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
+| AI-003 | Claude | PASS | No | Used for technical writing and architecture | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
+| AI-004 | DeepSeek | PASS | No | Used as software engineering assistant | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
+| AI-005 | Perplexity | PASS | No | Used for information retrieval | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
+| AI-006 | Cloudflare Workers AI | PASS | No | Planned infrastructure component | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Planned |
+| AI-007 | Cloudflare Vectorize | PASS | No | Semantic retrieval platform | 2026-07-02 | {{RESPONSIBLE_PERSON}} | POC |
+| AI-008 | GitHub Copilot | PASS | No | Developer assistance only | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Optional |
+| AI-009 | EU-112™ AI Governance Agent | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
+| AI-010 | Economic Twins™ Engine | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
+| AI-011 | Business Discovery Engine™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
+| AI-012 | Business Change Intelligence™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
+| AI-013 | AI Market Intelligence Agent™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
+| AI-014 | EU AI Act Intelligence Agent™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
+| AI-015 | Remote Inspection Agent™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Concept |
+| AI-016 | Compliance Documentation Generator™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Concept |
 
 ---
 
@@ -78,8 +78,8 @@ This register shall be reviewed whenever:
 | Field | Value |
 |--------|-------|
 | Register Owner | AI Governance Owner |
-| Custodian | Dan Ionescu |
-| Company | AiVenture SRL |
+| Custodian | {{RESPONSIBLE_PERSON}} |
+| Company | {{COMPANY_NAME}} |
 | Review Frequency | Annual or upon significant change |
 
 ---
@@ -98,11 +98,11 @@ This register shall be reviewed whenever:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

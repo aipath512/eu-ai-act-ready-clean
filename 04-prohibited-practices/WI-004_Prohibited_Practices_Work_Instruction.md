@@ -12,7 +12,7 @@
 | Title | Prohibited AI Practices Work Instruction |
 | Repository | RRVI™ |
 | Module | 04 – Prohibited AI Practices |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -194,11 +194,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

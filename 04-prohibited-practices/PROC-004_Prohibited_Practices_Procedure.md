@@ -12,7 +12,7 @@
 | Title | Prohibited AI Practices Procedure |
 | Repository | RRVI™ |
 | Module | 04 – Prohibited AI Practices |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This procedure defines the process used by AiVenture SRL to identify, assess, document and prevent the use of Artificial Intelligence practices prohibited under Regulation (EU) 2024/1689 (EU AI Act).
+This procedure defines the process used by {{COMPANY_NAME}} to identify, assess, document and prevent the use of Artificial Intelligence practices prohibited under Regulation (EU) 2024/1689 (EU AI Act).
 
 The procedure ensures that prohibited AI practices are identified before any AI system is deployed or used.
 
@@ -183,11 +183,11 @@ This procedure produces:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

@@ -12,7 +12,7 @@
 | Title | Prohibited Practices Evidence |
 | Repository | RRVI™ |
 | Module | 04 – Prohibited Practices |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -22,7 +22,7 @@
 
 This document records the objective evidence supporting the assessment of Artificial Intelligence systems against the prohibited AI practices defined by Regulation (EU) 2024/1689 (EU AI Act).
 
-The objective is to demonstrate that AiVenture SRL performs documented assessments before any AI system is placed into operational use.
+The objective is to demonstrate that {{COMPANY_NAME}} performs documented assessments before any AI system is placed into operational use.
 
 ---
 
@@ -117,11 +117,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

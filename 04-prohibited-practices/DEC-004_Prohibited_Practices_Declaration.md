@@ -12,7 +12,7 @@
 | Title | Prohibited Practices Declaration |
 | Repository | RRVI™ |
 | Module | 04 – Prohibited Practices |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,13 +20,13 @@
 
 # 1. Purpose
 
-This declaration confirms that AiVenture SRL has established and implemented a documented process to identify, assess and prevent the use of Artificial Intelligence systems involving prohibited AI practices under Regulation (EU) 2024/1689 (EU AI Act).
+This declaration confirms that {{COMPANY_NAME}} has established and implemented a documented process to identify, assess and prevent the use of Artificial Intelligence systems involving prohibited AI practices under Regulation (EU) 2024/1689 (EU AI Act).
 
 ---
 
 # 2. Declaration
 
-AiVenture SRL declares that:
+{{COMPANY_NAME}} declares that:
 
 - all AI systems are assessed for prohibited AI practices before operational deployment;
 - prohibited AI practices are not intentionally developed, acquired, deployed or used;
@@ -59,7 +59,7 @@ This declaration applies to:
 - proof-of-concept AI systems;
 - production AI systems;
 - future AI deployments;
-- contractors and consultants acting on behalf of AiVenture SRL.
+- contractors and consultants acting on behalf of {{COMPANY_NAME}}.
 
 ---
 
@@ -89,7 +89,7 @@ The Prohibited Practices assessment shall be reviewed:
 
 # 7. Declaration
 
-I declare that, to the best of my knowledge, AiVenture SRL does not intentionally develop, deploy or operate Artificial Intelligence systems involving prohibited AI practices as defined by Regulation (EU) 2024/1689 (EU AI Act).
+I declare that, to the best of my knowledge, {{COMPANY_NAME}} does not intentionally develop, deploy or operate Artificial Intelligence systems involving prohibited AI practices as defined by Regulation (EU) 2024/1689 (EU AI Act).
 
 The organization commits to maintaining continuous compliance through documented assessments, periodic reviews and objective evidence.
 
@@ -99,9 +99,9 @@ The organization commits to maintaining continuous compliance through documented
 
 | Field | Value |
 |--------|-------|
-| Approved By | Dan Ionescu |
+| Approved By | {{RESPONSIBLE_PERSON}} |
 | Position | Managing Director |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Approval Date | 2026-07-02 |
 | Status | Approved |
 
