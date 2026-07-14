@@ -12,7 +12,7 @@
 | Title | AI System Inventory Procedure |
 | Repository | RRVI™ |
 | Module | 01 – AI System Inventory |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This procedure describes the process for creating, maintaining, reviewing and updating the AI System Inventory of AiVenture SRL.
+This procedure describes the process for creating, maintaining, reviewing and updating the AI System Inventory of {{COMPANY_NAME}}.
 
 The procedure ensures that every Artificial Intelligence system used, developed, integrated or deployed by the company is properly identified and documented.
 
@@ -157,11 +157,11 @@ This procedure produces:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

@@ -12,7 +12,7 @@
 | Title | AI System Inventory Work Instruction |
 | Repository | RRVI™ |
 | Module | 01 – AI System Inventory |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -31,7 +31,7 @@ It provides a standardized method to ensure that every AI system is documented c
 Before creating a new inventory record, verify that:
 
 - the AI system exists;
-- the system is used or planned for use by AiVenture SRL;
+- the system is used or planned for use by {{COMPANY_NAME}};
 - sufficient information is available to identify the system.
 
 ---
@@ -183,11 +183,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

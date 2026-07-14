@@ -12,7 +12,7 @@
 | Title | AI System Inventory Policy |
 | Repository | RRVI™ |
 | Module | 01 – AI System Inventory |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-The purpose of this policy is to establish the mandatory requirements for identifying, documenting, maintaining and reviewing all Artificial Intelligence systems used, developed, deployed or integrated by AiVenture SRL.
+The purpose of this policy is to establish the mandatory requirements for identifying, documenting, maintaining and reviewing all Artificial Intelligence systems used, developed, deployed or integrated by {{COMPANY_NAME}}.
 
 The AI System Inventory serves as the authoritative source of information regarding AI systems within the organization and supports compliance with Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -36,13 +36,13 @@ This policy applies to:
 - AI developers;
 - AI deployers;
 - AI providers;
-- third-party AI services used by AiVenture SRL.
+- third-party AI services used by {{COMPANY_NAME}}.
 
 ---
 
 # 3. Policy Statements
 
-AiVenture SRL shall maintain a complete AI System Inventory.
+{{COMPANY_NAME}} shall maintain a complete AI System Inventory.
 
 Every AI system shall be registered before operational use.
 
@@ -113,11 +113,11 @@ Failure to maintain an accurate inventory may affect regulatory compliance and i
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

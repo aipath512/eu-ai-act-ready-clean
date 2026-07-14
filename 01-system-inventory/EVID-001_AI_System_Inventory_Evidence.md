@@ -12,7 +12,7 @@
 | Title | AI System Inventory Evidence |
 | Repository | RRVI™ |
 | Module | 01 – AI System Inventory |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This document identifies the objective evidence supporting the AI System Inventory maintained by AiVenture SRL.
+This document identifies the objective evidence supporting the AI System Inventory maintained by {{COMPANY_NAME}}.
 
 The purpose of this evidence register is to demonstrate that every AI system recorded in the inventory is supported by verifiable documentation.
 
@@ -116,11 +116,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

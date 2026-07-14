@@ -12,7 +12,7 @@
 | Title | AI System Inventory Declaration |
 | Repository | RRVI™ |
 | Module | 01 – AI System Inventory |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This declaration confirms that AiVenture SRL has established, maintains and periodically reviews an AI System Inventory as part of its AI governance framework.
+This declaration confirms that {{COMPANY_NAME}} has established, maintains and periodically reviews an AI System Inventory as part of its AI governance framework.
 
 The declaration demonstrates management commitment to maintaining an accurate inventory of Artificial Intelligence systems used, developed, integrated or deployed by the company.
 
@@ -28,7 +28,7 @@ The declaration demonstrates management commitment to maintaining an accurate in
 
 # 2. Declaration
 
-AiVenture SRL declares that:
+{{COMPANY_NAME}} declares that:
 
 - an AI System Inventory has been established;
 - every known AI system has been identified;
@@ -59,7 +59,7 @@ Management commits to:
 This declaration applies to all Artificial Intelligence systems:
 
 - used internally;
-- developed by AiVenture SRL;
+- developed by {{COMPANY_NAME}};
 - integrated into products;
 - evaluated during proof-of-concept activities;
 - planned for future deployment.
@@ -91,7 +91,7 @@ The AI System Inventory shall be reviewed:
 
 # 7. Declaration
 
-I declare that, to the best of my knowledge, the AI System Inventory maintained by AiVenture SRL accurately reflects the AI systems known to the organization at the date of approval.
+I declare that, to the best of my knowledge, the AI System Inventory maintained by {{COMPANY_NAME}} accurately reflects the AI systems known to the organization at the date of approval.
 
 Future changes shall be managed in accordance with the AI System Inventory Procedure.
 
@@ -101,9 +101,9 @@ Future changes shall be managed in accordance with the AI System Inventory Proce
 
 | Field | Value |
 |--------|-------|
-| Approved By | Dan Ionescu |
+| Approved By | {{RESPONSIBLE_PERSON}} |
 | Position | Managing Director |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Approval Date | 2026-07-02 |
 | Status | Approved |
 
