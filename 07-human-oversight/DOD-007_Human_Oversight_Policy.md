@@ -12,7 +12,7 @@
 | Title | Human Oversight Policy |
 | Repository | RRVI™ |
 | Module | 07 – Human Oversight |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-The purpose of this policy is to establish the principles and requirements for Human Oversight over Artificial Intelligence systems used, developed, deployed or integrated by AiVenture SRL.
+The purpose of this policy is to establish the principles and requirements for Human Oversight over Artificial Intelligence systems used, developed, deployed or integrated by {{COMPANY_NAME}}.
 
 This policy supports compliance with Regulation (EU) 2024/1689 (EU AI Act) by ensuring that appropriately qualified human personnel remain responsible for decisions supported or influenced by AI systems.
 
@@ -41,7 +41,7 @@ This policy applies to:
 
 # 3. Policy Statement
 
-AiVenture SRL shall ensure that every AI system operates under appropriate Human Oversight.
+{{COMPANY_NAME}} shall ensure that every AI system operates under appropriate Human Oversight.
 
 Artificial Intelligence shall support human decision-making and shall not replace human accountability.
 
@@ -64,7 +64,7 @@ Human Oversight shall ensure that:
 
 # 5. Human Oversight Objectives
 
-AiVenture SRL shall ensure:
+{{COMPANY_NAME}} shall ensure:
 
 - qualified personnel supervise AI systems;
 - responsibilities are clearly assigned;
@@ -158,11 +158,11 @@ Human Oversight shall be implemented proportionately to the intended purpose, ri
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

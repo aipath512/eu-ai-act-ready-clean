@@ -12,7 +12,7 @@
 | Title | Human Oversight Declaration |
 | Repository | RRVI™ |
 | Module | 07 – Human Oversight |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This declaration confirms that AiVenture SRL has established, implemented and maintains Human Oversight measures for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+This declaration confirms that {{COMPANY_NAME}} has established, implemented and maintains Human Oversight measures for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
 The declaration demonstrates management commitment to ensuring that Artificial Intelligence supports, but does not replace, responsible human decision-making.
 
@@ -28,7 +28,7 @@ The declaration demonstrates management commitment to ensuring that Artificial I
 
 # 2. Declaration
 
-AiVenture SRL declares that:
+{{COMPANY_NAME}} declares that:
 
 - Human Oversight has been implemented for all AI systems recorded in the AI System Inventory;
 - qualified personnel are assigned to supervise AI-assisted activities;
@@ -61,7 +61,7 @@ This declaration applies to:
 - proof-of-concept AI systems;
 - production AI systems;
 - future AI developments;
-- contractors and consultants using AI on behalf of AiVenture SRL.
+- contractors and consultants using AI on behalf of {{COMPANY_NAME}}.
 
 ---
 
@@ -94,7 +94,7 @@ Human Oversight arrangements shall be reviewed:
 
 # 7. Declaration
 
-I declare that, to the best of my knowledge, AiVenture SRL has implemented appropriate Human Oversight measures for the Artificial Intelligence systems currently identified in the AI System Inventory.
+I declare that, to the best of my knowledge, {{COMPANY_NAME}} has implemented appropriate Human Oversight measures for the Artificial Intelligence systems currently identified in the AI System Inventory.
 
 The organization commits to maintaining effective Human Oversight throughout the lifecycle of each AI system and to updating oversight arrangements whenever technical, operational or regulatory changes occur.
 
@@ -104,9 +104,9 @@ The organization commits to maintaining effective Human Oversight throughout the
 
 | Field | Value |
 |--------|-------|
-| Approved By | Dan Ionescu |
+| Approved By | {{RESPONSIBLE_PERSON}} |
 | Position | Managing Director |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Approval Date | 2026-07-02 |
 | Status | Approved |
 

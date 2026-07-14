@@ -12,7 +12,7 @@
 | Title | Human Oversight Work Instruction |
 | Repository | RRVI™ |
 | Module | 07 – Human Oversight |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This Work Instruction provides detailed guidance for implementing and documenting Human Oversight over Artificial Intelligence systems used by AiVenture SRL.
+This Work Instruction provides detailed guidance for implementing and documenting Human Oversight over Artificial Intelligence systems used by {{COMPANY_NAME}}.
 
 Its objective is to ensure that AI systems remain under appropriate human supervision throughout their operational lifecycle in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -203,11 +203,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

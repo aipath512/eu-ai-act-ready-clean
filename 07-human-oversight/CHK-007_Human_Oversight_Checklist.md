@@ -12,7 +12,7 @@
 | Title | Human Oversight Checklist |
 | Repository | RRVI™ |
 | Module | 07 – Human Oversight |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -107,11 +107,11 @@ _____________________________________________________
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

@@ -12,7 +12,7 @@
 | Title | Human Oversight Procedure |
 | Repository | RRVI™ |
 | Module | 07 – Human Oversight |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This procedure defines how AiVenture SRL establishes, performs, monitors and documents Human Oversight for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+This procedure defines how {{COMPANY_NAME}} establishes, performs, monitors and documents Human Oversight for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
 The procedure ensures that AI supports human decision-making while responsibility and accountability remain with designated human personnel.
 
@@ -192,11 +192,11 @@ This procedure produces:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

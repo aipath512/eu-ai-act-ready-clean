@@ -12,7 +12,7 @@
 | Title | Human Oversight Register |
 | Repository | RRVI™ |
 | Module | 07 – Human Oversight |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Register |
 
@@ -20,7 +20,7 @@
 
 # Purpose
 
-This register records the Human Oversight arrangements implemented for every Artificial Intelligence system used by AiVenture SRL.
+This register records the Human Oversight arrangements implemented for every Artificial Intelligence system used by {{COMPANY_NAME}}.
 
 The register demonstrates that appropriate human supervision is assigned, documented and maintained in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -30,22 +30,22 @@ The register demonstrates that appropriate human supervision is assigned, docume
 
 | AI ID | AI System | Human Operator | Oversight Level | Override Available | Review Frequency | Status |
 |-------|-----------|----------------|-----------------|-------------------|------------------|--------|
-| AI-001 | ChatGPT | Dan Ionescu | High | Yes | Before each significant use | Active |
-| AI-002 | Gemini | Dan Ionescu | High | Yes | Before each significant use | Active |
-| AI-003 | Claude | Dan Ionescu | High | Yes | Before each significant use | Active |
-| AI-004 | DeepSeek | Dan Ionescu | High | Yes | Before each significant use | Active |
-| AI-005 | Perplexity | Dan Ionescu | High | Yes | Before each significant use | Active |
-| AI-006 | Cloudflare Workers AI | Dan Ionescu | High | Yes | On deployment | Planned |
-| AI-007 | Cloudflare Vectorize | Dan Ionescu | High | Yes | On deployment | POC |
-| AI-008 | GitHub Copilot | Dan Ionescu | High | Yes | Before code integration | Active |
-| AI-009 | EU-112™ AI Governance Agent | Dan Ionescu | High | Yes | Design Review | Design |
-| AI-010 | Economic Twins™ Engine | Dan Ionescu | High | Yes | Design Review | Design |
-| AI-011 | Business Discovery Engine™ | Dan Ionescu | High | Yes | Design Review | Design |
-| AI-012 | Business Change Intelligence™ | Dan Ionescu | High | Yes | Design Review | Design |
-| AI-013 | AI Market Intelligence Agent™ | Dan Ionescu | High | Yes | Design Review | Design |
-| AI-014 | EU AI Act Intelligence Agent™ | Dan Ionescu | High | Yes | Design Review | Design |
-| AI-015 | Remote Inspection Agent™ | Dan Ionescu | High | Yes | Design Review | Concept |
-| AI-016 | Compliance Documentation Generator™ | Dan Ionescu | High | Yes | Design Review | Concept |
+| AI-001 | ChatGPT | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
+| AI-002 | Gemini | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
+| AI-003 | Claude | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
+| AI-004 | DeepSeek | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
+| AI-005 | Perplexity | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
+| AI-006 | Cloudflare Workers AI | {{RESPONSIBLE_PERSON}} | High | Yes | On deployment | Planned |
+| AI-007 | Cloudflare Vectorize | {{RESPONSIBLE_PERSON}} | High | Yes | On deployment | POC |
+| AI-008 | GitHub Copilot | {{RESPONSIBLE_PERSON}} | High | Yes | Before code integration | Active |
+| AI-009 | EU-112™ AI Governance Agent | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
+| AI-010 | Economic Twins™ Engine | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
+| AI-011 | Business Discovery Engine™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
+| AI-012 | Business Change Intelligence™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
+| AI-013 | AI Market Intelligence Agent™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
+| AI-014 | EU AI Act Intelligence Agent™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
+| AI-015 | Remote Inspection Agent™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Concept |
+| AI-016 | Compliance Documentation Generator™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Concept |
 
 ---
 
@@ -79,8 +79,8 @@ This register shall be updated whenever:
 | Field | Value |
 |--------|-------|
 | Register Owner | AI Governance Owner |
-| Custodian | Dan Ionescu |
-| Company | AiVenture SRL |
+| Custodian | {{RESPONSIBLE_PERSON}} |
+| Company | {{COMPANY_NAME}} |
 | Review Frequency | Annual or upon significant change |
 
 ---
@@ -102,11 +102,11 @@ This register shall be updated whenever:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

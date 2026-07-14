@@ -12,7 +12,7 @@
 | Title | Human Oversight Evidence |
 | Repository | RRVI™ |
 | Module | 07 – Human Oversight |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This document records the objective evidence supporting the Human Oversight measures implemented for Artificial Intelligence systems used by AiVenture SRL.
+This document records the objective evidence supporting the Human Oversight measures implemented for Artificial Intelligence systems used by {{COMPANY_NAME}}.
 
 The evidence demonstrates that Human Oversight is effectively implemented, documented and maintained in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -120,11 +120,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 
