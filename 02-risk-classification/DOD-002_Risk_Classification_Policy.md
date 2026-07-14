@@ -12,7 +12,7 @@
 | Title | Risk Classification Policy |
 | Repository | RRVI™ |
 | Module | 02 – Risk Classification |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -22,7 +22,7 @@
 
 The purpose of this policy is to establish the principles, responsibilities and requirements for the classification of Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
-This policy ensures that every AI system used, developed, integrated or deployed by AiVenture SRL is consistently assessed, classified and documented according to its regulatory risk category.
+This policy ensures that every AI system used, developed, integrated or deployed by {{COMPANY_NAME}} is consistently assessed, classified and documented according to its regulatory risk category.
 
 ---
 
@@ -41,7 +41,7 @@ This policy applies to:
 
 # 3. Policy Statements
 
-AiVenture SRL shall classify every AI system before operational deployment.
+{{COMPANY_NAME}} shall classify every AI system before operational deployment.
 
 Risk classification shall be based on:
 
@@ -154,11 +154,11 @@ Failure to classify AI systems appropriately may result in regulatory non-compli
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

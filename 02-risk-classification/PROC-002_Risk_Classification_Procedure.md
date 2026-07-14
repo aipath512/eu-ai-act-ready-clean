@@ -12,7 +12,7 @@
 | Title | Risk Classification Procedure |
 | Repository | RRVI™ |
 | Module | 02 – Risk Classification |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This procedure defines the process used by AiVenture SRL to classify Artificial Intelligence systems according to Regulation (EU) 2024/1689 (EU AI Act).
+This procedure defines the process used by {{COMPANY_NAME}} to classify Artificial Intelligence systems according to Regulation (EU) 2024/1689 (EU AI Act).
 
 The objective is to ensure that every AI system receives a documented and repeatable risk classification before operational deployment.
 
@@ -177,11 +177,11 @@ This procedure produces:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

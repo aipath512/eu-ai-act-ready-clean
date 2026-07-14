@@ -12,7 +12,7 @@
 | Title | Risk Classification Evidence |
 | Repository | RRVI™ |
 | Module | 02 – Risk Classification |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This document records the objective evidence supporting the risk classification of Artificial Intelligence systems maintained by AiVenture SRL.
+This document records the objective evidence supporting the risk classification of Artificial Intelligence systems maintained by {{COMPANY_NAME}}.
 
 Its purpose is to demonstrate that every classification decision is supported by documented facts, technical information and regulatory assessment.
 
@@ -115,11 +115,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

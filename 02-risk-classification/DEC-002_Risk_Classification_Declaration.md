@@ -12,7 +12,7 @@
 | Title | Risk Classification Declaration |
 | Repository | RRVI™ |
 | Module | 02 – Risk Classification |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This declaration confirms that AiVenture SRL has established and implemented a documented process for the classification of Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+This declaration confirms that {{COMPANY_NAME}} has established and implemented a documented process for the classification of Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
 The declaration demonstrates management commitment to ensuring that all AI systems are assessed, classified and periodically reviewed throughout their lifecycle.
 
@@ -28,7 +28,7 @@ The declaration demonstrates management commitment to ensuring that all AI syste
 
 # 2. Declaration
 
-AiVenture SRL declares that:
+{{COMPANY_NAME}} declares that:
 
 - every AI system recorded in the AI System Inventory is subject to a documented risk classification;
 - the classification process follows the Risk Classification Policy and Procedure;
@@ -92,7 +92,7 @@ Risk classifications shall be reviewed:
 
 # 7. Declaration
 
-I declare that, to the best of my knowledge, the Risk Classification Register maintained by AiVenture SRL accurately reflects the current regulatory classification of all identified AI systems.
+I declare that, to the best of my knowledge, the Risk Classification Register maintained by {{COMPANY_NAME}} accurately reflects the current regulatory classification of all identified AI systems.
 
 Future changes shall be managed in accordance with the Risk Classification Procedure.
 
@@ -102,9 +102,9 @@ Future changes shall be managed in accordance with the Risk Classification Proce
 
 | Field | Value |
 |--------|-------|
-| Approved By | Dan Ionescu |
+| Approved By | {{RESPONSIBLE_PERSON}} |
 | Position | Managing Director |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Approval Date | 2026-07-02 |
 | Status | Approved |
 

@@ -12,7 +12,7 @@
 | Title | Risk Classification Checklist |
 | Repository | RRVI™ |
 | Module | 02 – Risk Classification |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -107,11 +107,11 @@ _____________________________________________________
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

@@ -12,7 +12,7 @@
 | Title | Risk Classification Register |
 | Repository | RRVI™ |
 | Module | 02 – Risk Classification |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Register |
 
@@ -22,7 +22,7 @@
 
 This register records the official EU AI Act risk classification of every Artificial Intelligence system identified in the AI System Inventory.
 
-It provides the authoritative record of the regulatory classification, justification and approval status for each AI system operated, developed or deployed by AiVenture SRL.
+It provides the authoritative record of the regulatory classification, justification and approval status for each AI system operated, developed or deployed by {{COMPANY_NAME}}.
 
 ---
 
@@ -80,8 +80,8 @@ The classification shall be reviewed whenever:
 | Field | Value |
 |--------|-------|
 | Register Owner | AI Governance Owner |
-| Custodian | Dan Ionescu |
-| Company | AiVenture SRL |
+| Custodian | {{RESPONSIBLE_PERSON}} |
+| Company | {{COMPANY_NAME}} |
 | Review Frequency | Quarterly |
 
 ---
@@ -102,11 +102,11 @@ The classification shall be reviewed whenever:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

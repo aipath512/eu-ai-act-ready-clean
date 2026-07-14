@@ -12,7 +12,7 @@
 | Title | Risk Classification Work Instruction |
 | Repository | RRVI™ |
 | Module | 02 – Risk Classification |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This Work Instruction provides detailed operational guidance for performing the risk classification of Artificial Intelligence systems used, developed or deployed by AiVenture SRL.
+This Work Instruction provides detailed operational guidance for performing the risk classification of Artificial Intelligence systems used, developed or deployed by {{COMPANY_NAME}}.
 
 The instruction ensures that every AI system is classified consistently, objectively and in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -184,11 +184,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 
