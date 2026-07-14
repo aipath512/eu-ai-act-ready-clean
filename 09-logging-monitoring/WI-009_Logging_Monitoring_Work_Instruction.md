@@ -12,7 +12,7 @@
 | Title | Logging and Monitoring Work Instruction |
 | Repository | RRVI™ |
 | Module | 09 – Logging and Monitoring |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This Work Instruction provides detailed guidance for implementing, operating and reviewing logging and monitoring controls for Artificial Intelligence systems used by AiVenture SRL.
+This Work Instruction provides detailed guidance for implementing, operating and reviewing logging and monitoring controls for Artificial Intelligence systems used by {{COMPANY_NAME}}.
 
 The objective is to ensure that AI system activities remain traceable, auditable and continuously monitored throughout their operational lifecycle.
 
@@ -210,11 +210,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

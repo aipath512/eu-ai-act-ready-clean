@@ -12,7 +12,7 @@
 | Title | Logging and Monitoring Policy |
 | Repository | RRVI™ |
 | Module | 09 – Logging and Monitoring |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-The purpose of this policy is to establish the principles and requirements for logging and monitoring Artificial Intelligence systems used, developed or deployed by AiVenture SRL.
+The purpose of this policy is to establish the principles and requirements for logging and monitoring Artificial Intelligence systems used, developed or deployed by {{COMPANY_NAME}}.
 
 This policy supports compliance with Regulation (EU) 2024/1689 (EU AI Act) by ensuring that AI system activities are appropriately recorded, monitored and retained to support governance, incident investigation, continuous improvement and regulatory inspection.
 
@@ -41,7 +41,7 @@ This policy applies to:
 
 # 3. Policy Statement
 
-AiVenture SRL shall maintain appropriate logging and monitoring mechanisms for all AI systems proportionate to their intended purpose, operational context and associated risks.
+{{COMPANY_NAME}} shall maintain appropriate logging and monitoring mechanisms for all AI systems proportionate to their intended purpose, operational context and associated risks.
 
 Logs shall be protected against unauthorized modification and retained according to company retention requirements.
 
@@ -144,11 +144,11 @@ Logging and monitoring controls shall remain operational throughout the lifecycl
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

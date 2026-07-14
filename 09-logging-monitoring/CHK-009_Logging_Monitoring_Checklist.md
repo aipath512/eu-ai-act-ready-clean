@@ -12,7 +12,7 @@
 | Title | Logging and Monitoring Checklist |
 | Repository | RRVI™ |
 | Module | 09 – Logging and Monitoring |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -106,11 +106,11 @@ _____________________________________________________
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

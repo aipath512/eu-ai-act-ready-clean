@@ -12,7 +12,7 @@
 | Title | Logging and Monitoring Declaration |
 | Repository | RRVI™ |
 | Module | 09 – Logging and Monitoring |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This declaration confirms that AiVenture SRL has established, implemented and maintains Logging and Monitoring controls for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+This declaration confirms that {{COMPANY_NAME}} has established, implemented and maintains Logging and Monitoring controls for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
 The declaration demonstrates management commitment to ensuring that AI system activities remain traceable, auditable and continuously monitored throughout their operational lifecycle.
 
@@ -28,7 +28,7 @@ The declaration demonstrates management commitment to ensuring that AI system ac
 
 # 2. Declaration
 
-AiVenture SRL declares that:
+{{COMPANY_NAME}} declares that:
 
 - logging has been implemented for applicable AI systems;
 - monitoring mechanisms are operational where applicable;
@@ -92,7 +92,7 @@ Logging and Monitoring controls shall be reviewed:
 
 # 7. Declaration
 
-I declare that, to the best of my knowledge, AiVenture SRL has implemented appropriate Logging and Monitoring controls for the Artificial Intelligence systems currently identified in the AI System Inventory.
+I declare that, to the best of my knowledge, {{COMPANY_NAME}} has implemented appropriate Logging and Monitoring controls for the Artificial Intelligence systems currently identified in the AI System Inventory.
 
 The organization commits to maintaining accurate, secure and auditable operational records throughout the lifecycle of each AI system and to continuously improving monitoring capabilities whenever technical, operational or regulatory changes occur.
 
@@ -102,9 +102,9 @@ The organization commits to maintaining accurate, secure and auditable operation
 
 | Field | Value |
 |--------|-------|
-| Approved By | Dan Ionescu |
+| Approved By | {{RESPONSIBLE_PERSON}} |
 | Position | Managing Director |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Approval Date | 2026-07-02 |
 | Status | Approved |
 

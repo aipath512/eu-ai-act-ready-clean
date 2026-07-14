@@ -12,7 +12,7 @@
 | Title | Logging and Monitoring Evidence |
 | Repository | RRVI™ |
 | Module | 09 – Logging and Monitoring |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This document records the objective evidence supporting the Logging and Monitoring controls implemented for Artificial Intelligence systems operated by AiVenture SRL.
+This document records the objective evidence supporting the Logging and Monitoring controls implemented for Artificial Intelligence systems operated by {{COMPANY_NAME}}.
 
 The evidence demonstrates that AI system activities are recorded, monitored and periodically reviewed in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -119,11 +119,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 
