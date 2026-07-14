@@ -12,7 +12,7 @@
 | Title | AI Incident Reporting Policy |
 | Repository | RRVI™ |
 | Module | 10 – Incident Reporting |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-The purpose of this policy is to establish the principles and requirements for identifying, reporting, recording, investigating and resolving incidents involving Artificial Intelligence systems used, developed or deployed by AiVenture SRL.
+The purpose of this policy is to establish the principles and requirements for identifying, reporting, recording, investigating and resolving incidents involving Artificial Intelligence systems used, developed or deployed by {{COMPANY_NAME}}.
 
 This policy supports compliance with Regulation (EU) 2024/1689 (EU AI Act) by ensuring that AI-related incidents are managed consistently, documented objectively and resolved in a timely manner.
 
@@ -35,13 +35,13 @@ This policy applies to:
 - proof-of-concept AI systems;
 - production AI systems;
 - AI infrastructure;
-- personnel using AI systems on behalf of AiVenture SRL.
+- personnel using AI systems on behalf of {{COMPANY_NAME}}.
 
 ---
 
 # 3. Policy Statement
 
-AiVenture SRL shall establish and maintain an Incident Reporting process for all AI systems.
+{{COMPANY_NAME}} shall establish and maintain an Incident Reporting process for all AI systems.
 
 Every AI-related incident shall be:
 
@@ -165,11 +165,11 @@ Failure to report significant AI incidents may result in corrective actions and 
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

@@ -12,7 +12,7 @@
 | Title | AI Incident Reporting Work Instruction |
 | Repository | RRVI™ |
 | Module | 10 – Incident Reporting |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This Work Instruction provides detailed guidance for identifying, recording, investigating and closing Artificial Intelligence incidents within AiVenture SRL.
+This Work Instruction provides detailed guidance for identifying, recording, investigating and closing Artificial Intelligence incidents within {{COMPANY_NAME}}.
 
 The objective is to ensure that every AI-related incident is managed consistently, documented objectively and resolved in a timely manner.
 
@@ -220,11 +220,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

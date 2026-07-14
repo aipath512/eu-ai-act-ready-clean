@@ -12,7 +12,7 @@
 | Title | AI Incident Reporting Declaration |
 | Repository | RRVI™ |
 | Module | 10 – Incident Reporting |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This declaration confirms that AiVenture SRL has established, implemented and maintains a documented Incident Reporting process for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+This declaration confirms that {{COMPANY_NAME}} has established, implemented and maintains a documented Incident Reporting process for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
 The declaration demonstrates management commitment to ensuring that AI-related incidents are identified, reported, investigated, documented and resolved in a consistent and traceable manner.
 
@@ -28,7 +28,7 @@ The declaration demonstrates management commitment to ensuring that AI-related i
 
 # 2. Declaration
 
-AiVenture SRL declares that:
+{{COMPANY_NAME}} declares that:
 
 - AI-related incidents are identified and reported without undue delay;
 - every reported incident is documented and assigned a unique Incident ID;
@@ -61,7 +61,7 @@ This declaration applies to:
 - proof-of-concept AI systems;
 - production AI systems;
 - AI infrastructure;
-- all personnel using AI systems on behalf of AiVenture SRL.
+- all personnel using AI systems on behalf of {{COMPANY_NAME}}.
 
 ---
 
@@ -92,7 +92,7 @@ Incident Reporting arrangements shall be reviewed:
 
 # 7. Declaration
 
-I declare that, to the best of my knowledge, AiVenture SRL has implemented an effective Incident Reporting process for the Artificial Intelligence systems currently identified in the AI System Inventory.
+I declare that, to the best of my knowledge, {{COMPANY_NAME}} has implemented an effective Incident Reporting process for the Artificial Intelligence systems currently identified in the AI System Inventory.
 
 The organization commits to maintaining complete, accurate and traceable incident records, investigating every significant AI-related incident, implementing corrective actions and continuously improving the AI governance framework.
 
@@ -102,9 +102,9 @@ The organization commits to maintaining complete, accurate and traceable inciden
 
 | Field | Value |
 |--------|-------|
-| Approved By | Dan Ionescu |
+| Approved By | {{RESPONSIBLE_PERSON}} |
 | Position | Managing Director |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Approval Date | 2026-07-02 |
 | Status | Approved |
 

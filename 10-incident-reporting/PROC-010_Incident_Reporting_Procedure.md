@@ -12,7 +12,7 @@
 | Title | AI Incident Reporting Procedure |
 | Repository | RRVI™ |
 | Module | 10 – Incident Reporting |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This procedure defines how AiVenture SRL identifies, reports, investigates, documents and resolves incidents involving Artificial Intelligence systems.
+This procedure defines how {{COMPANY_NAME}} identifies, reports, investigates, documents and resolves incidents involving Artificial Intelligence systems.
 
 The objective is to ensure that AI-related incidents are managed consistently, corrective actions are implemented, and objective evidence is maintained in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -202,11 +202,11 @@ This procedure produces:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

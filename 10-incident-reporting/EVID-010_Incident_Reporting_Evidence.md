@@ -12,7 +12,7 @@
 | Title | AI Incident Reporting Evidence |
 | Repository | RRVI™ |
 | Module | 10 – Incident Reporting |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This document records the objective evidence supporting the identification, investigation, management and closure of AI-related incidents within AiVenture SRL.
+This document records the objective evidence supporting the identification, investigation, management and closure of AI-related incidents within {{COMPANY_NAME}}.
 
 The evidence demonstrates that incidents are properly documented, investigated and resolved in accordance with Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -119,11 +119,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

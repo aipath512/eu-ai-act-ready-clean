@@ -12,7 +12,7 @@
 | Title | AI Incident Reporting Register |
 | Repository | RRVI™ |
 | Module | 10 – Incident Reporting |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Register |
 
@@ -20,7 +20,7 @@
 
 # Purpose
 
-This register records all AI-related incidents identified, reported, investigated and resolved by AiVenture SRL.
+This register records all AI-related incidents identified, reported, investigated and resolved by {{COMPANY_NAME}}.
 
 It provides objective evidence that incidents are managed in accordance with Regulation (EU) 2024/1689 (EU AI Act) and supports internal governance, external audits and regulatory inspections.
 
@@ -78,8 +78,8 @@ This register shall be updated whenever:
 | Field | Value |
 |--------|-------|
 | Register Owner | AI Governance Owner |
-| Custodian | Dan Ionescu |
-| Company | AiVenture SRL |
+| Custodian | {{RESPONSIBLE_PERSON}} |
+| Company | {{COMPANY_NAME}} |
 | Review Frequency | Continuous |
 
 ---
@@ -99,11 +99,11 @@ This register shall be updated whenever:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 
