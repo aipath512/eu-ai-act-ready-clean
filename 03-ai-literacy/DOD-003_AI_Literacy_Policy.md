@@ -12,7 +12,7 @@
 | Title | AI Literacy Policy |
 | Repository | RRVI™ |
 | Module | 03 – AI Literacy |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-The purpose of this policy is to establish the principles and requirements for achieving and maintaining an appropriate level of Artificial Intelligence literacy within AiVenture SRL.
+The purpose of this policy is to establish the principles and requirements for achieving and maintaining an appropriate level of Artificial Intelligence literacy within {{COMPANY_NAME}}.
 
 This policy supports compliance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act), requiring providers and deployers of AI systems to ensure that personnel possess sufficient AI literacy according to their roles and responsibilities.
 
@@ -36,13 +36,13 @@ This policy applies to:
 - consultants;
 - interns;
 - temporary personnel;
-- any individual using AI systems on behalf of AiVenture SRL.
+- any individual using AI systems on behalf of {{COMPANY_NAME}}.
 
 ---
 
 # 3. Policy Statements
 
-AiVenture SRL shall ensure that all personnel using AI systems possess an appropriate level of AI literacy.
+{{COMPANY_NAME}} shall ensure that all personnel using AI systems possess an appropriate level of AI literacy.
 
 AI literacy shall be appropriate to:
 
@@ -153,11 +153,11 @@ Failure to maintain adequate AI literacy may increase operational, legal and reg
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

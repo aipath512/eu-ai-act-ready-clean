@@ -12,7 +12,7 @@
 | Title | AI Literacy Procedure |
 | Repository | RRVI™ |
 | Module | 03 – AI Literacy |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This procedure defines the process used by AiVenture SRL to establish, maintain, evaluate and continuously improve AI literacy among personnel using Artificial Intelligence systems.
+This procedure defines the process used by {{COMPANY_NAME}} to establish, maintain, evaluate and continuously improve AI literacy among personnel using Artificial Intelligence systems.
 
 The procedure supports compliance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -36,7 +36,7 @@ This procedure applies to:
 - consultants;
 - interns;
 - temporary personnel;
-- any individual using AI systems on behalf of AiVenture SRL.
+- any individual using AI systems on behalf of {{COMPANY_NAME}}.
 
 ---
 
@@ -173,11 +173,11 @@ This procedure produces:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

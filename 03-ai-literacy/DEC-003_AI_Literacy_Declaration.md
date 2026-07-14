@@ -12,7 +12,7 @@
 | Title | AI Literacy Declaration |
 | Repository | RRVI™ |
 | Module | 03 – AI Literacy |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This declaration confirms that AiVenture SRL has established, implemented and maintains an AI Literacy Programme in accordance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
+This declaration confirms that {{COMPANY_NAME}} has established, implemented and maintains an AI Literacy Programme in accordance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
 
 The declaration demonstrates management commitment to ensuring that all personnel using Artificial Intelligence systems possess an appropriate level of AI literacy for their responsibilities.
 
@@ -28,7 +28,7 @@ The declaration demonstrates management commitment to ensuring that all personne
 
 # 2. Declaration
 
-AiVenture SRL declares that:
+{{COMPANY_NAME}} declares that:
 
 - an AI Literacy Programme has been established;
 - personnel using AI systems have been identified;
@@ -63,7 +63,7 @@ This declaration applies to:
 - consultants;
 - temporary personnel;
 - interns;
-- any individual using AI systems on behalf of AiVenture SRL.
+- any individual using AI systems on behalf of {{COMPANY_NAME}}.
 
 ---
 
@@ -92,7 +92,7 @@ The AI Literacy Programme shall be reviewed:
 
 # 7. Declaration
 
-I declare that, to the best of my knowledge, AiVenture SRL has implemented an AI Literacy Programme appropriate to the nature of the Artificial Intelligence systems used by the organization and consistent with the requirements of Regulation (EU) 2024/1689 (EU AI Act).
+I declare that, to the best of my knowledge, {{COMPANY_NAME}} has implemented an AI Literacy Programme appropriate to the nature of the Artificial Intelligence systems used by the organization and consistent with the requirements of Regulation (EU) 2024/1689 (EU AI Act).
 
 The programme shall be maintained and continually improved through periodic review and documented evidence.
 
@@ -102,9 +102,9 @@ The programme shall be maintained and continually improved through periodic revi
 
 | Field | Value |
 |--------|-------|
-| Approved By | Dan Ionescu |
+| Approved By | {{RESPONSIBLE_PERSON}} |
 | Position | Managing Director |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Approval Date | 2026-07-02 |
 | Status | Approved |
 

@@ -12,7 +12,7 @@
 | Title | AI Literacy Register |
 | Repository | RRVI™ |
 | Module | 03 – AI Literacy |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Register |
 
@@ -20,7 +20,7 @@
 
 # Purpose
 
-This register records all AI Literacy activities performed by AiVenture SRL.
+This register records all AI Literacy activities performed by {{COMPANY_NAME}}.
 
 It provides objective evidence that personnel using Artificial Intelligence systems possess an appropriate level of AI literacy in accordance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -30,7 +30,7 @@ It provides objective evidence that personnel using Artificial Intelligence syst
 
 | Record ID | Name | Position | AI Systems Used | Training | Completion Date | Result | Next Review | Status |
 |-----------|------|----------|-----------------|----------|-----------------|--------|-------------|--------|
-| AL-001 | Dan Ionescu | Managing Director | ChatGPT, Gemini, Claude, DeepSeek, Perplexity | EU AI Act AI Literacy | 2026-07-02 | Passed | 2027-07-02 | Active |
+| AL-001 | {{RESPONSIBLE_PERSON}} | Managing Director | ChatGPT, Gemini, Claude, DeepSeek, Perplexity | EU AI Act AI Literacy | 2026-07-02 | Passed | 2027-07-02 | Active |
 
 ---
 
@@ -93,8 +93,8 @@ The register shall be reviewed:
 | Field | Value |
 |--------|-------|
 | Register Owner | AI Governance Owner |
-| Custodian | Dan Ionescu |
-| Company | AiVenture SRL |
+| Custodian | {{RESPONSIBLE_PERSON}} |
+| Company | {{COMPANY_NAME}} |
 | Review Frequency | Annual |
 
 ---
@@ -114,11 +114,11 @@ The register shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

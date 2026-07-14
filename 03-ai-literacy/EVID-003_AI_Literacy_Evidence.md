@@ -12,7 +12,7 @@
 | Title | AI Literacy Evidence |
 | Repository | RRVI™ |
 | Module | 03 – AI Literacy |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This document records the objective evidence demonstrating that personnel of AiVenture SRL have achieved an appropriate level of AI literacy in accordance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
+This document records the objective evidence demonstrating that personnel of {{COMPANY_NAME}} have achieved an appropriate level of AI literacy in accordance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
 
 The evidence supports internal governance, external audits and regulatory inspections.
 
@@ -43,14 +43,14 @@ Evidence shall be:
 
 | Evidence ID | Participant | Evidence Description | Evidence Location | Status |
 |--------------|------------|----------------------|-------------------|--------|
-| AL-E001 | Dan Ionescu | AI Literacy self-training record | REG-003 | Active |
-| AL-E002 | Dan Ionescu | EU AI Act study notes | Internal Documentation | Active |
-| AL-E003 | Dan Ionescu | Governance documentation developed | GitHub Repository | Active |
-| AL-E004 | Dan Ionescu | AI Inventory implementation | GitHub Repository | Active |
-| AL-E005 | Dan Ionescu | Risk Classification implementation | GitHub Repository | Active |
-| AL-E006 | Dan Ionescu | Technical Documentation implementation | GitHub Repository | Active |
-| AL-E007 | Dan Ionescu | Human Oversight implementation | GitHub Repository | Active |
-| AL-E008 | Dan Ionescu | Practical AI usage evidence | OpenAI / Google / Anthropic Accounts | Active |
+| AL-E001 | {{RESPONSIBLE_PERSON}} | AI Literacy self-training record | REG-003 | Active |
+| AL-E002 | {{RESPONSIBLE_PERSON}} | EU AI Act study notes | Internal Documentation | Active |
+| AL-E003 | {{RESPONSIBLE_PERSON}} | Governance documentation developed | GitHub Repository | Active |
+| AL-E004 | {{RESPONSIBLE_PERSON}} | AI Inventory implementation | GitHub Repository | Active |
+| AL-E005 | {{RESPONSIBLE_PERSON}} | Risk Classification implementation | GitHub Repository | Active |
+| AL-E006 | {{RESPONSIBLE_PERSON}} | Technical Documentation implementation | GitHub Repository | Active |
+| AL-E007 | {{RESPONSIBLE_PERSON}} | Human Oversight implementation | GitHub Repository | Active |
+| AL-E008 | {{RESPONSIBLE_PERSON}} | Practical AI usage evidence | OpenAI / Google / Anthropic Accounts | Active |
 
 ---
 
@@ -109,11 +109,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

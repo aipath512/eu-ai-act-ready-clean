@@ -12,7 +12,7 @@
 | Title | AI Literacy Work Instruction |
 | Repository | RRVI™ |
 | Module | 03 – AI Literacy |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This Work Instruction provides detailed guidance for planning, delivering, recording and reviewing AI Literacy activities within AiVenture SRL.
+This Work Instruction provides detailed guidance for planning, delivering, recording and reviewing AI Literacy activities within {{COMPANY_NAME}}.
 
 It ensures that personnel using Artificial Intelligence systems possess an appropriate level of knowledge consistent with their responsibilities and the requirements of Regulation (EU) 2024/1689 (EU AI Act).
 
@@ -206,11 +206,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 
