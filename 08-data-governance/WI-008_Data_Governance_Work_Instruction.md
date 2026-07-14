@@ -12,7 +12,7 @@
 | Title | Data Governance Work Instruction |
 | Repository | RRVI™ |
 | Module | 08 – Data Governance |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This Work Instruction provides detailed guidance for identifying, documenting, reviewing and maintaining data used by Artificial Intelligence systems within AiVenture SRL.
+This Work Instruction provides detailed guidance for identifying, documenting, reviewing and maintaining data used by Artificial Intelligence systems within {{COMPANY_NAME}}.
 
 The objective is to ensure that AI systems use reliable, secure and well-governed data throughout their operational lifecycle.
 
@@ -226,11 +226,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

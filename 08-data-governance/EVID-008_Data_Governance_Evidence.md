@@ -12,7 +12,7 @@
 | Title | Data Governance Evidence |
 | Repository | RRVI™ |
 | Module | 08 – Data Governance |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This document records the objective evidence supporting the Data Governance controls implemented for Artificial Intelligence systems operated by AiVenture SRL.
+This document records the objective evidence supporting the Data Governance controls implemented for Artificial Intelligence systems operated by {{COMPANY_NAME}}.
 
 The evidence demonstrates that data used by AI systems is identified, classified, protected and periodically reviewed in accordance with Regulation (EU) 2024/1689 (EU AI Act) and Regulation (EU) 2016/679 (GDPR).
 
@@ -120,11 +120,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

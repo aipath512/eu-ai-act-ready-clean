@@ -12,7 +12,7 @@
 | Title | Data Governance Procedure |
 | Repository | RRVI™ |
 | Module | 08 – Data Governance |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This procedure defines how AiVenture SRL governs, documents, reviews and maintains data used by Artificial Intelligence systems throughout their lifecycle.
+This procedure defines how {{COMPANY_NAME}} governs, documents, reviews and maintains data used by Artificial Intelligence systems throughout their lifecycle.
 
 The objective is to ensure that data used by AI systems remains accurate, complete, secure, traceable and compliant with Regulation (EU) 2024/1689 (EU AI Act) and Regulation (EU) 2016/679 (GDPR).
 
@@ -199,11 +199,11 @@ This procedure produces:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

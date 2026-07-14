@@ -12,7 +12,7 @@
 | Title | Data Governance Policy |
 | Repository | RRVI™ |
 | Module | 08 – Data Governance |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-The purpose of this policy is to establish the principles and requirements for governing data used by Artificial Intelligence systems within AiVenture SRL.
+The purpose of this policy is to establish the principles and requirements for governing data used by Artificial Intelligence systems within {{COMPANY_NAME}}.
 
 This policy supports compliance with Regulation (EU) 2024/1689 (EU AI Act) by ensuring that data used throughout the AI lifecycle is managed responsibly, securely, accurately and lawfully.
 
@@ -41,7 +41,7 @@ This policy applies to:
 
 # 3. Policy Statement
 
-AiVenture SRL shall implement appropriate Data Governance measures for all AI systems.
+{{COMPANY_NAME}} shall implement appropriate Data Governance measures for all AI systems.
 
 Data shall be managed to ensure:
 
@@ -70,7 +70,7 @@ Data used by AI systems shall be:
 
 # 5. Data Quality Objectives
 
-AiVenture SRL shall:
+{{COMPANY_NAME}} shall:
 
 - identify data sources;
 - document data flows;
@@ -162,11 +162,11 @@ Data Governance controls shall be proportionate to the AI system, intended purpo
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 
