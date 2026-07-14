@@ -366,9 +366,9 @@ Relationships support navigation in both directions.
 
 # Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 
 Version:

@@ -11,4 +11,4 @@ This release contains no architectural changes.
 
 Date: 2026-07-02
 
-Author: Dan Ionescu
+Author: {{RESPONSIBLE_PERSON}}

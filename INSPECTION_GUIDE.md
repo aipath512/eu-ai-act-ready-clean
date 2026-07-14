@@ -10,7 +10,7 @@ Version: 1.0.0
 
 # Purpose
 
-This guide explains how an internal auditor or regulatory inspector should inspect the EU AI Act Compliance Management System implemented by AiVenture SRL.
+This guide explains how an internal auditor or regulatory inspector should inspect the EU AI Act Compliance Management System implemented by {{COMPANY_NAME}}.
 
 ---
 
@@ -154,6 +154,6 @@ The repository shall demonstrate:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
-AiVenture SRL
+{{COMPANY_NAME}}

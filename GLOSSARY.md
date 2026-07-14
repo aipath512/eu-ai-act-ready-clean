@@ -138,8 +138,8 @@ The systematic management of document revisions throughout their lifecycle.
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Version 1.0.2

@@ -72,6 +72,6 @@ RRVI™ — EU AI Act Compliance Management System
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
-AiVenture SRL
+{{COMPANY_NAME}}

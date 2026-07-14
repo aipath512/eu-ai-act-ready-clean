@@ -167,6 +167,6 @@ Architecture Status
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
-AiVenture SRL
+{{COMPANY_NAME}}

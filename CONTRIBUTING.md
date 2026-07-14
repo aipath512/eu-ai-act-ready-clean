@@ -110,9 +110,9 @@ Significant contributions shall:
 
 Repository Maintainer
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 ---
 

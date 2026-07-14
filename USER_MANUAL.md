@@ -274,6 +274,6 @@ The Compliance Management System shall be updated whenever:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
-AiVenture SRL
+{{COMPANY_NAME}}
