@@ -12,7 +12,7 @@
 | Title | High-Risk AI System Assessment Work Instruction |
 | Repository | RRVI™ |
 | Module | 05 – High-Risk Assessment |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -104,7 +104,7 @@ Record the result.
 
 Evaluate Substantial Modification
 
-Determine whether modifications made by AiVenture SRL could change the regulatory classification.
+Determine whether modifications made by {{COMPANY_NAME}} could change the regulatory classification.
 
 Record the result.
 
@@ -211,11 +211,11 @@ This instruction updates:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

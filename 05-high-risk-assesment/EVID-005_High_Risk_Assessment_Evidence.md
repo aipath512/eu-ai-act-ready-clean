@@ -12,7 +12,7 @@
 | Title | High-Risk AI System Assessment Evidence |
 | Repository | RRVI™ |
 | Module | 05 – High-Risk Assessment |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Active Evidence Register |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This document records the objective evidence supporting the High-Risk AI System Assessments performed by AiVenture SRL.
+This document records the objective evidence supporting the High-Risk AI System Assessments performed by {{COMPANY_NAME}}.
 
 Its purpose is to demonstrate that every assessment is supported by verifiable documentation and can be reproduced during internal audits or regulatory inspections.
 
@@ -120,11 +120,11 @@ Evidence shall be reviewed:
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

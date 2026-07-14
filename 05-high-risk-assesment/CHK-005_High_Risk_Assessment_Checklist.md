@@ -12,7 +12,7 @@
 | Title | High-Risk AI System Assessment Checklist |
 | Repository | RRVI™ |
 | Module | 05 – High-Risk Assessment |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -108,11 +108,11 @@ _____________________________________________________
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 

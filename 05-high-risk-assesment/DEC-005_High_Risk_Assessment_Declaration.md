@@ -12,7 +12,7 @@
 | Title | High-Risk AI System Assessment Declaration |
 | Repository | RRVI™ |
 | Module | 05 – High-Risk Assessment |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-This declaration confirms that AiVenture SRL has established and implemented a documented process for determining whether Artificial Intelligence systems qualify as High-Risk AI Systems under Regulation (EU) 2024/1689 (EU AI Act).
+This declaration confirms that {{COMPANY_NAME}} has established and implemented a documented process for determining whether Artificial Intelligence systems qualify as High-Risk AI Systems under Regulation (EU) 2024/1689 (EU AI Act).
 
 The declaration demonstrates management commitment to performing objective, documented and repeatable High-Risk assessments before operational deployment.
 
@@ -28,7 +28,7 @@ The declaration demonstrates management commitment to performing objective, docu
 
 # 2. Declaration
 
-AiVenture SRL declares that:
+{{COMPANY_NAME}} declares that:
 
 - every AI system recorded in the AI System Inventory is subject to a documented High-Risk Assessment;
 - High-Risk Assessments are performed before operational deployment;
@@ -93,9 +93,9 @@ High-Risk Assessments shall be reviewed:
 
 # 7. Declaration
 
-I declare that, to the best of my knowledge, AiVenture SRL has established a documented and repeatable process for determining whether Artificial Intelligence systems qualify as High-Risk AI Systems under the EU AI Act.
+I declare that, to the best of my knowledge, {{COMPANY_NAME}} has established a documented and repeatable process for determining whether Artificial Intelligence systems qualify as High-Risk AI Systems under the EU AI Act.
 
-At the date of this declaration, all assessed operational AI systems used by AiVenture SRL have been documented, reviewed and classified according to the established assessment methodology.
+At the date of this declaration, all assessed operational AI systems used by {{COMPANY_NAME}} have been documented, reviewed and classified according to the established assessment methodology.
 
 The organization commits to maintaining this process and updating assessments whenever regulatory, technical or operational changes occur.
 
@@ -105,9 +105,9 @@ The organization commits to maintaining this process and updating assessments wh
 
 | Field | Value |
 |--------|-------|
-| Approved By | Dan Ionescu |
+| Approved By | {{RESPONSIBLE_PERSON}} |
 | Position | Managing Director |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Approval Date | 2026-07-02 |
 | Status | Approved |
 

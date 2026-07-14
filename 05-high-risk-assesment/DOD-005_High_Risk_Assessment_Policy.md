@@ -12,7 +12,7 @@
 | Title | High-Risk AI System Assessment Policy |
 | Repository | RRVI™ |
 | Module | 05 – High-Risk Assessment |
-| Company | AiVenture SRL |
+| Company | {{COMPANY_NAME}} |
 | Version | 1.0.0 |
 | Status | Approved |
 
@@ -20,7 +20,7 @@
 
 # 1. Purpose
 
-The purpose of this policy is to establish the principles and requirements for determining whether an Artificial Intelligence system used, developed, deployed or integrated by AiVenture SRL qualifies as a High-Risk AI System under Regulation (EU) 2024/1689 (EU AI Act).
+The purpose of this policy is to establish the principles and requirements for determining whether an Artificial Intelligence system used, developed, deployed or integrated by {{COMPANY_NAME}} qualifies as a High-Risk AI System under Regulation (EU) 2024/1689 (EU AI Act).
 
 This policy ensures that all AI systems are consistently assessed before operational deployment and throughout their lifecycle.
 
@@ -149,11 +149,11 @@ Any AI system identified as High-Risk shall comply with all applicable obligatio
 
 Prepared by
 
-Dan Ionescu
+{{RESPONSIBLE_PERSON}}
 
 Company
 
-AiVenture SRL
+{{COMPANY_NAME}}
 
 Status
 
