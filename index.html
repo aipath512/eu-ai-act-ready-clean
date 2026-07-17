@@ -4418,7 +4418,7 @@
 
 <script>
     const API =
-      "https://eu-ai-act-search-api.aipath512.workers.dev/search?q=";
+      "https://eu-ai-act-conversation-worker-test.aipath512.workers.dev/search?q=";
 
     const translations = {
       en: {
@@ -5288,10 +5288,22 @@
                 <span></span>
                 <span></span>
               </span>
+
+              <span id="loading-elapsed"></span>
             </p>
           </div>
         </div>
       `;
+
+      stopLoadingTimer();
+      loadingStartTime = Date.now();
+      loadingTimerInterval = setInterval(function () {
+        const el = document.getElementById("loading-elapsed");
+        if (el) {
+          const secs = Math.floor((Date.now() - loadingStartTime) / 1000);
+          el.textContent = " (" + secs + "s)";
+        }
+      }, 1000);
     }
 
     function renderAnswer(
@@ -5381,6 +5393,87 @@
       `;
     }
 
+    function renderGeneratedAnswer(payload, query) {
+      const language =
+        translations[selectedLanguage];
+
+      const sourcesHTML =
+        (payload.sources || [])
+          .map((s) => {
+            const url =
+              s.url || s.source_url ||
+              "https://eur-lex.europa.eu/eli/reg/2024/1689/oj";
+            const label =
+              s.label || s.article || s.title ||
+              "EU AI Act Official Text";
+
+            return `
+              <a href="${escapeHTML(url)}" target="_blank" rel="noopener">
+                ${escapeHTML(label)}
+              </a>
+            `;
+          })
+          .join("");
+
+      const rrviHTML =
+        (payload.rrvi_results || [])
+          .map((r) => {
+            return `
+              <span class="rrvi-tag">
+                RRVI: ${escapeHTML(r.source || r.id || "")}
+              </span>
+            `;
+          })
+          .join("");
+
+      const noteHTML =
+        payload.generation_error
+          ? `<p class="answer-note">${escapeHTML(payload.generation_error)}</p>`
+          : "";
+
+      answerZone.hidden = false;
+
+      answerZone.classList.remove(
+        "answer-error",
+        "answer-empty"
+      );
+
+      answerContent.innerHTML = `
+        <h2>${escapeHTML(query)}</h2>
+
+        <article>
+          <p>${textToHTML(payload.generated_answer)}</p>
+        </article>
+
+        ${noteHTML}
+
+        ${
+          sourcesHTML
+            ? `<div class="answer-meta">
+                 <span>${escapeHTML(language.answerSource)}</span>
+                 ${sourcesHTML}
+               </div>`
+            : ""
+        }
+
+        ${
+          rrviHTML
+            ? `<div class="answer-meta">${rrviHTML}</div>`
+            : ""
+        }
+      `;
+    }
+
+    let loadingTimerInterval = null;
+    let loadingStartTime = null;
+
+    function stopLoadingTimer() {
+      if (loadingTimerInterval) {
+        clearInterval(loadingTimerInterval);
+        loadingTimerInterval = null;
+      }
+    }
+
     async function askQuestion(question) {
       const cleanQuestion =
         question.trim();
@@ -5433,13 +5526,17 @@
         const payload =
           await response.json();
 
-        const results =
-          normalizeResults(payload);
+        if (payload && payload.generated_answer) {
+          renderGeneratedAnswer(payload, cleanQuestion);
+        } else {
+          const results =
+            normalizeResults(payload);
 
-        renderAnswer(
-          results,
-          cleanQuestion
-        );
+          renderAnswer(
+            results,
+            cleanQuestion
+          );
+        }
       } catch (error) {
         console.error(
           "EU AI Act Ask error:",
@@ -5452,6 +5549,7 @@
           language.errorText
         );
       } finally {
+        stopLoadingTimer();
         askButton.disabled = false;
         questionInput.disabled = false;
       }
