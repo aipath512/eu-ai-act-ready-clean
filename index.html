@@ -884,7 +884,7 @@ await response.json();
 if (data.generated_answer) {
 
   const sources = (data.sources || [])
-    .map(s => `<div style="margin-top:8px;color:#a8a8a8;font-size:14px;">${s.title || s.article || s.url || ""}</div>`)
+    .map(s => `<div style="margin-top:8px;font-size:14px;"><a href="${s.url || '#'}" target="_blank" rel="noopener" style="color:#c90016;text-decoration:none;">→ See more: ${s.label || s.url || ""}</a></div>`)
     .join("");
 
   answerBox.innerHTML =
