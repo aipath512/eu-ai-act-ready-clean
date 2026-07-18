@@ -140,6 +140,42 @@ input{
   cursor:pointer;
 }
 
+.lang-row{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  padding:10px 12px;
+  border-bottom:1px solid var(--border);
+  background:#050505;
+  flex-wrap:wrap;
+}
+
+.lang-btn{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 12px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  background:#0b0b0b;
+  color:#a8a8a8;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.lang-btn img{
+  width:16px;
+  height:11px;
+  object-fit:cover;
+}
+
+.lang-btn.active{
+  border-color:var(--red);
+  background:var(--red);
+  color:#fff;
+}
+
 .stream{
   border-bottom:1px solid var(--border);
 }
@@ -585,6 +621,16 @@ footer{
 
 </header>
 
+<div class="lang-row" id="lang-row">
+  <button class="lang-btn active" data-lang="en"><img src="assets/flags/gb.svg"> EN</button>
+  <button class="lang-btn" data-lang="fr"><img src="assets/flags/fr.svg"> FR</button>
+  <button class="lang-btn" data-lang="de"><img src="assets/flags/de.svg"> DE</button>
+  <button class="lang-btn" data-lang="es"><img src="assets/flags/es.svg"> ES</button>
+  <button class="lang-btn" data-lang="it"><img src="assets/flags/it.svg"> IT</button>
+  <button class="lang-btn" data-lang="ro"><img src="assets/flags/ro.svg"> RO</button>
+  <button class="lang-btn" data-lang="pl"><img src="assets/flags/pl.svg"> PL</button>
+</div>
+
 <section class="stream">
 
   <div class="news">
@@ -702,7 +748,7 @@ footer{
 
   <section class="popular">
 
-    <h2>
+    <h2 id="popular-title">
       ↗ Popular Askes
     </h2>
 
@@ -749,7 +795,7 @@ footer{
 
   <section class="answers">
 
-    <h2>
+    <h2 id="answers-title">
       Answers
     </h2>
 
@@ -911,6 +957,128 @@ askButton.disabled=false;
 askButton.textContent="ASK ⚡";
 
 }
+
+const UI_LABELS = {
+  en: {
+    placeholder: "Ask anything about the EU AI Act...",
+    askButton: "ASK ⚡",
+    popularTitle: "↗ Popular Askes",
+    answersTitle: "Answers",
+    chips: [
+      "Article 4<br>AI Literacy",
+      "High-Risk<br>Classification",
+      "GPAI<br>Obligations",
+      "Article 50<br>Transparency",
+      "AI<br>Inventory"
+    ]
+  },
+  fr: {
+    placeholder: "Posez une question sur l'AI Act...",
+    askButton: "DEMANDER ⚡",
+    popularTitle: "↗ Questions populaires",
+    answersTitle: "Réponses",
+    chips: [
+      "Article 4<br>Culture IA",
+      "Risque Élevé<br>Classification",
+      "GPAI<br>Obligations",
+      "Article 50<br>Transparence",
+      "IA<br>Inventaire"
+    ]
+  },
+  de: {
+    placeholder: "Stellen Sie eine Frage zum KI-Gesetz...",
+    askButton: "FRAGEN ⚡",
+    popularTitle: "↗ Beliebte Fragen",
+    answersTitle: "Antworten",
+    chips: [
+      "Artikel 4<br>KI-Kompetenz",
+      "Hochrisiko<br>Einstufung",
+      "GPAI<br>Pflichten",
+      "Artikel 50<br>Transparenz",
+      "KI<br>Inventar"
+    ]
+  },
+  es: {
+    placeholder: "Haz una pregunta sobre la Ley de IA...",
+    askButton: "PREGUNTAR ⚡",
+    popularTitle: "↗ Preguntas populares",
+    answersTitle: "Respuestas",
+    chips: [
+      "Artículo 4<br>Alfabetización IA",
+      "Alto Riesgo<br>Clasificación",
+      "GPAI<br>Obligaciones",
+      "Artículo 50<br>Transparencia",
+      "IA<br>Inventario"
+    ]
+  },
+  it: {
+    placeholder: "Fai una domanda sull'AI Act...",
+    askButton: "CHIEDI ⚡",
+    popularTitle: "↗ Domande popolari",
+    answersTitle: "Risposte",
+    chips: [
+      "Articolo 4<br>Alfabetizzazione IA",
+      "Alto Rischio<br>Classificazione",
+      "GPAI<br>Obblighi",
+      "Articolo 50<br>Trasparenza",
+      "IA<br>Inventario"
+    ]
+  },
+  ro: {
+    placeholder: "Pune o întrebare despre AI Act...",
+    askButton: "ÎNTREABĂ ⚡",
+    popularTitle: "↗ Întrebări populare",
+    answersTitle: "Răspunsuri",
+    chips: [
+      "Articolul 4<br>Alfabetizare IA",
+      "Risc Ridicat<br>Clasificare",
+      "GPAI<br>Obligații",
+      "Articolul 50<br>Transparență",
+      "IA<br>Inventar"
+    ]
+  },
+  pl: {
+    placeholder: "Zadaj pytanie o AI Act...",
+    askButton: "ZAPYTAJ ⚡",
+    popularTitle: "↗ Popularne pytania",
+    answersTitle: "Odpowiedzi",
+    chips: [
+      "Artykuł 4<br>Kompetencje AI",
+      "Wysokie Ryzyko<br>Klasyfikacja",
+      "GPAI<br>Obowiązki",
+      "Artykuł 50<br>Przejrzystość",
+      "AI<br>Inwentaryzacja"
+    ]
+  }
+};
+
+function applyLanguage(lang) {
+  const l = UI_LABELS[lang] || UI_LABELS.en;
+
+  questionInput.placeholder = l.placeholder;
+  askButton.textContent = l.askButton;
+
+  const popularTitleEl = document.getElementById("popular-title");
+  if (popularTitleEl) popularTitleEl.textContent = l.popularTitle;
+
+  const answersTitleEl = document.getElementById("answers-title");
+  if (answersTitleEl) answersTitleEl.textContent = l.answersTitle;
+
+  const chipButtons = document.querySelectorAll(".chips button");
+  chipButtons.forEach((btn, i) => {
+    if (l.chips[i]) btn.innerHTML = l.chips[i];
+  });
+
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+}
+
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    applyLanguage(btn.dataset.lang);
+  });
+});
 
 askButton.addEventListener("click", ask);
 
