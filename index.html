@@ -609,7 +609,7 @@ footer{
   </a>
 
   <div class="actions">
-    <a class="login" href="#">Login</a>
+    <a class="login" href="#" id="login-link">Login</a>
 
     <button class="menu" aria-label="Menu">
       ☰
@@ -632,13 +632,13 @@ footer{
 
   <div class="news">
 
-    <span class="news-label">
+    <span class="news-label" id="news-label">
       ⚡  NEW GUIDANCE
     </span>
 
     <div class="viewport">
 
-      <div class="news-track">
+      <div class="news-track" id="news-track">
         <span>regulatory intelligence</span>
         <span class="dot"></span>
 
@@ -702,11 +702,11 @@ footer{
     <div class="links">
 
   <a href="demo.html">
-    <strong>🎯 DEMO</strong>
+    <strong id="demo-label">🎯 DEMO</strong>
   </a>
 
   <a href="your-firm.html">
-    <strong>💻 YOUR FIRM</strong>
+    <strong id="yourfirm-label">💻 YOUR FIRM</strong>
   </a>
 
 </div>
@@ -849,7 +849,7 @@ footer{
 
   <span class="dot"></span>
 
-  <span>
+  <span id="footer-tagline">
     Ask &amp; Generator™
   </span>
 
@@ -1013,13 +1013,13 @@ const FAQ_DATA = {
 };
 
 const PAGE_EXTRAS = {
-  en: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONAL IN 27 EU LANGUAGES", faqTitle: "Compliance FAQ"},
-  fr: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONNEL EN 27 LANGUES DE L'UE", faqTitle: "FAQ Conformité"},
-  de: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONVERSATIONELL IN 27 EU-SPRACHEN", faqTitle: "Konformität FAQ"},
-  es: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSACIONAL EN 27 IDIOMAS DE LA UE", faqTitle: "FAQ de Cumplimiento"},
-  it: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAZIONALE IN 27 LINGUE UE", faqTitle: "FAQ sulla Conformità"},
-  ro: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAȚIONAL ÎN 27 DE LIMBI UE", faqTitle: "Întrebări despre Conformitate"},
-  pl: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONWERSACYJNY W 27 JĘZYKACH UE", faqTitle: "FAQ Zgodności"},
+  en: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONAL IN 27 EU LANGUAGES", faqTitle: "Compliance FAQ", login: "Login", newsLabel: "⚡  NEW GUIDANCE", newsItems: ["regulatory intelligence", "High-risk obligations guidance updated", "National authority developments", "Article 50 transparency requirements", "regulatory intelligence"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 YOUR FIRM", footerTagline: "Ask &amp; Generator™"},
+  fr: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONNEL EN 27 LANGUES DE L'UE", faqTitle: "FAQ Conformité", login: "Connexion", newsLabel: "⚡  NOUVELLES DIRECTIVES", newsItems: ["veille réglementaire", "Directives sur les obligations à haut risque mises à jour", "Évolutions des autorités nationales", "Exigences de transparence de l'article 50", "veille réglementaire"], demoLabel: "🎯 DÉMO", yourFirmLabel: "💻 VOTRE ENTREPRISE", footerTagline: "Ask &amp; Generator™"},
+  de: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONVERSATIONELL IN 27 EU-SPRACHEN", faqTitle: "Konformität FAQ", login: "Anmelden", newsLabel: "⚡  NEUE LEITLINIEN", newsItems: ["Regulatorische Intelligenz", "Leitlinien zu Hochrisiko-Pflichten aktualisiert", "Entwicklungen nationaler Behörden", "Transparenzanforderungen nach Artikel 50", "Regulatorische Intelligenz"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 IHR UNTERNEHMEN", footerTagline: "Ask &amp; Generator™"},
+  es: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSACIONAL EN 27 IDIOMAS DE LA UE", faqTitle: "FAQ de Cumplimiento", login: "Iniciar sesión", newsLabel: "⚡  NUEVA ORIENTACIÓN", newsItems: ["inteligencia regulatoria", "Orientación sobre obligaciones de alto riesgo actualizada", "Novedades de las autoridades nacionales", "Requisitos de transparencia del artículo 50", "inteligencia regulatoria"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 SU EMPRESA", footerTagline: "Ask &amp; Generator™"},
+  it: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAZIONALE IN 27 LINGUE UE", faqTitle: "FAQ sulla Conformità", login: "Accedi", newsLabel: "⚡  NUOVE LINEE GUIDA", newsItems: ["intelligence normativa", "Linee guida sugli obblighi ad alto rischio aggiornate", "Sviluppi delle autorità nazionali", "Requisiti di trasparenza dell'articolo 50", "intelligence normativa"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 LA TUA AZIENDA", footerTagline: "Ask &amp; Generator™"},
+  ro: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAȚIONAL ÎN 27 DE LIMBI UE", faqTitle: "Întrebări despre Conformitate", login: "Autentificare", newsLabel: "⚡  GHID NOU", newsItems: ["informații de reglementare", "Ghidul privind obligațiile de risc ridicat actualizat", "Evoluții ale autorităților naționale", "Cerințe de transparență conform articolului 50", "informații de reglementare"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 FIRMA TA", footerTagline: "Ask &amp; Generator™"},
+  pl: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONWERSACYJNY W 27 JĘZYKACH UE", faqTitle: "FAQ Zgodności", login: "Zaloguj się", newsLabel: "⚡  NOWE WYTYCZNE", newsItems: ["analiza regulacyjna", "Zaktualizowano wytyczne dotyczące obowiązków wysokiego ryzyka", "Zmiany krajowych organów nadzoru", "Wymogi przejrzystości z artykułu 50", "analiza regulacyjna"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 TWOJA FIRMA", footerTagline: "Ask &amp; Generator™"},
 };
 
 const UI_LABELS = {
@@ -1196,6 +1196,28 @@ function applyLanguage(lang) {
 
   const faqTitleEl = document.getElementById("faq-title");
   if (faqTitleEl) faqTitleEl.textContent = extras.faqTitle;
+
+  const loginEl = document.getElementById("login-link");
+  if (loginEl) loginEl.textContent = extras.login;
+
+  const newsLabelEl = document.getElementById("news-label");
+  if (newsLabelEl) newsLabelEl.textContent = extras.newsLabel;
+
+  const newsTrackEl = document.getElementById("news-track");
+  if (newsTrackEl && extras.newsItems) {
+    newsTrackEl.innerHTML = extras.newsItems
+      .map(t => `<span>${t}</span><span class="dot"></span>`)
+      .join("");
+  }
+
+  const demoLabelEl = document.getElementById("demo-label");
+  if (demoLabelEl) demoLabelEl.textContent = extras.demoLabel;
+
+  const yourFirmLabelEl = document.getElementById("yourfirm-label");
+  if (yourFirmLabelEl) yourFirmLabelEl.textContent = extras.yourFirmLabel;
+
+  const footerTaglineEl = document.getElementById("footer-tagline");
+  if (footerTaglineEl) footerTaglineEl.innerHTML = extras.footerTagline;
 
   faq.forEach((pair, i) => {
     const qEl = document.getElementById(`faq-q${i + 1}`);
