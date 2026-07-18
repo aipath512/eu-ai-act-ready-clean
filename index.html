@@ -933,25 +933,60 @@ footer{
 
 </main>
 
-<footer>
+<footer style="border-top:1px solid #292929; background:#030303; padding:60px 22px 30px; margin-top:60px;">
+  <style>
+    @media(max-width:900px){
+      #footer-grid{ grid-template-columns:1fr 1fr !important; }
+    }
+    @media(max-width:600px){
+      #footer-grid{ grid-template-columns:1fr !important; }
+      #footer-bottom{ flex-direction:column; align-items:flex-start !important; }
+    }
+  </style>
+  <div style="width:min(100%,1080px); margin:0 auto;">
+    <div id="footer-grid" style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px;">
 
-  <span>
-    © 2026 5thelement.AI
-  </span>
+      <div>
+        <h3 style="font-size:22px; font-weight:950; margin:0 0 15px; color:#fff;">EU AI ACT READY™</h3>
+        <p style="color:#888; line-height:1.7; font-size:14px;">
+          AI governance readiness platform for understanding Regulation (EU) 2024/1689, AI transparency and operational compliance.
+        </p>
+        <div style="display:flex; gap:12px; margin-top:18px;">
+          <a href="https://linkedin.com/company/eu-ai-act-ready" target="_blank" rel="noopener" style="width:36px; height:36px; border:1px solid #333; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; text-decoration:none;">in</a>
+          <a href="https://twitter.com/eu_ai_act_ready" target="_blank" rel="noopener" style="width:36px; height:36px; border:1px solid #333; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; text-decoration:none;">𝕏</a>
+        </div>
+      </div>
 
-  <span class="dot"></span>
+      <div>
+        <h4 style="font-size:13px; letter-spacing:.12em; color:#fff; margin-bottom:18px;">QUICK LINKS</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:2.2; color:#999;">
+          <li><a href="/" style="color:#999; text-decoration:none;">Home</a></li>
+          <li><a href="demo.html" style="color:#999; text-decoration:none;">Demo</a></li>
+          <li><a href="your-firm.html" style="color:#999; text-decoration:none;">Your Firm</a></li>
+          <li><a href="#offer" style="color:#999; text-decoration:none;">Pricing</a></li>
+          <li><a href="#faq" style="color:#999; text-decoration:none;">FAQ</a></li>
+        </ul>
+      </div>
 
-  <span>
-    EU AI Act Ready™
-  </span>
+      <div>
+        <h4 style="font-size:13px; letter-spacing:.12em; color:#fff; margin-bottom:18px;">CONTACT</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:2.2; color:#999;">
+          <li><a href="mailto:contact@5thelement.ai" style="color:#999; text-decoration:none;">contact@5thelement.ai</a></li>
+          <li><a href="tel:+40737123540" style="color:#999; text-decoration:none;">+40 737 123 540</a></li>
+          <li><a href="https://5thelement.ai" target="_blank" rel="noopener" style="color:#999; text-decoration:none;">5thelement.ai</a></li>
+        </ul>
+      </div>
 
-  <span class="dot"></span>
+    </div>
 
-  <span id="footer-tagline">
-    Ask &amp; Generator™
-  </span>
-
+    <div id="footer-bottom" style="margin-top:45px; padding-top:25px; border-top:1px solid #292929; display:flex; justify-content:space-between; gap:20px; color:#666; font-size:12px;">
+      <span>© 2026 EU AI ACT READY™. All rights reserved.</span>
+      <span>Regulation (EU) 2024/1689 readiness platform.</span>
+    </div>
+  </div>
 </footer>
+        
+
 
 <script>
 
