@@ -429,9 +429,10 @@ main{
   background:var(--red);
   margin-top:14px;
 }
-
 .answer-box{
   min-height:170px;
+  max-height:420px;
+  overflow-y:auto;
   margin-top:24px;
   padding:28px;
   border:1px solid #333;
@@ -440,6 +441,19 @@ main{
   color:#d0d0d0;
   font-size:18px;
   line-height:1.6;
+}
+
+.answer-box::-webkit-scrollbar{
+  width:8px;
+}
+
+.answer-box::-webkit-scrollbar-track{
+  background:#0b0b0b;
+}
+
+.answer-box::-webkit-scrollbar-thumb{
+  background:var(--red);
+  border-radius:4px;
 }
 
 footer{
