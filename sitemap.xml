@@ -1,79 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<sitemapindex 
-xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-<!-- CORE WEBSITE PAGES -->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <sitemap>
-    <loc>
-    https://eu-ai-act-ready.eu/sitemap-pages.xml
-    </loc>
+<loc>https://eu-ai-act-ready.eu/sitemap-pages.xml</loc>
 </sitemap>
-
-
-<!-- FAQ SEMANTIC KNOWLEDGE CLUSTERS -->
 
 <sitemap>
-    <loc>
-    https://eu-ai-act-ready.eu/sitemap-faq.xml
-    </loc>
+<loc>https://eu-ai-act-ready.eu/sitemap-faq.xml</loc>
 </sitemap>
-
-
-<!-- BLOG AUTHORITY CONTENT -->
 
 <sitemap>
-    <loc>
-    https://eu-ai-act-ready.eu/sitemap-blog.xml
-    </loc>
+<loc>https://eu-ai-act-ready.eu/sitemap-blog.xml</loc>
 </sitemap>
-
-
-<!-- RESOURCES KNOWLEDGE LIBRARY -->
 
 <sitemap>
-    <loc>
-    https://eu-ai-act-ready.eu/sitemap-resources.xml
-    </loc>
+<loc>https://eu-ai-act-ready.eu/sitemap-resources.xml</loc>
 </sitemap>
-
-
-<!-- ARTICLE / LEGAL KNOWLEDGE HUBS -->
 
 <sitemap>
-    <loc>
-    https://eu-ai-act-ready.eu/sitemap-legal.xml
-    </loc>
+<loc>https://eu-ai-act-ready.eu/sitemap-legal.xml</loc>
 </sitemap>
-
-
-<!-- GLOSSARY / SEMANTIC DICTIONARY -->
 
 <sitemap>
-    <loc>
-    https://eu-ai-act-ready.eu/sitemap-glossary.xml
-    </loc>
+<loc>https://eu-ai-act-ready.eu/sitemap-glossary.xml</loc>
 </sitemap>
-
-
-<!-- IMAGES -->
 
 <sitemap>
-    <loc>
-    https://eu-ai-act-ready.eu/sitemap-images.xml
-    </loc>
+<loc>https://eu-ai-act-ready.eu/sitemap-images.xml</loc>
 </sitemap>
-
-
-<!-- VIDEO / MEDIA FUTURE -->
 
 <sitemap>
-    <loc>
-    https://eu-ai-act-ready.eu/sitemap-media.xml
-    </loc>
+<loc>https://eu-ai-act-ready.eu/sitemap-media.xml</loc>
 </sitemap>
-
 
 </sitemapindex>
