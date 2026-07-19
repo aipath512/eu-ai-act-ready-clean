@@ -359,19 +359,25 @@ footer.cta a{
 
 <script>
 const MODULES = [
-  {id:"01", name:"AI System Inventory"},
-  {id:"02", name:"Risk Classification"},
-  {id:"03", name:"AI Literacy"},
-  {id:"04", name:"Prohibited Practices"},
-  {id:"05", name:"High-Risk Assessment"},
-  {id:"06", name:"Technical Documentation"},
-  {id:"07", name:"Human Oversight"},
-  {id:"08", name:"Data Governance"},
-  {id:"09", name:"Logging & Monitoring"},
-  {id:"10", name:"Incident Reporting"},
+  {id:"01", name:"AI System Inventory",     folder:"01-ai-system-inventory",     fileBase:"AI_System_Inventory"},
+  {id:"02", name:"Risk Classification",     folder:"02-risk-classification",     fileBase:"Risk_Classification"},
+  {id:"03", name:"AI Literacy",             folder:"03-ai-literacy",             fileBase:"AI_Literacy"},
+  {id:"04", name:"Prohibited Practices",    folder:"04-prohibited-practices",    fileBase:"Prohibited_Practices"},
+  {id:"05", name:"High-Risk Assessment",    folder:"05-high-risk-assessment",    fileBase:"High_Risk_Assessment"},
+  {id:"06", name:"Technical Documentation", folder:"06-technical-documentation", fileBase:"Technical_Documentation"},
+  {id:"07", name:"Human Oversight",         folder:"07-human-oversight",         fileBase:"Human_Oversight"},
+  {id:"08", name:"Data Governance",         folder:"08-data-governance",         fileBase:"Data_Governance"},
+  {id:"09", name:"Logging & Monitoring",    folder:"09-logging-monitoring",      fileBase:"Logging_Monitoring"},
+  {id:"10", name:"Incident Reporting",      folder:"10-incident-reporting",      fileBase:"Incident_Reporting"},
 ];
 
 const DOC_TYPES = ["Checklist","Declaration","Policy","Evidence","Procedure","Register","Work Instruction"];
+
+// Real filename prefixes used in the repo (confirmed from actual files)
+const TYPE_PREFIX = {
+  "Checklist":"CHK", "Declaration":"DEC", "Policy":"DOD", "Evidence":"EVID",
+  "Procedure":"PROC", "Register":"REG", "Work Instruction":"WI"
+};
 
 // Modules 01-03 (index 0-2): fully open.
 // Modules 04-10 (index 3-9): Evidence, Register, Work Instruction are locked.
@@ -396,7 +402,8 @@ MODULES.forEach((mod, mIdx) => {
     const isLocked = mIdx >= OPEN_MODULE_COUNT && LOCKED_TYPES.includes(type);
     const row = document.createElement("div");
     row.className = "doc" + (isLocked ? " locked-row" : "");
-    const slug = `${mod.id}-${type.toLowerCase().replace(/\s+/g,'-')}`;
+    const fileName = `${TYPE_PREFIX[type]}-0${mod.id}_${mod.fileBase}_${type.replace(/\s+/g,'_')}.md`;
+    const mdPath = `/${mod.folder}/${fileName}`;
 
     if (isLocked) {
       row.innerHTML = `
@@ -409,7 +416,7 @@ MODULES.forEach((mod, mIdx) => {
     } else {
       row.innerHTML = `
         <div class="doc-name">
-          <a class="open-link" href="rrvi_templates/${mod.id}-${mod.name.toLowerCase().replace(/\s+/g,'-')}/${slug}.md" target="_blank">${mod.name} ${type}</a>
+          <a class="open-link" href="/viewer.html?src=${encodeURIComponent(mdPath)}" target="_blank">${mod.name} ${type}</a>
           <span class="doc-type">${type}</span>
         </div>
         <span class="badge-open">✓ Open</span>`;
