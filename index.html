@@ -631,12 +631,6 @@ footer{
   </div>
 
 </header>
-<!-- ============================================================
-     STEP 1 — find this exact block in index.html (you already
-     pasted it), and change ONLY the opening <div> line:
-     add style="display:none" so the old buttons still work in
-     the background but are invisible.
-     ============================================================ -->
 <div class="lang-row" id="lang-row" style="display:none">
   <button class="lang-btn active" data-lang="en"><img src="assets/flags/gb.svg"> EN</button>
   <button class="lang-btn" data-lang="fr"><img src="assets/flags/fr.svg"> FR</button>
@@ -646,6 +640,17 @@ footer{
   <button class="lang-btn" data-lang="ro"><img src="assets/flags/ro.svg"> RO</button>
   <button class="lang-btn" data-lang="pl"><img src="assets/flags/pl.svg"> PL</button>
 </div>
+
+<script>
+  (function () {
+    var newSel = document.getElementById('langSelectNew');
+    if (!newSel) return;
+    newSel.addEventListener('change', function () {
+      var oldBtn = document.querySelector('.lang-btn[data-lang="' + newSel.value + '"]');
+      if (oldBtn) oldBtn.click();
+    });
+  })();
+</script>
 <div style="padding:10px 20px;">
   <select id="langSelectNew"
     style="width:auto;min-width:120px;background:#000000;color:#FFFFFF;
