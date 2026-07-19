@@ -99,23 +99,6 @@
     border:1px solid var(--border); border-radius:8px;
     padding:8px 10px; font-size:12.5px; color:#ccc;
   }
-  .langbar{
-    display:flex; gap:0; overflow-x:auto;
-    border-top:1px solid var(--border); border-bottom:1px solid var(--border);
-    margin:0 -16px 28px; padding:10px 16px;
-    -ms-overflow-style:none; scrollbar-width:none;
-  }
-  .langbar::-webkit-scrollbar{display:none;}
-  .langbar a{
-    display:flex; align-items:center; gap:6px;
-    color:var(--white); text-decoration:none;
-    font-size:15px; padding:0 14px;
-    border-right:1px solid var(--border);
-    white-space:nowrap;
-  }
-  .langbar a:first-child{padding-left:0;}
-  .langbar a:last-child{border-right:none;}
-  .langbar a.active{color:var(--red-bright); font-weight:800;}
   .askbox{
     margin-top:40px; border:1px solid var(--red); border-radius:14px;
     padding:14px; display:flex; align-items:center; gap:10px;
@@ -150,16 +133,6 @@
 <div class="top">
   <div class="mark">✦</div>
   <div class="brand">5thelement.AI</div>
-</div>
-
-<div class="langbar" id="langbar">
-  <a href="#" data-lang="en" class="active">🇬🇧 EN</a>
-  <a href="#" data-lang="fr">🇫🇷 FR</a>
-  <a href="#" data-lang="es">🇪🇸 ES</a>
-  <a href="#" data-lang="de">🇩🇪 DE</a>
-  <a href="#" data-lang="it">🇮🇹 IT</a>
-  <a href="#" data-lang="pl">🇵🇱 PL</a>
-  <a href="#" data-lang="ro">🇷🇴 RO</a>
 </div>
 
 <div class="wrap">
@@ -234,25 +207,20 @@ const RRVI_API = "https://eu-ai-act-rrvi-generator.aipath512.workers.dev/generat
 const form = document.getElementById("rrvi-form");
 const btn = document.getElementById("genBtn");
 const statusEl = document.getElementById("status");
-const langbar = document.getElementById("langbar");
 const bottomLang = document.getElementById("bottomLang");
 const docLangSelect = document.getElementById("docLang");
 
 function setActiveLang(code){
   docLangSelect.value = code;
-  [langbar, bottomLang].forEach(bar=>{
-    bar.querySelectorAll("a").forEach(a=>{
-      a.classList.toggle("active", a.dataset.lang === code);
-    });
+  bottomLang.querySelectorAll("a").forEach(a=>{
+    a.classList.toggle("active", a.dataset.lang === code);
   });
 }
 
-[langbar, bottomLang].forEach(bar=>{
-  bar.querySelectorAll("a").forEach(a=>{
-    a.addEventListener("click", function(e){
-      e.preventDefault();
-      setActiveLang(a.dataset.lang);
-    });
+bottomLang.querySelectorAll("a").forEach(a=>{
+  a.addEventListener("click", function(e){
+    e.preventDefault();
+    setActiveLang(a.dataset.lang);
   });
 });
 
