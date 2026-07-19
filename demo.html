@@ -414,12 +414,15 @@ MODULES.forEach((mod, mIdx) => {
         <span class="badge-locked">🔒 Locked</span>`;
       row.onclick = () => openModal();
     } else {
+      const url = `/viewer.html?src=${encodeURIComponent(mdPath)}`;
       row.innerHTML = `
-        <div class="doc-name">
-          <a class="open-link" href="/viewer.html?src=${encodeURIComponent(mdPath)}" target="_blank">${mod.name} ${type}</a>
-          <span class="doc-type">${type}</span>
-        </div>
-        <span class="badge-open">✓ Open</span>`;
+        <a class="row-link" href="${url}" target="_blank" style="display:flex;justify-content:space-between;align-items:center;width:100%;text-decoration:none;color:inherit;">
+          <div class="doc-name">
+            <span class="open-link">${mod.name} ${type}</span>
+            <span class="doc-type">${type}</span>
+          </div>
+          <span class="badge-open">✓ Open</span>
+        </a>`;
     }
     list.appendChild(row);
   });
