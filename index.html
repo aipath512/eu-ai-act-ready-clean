@@ -801,49 +801,46 @@ footer{
 
   </section>
 
-  <section class="popular" aria-labelledby="popular-title">
+<section class="popular" aria-labelledby="popular-title" style="display:flex;align-items:center;gap:8px;">
 
-  <div style="position:relative;">
+  <button id="chipsLeft" aria-label="Scroll left" style="flex:0 0 auto;background:#dc2626;border:none;color:#FFFFFF;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:22px;font-weight:900;line-height:1;">‹</button>
 
-    <button id="chipsLeft" aria-label="Scroll left" style="position:absolute;left:-4px;top:50%;transform:translateY(-50%);z-index:20;background:#000000;border:1.5px solid #dc2626;color:#FFFFFF;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;font-weight:800;">‹</button>
+  <div class="chips" id="chipsTrack" style="display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:12px;flex:1;min-width:0;">
 
-    <div class="chips" id="chipsTrack" style="display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:12px;padding:0 34px;">
+    <button data-q="What does Article 4 require for AI literacy?" style="flex:0 0 auto;">
+      Article 4<br>
+      AI Literacy
+    </button>
 
-      <button data-q="What does Article 4 require for AI literacy?" style="flex:0 0 auto;">
-        Article 4<br>
-        AI Literacy
-      </button>
+    <button data-q="How do I classify a high-risk AI system?" style="flex:0 0 auto;">
+      High-Risk<br>
+      Classification
+    </button>
 
-      <button data-q="How do I classify a high-risk AI system?" style="flex:0 0 auto;">
-        High-Risk<br>
-        Classification
-      </button>
+    <button data-q="What are Article 53 GPAI provider obligations under the EU AI Act?" style="flex:0 0 auto;">
+      GPAI<br>
+      Obligations
+    </button>
 
-      <button data-q="What are Article 53 GPAI provider obligations under the EU AI Act?" style="flex:0 0 auto;">
-        GPAI<br>
-        Obligations
-      </button>
+    <button data-q="What does Article 50 require?" style="flex:0 0 auto;">
+      Article 50<br>
+      Transparency
+    </button>
 
-      <button data-q="What does Article 50 require?" style="flex:0 0 auto;">
-        Article 50<br>
-        Transparency
-      </button>
-
-      <button data-q="How should I create an AI inventory?" style="flex:0 0 auto;">
-        AI<br>
-        Inventory
-      </button>
-
-    </div>
-
-    <button id="chipsRight" aria-label="Scroll right" style="position:absolute;right:-4px;top:50%;transform:translateY(-50%);z-index:20;background:#000000;border:1.5px solid #dc2626;color:#FFFFFF;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;font-weight:800;">›</button>
+    <button data-q="How should I create an AI inventory?" style="flex:0 0 auto;">
+      AI<br>
+      Inventory
+    </button>
 
   </div>
+
+  <button id="chipsRight" aria-label="Scroll right" style="flex:0 0 auto;background:#dc2626;border:none;color:#FFFFFF;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:22px;font-weight:900;line-height:1;">›</button>
 
 </section>
 
 <style>
   #chipsTrack::-webkit-scrollbar{ display:none; }
+</style>
 </style>
   <div class="links">
   <a href="demo.html">
