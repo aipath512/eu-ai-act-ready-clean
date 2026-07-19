@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EU AI Act — Why? | EU AI Act Ready™</title>
+<link rel="canonical" href="https://eu-ai-act-ready.eu/why.html" />
+<meta name="description" content="Why does the EU AI Act exist? The real risk isn't AI — it's untraceable AI decisions affecting people without human accountability. EU AI Act Ready™.">
+
+<style>
+:root{
+  --black:#000; --panel:#090909; --white:#fff; --muted:#a8a8a8;
+  --border:#2a2a2a; --red:#c90016; --red2:#ef001c;
+}
+*{ box-sizing:border-box; }
+html{ background:#000; color-scheme:dark; }
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(120,0,0,.12), transparent 34%),
+    #000;
+  color:#fff;
+  font-family:Inter,Arial,Helvetica,sans-serif;
+}
+a{ color:inherit; }
+.wrap{ width:min(100%,860px); margin:0 auto; padding:0 20px 100px; }
+
+.topbar{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 20px 0; width:min(100%,860px); margin:0 auto;
+}
+.back-link{
+  font-size:14px; font-weight:700; text-decoration:none; color:var(--muted);
+  border-bottom:1px solid rgba(255,255,255,.3); padding-bottom:2px;
+}
+.back-link:hover{ color:#fff; border-color:#fff; }
+select#langSelectWhy{
+  background:#dc2626; color:#fff; border:none; border-radius:8px;
+  padding:8px 12px; font-weight:900; font-size:13px; cursor:pointer;
+}
+
+.hero{ display:flex; flex-direction:column; align-items:center; margin-top:30px; }
+.hero-title{
+  width:100%; background:#fff; color:#000; text-align:center;
+  font-family:Impact,"Arial Narrow",sans-serif;
+  font-size:clamp(40px,8vw,84px); line-height:.95; letter-spacing:-.03em;
+  padding:20px 18px 16px; text-transform:uppercase;
+}
+.hero-subtitle{
+  margin-top:-2px; background:linear-gradient(#d90018,#a30010); color:#fff;
+  text-align:center; font-family:Impact,"Arial Narrow",sans-serif;
+  font-size:clamp(24px,4.5vw,44px); line-height:1; padding:14px 24px;
+  text-transform:uppercase; box-shadow:0 14px 32px rgba(200,0,20,.2);
+}
+
+.lede{
+  margin-top:32px; font-size:clamp(19px,2.6vw,24px); line-height:1.6;
+  color:#f2f2f2; font-weight:600;
+}
+.redline{ width:72px; height:4px; background:var(--red); margin:38px 0 20px; }
+
+h2{
+  font-size:clamp(22px,3.5vw,30px); letter-spacing:-.02em; margin:0 0 14px;
+  color:#fff;
+}
+p{ font-size:17px; line-height:1.75; color:#d0d0d0; margin:0 0 18px; }
+.callout{
+  border:1px solid #333; border-left:3px solid var(--red); border-radius:8px;
+  background:linear-gradient(#0d0d0d,#080808); padding:22px 26px;
+  margin:24px 0; font-size:16px; line-height:1.7; color:#e2e2e2;
+}
+.callout strong{ color:#fff; }
+
+.breadcrumb{
+  display:flex; align-items:stretch; gap:8px; margin:24px 0 8px;
+  overflow-x:auto; padding-bottom:6px;
+}
+.bc-step{
+  flex:1 1 0; min-width:140px;
+  border:1px solid #333; border-top:3px solid var(--red); border-radius:8px;
+  background:linear-gradient(#0d0d0d,#080808); padding:16px 14px;
+}
+.bc-label{
+  font-family:Impact,"Arial Narrow",sans-serif; font-size:20px; color:#fff;
+  letter-spacing:.02em; margin-bottom:8px;
+}
+.bc-desc{ font-size:13px; line-height:1.5; color:#a8a8a8; }
+.bc-arrow{
+  display:flex; align-items:center; justify-content:center;
+  color:var(--red2); font-size:20px; font-weight:900; flex:0 0 auto;
+}
+
+.pillars{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:16px;
+}
+.pillar{
+  border:1px solid #333; border-radius:8px; padding:18px 20px;
+  background:linear-gradient(#090909,#050505);
+}
+.pillar .num{ color:var(--red2); font-weight:900; font-size:13px; letter-spacing:.05em; }
+.pillar h3{ margin:6px 0 8px; font-size:16px; color:#fff; }
+.pillar p{ font-size:14px; color:#a8a8a8; margin:0; }
+
+.cta-row{
+  display:flex; gap:16px; justify-content:center; margin-top:48px; flex-wrap:wrap;
+}
+.cta-row a{
+  display:flex; align-items:center; justify-content:center;
+  min-width:180px; height:56px; padding:0 24px;
+  border:2px solid var(--red); border-radius:0; background:#090909; color:#fff;
+  text-decoration:none; font-weight:900; font-size:15px; transition:.2s;
+}
+.cta-row a:hover{ background:var(--red); }
+
+@media(max-width:700px){
+  .pillars{ grid-template-columns:1fr; }
+  .breadcrumb{ flex-direction:column; }
+  .bc-arrow{ transform:rotate(90deg); padding:2px 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-link" href="index.html">← EU AI Act Ready™</a>
+  <select id="langSelectWhy">
+    <option value="en">🇬🇧 EN</option>
+    <option value="fr">🇫🇷 FR</option>
+    <option value="de">🇩🇪 DE</option>
+    <option value="es">🇪🇸 ES</option>
+    <option value="it">🇮🇹 IT</option>
+    <option value="ro">🇷🇴 RO</option>
+    <option value="pl">🇵🇱 PL</option>
+  </select>
+</div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <h1 class="hero-title" id="hero-title">EU AI ACT</h1>
+    <div class="hero-subtitle" id="hero-subtitle">Why?</div>
+  </section>
+
+  <p class="lede" id="lede">
+    The EU AI Act isn't about stopping AI — it's about one question: when
+    an AI-driven decision or piece of AI-generated content affects a real
+    person, who can be held accountable?
+  </p>
+
+  <div class="redline"></div>
+
+  <h2 id="h-risk-title">The risk was never the algorithm</h2>
+  <p id="h-risk-p1">
+    AI-generated text, images, and voice are now convincing enough to
+    influence people at scale — deepfakes, cloned voices, stolen account
+    identities, content amplified across social platforms. During recent
+    European election cycles, researchers and regulators documented how
+    AI-amplified content on platforms like TikTok shifted public opinion
+    around candidates faster than any traditional campaign — including
+    around figures with little prior public recognition. That's the exact
+    scenario EU lawmakers were trying to get ahead of.
+  </p>
+  <p id="h-risk-p2">
+    The EU can't ban AI-generated content, and doesn't try to. What it can
+    do is make it costly — legally and financially — for a company to put
+    that content, or those decisions, in front of citizens without a human
+    accountable for it.
+  </p>
+
+  <h2 id="h-human-title">A human has to be in the loop — and has to consent</h2>
+  <p id="h-human-p1">
+    Automation — RPA, generative pipelines, autonomous agents — can
+    technically make a decision or publish content without anyone touching
+    a button. The EU AI Act's answer is simple: a named human inside the
+    company must be involved, and must have consented, before that content
+    or decision moves from one system, or one zone of responsibility, to
+    another — especially in domains that touch people directly: health,
+    credit, employment, and similar high-impact areas.
+  </p>
+  <p id="h-human-p2">
+    An AI system can't be fined, imprisoned, or held liable. A human — or a
+    legal entity represented by one — can. That's why "who pressed the
+    button" isn't rhetorical under this regulation. It's the actual
+    compliance requirement.
+  </p>
+
+  <h2 id="h-proof-title">Not trust — proof</h2>
+  <div class="callout" id="h-proof-callout">
+    The goal isn't to take a company's word that a human reviewed
+    something. It's to make that review <strong>evidence-based and
+    reconstructible</strong> — cryptographic hashing (SHA) and, where
+    justified, blockchain anchoring of AI-generated content and its
+    approval trail — so an auditor can trace any piece of content or
+    decision back to the human who validated it, at every handoff, with
+    rollback still possible if something was approved in error.
+  </div>
+  <p id="h-proof-p1">
+    That's not hypothetical here — it's the same mechanism behind EU AI Act
+    Ready™'s own Innovation Registry: every claim is blockchain-anchored
+    via OpenTimestamps, independently verifiable rather than just asserted.
+  </p>
+
+  <h2 id="h-breadcrumb-title">What "reconstructible" actually means</h2>
+  <p id="h-breadcrumb-lede">
+    Transparency and traceability aren't two separate pillars in practice —
+    they're the same breadcrumb, read in either direction. An auditor
+    should be able to follow it from either end:
+  </p>
+  <div class="breadcrumb" id="breadcrumb-row">
+    <div class="bc-step">
+      <div class="bc-label">WHO</div>
+      <div class="bc-desc" id="bc-who">The named human who reviewed it and gave consent — not "the system"</div>
+    </div>
+    <div class="bc-arrow">→</div>
+    <div class="bc-step">
+      <div class="bc-label">WHAT</div>
+      <div class="bc-desc" id="bc-what">The exact content or decision, hashed (SHA) at that moment</div>
+    </div>
+    <div class="bc-arrow">→</div>
+    <div class="bc-step">
+      <div class="bc-label">WHERE</div>
+      <div class="bc-desc" id="bc-where">The system or responsibility zone it moved into next</div>
+    </div>
+    <div class="bc-arrow">→</div>
+    <div class="bc-step">
+      <div class="bc-label">WHEN</div>
+      <div class="bc-desc" id="bc-when">A timestamped, anchored record of that exact handoff</div>
+    </div>
+    <div class="bc-arrow">→</div>
+    <div class="bc-step">
+      <div class="bc-label">HOW</div>
+      <div class="bc-desc" id="bc-how">The method of approval — and whether rollback is still possible</div>
+    </div>
+  </div>
+
+  <h2 id="h-pillars-title">The four pillars, through this lens</h2>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="num">01</div>
+      <h3 id="p1-title">Risk-based classification</h3>
+      <p id="p1-desc">The closer an AI system gets to directly affecting a person — health, credit, employment, justice — the stricter the obligations.</p>
+    </div>
+    <div class="pillar">
+      <div class="num">02</div>
+      <h3 id="p2-title">Human oversight</h3>
+      <p id="p2-desc">A named, accountable human must be able to intervene, override, or stop an AI-driven decision before it reaches a person.</p>
+    </div>
+    <div class="pillar">
+      <div class="num">03</div>
+      <h3 id="p3-title">Transparency</h3>
+      <p id="p3-desc">People have the right to know when they're interacting with, or affected by, an AI system — not to find out after the fact.</p>
+    </div>
+    <div class="pillar">
+      <div class="num">04</div>
+      <h3 id="p4-title">Traceability &amp; accountability</h3>
+      <p id="p4-desc">Every handoff of AI-generated content or AI-driven decisions must trace back to the human who approved it — with rollback possible.</p>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="ask.html" id="cta-ask">🔍 ASK THE ACT</a>
+    <a href="your-firm.html" id="cta-firm">💻 YOUR FIRM</a>
+  </div>
+
+</div>
+
+<script>
+// Same i18n pattern as the homepage's FAQ_DATA object — add a language by
+// filling in its key below. Falls back to English for any missing key.
+const WHY_I18N = {
+  en: {
+    heroSubtitle: "Why?",
+    lede: "The EU AI Act isn't about stopping AI — it's about one question: when an AI-driven decision or piece of AI-generated content affects a real person, who can be held accountable?",
+    riskTitle: "The risk was never the algorithm",
+    riskP1: "AI-generated text, images, and voice are now convincing enough to influence people at scale — deepfakes, cloned voices, stolen account identities, content amplified across social platforms. During recent European election cycles, researchers and regulators documented how AI-amplified content on platforms like TikTok shifted public opinion around candidates faster than any traditional campaign — including around figures with little prior public recognition. That's the exact scenario EU lawmakers were trying to get ahead of.",
+    riskP2: "The EU can't ban AI-generated content, and doesn't try to. What it can do is make it costly — legally and financially — for a company to put that content, or those decisions, in front of citizens without a human accountable for it.",
+    humanTitle: "A human has to be in the loop — and has to consent",
+    humanP1: "Automation — RPA, generative pipelines, autonomous agents — can technically make a decision or publish content without anyone touching a button. The EU AI Act's answer is simple: a named human inside the company must be involved, and must have consented, before that content or decision moves from one system, or one zone of responsibility, to another — especially in domains that touch people directly: health, credit, employment, and similar high-impact areas.",
+    humanP2: "An AI system can't be fined, imprisoned, or held liable. A human — or a legal entity represented by one — can. That's why \"who pressed the button\" isn't rhetorical under this regulation. It's the actual compliance requirement.",
+    proofTitle: "Not trust — proof",
+    proofCallout: "The goal isn't to take a company's word that a human reviewed something. It's to make that review evidence-based and reconstructible — cryptographic hashing (SHA) and, where justified, blockchain anchoring of AI-generated content and its approval trail — so an auditor can trace any piece of content or decision back to the human who validated it, at every handoff, with rollback still possible if something was approved in error.",
+    proofP1: "That's not hypothetical here — it's the same mechanism behind EU AI Act Ready™'s own Innovation Registry: every claim is blockchain-anchored via OpenTimestamps, independently verifiable rather than just asserted.",
+    breadcrumbTitle: "What \"reconstructible\" actually means",
+    breadcrumbLede: "Transparency and traceability aren't two separate pillars in practice — they're the same breadcrumb, read in either direction. An auditor should be able to follow it from either end:",
+    bcWho: "The named human who reviewed it and gave consent — not \"the system\"",
+    bcWhat: "The exact content or decision, hashed (SHA) at that moment",
+    bcWhere: "The system or responsibility zone it moved into next",
+    bcWhen: "A timestamped, anchored record of that exact handoff",
+    bcHow: "The method of approval — and whether rollback is still possible",
+    pillarsTitle: "The four pillars, through this lens",
+    p1Title: "Risk-based classification",
+    p1Desc: "The closer an AI system gets to directly affecting a person — health, credit, employment, justice — the stricter the obligations.",
+    p2Title: "Human oversight",
+    p2Desc: "A named, accountable human must be able to intervene, override, or stop an AI-driven decision before it reaches a person.",
+    p3Title: "Transparency",
+    p3Desc: "People have the right to know when they're interacting with, or affected by, an AI system — not to find out after the fact.",
+    p4Title: "Traceability & accountability",
+    p4Desc: "Every handoff of AI-generated content or AI-driven decisions must trace back to the human who approved it — with rollback possible.",
+    ctaAsk: "🔍 ASK THE ACT",
+    ctaFirm: "💻 YOUR FIRM"
+  },
+  ro: {
+    heroSubtitle: "De ce?",
+    lede: "EU AI Act nu înseamnă oprirea inteligenței artificiale — se reduce la o singură întrebare: când o decizie automată sau un conținut generat de AI afectează o persoană reală, cine poate fi tras la răspundere?",
+    riskTitle: "Riscul nu a fost niciodată algoritmul",
+    riskP1: "Text, imagini și voce generate de AI au ajuns suficient de convingătoare încât să influențeze oameni la scară largă — deepfake-uri, voci clonate, conturi furate, conținut amplificat pe rețelele sociale. În timpul unor cicluri electorale recente din Europa, cercetători și autorități de reglementare au documentat cum conținutul amplificat de AI pe platforme precum TikTok a schimbat opinia publică față de candidați mai rapid decât orice campanie tradițională — inclusiv în cazul unor persoane fără notorietate publică anterioară. Exact acest scenariu au încercat legiuitorii europeni să îl anticipeze.",
+    riskP2: "UE nu poate interzice conținutul generat de AI și nici nu încearcă. Ce poate face e să facă costisitor — legal și financiar — ca o firmă să pună acel conținut, sau acele decizii, în fața cetățenilor fără un om responsabil pentru ele.",
+    humanTitle: "Un om trebuie să fie în buclă — și trebuie să-și dea consimțământul",
+    humanP1: "Automatizarea — RPA, fluxuri generative, agenți autonomi — poate, tehnic, să ia o decizie sau să publice conținut fără ca cineva să apese vreun buton. Răspunsul EU AI Act e simplu: un om identificat, din interiorul firmei, trebuie implicat și trebuie să-și fi dat consimțământul, înainte ca acel conținut sau acea decizie să treacă dintr-un sistem — sau dintr-o zonă de responsabilitate — în alta. Mai ales în domenii care ating direct oamenii: sănătate, credit, angajare și alte activități cu impact similar.",
+    humanP2: "Un sistem AI nu poate fi amendat, închis sau ținut responsabil. Un om — sau o entitate juridică reprezentată de un om — poate. De asta „cine a apăsat butonul” nu e retoric sub acest regulament. E chiar cerința de conformitate.",
+    proofTitle: "Nu încredere — dovadă",
+    proofCallout: "Scopul nu e să crezi firma pe cuvânt că un om a verificat ceva. Scopul e ca acea verificare să fie bazată pe dovezi și reconstituibilă — hashing criptografic (SHA) și, unde se justifică, ancorare blockchain a conținutului generat de AI și a traseului său de aprobare — astfel încât un auditor să poată urca de la orice conținut sau decizie până la omul care a validat-o, la fiecare transfer, cu rollback încă posibil dacă ceva a fost aprobat din greșeală.",
+    proofP1: "Nu e teoretic aici — e chiar mecanismul din spatele propriului Innovation Registry al EU AI Act Ready™: fiecare afirmație e ancorată blockchain prin OpenTimestamps, verificabilă independent, nu doar declarată.",
+    breadcrumbTitle: "Ce înseamnă, concret, „reconstituibil”",
+    breadcrumbLede: "Transparența și trasabilitatea nu sunt doi piloni separați în practică — sunt același breadcrumb, citit în oricare direcție. Un auditor trebuie să-l poată urmări din oricare capăt:",
+    bcWho: "Omul identificat care a verificat și și-a dat consimțământul — nu doar „sistemul”",
+    bcWhat: "Conținutul sau decizia, exactă, hash-uită (SHA) în acel moment",
+    bcWhere: "Sistemul sau zona de responsabilitate în care a intrat apoi",
+    bcWhen: "O înregistrare cu marcă temporală, ancorată, a acelui transfer exact",
+    bcHow: "Metoda de aprobare — și dacă rollback-ul mai e posibil",
+    pillarsTitle: "Cei patru piloni, prin această lentilă",
+    p1Title: "Clasificare bazată pe risc",
+    p1Desc: "Cu cât un sistem AI ajunge mai aproape să afecteze direct o persoană — sănătate, credit, angajare, justiție — cu atât obligațiile sunt mai stricte.",
+    p2Title: "Supraveghere umană",
+    p2Desc: "Un om identificat, responsabil, trebuie să poată interveni, suprascrie sau opri o decizie automată înainte să ajungă la o persoană.",
+    p3Title: "Transparență",
+    p3Desc: "Oamenii au dreptul să știe când interacționează cu, sau sunt afectați de, un sistem AI — nu să afle ulterior.",
+    p4Title: "Trasabilitate și responsabilitate",
+    p4Desc: "Fiecare transfer de conținut generat de AI sau de decizii automate trebuie să poată fi urmărit până la omul care l-a aprobat — cu rollback posibil.",
+    ctaAsk: "🔍 ÎNTREABĂ REGULAMENTUL",
+    ctaFirm: "💻 FIRMA TA"
+  },
+  fr: {
+    heroSubtitle: "Pourquoi ?",
+    lede: "L'AI Act européen ne vise pas à stopper l'IA — tout se résume à une seule question : quand une décision automatisée ou un contenu généré par IA affecte une personne réelle, qui peut en être tenu responsable ?",
+    riskTitle: "Le risque n'a jamais été l'algorithme",
+    riskP1: "Les textes, images et voix générés par IA sont désormais assez convaincants pour influencer les gens à grande échelle — deepfakes, voix clonées, identités de comptes volées, contenus amplifiés sur les réseaux sociaux. Lors de récents cycles électoraux en Europe, chercheurs et régulateurs ont documenté comment des contenus amplifiés par IA sur des plateformes comme TikTok ont fait basculer l'opinion publique envers certains candidats plus vite qu'aucune campagne traditionnelle — y compris pour des personnalités peu connues du grand public auparavant. C'est exactement ce scénario que les législateurs européens ont voulu anticiper.",
+    riskP2: "L'UE ne peut pas interdire les contenus générés par IA, et n'essaie pas de le faire. Ce qu'elle peut faire, c'est rendre coûteux — juridiquement et financièrement — le fait, pour une entreprise, de présenter ce contenu ou ces décisions aux citoyens sans qu'un humain n'en soit responsable.",
+    humanTitle: "Un humain doit être dans la boucle — et doit donner son accord",
+    humanP1: "L'automatisation — RPA, chaînes génératives, agents autonomes — peut techniquement prendre une décision ou publier un contenu sans qu'personne n'appuie sur un bouton. La réponse de l'AI Act est simple : un humain identifié, au sein de l'entreprise, doit être impliqué et doit avoir donné son accord, avant que ce contenu ou cette décision ne passe d'un système, ou d'une zone de responsabilité, à une autre — en particulier dans les domaines qui touchent directement les personnes : santé, crédit, emploi, et autres activités à fort impact similaire.",
+    humanP2: "Un système d'IA ne peut être ni sanctionné, ni emprisonné, ni tenu responsable. Un humain — ou une entité juridique représentée par un humain — le peut. C'est pourquoi « qui a appuyé sur le bouton » n'est pas une question rhétorique sous ce règlement. C'est l'exigence de conformité elle-même.",
+    proofTitle: "Pas la confiance — la preuve",
+    proofCallout: "L'objectif n'est pas de croire une entreprise sur parole qu'un humain a vérifié quelque chose. C'est de rendre cette vérification fondée sur des preuves et reconstituable — hachage cryptographique (SHA) et, le cas échéant, ancrage blockchain du contenu généré par IA et de son parcours de validation — afin qu'un auditeur puisse remonter de tout contenu ou décision jusqu'à l'humain qui l'a validé, à chaque transfert, avec possibilité de retour en arrière si une erreur a été approuvée.",
+    proofP1: "Ce n'est pas hypothétique ici — c'est le même mécanisme derrière le propre Innovation Registry d'EU AI Act Ready™ : chaque affirmation est ancrée sur blockchain via OpenTimestamps, vérifiable de façon indépendante plutôt que simplement affirmée.",
+    breadcrumbTitle: "Ce que « reconstituable » signifie concrètement",
+    breadcrumbLede: "Transparence et traçabilité ne sont pas deux piliers distincts en pratique — c'est le même fil, qui se lit dans les deux sens. Un auditeur doit pouvoir le suivre depuis n'importe quelle extrémité :",
+    bcWho: "L'humain identifié qui a vérifié et donné son accord — pas seulement « le système »",
+    bcWhat: "Le contenu ou la décision exacte, hachée (SHA) à cet instant précis",
+    bcWhere: "Le système ou la zone de responsabilité dans laquelle elle est ensuite passée",
+    bcWhen: "Un enregistrement horodaté et ancré de ce transfert précis",
+    bcHow: "La méthode d'approbation — et si un retour en arrière reste possible",
+    pillarsTitle: "Les quatre piliers, sous cet angle",
+    p1Title: "Classification fondée sur le risque",
+    p1Desc: "Plus un système d'IA touche directement une personne — santé, crédit, emploi, justice — plus les obligations sont strictes.",
+    p2Title: "Supervision humaine",
+    p2Desc: "Un humain identifié et responsable doit pouvoir intervenir, annuler ou arrêter une décision automatisée avant qu'elle n'atteigne une personne.",
+    p3Title: "Transparence",
+    p3Desc: "Les personnes ont le droit de savoir quand elles interagissent avec un système d'IA, ou en sont affectées — pas de l'apprendre après coup.",
+    p4Title: "Traçabilité et responsabilité",
+    p4Desc: "Chaque transfert de contenu généré par IA ou de décision automatisée doit pouvoir être retracé jusqu'à l'humain qui l'a approuvé — avec retour en arrière possible.",
+    ctaAsk: "🔍 INTERROGER LE RÈGLEMENT",
+    ctaFirm: "💻 VOTRE ENTREPRISE"
+  }
+  // de / es / it / pl: add here, same keys, once translated
+};
+
+function applyWhyLanguage(lang){
+  const l = WHY_I18N[lang] || WHY_I18N.en;
+  document.getElementById("hero-subtitle").textContent = l.heroSubtitle;
+  document.getElementById("lede").textContent = l.lede;
+  document.getElementById("h-risk-title").textContent = l.riskTitle;
+  document.getElementById("h-risk-p1").textContent = l.riskP1;
+  document.getElementById("h-risk-p2").textContent = l.riskP2;
+  document.getElementById("h-human-title").textContent = l.humanTitle;
+  document.getElementById("h-human-p1").textContent = l.humanP1;
+  document.getElementById("h-human-p2").textContent = l.humanP2;
+  document.getElementById("h-proof-title").textContent = l.proofTitle;
+  document.getElementById("h-proof-callout").textContent = l.proofCallout;
+  document.getElementById("h-proof-p1").textContent = l.proofP1;
+  document.getElementById("h-breadcrumb-title").textContent = l.breadcrumbTitle;
+  document.getElementById("h-breadcrumb-lede").textContent = l.breadcrumbLede;
+  document.getElementById("bc-who").textContent = l.bcWho;
+  document.getElementById("bc-what").textContent = l.bcWhat;
+  document.getElementById("bc-where").textContent = l.bcWhere;
+  document.getElementById("bc-when").textContent = l.bcWhen;
+  document.getElementById("bc-how").textContent = l.bcHow;
+  document.getElementById("h-pillars-title").textContent = l.pillarsTitle;
+  document.getElementById("p1-title").textContent = l.p1Title;
+  document.getElementById("p1-desc").textContent = l.p1Desc;
+  document.getElementById("p2-title").textContent = l.p2Title;
+  document.getElementById("p2-desc").textContent = l.p2Desc;
+  document.getElementById("p3-title").textContent = l.p3Title;
+  document.getElementById("p3-desc").textContent = l.p3Desc;
+  document.getElementById("p4-title").textContent = l.p4Title;
+  document.getElementById("p4-desc").textContent = l.p4Desc;
+  document.getElementById("cta-ask").textContent = l.ctaAsk;
+  document.getElementById("cta-firm").textContent = l.ctaFirm;
+}
+
+document.getElementById("langSelectWhy").addEventListener("change", function(){
+  applyWhyLanguage(this.value);
+});
+</script>
+
+</body>
+</html>
