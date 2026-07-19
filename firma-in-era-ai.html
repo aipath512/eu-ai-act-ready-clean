@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firma în era AI — Cum atragi clienți, vinzi mai mult și crești eficiența | EU AI Act Ready</title>
+<meta name="description" content="În 2025 peste 51% din comunicațiile pe Internet sunt generate de agenți software. Descoperă strategia în 3 niveluri prin care firma ta devine citabilă, vandabilă și eficientă în era AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Firma în era AI: Cum folosești AI ca să atragi clienți, să vinzi mai mult și să crești eficiența",
+  "description": "Ghid strategic pentru firme despre AI visibility, citabilitate algoritmică și infrastructura digitală prin care agenții AI recomandă, compară și cumpără în numele oamenilor.",
+  "inLanguage": "ro",
+  "publisher": {
+    "@type": "Organization",
+    "name": "EU AI Act Ready"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ce înseamnă să fii \"citabil\" de AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Înseamnă ca firma să aibă o infrastructură de înțelegere pentru mașini: pagini clare despre produse și servicii, date structurate Schema.org, FAQ explicite, informații verificabile despre companie, politici și dovezi de autoritate, fișiere machine-readable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce este \"AI visibility\" și cum diferă de SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO optimizează pentru ranking în fața oamenilor care caută. AI visibility optimizează pentru încrederea algoritmică — devii sursa pe care agenții AI o aleg atunci când recomandă o firmă unui utilizator uman."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pot firmele mici să concureze cu AI-readiness?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da. O firmă mică, dar AI-readable și AI-ready, poate concura cu firme mai mari dacă devine mai ușor de identificat, verificat și recomandat de agenții AI — competiția nu se mai dă doar pe mărime, ci pe claritate și verificabilitate."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --text:#000000;
+  --bg:#ffffff;
+  --bg-alt:#f5f5f7;
+  --blue:#0051A8;
+  --accent:#0051A8;
+  --border:rgba(0,0,0,0.1);
+  --card-bg:#ffffff;
+}
+body.dark-mode{
+  --text:#ffffff;
+  --bg:#000000;
+  --bg-alt:#0d0d0f;
+  --blue:#7ec8ff;
+  --accent:#7ec8ff;
+  --border:rgba(255,255,255,0.12);
+  --card-bg:#111114;
+}
+body.light-mode * { color:#0a0a0a !important; }
+
+*{box-sizing:border-box; margin:0; padding:0;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter', sans-serif;
+  font-weight:300;
+  line-height:1.65;
+  transition:background .3s ease, color .3s ease;
+}
+h1,h2,h3{
+  font-family:'Playfair Display', serif;
+  font-weight:700;
+  line-height:1.2;
+}
+a{color:var(--blue); text-decoration:none;}
+
+/* Controls */
+#theme-toggle{
+  position:fixed; top:68px; left:24px; z-index:1000;
+  width:34px; height:34px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer; border:1px solid var(--border);
+  background:var(--card-bg); font-size:16px;
+  transition:all .2s ease;
+}
+body.light-mode #theme-toggle{ background:#000; color:#fff; }
+body.dark-mode #theme-toggle{ background:#fff; color:#000; }
+
+#lang-select-wrap{
+  position:fixed; top:24px; right:24px; z-index:1000;
+}
+#lang-select{
+  background:var(--card-bg); color:var(--text);
+  border:1px solid var(--border); border-radius:8px;
+  padding:8px 12px; font-family:'Inter',sans-serif; font-size:13px;
+  cursor:pointer;
+}
+
+/* Layout */
+.wrap{max-width:900px; margin:0 auto; padding:140px 24px 100px;}
+header.hero{text-align:center; margin-bottom:90px;}
+.eyebrow{
+  font-family:'Inter',sans-serif; font-size:13px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:18px;
+}
+h1{font-size:clamp(32px,5vw,52px); margin-bottom:24px;}
+.lede{font-size:19px; font-weight:300; opacity:.85; max-width:680px; margin:0 auto;}
+
+.stat-banner{
+  background:var(--bg-alt); border:1px solid var(--border);
+  border-radius:16px; padding:28px 32px; margin:48px 0 80px;
+  text-align:center; font-size:16px; font-weight:400;
+}
+.stat-banner b{font-family:'Playfair Display',serif; font-weight:700; color:var(--blue); font-size:22px;}
+
+section.block{margin-bottom:72px;}
+.block-num{
+  font-family:'Playfair Display',serif; font-size:15px; font-weight:700;
+  color:var(--accent); letter-spacing:.05em; margin-bottom:10px;
+}
+h2{font-size:clamp(24px,3.2vw,32px); margin-bottom:20px;}
+p{font-size:16px; margin-bottom:16px; opacity:.9;}
+p.quote-line{
+  border-left:3px solid var(--accent); padding:14px 20px;
+  background:var(--bg-alt); border-radius:0 10px 10px 0;
+  font-style:italic; font-size:15.5px; margin:20px 0;
+}
+
+.flow{
+  display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+  justify-content:center; margin:28px 0; font-family:'Inter',sans-serif;
+}
+.flow span.node{
+  background:var(--card-bg); border:1px solid var(--border);
+  border-radius:999px; padding:10px 18px; font-size:13.5px; font-weight:500;
+}
+.flow span.arrow{opacity:.4; font-size:14px;}
+
+.grid3{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px; margin-top:24px;
+}
+.card{
+  background:var(--card-bg); border:1px solid var(--border);
+  border-radius:14px; padding:24px;
+}
+.card h3{font-size:16px; margin-bottom:8px; font-family:'Inter',sans-serif; font-weight:600;}
+.card p{font-size:14.5px; margin-bottom:0;}
+
+.diagram-box{
+  background:var(--bg-alt); border:1px solid var(--border);
+  border-radius:16px; padding:32px; margin:28px 0;
+  font-family:'IBM Plex Mono', 'Inter', monospace; font-size:13.5px;
+  overflow-x:auto; white-space:pre; line-height:2;
+}
+
+.cta{
+  text-align:center; margin-top:90px; padding:56px 32px;
+  background:var(--bg-alt); border-radius:20px; border:1px solid var(--border);
+}
+.cta h2{margin-bottom:16px;}
+.cta-btn{
+  display:inline-block; margin-top:20px; padding:14px 34px;
+  background:var(--blue); color:#fff !important; border-radius:999px;
+  font-weight:600; font-size:15px; letter-spacing:.02em;
+}
+
+footer{text-align:center; padding:40px 24px; font-size:12.5px; opacity:.5;}
+</style>
+</head>
+<body class="dark-mode">
+
+<div id="theme-toggle" onclick="toggleTheme()">☀</div>
+
+<div id="lang-select-wrap">
+  <select id="lang-select" onchange="if(this.value!=='ro') window.location.href='/'+this.value+'/firma-in-era-ai.html'">
+    <option value="ro" selected>RO</option>
+    <option value="en">EN</option>
+    <option value="fr">FR</option>
+    <option value="es">ES</option>
+    <option value="de">DE</option>
+    <option value="it">IT</option>
+    <option value="pl">PL</option>
+  </select>
+</div>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">Firma în era AI</div>
+  <h1>Cum folosești AI ca să atragi clienți, să vinzi mai mult și să crești eficiența</h1>
+  <p class="lede">Nu mai optimizezi doar pentru oameni care caută. Optimizezi pentru agenți software care decid ce informații merită aduse oamenilor.</p>
+</header>
+
+<div class="stat-banner">
+  În 2025, peste <b>51%</b> din comunicațiile pe Internet sunt generate de "mașini" — agenți software delegați de oameni să caute, exploreze, verifice și chiar să cumpere în numele lor.
+</div>
+
+<section class="block">
+  <div class="block-num">01</div>
+  <h2>Devii "citabil" de AI înainte să devii vizibil pentru oameni</h2>
+  <p>În noul model, drumul către o achiziție nu mai pornește de la un om care caută — pornește de la un agent care evaluează.</p>
+  <div class="flow">
+    <span class="node">Agent AI</span><span class="arrow">→</span>
+    <span class="node">Surse de încredere</span><span class="arrow">→</span>
+    <span class="node">Răspuns generat</span><span class="arrow">→</span>
+    <span class="node">Recomandare</span><span class="arrow">→</span>
+    <span class="node">Utilizator</span><span class="arrow">→</span>
+    <span class="node">Achiziție</span>
+  </div>
+  <p>Asta înseamnă că firma trebuie să aibă o infrastructură de înțelegere pentru mașini:</p>
+  <div class="grid3">
+    <div class="card"><h3>Pagini clare</h3><p>Despre produse și servicii, fără ambiguitate.</p></div>
+    <div class="card"><h3>Date structurate</h3><p>Schema.org aplicat consecvent pe tot site-ul.</p></div>
+    <div class="card"><h3>FAQ explicite</h3><p>Întrebări reale, răspunsuri directe, verificabile.</p></div>
+    <div class="card"><h3>Informații verificabile</h3><p>Despre companie: cine sunteți, ce dovediți.</p></div>
+    <div class="card"><h3>Politici și dovezi</h3><p>Autoritate demonstrabilă, nu declarată.</p></div>
+    <div class="card"><h3>Fișiere machine-readable</h3><p>Conținut care răspunde direct la intenții comerciale.</p></div>
+  </div>
+  <p style="margin-top:24px;">Practic, construiești un strat digital de încredere pentru agenții AI.</p>
+</section>
+
+<section class="block">
+  <div class="block-num">02</div>
+  <h2>Transformi site-ul într-un agent comercial 24/7</h2>
+  <p>Un site pregătit pentru AI devine un sistem care <b>atrage</b> — identifică clar cine ești, ce rezolvi, pentru cine, în ce condiții, cu ce dovezi — și <b>conversaționalizează</b> cu clientul care întreabă:</p>
+  <p class="quote-line">"Care este cea mai potrivită firmă pentru o companie SaaS cu 20 angajați care are nevoie de contabilitate și consultanță fiscală?"</p>
+  <p>AI va compara. Și apoi <b>convertește</b>: agentul poate pregăti comparații, oferte, cereri de ofertă, programări, formulare completate — fără intervenție umană până la momentul deciziei.</p>
+</section>
+
+<section class="block">
+  <div class="block-num">03</div>
+  <h2>Folosești AI pentru vânzări</h2>
+  <p><b>Prospectare</b> — AI analizează schimbări de piață, intenții, semnale publice, și poate genera abordări precise:</p>
+  <p class="quote-line">"Am observat că ați lansat trei produse noi și aveți nevoie probabil de scalarea proceselor interne. Avem o analiză AI pentru această etapă."</p>
+  <p><b>Follow-up automat</b> — AI poate gestiona emailuri, LinkedIn, WhatsApp, CRM, întâlniri. Omul intervine acolo unde este nevoie de negociere.</p>
+</section>
+
+<section class="block">
+  <div class="block-num">04</div>
+  <h2>Crești eficiența internă</h2>
+  <p>AI nu este doar canal de vânzare. Este multiplicator operațional — reduce timpul dintre semnal și acțiune, în toate funcțiile firmei, nu doar în marketing și vânzări.</p>
+</section>
+
+<section class="block">
+  <div class="block-num">05</div>
+  <h2>Noua regulă: "AI visibility" înainte de SEO</h2>
+  <p>Noua întrebare pe care orice firmă trebuie să și-o pună:</p>
+  <p class="quote-line">"Cum devin sursa pe care agenții AI o aleg când recomandă?"</p>
+  <p>Apare o nouă competiție: nu doar ranking, ci încredere algoritmică.</p>
+</section>
+
+<section class="block">
+  <div class="block-num">06</div>
+  <h2>Modelul practic pentru o firmă</h2>
+  <div class="diagram-box">INTERNET
+   │
+   ▼
+AI Agents / Crawlers
+   │
+   ▼
+AI Knowledge Layer
+   │
+   ├── Identitate
+   ├── Oferte
+   ├── Dovezi
+   ├── FAQ
+   └── Date structurate
+   │
+   ▼
+Conversational AI
+   │
+   ▼
+CRM + Vânzare
+   │
+   ▼
+Client</div>
+</section>
+
+<section class="block">
+  <div class="block-num">07</div>
+  <h2>Avantajul pentru IMM-uri</h2>
+  <p>Majoritatea IMM-urilor încă gândesc: <i>"Trebuie să fac un site."</i></p>
+  <p>În realitate: <i>"Trebuie să construiesc o infrastructură digitală pe care oamenii și agenții AI să o poată înțelege, verifica și recomanda."</i></p>
+  <p>Asta schimbă competiția. O firmă mică, dar AI-readable și AI-ready, poate concura cu firme mai mari dacă devine mai ușor de identificat, verificat și recomandat de agenții AI.</p>
+  <p>AI nu înlocuiește doar angajații. AI schimbă mecanismul prin care clienții găsesc, evaluează și cumpără de la companii.</p>
+  <p><b>Câștigătorii următoarei perioade vor fi firmele care nu doar folosesc AI pentru a produce conținut, ci construiesc infrastructura prin care AI poate înțelege și vinde valoarea lor.</b></p>
+</section>
+
+<div class="cta">
+  <h2>Îți pregătești firma pentru era AI?</h2>
+  <p>Verifică unde stai azi din perspectiva agenților AI — și ce infrastructură lipsește pentru a deveni recomandabil.</p>
+  <a href="/" class="cta-btn">Vezi evaluarea EU AI Act Ready →</a>
+</div>
+
+</div>
+
+<footer>© 2026 EU AI Act Ready — AI Knowledge Layer</footer>
+
+<script>
+function toggleTheme(){
+  const body = document.body;
+  const btn = document.getElementById('theme-toggle');
+  if(body.classList.contains('dark-mode')){
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+    btn.textContent = '☾';
+  } else {
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    btn.textContent = '☀';
+  }
+}
+</script>
+
+</body>
+</html>
