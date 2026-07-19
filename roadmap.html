@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Roadmap — EU AI Act Ready™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;900&family=Barlow:wght@300;400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#030508;
+    --electric:#00d4ff;
+    --red:#e03a1e;
+    --text-dark:#ffffff;
+    --text-light:#0a0a0a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text-dark);
+    font-family:'Barlow', sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  body.light-mode{ background:#f4f4f4; }
+  body.light-mode *{ color:#0a0a0a !important; }
+
+  /* scanlines overlay */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);
+    pointer-events:none; z-index:1;
+  }
+
+  #toggle{
+    position:fixed; top:68px; left:12px;
+    width:auto; min-width:34px; height:34px;
+    display:flex; align-items:center; justify-content:center;
+    gap:6px; padding:0 10px;
+    border-radius:8px;
+    background:#ffffff; color:#0a0a0a;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500;
+    border:1px solid var(--electric);
+    cursor:pointer; z-index:1000;
+  }
+  body.light-mode #toggle{ background:#0a0a0a; color:#ffffff; }
+
+  header{
+    padding:90px 20px 30px;
+    text-align:center;
+    border-bottom:1px solid rgba(0,212,255,0.2);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--red);
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:900;
+    font-size:clamp(32px, 9vw, 64px);
+    text-transform:uppercase;
+    line-height:1.05;
+    letter-spacing:-1px;
+  }
+  h1 span{ color:var(--electric); }
+  .lede{
+    max-width:640px; margin:20px auto 0;
+    font-size:15px; color:#b8bcc4;
+  }
+  body.light-mode .lede{ color:#333 !important; }
+
+  a.back{
+    display:inline-block; margin-top:24px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--electric); text-decoration:none;
+    border:1px solid var(--electric); border-radius:6px;
+    padding:8px 16px;
+  }
+
+  main{ max-width:900px; margin:0 auto; padding:40px 20px 80px; position:relative; z-index:2;}
+
+  .block{ margin-bottom:56px; }
+  .block h2{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:900; font-size:clamp(22px,6vw,32px);
+    text-transform:uppercase; color:var(--red);
+    margin-bottom:16px; letter-spacing:-0.5px;
+  }
+  .block p{ font-size:15px; color:#d8dade; margin-bottom:12px; }
+  body.light-mode .block p{ color:#222 !important; }
+
+  /* stage table -> stacked cards on mobile */
+  .stages{ display:flex; flex-direction:column; gap:2px; margin-top:20px; }
+  .stage{
+    display:grid; grid-template-columns:36px 1fr; gap:14px;
+    background:rgba(255,255,255,0.03);
+    border-left:3px solid var(--electric);
+    padding:14px 16px;
+  }
+  .stage.hard{ border-left-color:var(--red); }
+  .stage .num{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--electric); font-weight:500; font-size:14px;
+  }
+  .stage.hard .num{ color:var(--red); }
+  .stage .cap{ font-size:14px; font-weight:400; color:#eee; }
+  body.light-mode .stage .cap{ color:#111 !important; }
+  .stage .diff{
+    font-family:'IBM Plex Mono', monospace; font-size:11px;
+    text-transform:uppercase; letter-spacing:1px; color:#8a8f98; margin-top:4px;
+  }
+
+  .flow{
+    font-family:'IBM Plex Mono', monospace; font-size:13px;
+    color:var(--electric); line-height:2.1; white-space:pre-wrap;
+    background:rgba(0,212,255,0.05); border:1px solid rgba(0,212,255,0.2);
+    border-radius:8px; padding:20px; margin-top:16px;
+  }
+
+  .callout{
+    border:1px solid var(--red); border-radius:8px;
+    padding:20px; margin-top:20px;
+    background:rgba(224,58,30,0.06);
+  }
+  .callout .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:11px;
+    color:var(--red); text-transform:uppercase; letter-spacing:2px;
+    margin-bottom:10px; display:block;
+  }
+
+  footer{
+    text-align:center; padding:30px 20px 60px;
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color:#666;
+    border-top:1px solid rgba(255,255,255,0.08);
+  }
+
+  /* language selector — compact dropdown, standard block reused on every page */
+  .lang-row{
+    display:flex; justify-content:center;
+    padding:16px 12px;
+  }
+  .lang-select{
+    appearance:none; -webkit-appearance:none;
+    display:flex; align-items:center;
+    padding:8px 36px 8px 14px;
+    border-radius:20px;
+    font-family:'Barlow Condensed', sans-serif; font-weight:600; font-size:14px;
+    background:rgba(255,255,255,0.06) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="%23ffffff"/></svg>') no-repeat right 14px center;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.15);
+    cursor:pointer;
+  }
+  body.light-mode .lang-select{ color:#0a0a0a !important; background-color:#eee; }
+</style>
+</head>
+<body>
+
+<button id="toggle" onclick="toggleTheme()">☀ Light</button>
+
+<header>
+  <div class="eyebrow">Step 1 → Next Step</div>
+  <h1>The <span>70 Documents</span> Are the Entry Ticket</h1>
+  <p class="lede">Generating a complete EU AI Act compliance package in minutes is a strong first milestone — but it's not the moat. Here's what we're building on top of it.</p>
+  <a class="back" href="/">← Back to Ask &amp; Generator</a>
+</header>
+
+<nav class="lang-row">
+  <select class="lang-select" id="langSelect">
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="ro">🇷🇴 Română</option>
+    <option value="pl">🇵🇱 Polski</option>
+    <option value="bg">🇧🇬 Български</option>
+    <option value="hr">🇭🇷 Hrvatski</option>
+    <option value="cs">🇨🇿 Čeština</option>
+    <option value="da">🇩🇰 Dansk</option>
+    <option value="nl">🇳🇱 Nederlands</option>
+    <option value="et">🇪🇪 Eesti</option>
+    <option value="fi">🇫🇮 Suomi</option>
+    <option value="el">🇬🇷 Ελληνικά</option>
+    <option value="hu">🇭🇺 Magyar</option>
+    <option value="ga">🇮🇪 Gaeilge</option>
+    <option value="lv">🇱🇻 Latviešu</option>
+    <option value="lt">🇱🇹 Lietuvių</option>
+    <option value="mt">🇲🇹 Malti</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="sk">🇸🇰 Slovenčina</option>
+    <option value="sl">🇸🇮 Slovenščina</option>
+    <option value="sv">🇸🇪 Svenska</option>
+  </select>
+</nav>
+
+<main>
+
+  <div class="block">
+    <h2>Why Stage 1 Matters</h2>
+    <p>Today, most SMEs have zero AI Act documentation. If the system produces the AI Policy, AI Inventory, Risk Assessment, Human Oversight Procedure, Incident Procedure, AI Literacy Plan, Technical Documentation — all 70 documents — in minutes, that alone is commercially valuable.</p>
+    <p>It's the equivalent of "press Generate → complete documentation appears." That's already far beyond a chatbot. But it's not the destination.</p>
+  </div>
+
+  <div class="block">
+    <h2>The Competitive Progression</h2>
+    <div class="stages">
+      <div class="stage"><div class="num">01</div><div><div class="cap">Generate 70 firm-specific documents</div><div class="diff">Difficulty: Medium</div></div></div>
+      <div class="stage"><div class="num">02</div><div><div class="cap">Conversational EU AI Act knowledge assistant, all 27 EU languages</div><div class="diff">Difficulty: Medium–High</div></div></div>
+      <div class="stage"><div class="num">03</div><div><div class="cap">Structured parameter model — company profile entered once, reused everywhere</div><div class="diff">Difficulty: High</div></div></div>
+      <div class="stage"><div class="num">04</div><div><div class="cap">Automatic consistency validation across all documents</div><div class="diff">Difficulty: High</div></div></div>
+      <div class="stage hard"><div class="num">05</div><div><div class="cap">Bidirectional traceability — parameter → clause → document → evidence</div><div class="diff">Difficulty: Very High</div></div></div>
+      <div class="stage hard"><div class="num">06</div><div><div class="cap">Evidence repository — logs, policies, inventories, contracts</div><div class="diff">Difficulty: Very High</div></div></div>
+      <div class="stage hard"><div class="num">07</div><div><div class="cap">Continuous compliance monitoring</div><div class="diff">Difficulty: Very High</div></div></div>
+      <div class="stage hard"><div class="num">08</div><div><div class="cap">Remote Regulatory Verification Infrastructure™ (RRVI™)</div><div class="diff">Difficulty: Exceptional</div></div></div>
+      <div class="stage hard"><div class="num">09</div><div><div class="cap">Digital regulatory passport for the organization</div><div class="diff">Difficulty: Exceptional</div></div></div>
+      <div class="stage hard"><div class="num">10</div><div><div class="cap">Machine-verifiable compliance instead of document exchange</div><div class="diff">Difficulty: Category-defining</div></div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>The Real Gold Rush: Keeping It Alive</h2>
+    <p>Generating documents is not the hard part. Keeping them synchronized is.</p>
+    <div class="flow">Company changes AI provider
+  ↓
+Inventory updates
+  ↓
+Risk Register updates
+  ↓
+Contracts update
+  ↓
+Transparency Register updates
+  ↓
+Training obligations update
+  ↓
+Evidence updates
+  ↓
+Everything remains synchronized</div>
+  </div>
+
+  <div class="block">
+    <h2>Then Comes Verification</h2>
+    <p>Instead of an auditor asking "show me your AI Policy," they ask: "Prove that employees received AI literacy training." The system answers with structured evidence — employee records, timestamps, signed acknowledgements, logs, policies, affected AI systems, responsible persons. No searching through PDFs.</p>
+  </div>
+
+  <div class="block">
+    <h2>Then RRVI™</h2>
+    <p>This is where the architecture becomes different. Instead of exchanging documents back and forth, the regulator sends a secure verification request directly to the organization's system, which returns structured evidence and cryptographic proof — resulting in a verification report. The regulator verifies remotely.</p>
+    <div class="callout">
+      <span class="tag">A different model</span>
+      This is a completely different model from today's document-exchange compliance process — verification happens against a live, structured system of record, not a folder of PDFs.
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>The Long-Term Progression</h2>
+    <div class="flow">70 documents
+  ↓
+Conversation
+  ↓
+Parameterization
+  ↓
+Knowledge graph
+  ↓
+Evidence graph
+  ↓
+Compliance graph
+  ↓
+Continuous monitoring
+  ↓
+Remote verification
+  ↓
+Digital Trust Infrastructure
+  ↓
+European compliance infrastructure</div>
+  </div>
+
+  <div class="block">
+    <h2>The Biggest Opportunity</h2>
+    <p>The 70 documents are the entry ticket, not the destination. The defensible asset is the structured compliance knowledge model underneath them: every obligation modeled, every document generated from that model, every parameter reused consistently, every piece of evidence linked, every update propagated automatically, every regulatory requirement traceable.</p>
+    <p>That transforms the product from a document generator into a <strong>compliance operating system.</strong></p>
+  </div>
+
+</main>
+
+<footer>EU AI ACT READY™ — RRVI™ Roadmap</footer>
+
+<script>
+  function toggleTheme(){
+    document.body.classList.toggle('light-mode');
+    const btn = document.getElementById('toggle');
+    btn.textContent = document.body.classList.contains('light-mode') ? '☾ Dark' : '☀ Light';
+  }
+
+  // language dropdown — visual only on this page;
+  // wire to real content/API once per-page translations exist
+  document.getElementById('langSelect').addEventListener('change', e=>{
+    console.log('Language selected:', e.target.value);
+  });
+</script>
+
+</body>
+</html>
