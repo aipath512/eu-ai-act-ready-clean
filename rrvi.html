@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RRVI™ — Remote Regulatory Verification Infrastructure | Engineering Manifesto</title>
+<meta name="description" content="Remote Regulatory Verification Infrastructure™ (RRVI™) — the engineering reference architecture behind EU AI Act Ready™. What each letter means, the manifesto, and why it is a new category.">
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --bg:#030508;
+  --panel:#090909;
+  --border:#1c1c1c;
+  --red:#ff3333;
+  --cyan:#00d4ff;
+  --text:#ffffff;
+  --muted:#b8b8b8;
+  --dim:#7a7a7a;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+
+body.light-mode{
+  --bg:#f7f7f7;
+  --panel:#ffffff;
+  --border:#e2e2e2;
+  --text:#0a0a0a;
+  --muted:#3a3a3a;
+  --dim:#5a5a5a;
+}
+body.light-mode *{color:#0a0a0a !important;}
+body.light-mode .rrvi-card, body.light-mode .letter-card{background:#ffffff !important;}
+
+a{color:inherit;}
+
+/* ---- top controls ---- */
+.top-controls{
+  position:fixed;
+  top:68px;
+  left:24px;
+  z-index:100;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.mode-toggle{
+  width:34px;height:34px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--panel);
+  color:var(--text);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.lang-select{
+  background:var(--panel);
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:8px 12px;
+  font-size:13px;
+}
+
+/* ---- back link ---- */
+.back-nav{
+  max-width:1200px;
+  margin:0 auto;
+  padding:120px 30px 0;
+}
+.back-nav a{
+  color:var(--dim);
+  text-decoration:none;
+  font-size:14px;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  border-bottom:1px solid transparent;
+  transition:.2s;
+}
+.back-nav a:hover{color:var(--cyan);border-bottom-color:var(--cyan);}
+
+/* ---- hero ---- */
+.hero{
+  max-width:1200px;
+  margin:0 auto;
+  padding:60px 30px 80px;
+  border-bottom:1px solid var(--border);
+}
+
+.eyebrow{
+  display:inline-block;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--cyan);
+  border:1px solid var(--cyan);
+  border-radius:100px;
+  padding:6px 16px;
+  margin-bottom:24px;
+}
+
+.hero h1{
+  font-size:clamp(40px,6vw,84px);
+  font-weight:900;
+  line-height:1.02;
+  letter-spacing:-1px;
+  margin-bottom:24px;
+}
+
+.hero h1 .rr{color:var(--red);}
+.hero h1 .vi{color:var(--cyan);}
+
+.hero .lede{
+  max-width:760px;
+  font-size:clamp(18px,2vw,22px);
+  color:var(--muted);
+  line-height:1.75;
+}
+
+.hero .meta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-top:36px;
+  font-family:'Courier New',monospace;
+  font-size:13px;
+  color:var(--dim);
+  letter-spacing:.5px;
+}
+.hero .meta-row span strong{color:var(--muted);}
+
+/* ---- section shell ---- */
+.section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:80px 30px;
+  border-bottom:1px solid var(--border);
+}
+
+.section-label{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--red);
+  margin-bottom:16px;
+}
+
+.section h2{
+  font-size:clamp(28px,4vw,44px);
+  font-weight:900;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  letter-spacing:-.5px;
+}
+
+.section .intro{
+  max-width:820px;
+  font-size:18px;
+  color:var(--muted);
+  margin-bottom:50px;
+  line-height:1.8;
+}
+
+/* ---- letter breakdown ---- */
+.letters{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.letter-card{
+  background:var(--panel);
+  padding:36px 28px;
+}
+
+.letter-card .letter{
+  font-size:64px;
+  font-weight:900;
+  color:var(--cyan);
+  line-height:1;
+  margin-bottom:16px;
+}
+
+.letter-card:nth-child(1) .letter,
+.letter-card:nth-child(2) .letter{color:var(--red);}
+
+.letter-card h3{
+  font-size:20px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:12px;
+}
+
+.letter-card p{
+  font-size:15px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* ---- manifesto grid ---- */
+.rrvi-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;
+}
+
+.rrvi-card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:30px;
+}
+
+.rrvi-card .num{
+  font-family:'Courier New',monospace;
+  font-size:13px;
+  color:var(--dim);
+  margin-bottom:10px;
+}
+
+.rrvi-card h3{
+  font-size:19px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.rrvi-card p, .rrvi-card li{
+  font-size:14.5px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.rrvi-card ul{
+  padding-left:18px;
+  margin-top:8px;
+}
+
+.rrvi-card.accent{
+  border-color:var(--cyan);
+}
+.rrvi-card.accent h3{color:var(--cyan);}
+
+.rrvi-card.warn{
+  border-color:var(--red);
+}
+.rrvi-card.warn h3{color:var(--red);}
+
+/* ---- scope not-list ---- */
+.not-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:20px;
+}
+.not-list span{
+  border:1px solid var(--border);
+  color:var(--dim);
+  font-size:13px;
+  padding:8px 16px;
+  border-radius:100px;
+  font-family:'Courier New',monospace;
+}
+.not-list span::before{content:"✕ ";color:var(--red);}
+
+/* ---- pipeline ---- */
+.pipeline{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:0;
+  font-family:'Courier New',monospace;
+  font-size:14px;
+}
+.pipeline .step{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:14px 18px;
+  color:var(--text);
+}
+.pipeline .arrow{
+  color:var(--cyan);
+  padding:0 10px;
+  font-size:16px;
+}
+
+/* ---- category statement / footer block ---- */
+.category-block{
+  background:var(--panel);
+  border:1px solid var(--cyan);
+  border-radius:18px;
+  padding:50px;
+}
+
+.category-block h2{
+  color:var(--cyan);
+}
+
+.category-block p{
+  font-size:17px;
+  color:var(--muted);
+  max-width:820px;
+  margin-bottom:16px;
+  line-height:1.8;
+}
+
+.category-meta{
+  margin-top:30px;
+  padding-top:24px;
+  border-top:1px solid var(--border);
+  font-family:'Courier New',monospace;
+  font-size:13px;
+  color:var(--dim);
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px 32px;
+}
+.category-meta strong{color:var(--muted);}
+
+/* ---- final CTA ---- */
+.final-cta{
+  max-width:1200px;
+  margin:0 auto;
+  padding:80px 30px 100px;
+  text-align:center;
+}
+.final-cta h2{
+  font-size:clamp(26px,4vw,40px);
+  font-weight:900;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.final-cta p{
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:36px;
+}
+.btn-row{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.btn-red, .btn-outline{
+  display:inline-block;
+  padding:14px 30px;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+  font-size:15px;
+  transition:.2s;
+}
+.btn-red{background:var(--red);color:#fff;}
+.btn-red:hover{background:#cc0000;}
+.btn-outline{border:1px solid var(--cyan);color:var(--cyan);}
+.btn-outline:hover{background:var(--cyan);color:#000;}
+
+@media(max-width:640px){
+  .top-controls{top:16px;left:16px;}
+  .back-nav{padding-top:80px;}
+  .category-block{padding:30px;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="top-controls">
+  <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark/light mode">☾</button>
+  <select class="lang-select" id="langSelect" aria-label="Select language">
+    <option value="en">EN</option>
+    <option value="bg">BG</option><option value="hr">HR</option><option value="cs">CS</option>
+    <option value="da">DA</option><option value="nl">NL</option><option value="et">ET</option>
+    <option value="fi">FI</option><option value="fr">FR</option><option value="de">DE</option>
+    <option value="el">EL</option><option value="hu">HU</option><option value="ga">GA</option>
+    <option value="it">IT</option><option value="lv">LV</option><option value="lt">LT</option>
+    <option value="mt">MT</option><option value="pl">PL</option><option value="pt">PT</option>
+    <option value="ro">RO</option><option value="sk">SK</option><option value="sl">SL</option>
+    <option value="es">ES</option><option value="sv">SV</option>
+  </select>
+</div>
+
+<div class="back-nav">
+  <a href="/index.html">← Back to EU AI Act Ready™</a>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <span class="eyebrow">Engineering Manifesto &amp; Reference Architecture · v1.0 · Canonical</span>
+  <h1><span class="rr">R</span><span class="rr">R</span><span class="vi">V</span><span class="vi">I</span>™</h1>
+  <p class="lede">
+    Remote Regulatory Verification Infrastructure™ is the engineering architecture behind EU AI Act Ready™ —
+    a way of turning regulatory compliance from a document-exchange problem into a structured, machine-verifiable evidence problem.
+    EU AI Act Ready™ is its first reference implementation.
+  </p>
+  <div class="meta-row">
+    <span><strong>Status:</strong> Canonical</span>
+    <span><strong>Version:</strong> 1.0</span>
+    <span><strong>Published:</strong> 2026-07-01</span>
+    <span><strong>Category:</strong> New engineering category (not a product, not a certification)</span>
+  </div>
+</section>
+
+<!-- ========== WHAT EACH LETTER MEANS ========== -->
+<section class="section">
+  <div class="section-label">01 — What RRVI™ Stands For</div>
+  <h2>Four Letters, One Architecture</h2>
+  <p class="intro">
+    RRVI™ is not a product name — it names an architectural pattern. Each word does specific work in defining what the system is and is not.
+  </p>
+
+  <div class="letters">
+    <div class="letter-card">
+      <div class="letter">R</div>
+      <h3>Remote</h3>
+      <p>Compliance evidence is accessible for review without an on-site visit. An inspector, auditor, or partner can verify readiness from anywhere, at any time — not only when a physical inspection is scheduled.</p>
+    </div>
+    <div class="letter-card">
+      <div class="letter">R</div>
+      <h3>Regulatory</h3>
+      <p>The architecture exists to serve regulatory obligations — not general document management. Every component maps back to a specific obligation under a specific regulation, starting with the EU AI Act.</p>
+    </div>
+    <div class="letter-card">
+      <div class="letter">V</div>
+      <h3>Verification</h3>
+      <p>The goal is not to produce documents — it's to produce evidence that can be independently checked: cryptographically, semantically, and against the actual regulatory text. Verification, not paperwork.</p>
+    </div>
+    <div class="letter-card">
+      <div class="letter">I</div>
+      <h3>Infrastructure</h3>
+      <p>RRVI™ is a reusable foundation, not a one-off tool. The same architecture that powers EU AI Act readiness can support other regulatory domains — because the infrastructure is decoupled from any single regulation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THE PROBLEM ========== -->
+<section class="section">
+  <div class="section-label">02 — The Problem</div>
+  <h2>Compliance Is Still Document-Centric</h2>
+  <p class="intro">
+    Organizations repeatedly create, exchange, review, and archive large volumes of documentation to demonstrate compliance.
+    Digital systems already generate the underlying operational data — but it's rarely structured for automated verification, semantic interoperability, or remote inspection.
+  </p>
+  <div class="rrvi-grid">
+    <div class="rrvi-card warn"><div class="num">RESULT 01</div><h3>Fragmented evidence</h3><p>Proof of compliance lives scattered across formats, folders, and departments instead of one verifiable state.</p></div>
+    <div class="rrvi-card warn"><div class="num">RESULT 02</div><h3>Manual verification</h3><p>Someone still has to read, cross-check, and manually confirm every document against every obligation.</p></div>
+    <div class="rrvi-card warn"><div class="num">RESULT 03</div><h3>Weak traceability</h3><p>Connecting a piece of evidence back to the exact article or obligation it satisfies is difficult to maintain over time.</p></div>
+    <div class="rrvi-card warn"><div class="num">RESULT 04</div><h3>Slow inspections</h3><p>Every audit becomes a fresh document hunt instead of a query against an already-verifiable state.</p></div>
+    <div class="rrvi-card warn"><div class="num">RESULT 05</div><h3>Repeated work</h3><p>The same evidence gets reproduced in different formats for different reviewers, again and again.</p></div>
+  </div>
+</section>
+
+<!-- ========== SCOPE ========== -->
+<section class="section">
+  <div class="section-label">03 — Scope</div>
+  <h2>What RRVI™ Is — and Isn't</h2>
+  <p class="intro">
+    RRVI™ is an engineering reference architecture: a set of architectural principles, components, and patterns for producing, publishing, verifying, and navigating digital regulatory evidence. Individual regulations become <em>implementations</em> of the architecture — they don't define it.
+  </p>
+  <div class="not-list">
+    <span>Legislation</span>
+    <span>A certification scheme</span>
+    <span>A software product</span>
+    <span>A cloud platform</span>
+    <span>A regulatory authority</span>
+  </div>
+</section>
+
+<!-- ========== VISION ========== -->
+<section class="section">
+  <div class="section-label">04 — Vision</div>
+  <h2>Continuous, Not Announced</h2>
+  <p class="intro">
+    Organizations shouldn't prepare compliance documentation only when an inspection is announced. They should operate continuously in a verifiable state, where regulatory evidence is maintained as part of normal business operations — moving from exchanging documents to verifying structured digital evidence.
+  </p>
+</section>
+
+<!-- ========== CORE COMPONENTS ========== -->
+<section class="section">
+  <div class="section-label">05 — Core Components</div>
+  <h2>The Nine Building Blocks</h2>
+  <p class="intro">Every RRVI™ implementation is built from the same nine architectural components.</p>
+  <div class="rrvi-grid">
+    <div class="rrvi-card accent"><div class="num">01</div><h3>Compliance Evidence Runtime™ (CER™)</h3><p>The operational engine — continuously captures, maintains, and publishes evidence of the organization's compliance state.</p></div>
+    <div class="rrvi-card"><div class="num">02</div><h3>Evidence Objects™</h3><p>Standardized, atomic units of evidence — identifier, type, source, timestamp, version, lifecycle status, and relationships.</p></div>
+    <div class="rrvi-card"><div class="num">03</div><h3>Semantic Data Dictionary</h3><p>A shared vocabulary so evidence means the same thing across systems, languages, and reviewers.</p></div>
+    <div class="rrvi-card"><div class="num">04</div><h3>Entity–Relationship Metamodel</h3><p>Defines how evidence, obligations, and responsible parties relate to one another structurally.</p></div>
+    <div class="rrvi-card"><div class="num">05</div><h3>Compliance Knowledge Graph</h3><p>Connects every piece of evidence to the specific article and obligation it satisfies.</p></div>
+    <div class="rrvi-card"><div class="num">06</div><h3>Verification Pipeline</h3><p>The deterministic sequence that turns raw evidence into an independently verifiable published state.</p></div>
+    <div class="rrvi-card"><div class="num">07</div><h3>Publication Layer</h3><p>Makes verified evidence remotely accessible without exposing systems it wasn't meant to expose.</p></div>
+    <div class="rrvi-card"><div class="num">08</div><h3>Verification APIs</h3><p>Machine-readable endpoints an inspector, auditor, or partner system can query directly.</p></div>
+    <div class="rrvi-card"><div class="num">09</div><h3>Governance Layer</h3><p>Publication authority, trust anchors, key management, and dispute resolution — governance as architecture, not afterthought.</p></div>
+  </div>
+</section>
+
+<!-- ========== VERIFICATION PIPELINE ========== -->
+<section class="section">
+  <div class="section-label">06 — Verification Pipeline</div>
+  <h2>From Evidence to Verified Report</h2>
+  <p class="intro">RRVI™ defines a deterministic pipeline so any published evidence object can be independently verified throughout its lifecycle.</p>
+  <div class="pipeline">
+    <span class="step">Evidence Object™</span><span class="arrow">→</span>
+    <span class="step">Integrity Hash</span><span class="arrow">→</span>
+    <span class="step">Version Control</span><span class="arrow">→</span>
+    <span class="step">Trusted Timestamp</span><span class="arrow">→</span>
+    <span class="step">Publication Layer</span><span class="arrow">→</span>
+    <span class="step">Verification API</span><span class="arrow">→</span>
+    <span class="step">Inspector / Verification System</span><span class="arrow">→</span>
+    <span class="step">Verification Report</span>
+  </div>
+</section>
+
+<!-- ========== AI NAVIGATION PRINCIPLE ========== -->
+<section class="section">
+  <div class="section-label">07 — The AI Navigation Principle</div>
+  <h2>AI Assists. AI Doesn't Decide.</h2>
+  <p class="intro">Artificial intelligence is an inspection assistant inside RRVI™ — never a source of regulatory truth. This boundary is architectural, not a disclaimer.</p>
+  <div class="rrvi-grid">
+    <div class="rrvi-card accent">
+      <h3>AI may</h3>
+      <ul>
+        <li>Discover evidence</li>
+        <li>Locate documents</li>
+        <li>Navigate semantic relationships</li>
+        <li>Explain traceability</li>
+        <li>Summarize information</li>
+        <li>Assist human inspectors</li>
+      </ul>
+    </div>
+    <div class="rrvi-card warn">
+      <h3>AI shall not</h3>
+      <ul>
+        <li>Determine legal compliance</li>
+        <li>Replace competent authorities</li>
+        <li>Issue regulatory decisions</li>
+        <li>Certify compliance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY A NEW CATEGORY ========== -->
+<section class="section">
+  <div class="section-label">08 — Category Statement</div>
+  <h2>Why This Is a New Category</h2>
+  <div class="category-block">
+    <p>
+      The innovation of RRVI™ doesn't live in any single technology. It lives in integrating <strong>Continuous Compliance Evidence™</strong>, semantic modeling,
+      cryptographic integrity, machine-readable publication, deterministic verification, and AI-assisted navigation into one unified engineering architecture.
+    </p>
+    <p>
+      That combination changes the regulatory interaction model itself — from <strong>exchanging compliance documents</strong> to <strong>verifying structured digital evidence</strong>.
+      No individual component here is unprecedented; the architecture that binds them into one continuously verifiable system is what's new.
+    </p>
+    <p>
+      RRVI™ establishes an engineering category for the production, publication, verification, and navigation of digital regulatory evidence —
+      a reusable foundation that regulation-specific verification infrastructures can be built on top of.
+    </p>
+    <div class="category-meta">
+      <span><strong>First reference implementation:</strong> EU AI Act Remote-Inspection-Ready™</span>
+      <span><strong>Conformance profiles:</strong> Core · Advanced · Enterprise</span>
+      <span><strong>Mission:</strong> An open architecture for organizations, regulators, auditors, and AI systems to interact through trusted, verifiable regulatory information</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<div class="final-cta">
+  <h2>EU AI Act Ready™ Is RRVI™ in Production</h2>
+  <p>70 controlled documents, 27-language conversation, permanent lifecycle maintenance, and remote inspector-ready verification — built on this architecture.</p>
+  <div class="btn-row">
+    <a href="/index.html" class="btn-red">Back to EU AI Act Ready™</a>
+    <a href="/your-firm.html" class="btn-outline">Start Your SME Pack →</a>
+  </div>
+</div>
+
+<script>
+const toggle = document.getElementById('modeToggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  toggle.textContent = document.body.classList.contains('light-mode') ? '☀' : '☾';
+});
+</script>
+
+</body>
+</html>
