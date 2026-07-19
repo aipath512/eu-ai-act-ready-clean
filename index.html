@@ -1476,6 +1476,22 @@ document.querySelectorAll(".chips button").forEach(button => {
     });
   });
 </script>        
-        
+<script>
+  (function () {
+    var track = document.getElementById('chipsTrack');
+    var left = document.getElementById('chipsLeft');
+    var right = document.getElementById('chipsRight');
+    if (!track || !left || !right) return;
+    var amount = 180;
+    left.addEventListener('click', function () { track.scrollBy({ left: -amount, behavior: 'smooth' }); });
+    right.addEventListener('click', function () { track.scrollBy({ left: amount, behavior: 'smooth' }); });
+    function updateArrows() {
+      left.style.opacity = track.scrollLeft <= 5 ? '0.3' : '1';
+      right.style.opacity = (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) ? '0.3' : '1';
+    }
+    track.addEventListener('scroll', updateArrows);
+    updateArrows();
+  })();
+</script>        
 </body>
 </html>
