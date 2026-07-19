@@ -1486,5 +1486,17 @@ document.querySelectorAll(".chips button").forEach(button => {
 
 </script>
 
+<script>
+  document.querySelectorAll('.starter-chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var input = document.getElementById('question');
+      if (input) input.value = chip.dataset.q;
+      var starters = document.getElementById('starter-prompts');
+      if (starters) starters.style.display = 'none';
+      if (typeof ask === 'function') ask();
+    });
+  });
+</script>        
+        
 </body>
 </html>
