@@ -234,6 +234,26 @@ p{ font-size:17px; line-height:1.75; color:#d0d0d0; margin:0 0 18px; }
     </div>
   </div>
 
+  <h2 id="h-diligence-title">Not proof of innocence — proof of diligence</h2>
+  <p id="h-diligence-p1">
+    Market surveillance under the EU AI Act is administrative — the
+    national market surveillance authority has the legal power to request
+    documentation and inspect, and companies are obligated to cooperate.
+    It's closer to "the authority can ask, you must answer" than "the
+    authority must prove first."
+  </p>
+  <p id="h-diligence-p2">
+    It's not about who wins the legal argument over burden of proof — it's
+    that being asked and having nothing ready is the real risk, regardless
+    of who technically carries it.
+  </p>
+  <div class="callout" id="h-diligence-callout">
+    A company that says "we don't use AI" with no documentation is in a
+    worse position during an inquiry than one that says "we assessed this
+    on [date], here's the timestamped record, here's why we concluded no
+    AI system is in scope."
+  </div>
+
   <h2 id="h-pillars-title">The four pillars, through this lens</h2>
   <div class="pillars">
     <div class="pillar">
@@ -288,6 +308,10 @@ const WHY_I18N = {
     bcWhere: "The system or responsibility zone it moved into next",
     bcWhen: "A timestamped, anchored record of that exact handoff",
     bcHow: "The method of approval — and whether rollback is still possible",
+    diligenceTitle: "Not proof of innocence — proof of diligence",
+    diligenceP1: "Market surveillance under the EU AI Act is administrative — the national market surveillance authority has the legal power to request documentation and inspect, and companies are obligated to cooperate. It's closer to \"the authority can ask, you must answer\" than \"the authority must prove first.\"",
+    diligenceP2: "It's not about who wins the legal argument over burden of proof — it's that being asked and having nothing ready is the real risk, regardless of who technically carries it.",
+    diligenceCallout: "A company that says \"we don't use AI\" with no documentation is in a worse position during an inquiry than one that says \"we assessed this on [date], here's the timestamped record, here's why we concluded no AI system is in scope.\"",
     pillarsTitle: "The four pillars, through this lens",
     p1Title: "Risk-based classification",
     p1Desc: "The closer an AI system gets to directly affecting a person — health, credit, employment, justice — the stricter the obligations.",
@@ -319,6 +343,10 @@ const WHY_I18N = {
     bcWhere: "Sistemul sau zona de responsabilitate în care a intrat apoi",
     bcWhen: "O înregistrare cu marcă temporală, ancorată, a acelui transfer exact",
     bcHow: "Metoda de aprobare — și dacă rollback-ul mai e posibil",
+    diligenceTitle: "Nu dovadă de nevinovăție — dovadă de diligență",
+    diligenceP1: "Supravegherea de piață sub EU AI Act e administrativă — ANCOM are putere legală să ceară documentație și să inspecteze, iar firma e obligată să coopereze. E mai aproape de „autoritatea poate întreba, tu trebuie să răspunzi” decât de „autoritatea trebuie să dovedească întâi.”",
+    diligenceP2: "Nu e despre cine câștigă disputa juridică pe sarcina probei — e că a fi întrebat și a nu avea nimic pregătit e riscul real, indiferent cine poartă tehnic sarcina.",
+    diligenceCallout: "O firmă care spune „nu folosim AI” fără nicio documentație e într-o poziție mai proastă la un control ANCOM decât una care spune „am evaluat asta pe [dată], iată înregistrarea cu marcă temporală, iată de ce am concluzionat că niciun sistem AI nu intră sub incidență.”",
     pillarsTitle: "Cei patru piloni, prin această lentilă",
     p1Title: "Clasificare bazată pe risc",
     p1Desc: "Cu cât un sistem AI ajunge mai aproape să afecteze direct o persoană — sănătate, credit, angajare, justiție — cu atât obligațiile sunt mai stricte.",
@@ -350,6 +378,10 @@ const WHY_I18N = {
     bcWhere: "Le système ou la zone de responsabilité dans laquelle elle est ensuite passée",
     bcWhen: "Un enregistrement horodaté et ancré de ce transfert précis",
     bcHow: "La méthode d'approbation — et si un retour en arrière reste possible",
+    diligenceTitle: "Pas une preuve d'innocence — une preuve de diligence",
+    diligenceP1: "La surveillance du marché sous l'AI Act est de nature administrative — l'autorité nationale de surveillance a le pouvoir légal d'exiger des documents et de mener des inspections, et les entreprises sont tenues de coopérer. C'est plus proche de « l'autorité peut interroger, vous devez répondre » que de « l'autorité doit d'abord prouver ».",
+    diligenceP2: "Il ne s'agit pas de savoir qui gagne le débat juridique sur la charge de la preuve — le vrai risque, c'est d'être interrogé sans rien avoir de prêt, quel que soit celui qui porte techniquement cette charge.",
+    diligenceCallout: "Une entreprise qui affirme « nous n'utilisons pas l'IA » sans aucune documentation est dans une position plus fragile lors d'un contrôle que celle qui déclare : « nous avons évalué cela le [date], voici l'enregistrement horodaté, voici pourquoi nous avons conclu qu'aucun système d'IA n'entre dans le champ d'application ».",
     pillarsTitle: "Les quatre piliers, sous cet angle",
     p1Title: "Classification fondée sur le risque",
     p1Desc: "Plus un système d'IA touche directement une personne — santé, crédit, emploi, justice — plus les obligations sont strictes.",
@@ -385,6 +417,10 @@ function applyWhyLanguage(lang){
   document.getElementById("bc-where").textContent = l.bcWhere;
   document.getElementById("bc-when").textContent = l.bcWhen;
   document.getElementById("bc-how").textContent = l.bcHow;
+  document.getElementById("h-diligence-title").textContent = l.diligenceTitle;
+  document.getElementById("h-diligence-p1").textContent = l.diligenceP1;
+  document.getElementById("h-diligence-p2").textContent = l.diligenceP2;
+  document.getElementById("h-diligence-callout").textContent = l.diligenceCallout;
   document.getElementById("h-pillars-title").textContent = l.pillarsTitle;
   document.getElementById("p1-title").textContent = l.p1Title;
   document.getElementById("p1-desc").textContent = l.p1Desc;
