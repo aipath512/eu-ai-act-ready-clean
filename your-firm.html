@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Firm — EU AI Act Ready™ RRVI Generator</title>
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --red:#c81e1e;
+    --red-bright:#e02424;
+    --white:#f5f5f5;
+    --grey:#888;
+    --border:#2a2a2a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    min-height:100vh;
+    padding:24px 16px 60px;
+  }
+  .top{
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:28px;
+  }
+  .mark{
+    width:44px; height:44px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px;
+  }
+  .brand{font-weight:800; font-size:18px; letter-spacing:0.02em;}
+  .wrap{max-width:640px; margin:0 auto;}
+  h1{
+    font-size:34px; line-height:1.05; font-weight:900;
+    letter-spacing:-0.01em;
+    margin-bottom:6px;
+  }
+  h1 span{color:var(--red-bright);}
+  .sub{color:var(--grey); font-size:15px; margin-bottom:32px;}
+  .field{margin-bottom:20px;}
+  label{
+    display:block; font-size:13px; font-weight:700;
+    text-transform:uppercase; letter-spacing:0.06em;
+    color:var(--grey); margin-bottom:8px;
+  }
+  input[type=text]{
+    width:100%;
+    background:#111; border:1px solid var(--border);
+    color:var(--white); font-size:17px;
+    padding:14px 16px; border-radius:10px;
+    outline:none;
+  }
+  input[type=text]:focus{border-color:var(--red);}
+  select{
+    width:100%;
+    background:#111; border:1px solid var(--border);
+    color:var(--white); font-size:17px;
+    padding:14px 16px; border-radius:10px;
+    outline:none;
+    appearance:none;
+    -webkit-appearance:none;
+    background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23888' d='M5.5 7.5l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+  }
+  select:focus{border-color:var(--red);}
+  .btn{
+    width:100%;
+    background:var(--red-bright);
+    color:#fff; border:none; border-radius:10px;
+    font-size:17px; font-weight:800;
+    padding:17px 18px; margin-top:8px;
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    cursor:pointer;
+  }
+  .btn:active{background:var(--red);}
+  .btn:disabled{background:#4a1414; color:#aaa; cursor:not-allowed;}
+  .meta{
+    margin-top:18px; font-size:13px; color:var(--grey); text-align:center;
+  }
+  .status{
+    margin-top:20px; padding:14px 16px; border-radius:10px;
+    border:1px solid var(--border); font-size:14px; display:none;
+  }
+  .status.show{display:block;}
+  .status.ok{border-color:#1e7a3a; color:#7ee0a0;}
+  .status.err{border-color:var(--red); color:#ff9b9b;}
+  .status.pending{border-color:var(--border); color:var(--white);}
+  .modules{
+    margin-top:36px; border-top:1px solid var(--border); padding-top:20px;
+  }
+  .modules h2{font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--grey); margin-bottom:12px;}
+  .modgrid{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .modgrid div{
+    border:1px solid var(--border); border-radius:8px;
+    padding:8px 10px; font-size:12.5px; color:#ccc;
+  }
+  .langbar{
+    display:flex; gap:0; overflow-x:auto;
+    border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+    margin:0 -16px 28px; padding:10px 16px;
+    -ms-overflow-style:none; scrollbar-width:none;
+  }
+  .langbar::-webkit-scrollbar{display:none;}
+  .langbar a{
+    display:flex; align-items:center; gap:6px;
+    color:var(--white); text-decoration:none;
+    font-size:15px; padding:0 14px;
+    border-right:1px solid var(--border);
+    white-space:nowrap;
+  }
+  .langbar a:first-child{padding-left:0;}
+  .langbar a:last-child{border-right:none;}
+  .langbar a.active{color:var(--red-bright); font-weight:800;}
+  .askbox{
+    margin-top:40px; border:1px solid var(--red); border-radius:14px;
+    padding:14px; display:flex; align-items:center; gap:10px;
+    background:#0d0d0d;
+  }
+  .askbox input[type=text]{
+    flex:1; border:none; background:transparent;
+    font-size:16px; padding:8px 4px;
+  }
+  .askbox input[type=text]:focus{border-color:transparent;}
+  .askbtn{
+    background:var(--red-bright); color:#fff; border:none;
+    border-radius:10px; font-weight:800; font-size:15px;
+    padding:12px 18px; white-space:nowrap; cursor:pointer;
+    display:flex; align-items:center; gap:6px;
+  }
+  .askbtn:active{background:var(--red);}
+  .bottom-lang{
+    margin-top:14px; display:flex; gap:0; overflow-x:auto;
+    -ms-overflow-style:none; scrollbar-width:none;
+  }
+  .bottom-lang::-webkit-scrollbar{display:none;}
+  .bottom-lang a{
+    color:var(--grey); text-decoration:none; font-size:14px;
+    padding:6px 12px; border:1px solid var(--border); border-radius:8px;
+    margin-right:8px; white-space:nowrap; flex:0 0 auto;
+  }
+  .bottom-lang a.active{color:var(--red-bright); border-color:var(--red);}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="mark">✦</div>
+  <div class="brand">5thelement.AI</div>
+</div>
+
+<div class="langbar" id="langbar">
+  <a href="#" data-lang="en" class="active">🇬🇧 EN</a>
+  <a href="#" data-lang="fr">🇫🇷 FR</a>
+  <a href="#" data-lang="es">🇪🇸 ES</a>
+  <a href="#" data-lang="de">🇩🇪 DE</a>
+  <a href="#" data-lang="it">🇮🇹 IT</a>
+  <a href="#" data-lang="pl">🇵🇱 PL</a>
+  <a href="#" data-lang="ro">🇷🇴 RO</a>
+</div>
+
+<div class="wrap">
+  <h1>Generate your <span>70 compliance documents</span></h1>
+  <p class="sub">Enter your firm and your AI Act responsible person. We fill all 10 RRVI modules — Checklist, Declaration, Policy, Evidence, Procedure, Register, Work Instruction — and hand you a ready zip.</p>
+
+  <form id="rrvi-form">
+    <div class="field">
+      <label for="firmName">Firm name</label>
+      <input type="text" id="firmName" name="firmName" placeholder="e.g. Acme Robotics SRL" required autocomplete="organization">
+    </div>
+    <div class="field">
+      <label for="responsiblePerson">AI Act responsible person</label>
+      <input type="text" id="responsiblePerson" name="responsiblePerson" placeholder="e.g. Maria Ionescu" required autocomplete="name">
+    </div>
+    <div class="field">
+      <label for="docLang">Document language</label>
+      <select id="docLang" name="docLang">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="pl">Polski</option>
+        <option value="ro">Română</option>
+      </select>
+    </div>
+    <button type="submit" class="btn" id="genBtn">⚡ Generate all 70 documents</button>
+  </form>
+
+  <div class="status" id="status"></div>
+  <p class="meta">Docs are generated on request — nothing is stored. Delivered as a single .zip, ready to open in Word.</p>
+
+  <div class="modules">
+    <h2>What's inside — 10 modules × 7 doc types</h2>
+    <div class="modgrid">
+      <div>AI System Inventory</div>
+      <div>Risk Classification</div>
+      <div>Data Governance</div>
+      <div>Technical Documentation</div>
+      <div>Human Oversight</div>
+      <div>Transparency (Art. 50)</div>
+      <div>Robustness & Security</div>
+      <div>Post-Market Monitoring</div>
+      <div>Incident Reporting</div>
+      <div>Conformity Assessment</div>
+    </div>
+  </div>
+
+  <div class="askbox">
+    <span style="opacity:.6;">🔍</span>
+    <input type="text" id="askInput" placeholder="Ask about your obligations, e.g. Article 53 GPAI">
+    <button class="askbtn" id="askBtn">ASK ⚡</button>
+  </div>
+  <div class="bottom-lang" id="bottomLang">
+    <a href="#" data-lang="en" class="active">🇬🇧 EN</a>
+    <a href="#" data-lang="fr">🇫🇷 FR</a>
+    <a href="#" data-lang="es">🇪🇸 ES</a>
+    <a href="#" data-lang="de">🇩🇪 DE</a>
+    <a href="#" data-lang="it">🇮🇹 IT</a>
+    <a href="#" data-lang="pl">🇵🇱 PL</a>
+    <a href="#" data-lang="ro">🇷🇴 RO</a>
+  </div>
+</div>
+
+<script>
+// ── Configure once the RRVI generator Worker is deployed ──
+// Expected to accept: POST { firmName, responsiblePerson }
+// Expected to return: application/zip (binary) containing all 70 filled documents
+const RRVI_API = "https://eu-ai-act-rrvi-generator.aipath512.workers.dev/generate";
+
+const form = document.getElementById("rrvi-form");
+const btn = document.getElementById("genBtn");
+const statusEl = document.getElementById("status");
+const langbar = document.getElementById("langbar");
+const bottomLang = document.getElementById("bottomLang");
+const docLangSelect = document.getElementById("docLang");
+
+function setActiveLang(code){
+  docLangSelect.value = code;
+  [langbar, bottomLang].forEach(bar=>{
+    bar.querySelectorAll("a").forEach(a=>{
+      a.classList.toggle("active", a.dataset.lang === code);
+    });
+  });
+}
+
+[langbar, bottomLang].forEach(bar=>{
+  bar.querySelectorAll("a").forEach(a=>{
+    a.addEventListener("click", function(e){
+      e.preventDefault();
+      setActiveLang(a.dataset.lang);
+    });
+  });
+});
+
+docLangSelect.addEventListener("change", function(){
+  setActiveLang(docLangSelect.value);
+});
+
+function setStatus(kind, text){
+  statusEl.className = "status show " + kind;
+  statusEl.textContent = text;
+}
+
+const askInput = document.getElementById("askInput");
+const askBtn = document.getElementById("askBtn");
+
+async function runAsk(){
+  const q = askInput.value.trim();
+  if(!q) return;
+
+  askBtn.disabled = true;
+  askBtn.textContent = "…";
+  setStatus("pending", "Searching the AI Act for \u201c" + q + "\u201d in " + docLangSelect.value.toUpperCase() + "\u2026");
+
+  try{
+    const API = "https://eu-ai-act-search-api.aipath512.workers.dev/search?q=";
+    const res = await fetch(API + encodeURIComponent(q) + "&lang=" + docLangSelect.value);
+    if(!res.ok) throw new Error("Server returned " + res.status);
+    const data = await res.json();
+    const answer = (data && (data.generated_answer || data.answer)) || "No grounded answer found for that question yet.";
+    setStatus("ok", answer);
+  }catch(err){
+    setStatus("err", "Search failed (" + err.message + "). Please try again.");
+  }finally{
+    askBtn.disabled = false;
+    askBtn.textContent = "ASK \u26a1";
+  }
+}
+
+askBtn.addEventListener("click", runAsk);
+askInput.addEventListener("keydown", function(e){
+  if(e.key === "Enter") runAsk();
+});
+
+form.addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const firmName = document.getElementById("firmName").value.trim();
+  const responsiblePerson = document.getElementById("responsiblePerson").value.trim();
+  const docLang = document.getElementById("docLang").value;
+
+  if(!firmName || !responsiblePerson){
+    setStatus("err", "Both fields are required.");
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "⚡ Generating…";
+  setStatus("pending", "Building your 70 documents — this usually takes under a minute.");
+
+  try{
+    const res = await fetch(RRVI_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ firmName, responsiblePerson, lang: docLang })
+    });
+
+    if(!res.ok){
+      throw new Error("Server returned " + res.status);
+    }
+
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = firmName.replace(/[^a-z0-9]+/gi, "_") + "_EU_AI_Act_RRVI_Compliance_Pack_" + docLang.toUpperCase() + ".zip";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(url);
+
+    setStatus("ok", "Done — your 70-document pack has downloaded.");
+  }catch(err){
+    setStatus("err", "Generation failed (" + err.message + "). Please try again in a moment.");
+  }finally{
+    btn.disabled = false;
+    btn.textContent = "⚡ Generate all 70 documents";
+  }
+});
+</script>
+</body>
+</html>
