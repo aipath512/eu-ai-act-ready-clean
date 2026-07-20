@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administration Guide — EU AI Act Compliance Management System™ | RRVI™</title>
+<meta name="description" content="Administration Guide for the EU AI Act Compliance Management System™ — repository, document, version, user, backup, and inspection-readiness administration under the RRVI™ architecture.">
+<link rel="canonical" href="https://eu-ai-act-ready.eu/admin-guide.html">
+
+<meta property="og:title" content="Administration Guide — EU AI Act Compliance Management System™">
+<meta property="og:description" content="How administrators maintain the EU AI Act Compliance Management System throughout its operational lifecycle — repository, documents, versions, users, backups, reviews, and audits.">
+<meta property="og:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+<meta property="og:url" content="https://eu-ai-act-ready.eu/admin-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EU AI Act Ready™">
+<meta property="og:locale" content="en_EU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Administration Guide — EU AI Act Compliance Management System™">
+<meta name="twitter:description" content="How administrators maintain the EU AI Act Compliance Management System throughout its operational lifecycle.">
+<meta name="twitter:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://eu-ai-act-ready.eu/admin-guide.html#article",
+  "headline": "Administration Guide — EU AI Act Compliance Management System™",
+  "description": "How administrators maintain the EU AI Act Compliance Management System throughout its operational lifecycle — repository, documents, versions, users, backups, reviews, and audits.",
+  "url": "https://eu-ai-act-ready.eu/admin-guide.html",
+  "version": "1.0.2",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EU AI Act Ready™",
+    "url": "https://eu-ai-act-ready.eu/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AiVenture SRL",
+    "url": "https://5thelement.ai/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "Administration Guide", "item": "https://eu-ai-act-ready.eu/admin-guide.html"}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Who is responsible for maintaining the compliance repository?", "acceptedAnswer": {"@type": "Answer", "text": "The Repository Administrator, working alongside the AI Governance Owner and Compliance Owner, is responsible for repository integrity, document versions, user access, traceability, and audit readiness."}},
+    {"@type": "Question", "name": "Can controlled documents be renamed?", "acceptedAnswer": {"@type": "Answer", "text": "No. Controlled documents must never be renamed once issued, since their filename is part of their unique identifier and is referenced by traceability records, registers, and prior audit evidence."}},
+    {"@type": "Question", "name": "What must every controlled document include?", "acceptedAnswer": {"@type": "Answer", "text": "A unique identifier, a version number, a recorded approval, a revision history, and a named owner."}},
+    {"@type": "Question", "name": "How often should the system be reviewed?", "acceptedAnswer": {"@type": "Answer", "text": "At minimum annually, and additionally after any regulatory change to the EU AI Act or after major updates to the repository itself."}},
+    {"@type": "Question", "name": "What roles need to be assigned for administration?", "acceptedAnswer": {"@type": "Answer", "text": "AI Governance Owner, AI System Owner, Compliance Owner, Internal Auditor, and Repository Administrator."}},
+    {"@type": "Question", "name": "What should be verified before an inspection?", "acceptedAnswer": {"@type": "Answer", "text": "That all modules are complete, registers are current, evidence is available, declarations are approved, and traceability is maintained end to end."}},
+    {"@type": "Question", "name": "What happens at every version release?", "acceptedAnswer": {"@type": "Answer", "text": "The CHANGELOG and README are updated, a GitHub Release is created, and a Zenodo DOI is published where applicable, so every release remains citable and traceable."}}
+  ]
+}
+</script>
+
+<style>
+:root{--bg:#030508;--panel:#0a0d12;--panel2:#0d1117;--border:#1c1c1c;--electric:#00d4ff;--red:#e03a1e;--text:#ffffff;--muted:#a7acb5;--dim:#6f7580}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.65}
+body.light-mode{--bg:#f7f7f7;--panel:#ffffff;--panel2:#f1f1f1;--border:#e2e2e2;--text:#0a0a0a;--muted:#3f4552;--dim:#6a6f78}
+body.light-mode *{color:#0a0a0a !important}
+body.light-mode .card,body.light-mode .role-card,body.light-mode .quick-ref{background:#ffffff !important}
+a{color:inherit}
+
+#theme-toggle{position:fixed;top:68px;left:16px;z-index:999;width:34px;height:34px;border-radius:8px;background:var(--panel);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;color:var(--text)}
+#lang-select{position:fixed;top:68px;left:58px;z-index:999;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:0 30px 0 12px;height:34px;font-size:12px;font-family:inherit;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="%23ffffff"/></svg>');background-repeat:no-repeat;background-position:right 10px center}
+body.light-mode #lang-select{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="%23000000"/></svg>')}
+
+.breadcrumb{max-width:1080px;margin:0 auto;padding:14px 24px 0;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--dim)}
+.breadcrumb a{color:var(--dim);text-decoration:none}
+.breadcrumb a:hover{color:var(--electric)}
+.breadcrumb .sep{margin:0 6px}
+.breadcrumb .current{color:var(--electric)}
+
+header.hero{max-width:1080px;margin:0 auto;padding:36px 24px 44px;border-bottom:1px solid var(--border)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:14px;display:block}
+h1{font-family:Georgia,serif;font-weight:900;font-size:clamp(32px,6vw,58px);line-height:1.05;letter-spacing:-1px;margin-bottom:16px}
+.lede{color:var(--muted);font-size:17px;max-width:700px;line-height:1.7}
+.meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+.meta-row span{border:1px solid var(--border);border-radius:999px;padding:7px 14px;color:var(--muted)}
+.meta-row span b{color:var(--electric)}
+
+.quick-ref{max-width:1080px;margin:40px auto 0;padding:0 24px}
+.quick-ref .box{border:1px solid var(--electric);border-radius:14px;padding:26px 28px;background:rgba(0,212,255,.04)}
+.quick-ref h2{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--electric);margin-bottom:16px}
+.quick-ref ol{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 20px}
+.quick-ref li{font-size:14px;color:var(--muted);display:flex;gap:10px}
+.quick-ref li b{color:var(--text);font-family:"IBM Plex Mono",monospace;font-size:12px;flex:0 0 auto}
+.quick-ref li a{text-decoration:none;color:var(--muted)}
+.quick-ref li a:hover{color:var(--electric)}
+
+main{max-width:1080px;margin:0 auto;padding:20px 24px 100px}
+section.block{padding:56px 0;border-top:1px solid var(--border)}
+section.block:first-of-type{border-top:0}
+.block-label{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--red);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+h2{font-family:Georgia,serif;font-weight:900;font-size:clamp(24px,3.5vw,34px);letter-spacing:-.5px;margin-bottom:16px}
+h3{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;letter-spacing:.3px;color:var(--electric);margin:26px 0 12px}
+p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:760px}
+strong{color:var(--text)}
+
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}
+.card{border:1px solid var(--border);border-radius:12px;padding:20px;background:var(--panel)}
+.card .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--electric);margin-bottom:8px}
+.card p{font-size:14px;margin-bottom:0;color:var(--muted)}
+
+.role-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:18px}
+.role-card{border:1px solid var(--border);border-left:3px solid var(--red);border-radius:8px;padding:16px 18px;background:var(--panel2)}
+.role-card .title{font-weight:700;font-size:14.5px;margin-bottom:4px}
+.role-card .desc{font-size:13px;color:var(--dim)}
+
+.checklist{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.checklist li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--muted)}
+.checklist li::before{content:"—";color:var(--electric);flex:0 0 auto}
+
+.warn{border:1px solid var(--red);border-left:3px solid var(--red);border-radius:10px;padding:18px 22px;margin:20px 0;background:rgba(224,58,30,.06);font-size:14.5px;color:var(--muted)}
+.warn strong{color:var(--red)}
+
+table{width:100%;border-collapse:collapse;margin-top:18px;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+th,td{padding:11px 14px;border:1px solid var(--border);font-size:14px;text-align:left}
+th{background:var(--panel2);color:var(--electric);font-family:"IBM Plex Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+td{color:var(--muted)}
+
+.faq-item{border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:12px;background:var(--panel)}
+.faq-item h3{margin:0 0 8px;color:var(--text)}
+.faq-item p{font-size:14.5px;margin-bottom:0}
+
+.prep-footer{max-width:1080px;margin:0 auto;padding:40px 24px 80px;border-top:1px solid var(--border)}
+.prep-footer .box{border:1px solid var(--border);border-radius:14px;padding:26px 28px;background:var(--panel);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.prep-footer .field{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--dim)}
+.prep-footer .field b{display:block;color:var(--text);font-family:-apple-system,sans-serif;font-size:15px;margin-top:4px}
+
+footer.site{text-align:center;padding:30px 20px 60px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--dim);border-top:1px solid var(--border)}
+
+@media(max-width:640px){
+  #theme-toggle{top:16px;left:12px}
+  #lang-select{top:16px;left:54px}
+  header.hero{padding-top:70px}
+  .breadcrumb{padding-top:70px}
+}
+</style>
+</head>
+<body>
+
+<button id="theme-toggle" aria-label="Toggle dark/light mode" onclick="document.body.classList.toggle('light-mode');this.textContent=document.body.classList.contains('light-mode')?'☀':'☾';">☾</button>
+<select id="lang-select" aria-label="Select language" onchange="console.log('Language selected:', this.value);">
+  <option value="en">🇬🇧 EN</option>
+  <option value="fr">🇫🇷 FR</option>
+  <option value="de">🇩🇪 DE</option>
+  <option value="es">🇪🇸 ES</option>
+  <option value="it">🇮🇹 IT</option>
+  <option value="ro">🇷🇴 RO</option>
+  <option value="pl">🇵🇱 PL</option>
+</select>
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="https://eu-ai-act-ready.eu/">Home</a>
+  <span class="sep">›</span>
+  <span class="current">Administration Guide</span>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">RRVI™ Repository · Reference Document</span>
+  <h1>Administration Guide</h1>
+  <p class="lede">How administrators maintain the EU AI Act Compliance Management System™ throughout its operational lifecycle — from repository integrity to audit-day readiness.</p>
+  <div class="meta-row">
+    <span>System: <b>EU AI Act Compliance Management System™</b></span>
+    <span>Repository: <b>RRVI™</b></span>
+    <span>Version: <b>1.0.2</b></span>
+  </div>
+</header>
+
+<div class="quick-ref">
+  <div class="box">
+    <h2>On this page</h2>
+    <ol>
+      <li><b>01</b><a href="#purpose">Purpose</a></li>
+      <li><b>02</b><a href="#responsibilities">Administrator Responsibilities</a></li>
+      <li><b>03</b><a href="#repository">Repository Administration</a></li>
+      <li><b>04</b><a href="#documents">Document Administration</a></li>
+      <li><b>05</b><a href="#versions">Version Management</a></li>
+      <li><b>06</b><a href="#users">User Administration</a></li>
+      <li><b>07</b><a href="#backup">Backup</a></li>
+      <li><b>08</b><a href="#reviews">Periodic Reviews</a></li>
+      <li><b>09</b><a href="#inspection">Inspection Preparation</a></li>
+      <li><b>10</b><a href="#maintenance">Continuous Maintenance</a></li>
+      <li><b>FAQ</b><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+</div>
+
+<main>
+
+<section class="block" id="purpose">
+  <div class="block-label">01 — Purpose</div>
+  <h2>What this guide governs</h2>
+  <p>This guide describes how administrators maintain the EU AI Act Compliance Management System throughout its operational lifecycle — not just at setup, but continuously, as the regulation phases in, as documents get reviewed, and as the organization changes.</p>
+  <p>It applies to anyone holding an administrative role over the compliance repository: the <strong>Repository Administrator</strong>, the <strong>AI Governance Owner</strong>, and anyone coordinating document reviews, user access, or audit preparation on their behalf.</p>
+</section>
+
+<section class="block" id="responsibilities">
+  <div class="block-label">02 — Administrator Responsibilities</div>
+  <h2>What the Administrator is accountable for</h2>
+  <p>The Administrator shall maintain the system across six areas. Each is covered in detail in its own section below.</p>
+  <div class="card-grid">
+    <div class="card"><div class="n">01</div><p>Maintain repository integrity</p></div>
+    <div class="card"><div class="n">02</div><p>Manage document versions</p></div>
+    <div class="card"><div class="n">03</div><p>Coordinate document reviews</p></div>
+    <div class="card"><div class="n">04</div><p>Manage user access</p></div>
+    <div class="card"><div class="n">05</div><p>Maintain traceability</p></div>
+    <div class="card"><div class="n">06</div><p>Prepare the system for audits and inspections</p></div>
+  </div>
+</section>
+
+<section class="block" id="repository">
+  <div class="block-label">03 — Repository Administration</div>
+  <h2>Keeping the repository itself trustworthy</h2>
+  <p>Before anything else, the repository has to be internally consistent — a crawler, an auditor, or the next administrator should be able to open it and immediately understand its structure without asking you.</p>
+  <h3>Verify</h3>
+  <ul class="checklist">
+    <li>Repository structure matches the documented module layout</li>
+    <li>Document naming follows the established convention exactly</li>
+    <li>Folder organization is unchanged from the reference structure</li>
+    <li>Version consistency across all controlled documents</li>
+  </ul>
+  <div class="warn"><strong>Do not rename controlled documents.</strong> A document's filename is part of its identity — traceability records, registers, and prior audit evidence all reference it by name. Renaming breaks the chain even if the content is unchanged.</div>
+</section>
+
+<section class="block" id="documents">
+  <div class="block-label">04 — Document Administration</div>
+  <h2>What every controlled document must carry</h2>
+  <p>Every controlled document in the system shall have all five of the following, without exception:</p>
+  <table>
+    <thead><tr><th>Field</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td>Unique identifier</td><td>Lets any register, cross-reference, or audit trail point to exactly one document, unambiguously.</td></tr>
+      <tr><td>Version</td><td>Distinguishes the current controlled state from superseded drafts.</td></tr>
+      <tr><td>Approval</td><td>Records who authorized the document to become effective, and when.</td></tr>
+      <tr><td>Revision history</td><td>Shows what changed between versions, and why — the difference between a document and a black box.</td></tr>
+      <tr><td>Owner</td><td>Names exactly one accountable person for keeping the document current.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="block" id="versions">
+  <div class="block-label">05 — Version Management</div>
+  <h2>What happens at every release</h2>
+  <p>Each release of the compliance system — not just the code, but the documentation set itself — follows the same sequence:</p>
+  <ul class="checklist">
+    <li>Update the CHANGELOG with what changed in this release</li>
+    <li>Update the README to reflect the current state</li>
+    <li>Create a GitHub Release, tagged and versioned</li>
+    <li>Publish a Zenodo DOI where applicable, so the release is independently citable</li>
+  </ul>
+</section>
+
+<section class="block" id="users">
+  <div class="block-label">06 — User Administration</div>
+  <h2>The five roles that must be assigned</h2>
+  <p>Administration is not a single job — it is five distinct areas of accountability, and each needs a named person, even in a small organization where one person holds more than one role.</p>
+  <div class="role-grid">
+    <div class="role-card"><div class="title">AI Governance Owner</div><div class="desc">Owns the overall governance posture and policy direction.</div></div>
+    <div class="role-card"><div class="title">AI System Owner</div><div class="desc">Accountable for a specific AI system's inventory entry and risk classification.</div></div>
+    <div class="role-card"><div class="title">Compliance Owner</div><div class="desc">Owns the compliance documentation set and its currency.</div></div>
+    <div class="role-card"><div class="title">Internal Auditor</div><div class="desc">Independently reviews evidence and flags gaps before an external inspector does.</div></div>
+    <div class="role-card"><div class="title">Repository Administrator</div><div class="desc">Maintains the repository itself — structure, versions, access, backups.</div></div>
+  </div>
+</section>
+
+<section class="block" id="backup">
+  <div class="block-label">07 — Backup</div>
+  <h2>What must survive a disaster</h2>
+  <ul class="checklist">
+    <li>GitHub repository backup, kept current</li>
+    <li>Document integrity — checksums or equivalent verification available</li>
+    <li>Release preservation — every past release remains retrievable, not just the latest</li>
+    <li>DOI preservation — published Zenodo DOIs remain resolvable indefinitely</li>
+  </ul>
+</section>
+
+<section class="block" id="reviews">
+  <div class="block-label">08 — Periodic Reviews</div>
+  <h2>When the system gets reviewed</h2>
+  <p>Reviews are not optional and not only reactive. The system shall be reviewed:</p>
+  <ul class="checklist">
+    <li>Annually, at minimum, regardless of whether anything appears to have changed</li>
+    <li>After any regulatory change to the EU AI Act or its implementing guidance</li>
+    <li>After any major update to the repository itself — a restructuring, a new module, a tooling change</li>
+  </ul>
+</section>
+
+<section class="block" id="inspection">
+  <div class="block-label">09 — Inspection Preparation</div>
+  <h2>What "ready" looks like before an inspector asks</h2>
+  <p>Before any inspection — announced or not — verify the following, in this order:</p>
+  <ul class="checklist">
+    <li>All modules are complete, not partially filled placeholders</li>
+    <li>Registers are current, reflecting the actual state today, not a snapshot from months ago</li>
+    <li>Evidence is available and retrievable on request, not just referenced</li>
+    <li>Declarations are approved, with a recorded approver and date</li>
+    <li>Traceability is maintained end to end — every obligation still maps to a document, and every document still maps to evidence</li>
+  </ul>
+</section>
+
+<section class="block" id="maintenance">
+  <div class="block-label">10 — Continuous Maintenance</div>
+  <h2>What stays maintained, always</h2>
+  <p>Administration does not end once the system is set up. Five things stay under continuous maintenance for as long as the system is in use:</p>
+  <div class="card-grid">
+    <div class="card"><div class="n">01</div><p>Repository</p></div>
+    <div class="card"><div class="n">02</div><p>Documentation</p></div>
+    <div class="card"><div class="n">03</div><p>Releases</p></div>
+    <div class="card"><div class="n">04</div><p>Audit records</p></div>
+    <div class="card"><div class="n">05</div><p>Compliance records</p></div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="block-label">FAQ</div>
+  <h2>Frequently asked questions</h2>
+
+  <div class="faq-item">
+    <h3>Who is responsible for maintaining the compliance repository?</h3>
+    <p>The Repository Administrator, working alongside the AI Governance Owner and Compliance Owner, is responsible for repository integrity, document versions, user access, traceability, and audit readiness.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Can controlled documents be renamed?</h3>
+    <p>No. Controlled documents must never be renamed once issued, since their filename is part of their unique identifier and is referenced by traceability records, registers, and prior audit evidence.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What must every controlled document include?</h3>
+    <p>A unique identifier, a version number, a recorded approval, a revision history, and a named owner.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How often should the system be reviewed?</h3>
+    <p>At minimum annually, and additionally after any regulatory change to the EU AI Act or after major updates to the repository itself.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What roles need to be assigned for administration?</h3>
+    <p>AI Governance Owner, AI System Owner, Compliance Owner, Internal Auditor, and Repository Administrator.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What should be verified before an inspection?</h3>
+    <p>That all modules are complete, registers are current, evidence is available, declarations are approved, and traceability is maintained end to end.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What happens at every version release?</h3>
+    <p>The CHANGELOG and README are updated, a GitHub Release is created, and a Zenodo DOI is published where applicable, so every release remains citable and traceable.</p>
+  </div>
+
+</section>
+
+</main>
+
+<div class="prep-footer">
+  <div class="box">
+    <div class="field">Version<b>1.0.2</b></div>
+    <div class="field">Prepared by<b>{{RESPONSIBLE_PERSON}}</b></div>
+    <div class="field">Company<b>{{COMPANY_NAME}}</b></div>
+  </div>
+</div>
+
+<footer class="site">EU AI ACT READY™ — Administration Guide · RRVI™ Repository</footer>
+
+</body>
+</html>
