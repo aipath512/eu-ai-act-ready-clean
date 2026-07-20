@@ -1723,6 +1723,165 @@ document.querySelectorAll(".chips button").forEach(button => {
     track.addEventListener('scroll', updateArrows);
     updateArrows();
   })();
-</script>        
+</script>
+ <style>
+  #gate-overlay {
+    position: fixed; inset: 0; background: rgba(3,5,8,0.92);
+    display: none; align-items: center; justify-content: center;
+    z-index: 9999; backdrop-filter: blur(4px);
+  }
+  #gate-overlay.active { display: flex; }
+  #gate-modal {
+    background: #0a0a0a; border: 1px solid #c90016; border-radius: 8px;
+    width: min(420px, 90vw); padding: 28px; color: #fff;
+    font-family: Inter, system-ui, sans-serif;
+  }
+  #gate-modal h2 { margin: 0 0 6px; font-size: 20px; }
+  #gate-modal p.sub { color: #999; font-size: 13px; margin: 0 0 20px; }
+  #gate-modal label { display: block; font-size: 12px; color: #ccc; margin: 12px 0 4px; }
+  #gate-modal input {
+    width: 100%; box-sizing: border-box; padding: 10px 12px;
+    background: #141414; border: 1px solid #333; border-radius: 4px;
+    color: #fff; font-size: 14px;
+  }
+  #gate-modal input:focus { outline: none; border-color: #c90016; }
+  #gate-submit {
+    margin-top: 20px; width: 100%; padding: 12px; background: #c90016;
+    color: #fff; border: none; border-radius: 4px; font-weight: 700;
+    letter-spacing: 0.5px; cursor: pointer;
+  }
+  #gate-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+  #gate-msg { margin-top: 12px; font-size: 13px; min-height: 18px; }
+  #gate-msg.error { color: #ff6b5b; }
+  #gate-msg.ok { color: #4ade80; }
+  #gate-close {
+    position: absolute; top: 12px; right: 16px; background: none;
+    border: none; color: #666; font-size: 20px; cursor: pointer;
+  }
+  .gate-locked { filter: blur(3px); pointer-events: none; user-select: none; }
+</style>
+
+<div id="gate-overlay">
+  <div id="gate-modal" style="position:relative;">
+    <button id="gate-close" title="Close">×</button>
+    <h2>Unlock Ask & Generator</h2>
+    <p class="sub">Free for verified professionals. Business email required — no personal/free addresses.</p>
+
+    <label>First name *</label>
+    <input id="gate-name" type="text" autocomplete="given-name" />
+
+    <label>Surname *</label>
+    <input id="gate-surname" type="text" autocomplete="family-name" />
+
+    <label>Business email *</label>
+    <input id="gate-email" type="email" autocomplete="email" placeholder="you@yourcompany.com" />
+
+    <label>Firm (optional)</label>
+    <input id="gate-firm" type="text" autocomplete="organization" />
+
+    <label>AI system / use case (optional)</label>
+    <input id="gate-ai" type="text" placeholder="e.g. internal chatbot, hiring tool..." />
+
+    <button id="gate-submit">SEND VERIFICATION LINK</button>
+    <div id="gate-msg"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const AUTH_API = "https://eu-ai-act-auth-worker.aipath512.workers.dev";
+
+  const overlay = document.getElementById("gate-overlay");
+  const msg = document.getElementById("gate-msg");
+  const submitBtn = document.getElementById("gate-submit");
+
+  function showMsg(text, type) {
+    msg.textContent = text;
+    msg.className = type || "";
+  }
+
+  function openGate() {
+    overlay.classList.add("active");
+  }
+
+  function closeGate() {
+    overlay.classList.remove("active");
+  }
+
+  document.getElementById("gate-close").addEventListener("click", closeGate);
+
+  submitBtn.addEventListener("click", async function () {
+    const name = document.getElementById("gate-name").value.trim();
+    const surname = document.getElementById("gate-surname").value.trim();
+    const email = document.getElementById("gate-email").value.trim();
+    const firm = document.getElementById("gate-firm").value.trim();
+    const ai = document.getElementById("gate-ai").value.trim();
+
+    if (!name || !surname || !email) {
+      showMsg("First name, surname and business email are required.", "error");
+      return;
+    }
+
+    submitBtn.disabled = true;
+    showMsg("Sending...", "");
+
+    try {
+      const resp = await fetch(AUTH_API + "/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ name, surname, email, firm, ai })
+      });
+      const data = await resp.json();
+      if (!resp.ok) {
+        showMsg(data.error || "Something went wrong.", "error");
+        submitBtn.disabled = false;
+        return;
+      }
+      showMsg(data.message || "Check your inbox to confirm your email.", "ok");
+    } catch (e) {
+      showMsg("Network error. Try again.", "error");
+      submitBtn.disabled = false;
+    }
+  });
+
+  function lockGatedSections() {
+    document.querySelectorAll("[data-gated]").forEach(function (el) {
+      el.classList.add("gate-locked");
+      el.addEventListener("click", openGate, { once: false });
+    });
+  }
+
+  function unlockGatedSections() {
+    document.querySelectorAll("[data-gated]").forEach(function (el) {
+      el.classList.remove("gate-locked");
+    });
+  }
+
+  async function checkSession() {
+    try {
+      const resp = await fetch(AUTH_API + "/api/auth/session", { credentials: "include" });
+      const data = await resp.json();
+      if (data.authenticated) {
+        unlockGatedSections();
+      } else {
+        lockGatedSections();
+      }
+    } catch (e) {
+      lockGatedSections();
+    }
+  }
+
+  if (new URLSearchParams(location.search).get("verified") === "1") {
+    unlockGatedSections();
+  }
+
+  checkSession();
+
+  document.querySelectorAll('[data-open-gate]').forEach(function (el) {
+    el.addEventListener("click", function(e){ e.preventDefault(); openGate(); });
+  });
+})();
+</script>       
 </body>
 </html>
