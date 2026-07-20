@@ -1,294 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+:root { --bg: #0a0a0a; --panel: #141414; --border: #2a2a2a; --text: #ffffff; --muted: #9a9a9a; --red: #e03a1e; --red-dim: #7a2113; }
+
+body.light-mode { --bg: #f7f7f7; --panel: #ffffff; --border: #ddd; --text: #0a0a0a; --muted: #555; }
+
+body.light-mode * { color: rgb(10, 10, 10) !important; }
+
+* { box-sizing: border-box; margin: 0px; padding: 0px; }
+
+body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, sans-serif; min-height: 100vh; }
+
+#theme-toggle { position: fixed; top: 68px; left: 16px; z-index: 999; width: 34px; height: 34px; border-radius: 8px; background: var(--panel); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 16px; cursor: pointer; color: var(--text); }
+
+.breadcrumb { padding: 14px 16px 0; font-size: 13px; color: var(--muted); }
+
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+
+.breadcrumb a:hover { color: var(--red); }
+
+.breadcrumb .sep { margin: 0 6px; }
+
+.breadcrumb .current { color: var(--text); }
+
+#to-top { position: fixed; right: 16px; bottom: 100px; z-index: 900; width: 44px; height: 44px; border-radius: 50%; background: var(--red); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 16px; opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity 0.25s, transform 0.25s; }
+
+#to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0px); }
+
+header { padding: 130px 20px 24px; text-align: center; border-bottom: 1px solid var(--border); }
+
+header h1 { font-family: Georgia, serif; font-weight: 900; font-size: clamp(32px, 10vw, 56px); letter-spacing: -1px; text-transform: uppercase; }
+
+.ticker-wrap { margin-top: 16px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--panel); overflow: hidden; white-space: nowrap; }
+
+.ticker-track { display: inline-block; padding: 9px 0px; animation: 22s linear 0s infinite normal none running ticker-scroll; font-size: 13px; font-weight: 600; letter-spacing: 0.2px; }
+
+.ticker-track b { color: var(--red); }
+
+.ticker-track .sep { color: var(--muted); margin: 0px 10px; }
+
+@keyframes ticker-scroll { 
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(-50%); }
+}
+
+.stats { display: flex; justify-content: center; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+
+.stat { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 13px; }
+
+.stat b { color: var(--red); }
+
+.cta-top { margin-top: 18px; display: inline-block; background: var(--red); padding: 10px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; color: rgb(255, 255, 255) !important; }
+
+.lang-toggle-wrap { position: relative; display: flex; justify-content: center; margin: 18px auto 0px; }
+
+.lang-current { display: flex; align-items: center; gap: 8px; border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 700; cursor: pointer; background: var(--panel); color: var(--text) !important; }
+
+.lang-current .chev { font-size: 10px; color: var(--muted); }
+
+.lang-dropdown { display: none; position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 6px; z-index: 600; min-width: 160px; box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 24px; }
+
+.lang-dropdown.open { display: block; }
+
+.lang-option { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--text) !important; }
+
+.lang-option:hover, .lang-option.active { background: var(--red); color: rgb(255, 255, 255) !important; }
+
+.ask-wrap { max-width: 640px; margin: 22px auto 0px; padding: 0px 16px; }
+
+.ask-banner { background: var(--red); color: rgb(255, 255, 255); font-weight: 900; text-transform: uppercase; padding: 10px 16px; border-radius: 8px; text-align: center; font-size: 15px; letter-spacing: 0.5px; margin-bottom: 14px; }
+
+.ask-box { display: flex; gap: 8px; border: 1px solid var(--border); border-radius: 999px; padding: 6px 6px 6px 16px; background: var(--panel); align-items: center; }
+
+.ask-box .loupe { font-size: 16px; color: var(--muted); }
+
+.ask-box input { flex: 1 1 0%; background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; outline: none; color: var(--text); font-size: 15px; padding: 8px 0px; }
+
+.ask-box input::placeholder { color: var(--muted); }
+
+.ask-btn { background: var(--red); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; border-radius: 999px; padding: 10px 20px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap; }
+
+.ask-status { font-size: 13px; color: var(--muted); text-align: center; margin-top: 10px; min-height: 18px; }
+
+.ask-answer { margin-top: 14px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; font-size: 14px; line-height: 1.55; display: none; }
+
+.ask-answer.show { display: block; }
+
+.ask-sources { margin-top: 10px; font-size: 12px; color: var(--muted); }
+
+.ask-sources a { color: var(--red) !important; }
+
+#sticky-ask { position: sticky; top: 0px; z-index: 500; background: var(--bg); border-bottom: 1px solid var(--border); padding: 14px 16px; box-shadow: rgba(0, 0, 0, 0.35) 0px 6px 16px; }
+
+body.light-mode #sticky-ask { box-shadow: rgba(0, 0, 0, 0.08) 0px 6px 16px; }
+
+#sticky-ask .lang-toggle-wrap { margin: 0px; }
+
+#ask-wrap-bottom { position: fixed; left: 0px; right: 0px; bottom: 0px; z-index: 800; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--bg) 65%, transparent); }
+
+#ask-wrap-bottom .ask-box { max-width: 680px; margin: 0px auto; background: var(--panel); border: 1px solid var(--red); border-radius: 999px; padding: 8px 8px 8px 18px; box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 30px; }
+
+body.light-mode #ask-wrap-bottom .ask-box { box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 30px; }
+
+#ask-wrap-bottom .ask-btn { border-radius: 999px; padding: 10px 20px; font-size: 14px; width: auto; height: auto; }
+
+main { padding-bottom: 110px; }
+
+#ask-fullscreen { display: none; position: fixed; inset: 0px; z-index: 2000; background: var(--bg); flex-direction: column; }
+
+#ask-fullscreen.show { display: flex; }
+
+.af-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--border); background: var(--panel); }
+
+.af-title { font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; color: var(--red); font-size: 15px; }
+
+.af-close { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px; color: var(--text); }
+
+.af-body { flex: 1 1 0%; overflow-y: auto; max-width: 680px; width: 100%; margin: 0px auto; padding: 24px 16px; }
+
+.af-question { font-size: 15px; font-weight: 700; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+
+.af-return { text-align: center; padding: 16px; border-top: 1px solid var(--border); color: var(--red); font-weight: 700; font-size: 14px; cursor: pointer; background: var(--panel); }
+
+main { max-width: 900px; margin: 0px auto; padding: 24px 16px 80px; }
+
+.module { margin-bottom: 26px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--panel); }
+
+.module-head { padding: 14px 16px; background: linear-gradient(90deg, var(--red-dim), transparent); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+
+.module-head h2 { font-size: 16px; letter-spacing: 0.3px; }
+
+.module-head span { font-size: 12px; color: var(--muted); }
+
+.doc-list { display: flex; flex-direction: column; }
+
+.doc { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-top: 1px solid var(--border); font-size: 14px; }
+
+.doc:first-child { border-top-width: medium; border-top-style: none; border-top-color: currentcolor; }
+
+.doc-name { display: flex; align-items: center; gap: 10px; }
+
+.doc-type { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; }
+
+.badge-open { color: rgb(61, 220, 132); font-size: 12px; font-weight: 600; }
+
+.badge-locked { color: var(--muted); font-size: 12px; display: flex; align-items: center; gap: 4px; }
+
+a.open-link { text-decoration: none; color: var(--text) !important; }
+
+a.open-link:hover { color: var(--red) !important; }
+
+.locked-row { opacity: 0.55; cursor: pointer; }
+
+.locked-row:hover { opacity: 0.8; }
+
+footer.cta { max-width: 640px; margin: 40px auto 0px; text-align: center; padding: 28px 20px; border: 1px solid var(--border); border-radius: 14px; background: var(--panel); }
+
+footer.cta h3 { font-size: 20px; margin-bottom: 8px; }
+
+footer.cta p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+
+footer.cta a { background: var(--red); padding: 12px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px; color: rgb(255, 255, 255) !important; }
+
+#lock-modal { display: none; position: fixed; inset: 0px; background: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+
+#lock-modal .box { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; max-width: 380px; padding: 26px; text-align: center; }
+
+#lock-modal h4 { font-size: 18px; margin-bottom: 10px; }
+
+#lock-modal p { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+
+#lock-modal a { background: var(--red); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px; display: inline-block; margin-bottom: 10px; color: rgb(255, 255, 255) !important; }
+
+#lock-modal .close { display: block; color: var(--muted); font-size: 13px; cursor: pointer; margin-top: 6px; }</style>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Demo — Full RRVI Document Library | EU AI Act Ready™</title>
-<style>
-:root{
-  --bg:#0a0a0a;
-  --panel:#141414;
-  --border:#2a2a2a;
-  --text:#ffffff;
-  --muted:#9a9a9a;
-  --red:#e03a1e;
-  --red-dim:#7a2113;
-}
-body.light-mode{
-  --bg:#f7f7f7;
-  --panel:#ffffff;
-  --border:#ddd;
-  --text:#0a0a0a;
-  --muted:#555;
-}
-body.light-mode *{ color:#0a0a0a !important; }
-*{box-sizing:border-box; margin:0; padding:0;}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Inter',system-ui,-apple-system,sans-serif;
-  min-height:100vh;
-}
-/* dark/light toggle — fixed top-left, 68px from top, 34x34 */
-#theme-toggle{
-  position:fixed; top:68px; left:16px; z-index:999;
-  width:34px; height:34px; border-radius:8px;
-  background:var(--panel); border:1px solid var(--border);
-  display:flex; align-items:center; justify-content:center;
-  font-size:16px; cursor:pointer; color:var(--text);
-}
-/* return-to-top button — fades in after scrolling, sits above the fixed Ask bar */
-#to-top{
-  position:fixed; right:16px; bottom:100px; z-index:900;
-  width:44px; height:44px; border-radius:50%;
-  background:var(--red); color:#fff; border:none;
-  display:flex; align-items:center; justify-content:center;
-  font-size:18px; cursor:pointer;
-  box-shadow:0 6px 16px rgba(0,0,0,.4);
-  opacity:0; pointer-events:none;
-  transform:translateY(10px);
-  transition:opacity .25s ease, transform .25s ease;
-}
-#to-top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
-header{
-  padding:130px 20px 24px;
-  text-align:center;
-  border-bottom:1px solid var(--border);
-}
-header h1{
-  font-family:Georgia, serif;
-  font-weight:900;
-  font-size:clamp(32px,10vw,56px);
-  letter-spacing:-1px;
-  text-transform:uppercase;
-}
-/* Reuters/Telegram-style one-line ticker summarizing what the page does */
-.ticker-wrap{
-  margin-top:16px; border-top:1px solid var(--border); border-bottom:1px solid var(--border);
-  background:var(--panel); overflow:hidden; white-space:nowrap;
-}
-.ticker-track{
-  display:inline-block; padding:9px 0;
-  animation:ticker-scroll 22s linear infinite;
-  font-size:13px; font-weight:600; letter-spacing:.2px;
-}
-.ticker-track b{ color:var(--red); }
-.ticker-track .sep{ color:var(--muted); margin:0 10px; }
-@keyframes ticker-scroll{
-  0%{ transform:translateX(0); }
-  100%{ transform:translateX(-50%); }
-}
-.stats{
-  display:flex; justify-content:center; gap:10px;
-  margin-top:18px; flex-wrap:wrap;
-}
-.stat{
-  background:var(--panel); border:1px solid var(--border);
-  border-radius:8px; padding:8px 14px; font-size:13px;
-}
-.stat b{color:var(--red);}
-.cta-top{
-  margin-top:18px;
-  display:inline-block;
-  background:var(--red); color:#fff !important;
-  padding:10px 22px; border-radius:8px;
-  font-weight:700; text-decoration:none; font-size:14px;
-}
 
-/* language selector — single-line compact toggle with dropdown, not a 2-row pill grid */
-.lang-toggle-wrap{ position:relative; display:flex; justify-content:center; margin:18px auto 0; }
-.lang-current{
-  display:flex; align-items:center; gap:8px;
-  border:1px solid var(--border); border-radius:999px;
-  padding:8px 16px; font-size:13px; font-weight:700;
-  cursor:pointer; background:var(--panel); color:var(--text) !important;
-}
-.lang-current .chev{ font-size:10px; color:var(--muted); }
-.lang-dropdown{
-  display:none; position:absolute; top:calc(100% + 6px); left:50%;
-  transform:translateX(-50%);
-  background:var(--panel); border:1px solid var(--border); border-radius:12px;
-  padding:6px; z-index:600; min-width:160px;
-  box-shadow:0 10px 24px rgba(0,0,0,.4);
-}
-.lang-dropdown.open{ display:block; }
-.lang-option{
-  display:flex; align-items:center; gap:8px;
-  padding:8px 12px; border-radius:8px; font-size:13px; font-weight:600;
-  cursor:pointer; color:var(--text) !important;
-}
-.lang-option:hover, .lang-option.active{ background:var(--red); color:#fff !important; }
+<meta name="description" content="Preview EU AI Act Ready's 70-document RRVI compliance pack — checklists, policies, registers across 10 modules. Free sample, full set unlocked with your firm.">
+<link rel="canonical" href="https://eu-ai-act-ready.eu/demo.html">
 
-/* ask box — same principle as homepage Ask & Generator */
-.ask-wrap{ max-width:640px; margin:22px auto 0; padding:0 16px; }
-.ask-banner{
-  background:var(--red); color:#fff; font-weight:900; text-transform:uppercase;
-  padding:10px 16px; border-radius:8px; text-align:center; font-size:15px;
-  letter-spacing:.5px; margin-bottom:14px;
-}
-.ask-box{
-  display:flex; gap:8px; border:1px solid var(--border);
-  border-radius:999px; padding:6px 6px 6px 16px;
-  background:var(--panel); align-items:center;
-}
-.ask-box .loupe{ font-size:16px; color:var(--muted); }
-.ask-box input{
-  flex:1; background:transparent; border:none; outline:none;
-  color:var(--text); font-size:15px; padding:8px 0;
-}
-.ask-box input::placeholder{ color:var(--muted); }
-.ask-btn{
-  background:var(--red); color:#fff; border:none; border-radius:999px;
-  padding:10px 20px; font-weight:700; font-size:14px; cursor:pointer;
-  white-space:nowrap;
-}
-.ask-status{
-  font-size:13px; color:var(--muted); text-align:center; margin-top:10px; min-height:18px;
-}
-.ask-answer{
-  margin-top:14px; background:var(--panel); border:1px solid var(--border);
-  border-radius:12px; padding:16px; font-size:14px; line-height:1.55; display:none;
-}
-.ask-answer.show{ display:block; }
-.ask-sources{ margin-top:10px; font-size:12px; color:var(--muted); }
-.ask-sources a{ color:var(--red) !important; }
+<meta property="og:title" content="Demo — Full RRVI Document Library | EU AI Act Ready™">
+<meta property="og:description" content="Preview EU AI Act Ready's 70-document RRVI compliance pack — checklists, policies, registers across 10 modules.">
+<meta property="og:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+<meta property="og:url" content="https://eu-ai-act-ready.eu/demo.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EU AI Act Ready™">
+<meta property="og:locale" content="en_EU">
 
-/* sticky lang bar — pinned in header, stays visible while scrolling */
-#sticky-ask{
-  position:sticky; top:0; z-index:500;
-  background:var(--bg);
-  border-bottom:1px solid var(--border);
-  padding:14px 16px;
-  box-shadow:0 6px 16px rgba(0,0,0,.35);
-}
-body.light-mode #sticky-ask{ box-shadow:0 6px 16px rgba(0,0,0,.08); }
-#sticky-ask .lang-toggle-wrap{ margin:0; }
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Demo — Full RRVI Document Library | EU AI Act Ready™">
+<meta name="twitter:description" content="Preview EU AI Act Ready's 70-document RRVI compliance pack — checklists, policies, registers across 10 modules.">
+<meta name="twitter:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
 
-/* ask box docked to the BOTTOM OF THE SCREEN — always visible, fixed (not sticky),
-   same red-bordered visual style as the homepage Ask & Generator box */
-#ask-wrap-bottom{
-  position:fixed; left:0; right:0; bottom:0; z-index:800;
-  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
-  background:linear-gradient(to top, var(--bg) 65%, transparent);
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Demo — Full RRVI Document Library",
+  "description": "Preview EU AI Act Ready's 70-document RRVI compliance pack across 10 compliance modules.",
+  "url": "https://eu-ai-act-ready.eu/demo.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EU AI Act Ready™",
+    "url": "https://eu-ai-act-ready.eu/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "Demo", "item": "https://eu-ai-act-ready.eu/demo.html"}
+    ]
+  }
 }
-#ask-wrap-bottom .ask-box{
-  max-width:680px; margin:0 auto;
-  background:var(--panel); border:1px solid var(--red);
-  border-radius:999px; padding:8px 8px 8px 18px;
-  box-shadow:0 10px 30px rgba(0,0,0,.45);
-}
-body.light-mode #ask-wrap-bottom .ask-box{ box-shadow:0 10px 30px rgba(0,0,0,.12); }
-#ask-wrap-bottom .ask-btn{
-  border-radius:999px; padding:10px 20px; font-size:14px;
-  width:auto; height:auto;
-}
+</script>
 
-/* keep the doc list from hiding behind the fixed bottom bar */
-main{ padding-bottom:110px; }
-
-/* fullscreen Ask dialog — Claude-style, opens on submit, X closes back to docs */
-#ask-fullscreen{
-  display:none; position:fixed; inset:0; z-index:2000;
-  background:var(--bg); flex-direction:column;
-}
-#ask-fullscreen.show{ display:flex; }
-.af-header{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:18px 20px; border-bottom:1px solid var(--border);
-  background:var(--panel);
-}
-.af-title{ font-weight:900; text-transform:uppercase; letter-spacing:.5px; color:var(--red); font-size:15px; }
-.af-close{
-  width:34px; height:34px; border-radius:8px; border:1px solid var(--border);
-  display:flex; align-items:center; justify-content:center;
-  cursor:pointer; font-size:16px; color:var(--text);
-}
-.af-body{
-  flex:1; overflow-y:auto; max-width:680px; width:100%;
-  margin:0 auto; padding:24px 16px;
-}
-.af-question{
-  font-size:15px; font-weight:700; margin-bottom:16px;
-  padding-bottom:14px; border-bottom:1px solid var(--border);
-}
-.af-return{
-  text-align:center; padding:16px; border-top:1px solid var(--border);
-  color:var(--red); font-weight:700; font-size:14px; cursor:pointer;
-  background:var(--panel);
-}
-
-main{max-width:900px; margin:0 auto; padding:24px 16px 80px;}
-.module{
-  margin-bottom:26px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  overflow:hidden;
-  background:var(--panel);
-}
-.module-head{
-  padding:14px 16px;
-  background:linear-gradient(90deg, var(--red-dim), transparent);
-  border-bottom:1px solid var(--border);
-  display:flex; align-items:center; justify-content:space-between;
-}
-.module-head h2{font-size:16px; letter-spacing:.3px;}
-.module-head span{font-size:12px; color:var(--muted);}
-.doc-list{display:flex; flex-direction:column;}
-.doc{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:12px 16px;
-  border-top:1px solid var(--border);
-  font-size:14px;
-}
-.doc:first-child{border-top:none;}
-.doc-name{display:flex; align-items:center; gap:10px;}
-.doc-type{
-  font-size:10px; text-transform:uppercase; letter-spacing:.5px;
-  color:var(--muted); border:1px solid var(--border);
-  border-radius:4px; padding:2px 6px;
-}
-.badge-open{color:#3ddc84; font-size:12px; font-weight:600;}
-.badge-locked{color:var(--muted); font-size:12px; display:flex; align-items:center; gap:4px;}
-a.open-link{color:var(--text) !important; text-decoration:none;}
-a.open-link:hover{color:var(--red) !important;}
-.locked-row{opacity:.55; cursor:pointer;}
-.locked-row:hover{opacity:.8;}
-footer.cta{
-  max-width:640px; margin:40px auto 0; text-align:center;
-  padding:28px 20px; border:1px solid var(--border); border-radius:14px;
-  background:var(--panel);
-}
-footer.cta h3{font-size:20px; margin-bottom:8px;}
-footer.cta p{color:var(--muted); font-size:14px; margin-bottom:16px;}
-footer.cta a{
-  background:var(--red); color:#fff !important; padding:12px 26px;
-  border-radius:8px; text-decoration:none; font-weight:700; font-size:14px;
-}
-/* modal */
-#lock-modal{
-  display:none; position:fixed; inset:0; background:rgba(0,0,0,.7);
-  z-index:1000; align-items:center; justify-content:center; padding:20px;
-}
-#lock-modal .box{
-  background:var(--panel); border:1px solid var(--border); border-radius:14px;
-  max-width:380px; padding:26px; text-align:center;
-}
-#lock-modal h4{font-size:18px; margin-bottom:10px;}
-#lock-modal p{color:var(--muted); font-size:14px; margin-bottom:18px;}
-#lock-modal a{
-  background:var(--red); color:#fff !important; padding:10px 20px;
-  border-radius:8px; text-decoration:none; font-weight:700; font-size:14px;
-  display:inline-block; margin-bottom:10px;
-}
-#lock-modal .close{
-  display:block; color:var(--muted); font-size:13px; cursor:pointer; margin-top:6px;
-}
-</style>
 </head>
 <body>
 
-<div id="theme-toggle" onclick="toggleTheme()">☾</div>
-<button id="to-top" onclick="scrollToTop()" aria-label="Return to top">↑</button>
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="https://eu-ai-act-ready.eu/">Home</a>
+  <span class="sep">›</span>
+  <span class="current">Demo</span>
+</nav>
+
+<div id="theme-toggle">☾</div>
+<button id="to-top" aria-label="Return to top">↑</button>
 
 <header>
   <h1 id="t-title">Demo</h1>
@@ -298,12 +234,12 @@ footer.cta a{
       <b>70</b> <span class="t-docscount">compliance documents</span> <span class="sep">•</span> <b>10</b> <span class="t-modulescount">modules</span> <span class="sep">•</span> <b>49</b> <span class="t-openpreview">open for preview</span> <span class="sep">•</span> <b>21</b> <span class="t-unlockedfirm">unlocked with your firm</span> <span class="sep">•</span> <span class="t-generatedby">generated by AiVenture's RRVI engine</span> <span class="sep">•</span>
     </div>
   </div>
-  <a class="cta-top" id="t-ctatop" href="your-firm.html">Generate My Full Set →</a>
+  <a class="cta-top" id="t-ctatop" href="https://eu-ai-act-ready.eu/your-firm.html">Generate My Full Set →</a>
 </header>
 
 <div id="sticky-ask">
   <div class="lang-toggle-wrap">
-    <div class="lang-current" id="lang-current" onclick="toggleLangDropdown()">
+    <div class="lang-current" id="lang-current">
       <span id="lang-current-label">🇬🇧 EN</span>
       <span class="chev">▾</span>
     </div>
@@ -325,36 +261,36 @@ footer.cta a{
   <div class="ask-box">
     <span class="loupe">🔍</span>
     <input id="ask-input" type="text" placeholder="Ask anything about these 70 documents...">
-    <button class="ask-btn" id="ask-btn" onclick="runAsk()">ASK ⚡</button>
+    <button class="ask-btn" id="ask-btn">ASK ⚡</button>
   </div>
 </div>
 
 <footer class="cta">
   <h3 id="t-footertitle">Unlock the remaining 30%</h3>
   <p id="t-footertext">Registers, Evidence logs, and Work Instructions are generated with your firm's actual details. Enter your firm once to unlock every document, fully parameterized.</p>
-  <a id="t-footerbtn" href="your-firm.html">Unlock Full Set</a>
+  <a id="t-footerbtn" href="https://eu-ai-act-ready.eu/your-firm.html">Unlock Full Set</a>
 </footer>
 
 <div id="lock-modal">
   <div class="box">
     <h4 id="t-modaltitle">🔒 This document is part of the full set</h4>
     <p id="t-modaltext">Registers, Evidence, and Work Instructions are generated with your firm's name and responsible person filled in automatically. Enter your details once to unlock all 70 documents.</p>
-    <a id="t-modalbtn" href="your-firm.html">Unlock with Your Firm</a>
-    <span class="close" id="t-modalclose" onclick="closeModal()">Close</span>
+    <a id="t-modalbtn" href="https://eu-ai-act-ready.eu/your-firm.html">Unlock with Your Firm</a>
+    <span class="close" id="t-modalclose">Close</span>
   </div>
 </div>
 
 <div id="ask-fullscreen">
   <div class="af-header">
     <span class="af-title">Ask &amp; Generator™</span>
-    <span class="af-close" onclick="closeAsk()">✕</span>
+    <span class="af-close">✕</span>
   </div>
   <div class="af-body">
     <div class="af-question" id="af-question"></div>
     <div class="ask-status" id="ask-status"></div>
     <div class="ask-answer" id="ask-answer"></div>
   </div>
-  <div class="af-return" id="t-askreturn" onclick="closeAsk()">← Return to documents</div>
+  <div class="af-return" id="t-askreturn">← Return to documents</div>
 </div>
 
 <script>
@@ -695,5 +631,6 @@ document.getElementById("ask-input").addEventListener("keydown", (e) => {
 });
 </script>
 
-</body>
-</html>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;fc10dcfbe72446578ab9c9d37e9ca6ba&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+</body></html>

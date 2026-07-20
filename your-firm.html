@@ -1,135 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+:root { --bg: #0a0a0a; --red: #c81e1e; --red-bright: #e02424; --white: #f5f5f5; --grey: #888; --border: #2a2a2a; }
+
+* { box-sizing: border-box; margin: 0px; padding: 0px; }
+
+body { background: var(--bg); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; min-height: 100vh; padding: 24px 16px 60px; }
+
+.top { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+
+.mark { width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+
+.brand { font-weight: 800; font-size: 18px; letter-spacing: 0.02em; }
+
+.breadcrumb { max-width: 640px; margin: 0px auto 18px; font-size: 13px; color: var(--grey); }
+
+.breadcrumb a { color: var(--grey); text-decoration: none; }
+
+.breadcrumb a:hover { color: var(--red-bright); }
+
+.breadcrumb .sep { margin: 0 6px; }
+
+.breadcrumb .current { color: var(--white); }
+
+.wrap { max-width: 640px; margin: 0px auto; }
+
+h1 { font-size: 34px; line-height: 1.05; font-weight: 900; letter-spacing: -0.01em; margin-bottom: 6px; }
+
+h1 span { color: var(--red-bright); }
+
+.sub { color: var(--grey); font-size: 15px; margin-bottom: 32px; }
+
+.field { margin-bottom: 20px; }
+
+label { display: block; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--grey); margin-bottom: 8px; }
+
+input[type="text"] { width: 100%; background: rgb(17, 17, 17); border: 1px solid var(--border); color: var(--white); font-size: 17px; padding: 14px 16px; border-radius: 10px; outline: none; }
+
+input[type="text"]:focus { border-color: var(--red); }
+
+select { width: 100%; background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23888' d='M5.5 7.5l4.5 5 4.5-5z'/%3E%3C/svg%3E") right 14px center no-repeat rgb(17, 17, 17); border: 1px solid var(--border); color: var(--white); font-size: 17px; padding: 14px 16px; border-radius: 10px; outline: none; appearance: none; }
+
+select:focus { border-color: var(--red); }
+
+.btn { width: 100%; background: var(--red-bright); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; border-radius: 10px; font-size: 17px; font-weight: 800; padding: 17px 18px; margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; }
+
+.btn:active { background: var(--red); }
+
+.btn:disabled { background: rgb(74, 20, 20); color: rgb(170, 170, 170); cursor: not-allowed; }
+
+.meta { margin-top: 18px; font-size: 13px; color: var(--grey); text-align: center; }
+
+.status { margin-top: 20px; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--border); font-size: 14px; display: none; }
+
+.status.show { display: block; }
+
+.status.ok { border-color: rgb(30, 122, 58); color: rgb(126, 224, 160); }
+
+.status.err { border-color: var(--red); color: rgb(255, 155, 155); }
+
+.status.pending { border-color: var(--border); color: var(--white); }
+
+.modules { margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; }
+
+.modules h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); margin-bottom: 12px; }
+
+.modgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.modgrid div { border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12.5px; color: rgb(204, 204, 204); }
+
+.askbox { margin-top: 40px; border: 1px solid var(--red); border-radius: 14px; padding: 14px; display: flex; align-items: center; gap: 10px; background: rgb(13, 13, 13); }
+
+.askbox input[type="text"] { flex: 1 1 0%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; background: transparent; font-size: 16px; padding: 8px 4px; }
+
+.askbox input[type="text"]:focus { border-color: transparent; }
+
+.askbtn { background: var(--red-bright); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; border-radius: 10px; font-weight: 800; font-size: 15px; padding: 12px 18px; white-space: nowrap; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+
+.askbtn:active { background: var(--red); }
+
+.bottom-lang { margin-top: 14px; display: flex; gap: 0px; overflow-x: auto; scrollbar-width: none; }
+
+.bottom-lang::-webkit-scrollbar { display: none; }
+
+.bottom-lang a { color: var(--grey); text-decoration: none; font-size: 14px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; margin-right: 8px; white-space: nowrap; flex: 0 0 auto; }
+
+.bottom-lang a.active { color: var(--red-bright); border-color: var(--red); }</style>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Firm — EU AI Act Ready™ RRVI Generator</title>
-<style>
-  :root{
-    --bg:#0a0a0a;
-    --red:#c81e1e;
-    --red-bright:#e02424;
-    --white:#f5f5f5;
-    --grey:#888;
-    --border:#2a2a2a;
+
+<meta name="description" content="Generate your firm's 70-document EU AI Act compliance pack — 10 RRVI modules, personalized with your company and responsible person, delivered as a ready zip.">
+<link rel="canonical" href="https://eu-ai-act-ready.eu/your-firm.html">
+
+<meta property="og:title" content="Your Firm — EU AI Act Ready™ RRVI Generator">
+<meta property="og:description" content="Generate your firm's 70-document EU AI Act compliance pack — 10 RRVI modules, personalized and delivered as a ready zip.">
+<meta property="og:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+<meta property="og:url" content="https://eu-ai-act-ready.eu/your-firm.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EU AI Act Ready™">
+<meta property="og:locale" content="en_EU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your Firm — EU AI Act Ready™ RRVI Generator">
+<meta name="twitter:description" content="Generate your firm's 70-document EU AI Act compliance pack — 10 RRVI modules, personalized and delivered as a ready zip.">
+<meta name="twitter:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Your Firm — RRVI Generator",
+  "description": "Generate your firm's 70-document EU AI Act compliance pack across 10 RRVI modules, personalized with your company and responsible person.",
+  "url": "https://eu-ai-act-ready.eu/your-firm.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EU AI Act Ready™",
+    "url": "https://eu-ai-act-ready.eu/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "Your Firm", "item": "https://eu-ai-act-ready.eu/your-firm.html"}
+    ]
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  body{
-    background:var(--bg);
-    color:var(--white);
-    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    min-height:100vh;
-    padding:24px 16px 60px;
-  }
-  .top{
-    display:flex; align-items:center; gap:14px;
-    margin-bottom:28px;
-  }
-  .mark{
-    width:44px; height:44px;
-    border:1px solid var(--border);
-    border-radius:8px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:20px;
-  }
-  .brand{font-weight:800; font-size:18px; letter-spacing:0.02em;}
-  .wrap{max-width:640px; margin:0 auto;}
-  h1{
-    font-size:34px; line-height:1.05; font-weight:900;
-    letter-spacing:-0.01em;
-    margin-bottom:6px;
-  }
-  h1 span{color:var(--red-bright);}
-  .sub{color:var(--grey); font-size:15px; margin-bottom:32px;}
-  .field{margin-bottom:20px;}
-  label{
-    display:block; font-size:13px; font-weight:700;
-    text-transform:uppercase; letter-spacing:0.06em;
-    color:var(--grey); margin-bottom:8px;
-  }
-  input[type=text]{
-    width:100%;
-    background:#111; border:1px solid var(--border);
-    color:var(--white); font-size:17px;
-    padding:14px 16px; border-radius:10px;
-    outline:none;
-  }
-  input[type=text]:focus{border-color:var(--red);}
-  select{
-    width:100%;
-    background:#111; border:1px solid var(--border);
-    color:var(--white); font-size:17px;
-    padding:14px 16px; border-radius:10px;
-    outline:none;
-    appearance:none;
-    -webkit-appearance:none;
-    background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23888' d='M5.5 7.5l4.5 5 4.5-5z'/%3E%3C/svg%3E");
-    background-repeat:no-repeat;
-    background-position:right 14px center;
-  }
-  select:focus{border-color:var(--red);}
-  .btn{
-    width:100%;
-    background:var(--red-bright);
-    color:#fff; border:none; border-radius:10px;
-    font-size:17px; font-weight:800;
-    padding:17px 18px; margin-top:8px;
-    display:flex; align-items:center; justify-content:center; gap:10px;
-    cursor:pointer;
-  }
-  .btn:active{background:var(--red);}
-  .btn:disabled{background:#4a1414; color:#aaa; cursor:not-allowed;}
-  .meta{
-    margin-top:18px; font-size:13px; color:var(--grey); text-align:center;
-  }
-  .status{
-    margin-top:20px; padding:14px 16px; border-radius:10px;
-    border:1px solid var(--border); font-size:14px; display:none;
-  }
-  .status.show{display:block;}
-  .status.ok{border-color:#1e7a3a; color:#7ee0a0;}
-  .status.err{border-color:var(--red); color:#ff9b9b;}
-  .status.pending{border-color:var(--border); color:var(--white);}
-  .modules{
-    margin-top:36px; border-top:1px solid var(--border); padding-top:20px;
-  }
-  .modules h2{font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--grey); margin-bottom:12px;}
-  .modgrid{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
-  .modgrid div{
-    border:1px solid var(--border); border-radius:8px;
-    padding:8px 10px; font-size:12.5px; color:#ccc;
-  }
-  .askbox{
-    margin-top:40px; border:1px solid var(--red); border-radius:14px;
-    padding:14px; display:flex; align-items:center; gap:10px;
-    background:#0d0d0d;
-  }
-  .askbox input[type=text]{
-    flex:1; border:none; background:transparent;
-    font-size:16px; padding:8px 4px;
-  }
-  .askbox input[type=text]:focus{border-color:transparent;}
-  .askbtn{
-    background:var(--red-bright); color:#fff; border:none;
-    border-radius:10px; font-weight:800; font-size:15px;
-    padding:12px 18px; white-space:nowrap; cursor:pointer;
-    display:flex; align-items:center; gap:6px;
-  }
-  .askbtn:active{background:var(--red);}
-  .bottom-lang{
-    margin-top:14px; display:flex; gap:0; overflow-x:auto;
-    -ms-overflow-style:none; scrollbar-width:none;
-  }
-  .bottom-lang::-webkit-scrollbar{display:none;}
-  .bottom-lang a{
-    color:var(--grey); text-decoration:none; font-size:14px;
-    padding:6px 12px; border:1px solid var(--border); border-radius:8px;
-    margin-right:8px; white-space:nowrap; flex:0 0 auto;
-  }
-  .bottom-lang a.active{color:var(--red-bright); border-color:var(--red);}
-</style>
+}
+</script>
+
 </head>
 <body>
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="https://eu-ai-act-ready.eu/">Home</a>
+  <span class="sep">›</span>
+  <span class="current">Your Firm</span>
+</nav>
+
 <div class="top">
   <div class="mark">✦</div>
   <div class="brand">5thelement.AI</div>
@@ -142,11 +148,11 @@
   <form id="rrvi-form">
     <div class="field">
       <label for="firmName">Firm name</label>
-      <input type="text" id="firmName" name="firmName" placeholder="e.g. Acme Robotics SRL" required autocomplete="organization">
+      <input type="text" id="firmName" name="firmName" placeholder="e.g. Acme Robotics SRL" required="" autocomplete="organization">
     </div>
     <div class="field">
       <label for="responsiblePerson">AI Act responsible person</label>
-      <input type="text" id="responsiblePerson" name="responsiblePerson" placeholder="e.g. Maria Ionescu" required autocomplete="name">
+      <input type="text" id="responsiblePerson" name="responsiblePerson" placeholder="e.g. Maria Ionescu" required="" autocomplete="name">
     </div>
     <div class="field">
       <label for="docLang">Document language</label>
@@ -175,7 +181,7 @@
       <div>Technical Documentation</div>
       <div>Human Oversight</div>
       <div>Transparency (Art. 50)</div>
-      <div>Robustness & Security</div>
+      <div>Robustness &amp; Security</div>
       <div>Post-Market Monitoring</div>
       <div>Incident Reporting</div>
       <div>Conformity Assessment</div>
@@ -188,13 +194,13 @@
     <button class="askbtn" id="askBtn">ASK ⚡</button>
   </div>
   <div class="bottom-lang" id="bottomLang">
-    <a href="#" data-lang="en" class="active">🇬🇧 EN</a>
-    <a href="#" data-lang="fr">🇫🇷 FR</a>
-    <a href="#" data-lang="es">🇪🇸 ES</a>
-    <a href="#" data-lang="de">🇩🇪 DE</a>
-    <a href="#" data-lang="it">🇮🇹 IT</a>
-    <a href="#" data-lang="pl">🇵🇱 PL</a>
-    <a href="#" data-lang="ro">🇷🇴 RO</a>
+    <a href="https://eu-ai-act-ready.eu/your-firm#" data-lang="en" class="active">🇬🇧 EN</a>
+    <a href="https://eu-ai-act-ready.eu/your-firm#" data-lang="fr">🇫🇷 FR</a>
+    <a href="https://eu-ai-act-ready.eu/your-firm#" data-lang="es">🇪🇸 ES</a>
+    <a href="https://eu-ai-act-ready.eu/your-firm#" data-lang="de">🇩🇪 DE</a>
+    <a href="https://eu-ai-act-ready.eu/your-firm#" data-lang="it">🇮🇹 IT</a>
+    <a href="https://eu-ai-act-ready.eu/your-firm#" data-lang="pl">🇵🇱 PL</a>
+    <a href="https://eu-ai-act-ready.eu/your-firm#" data-lang="ro">🇷🇴 RO</a>
   </div>
 </div>
 
@@ -310,5 +316,6 @@ form.addEventListener("submit", async function(e){
   }
 });
 </script>
-</body>
-</html>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;fc10dcfbe72446578ab9c9d37e9ca6ba&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+</body></html>
