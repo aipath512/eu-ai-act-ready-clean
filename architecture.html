@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture — EU AI Act Compliance Management System™ | RRVI™</title>
+<meta name="description" content="Architecture of the EU AI Act Compliance Management System™ — repository structure, module architecture, traceability, governance, inspection navigation, and versioning under the RRVI™ framework.">
+<link rel="canonical" href="https://eu-ai-act-ready.eu/architecture.html">
+
+<meta property="og:title" content="Architecture — EU AI Act Compliance Management System™">
+<meta property="og:description" content="The architecture of the EU AI Act Compliance Management System — repository structure, module model, traceability, governance, and inspection navigation.">
+<meta property="og:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+<meta property="og:url" content="https://eu-ai-act-ready.eu/architecture.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EU AI Act Ready™">
+<meta property="og:locale" content="en_EU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Architecture — EU AI Act Compliance Management System™">
+<meta name="twitter:description" content="The architecture of the EU AI Act Compliance Management System — repository structure, module model, traceability, governance, and inspection navigation.">
+<meta name="twitter:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://eu-ai-act-ready.eu/architecture.html#article",
+  "headline": "Architecture — EU AI Act Compliance Management System™",
+  "description": "The architecture of the EU AI Act Compliance Management System — repository structure, module model, traceability, governance, and inspection navigation.",
+  "url": "https://eu-ai-act-ready.eu/architecture.html",
+  "version": "1.0.2",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EU AI Act Ready™",
+    "url": "https://eu-ai-act-ready.eu/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AiVenture SRL",
+    "url": "https://5thelement.ai/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "Architecture", "item": "https://eu-ai-act-ready.eu/architecture.html"}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How many modules does the Compliance Management System have?", "acceptedAnswer": {"@type": "Answer", "text": "10 modules, together forming 70 controlled documents, plus repository governance, version control, audit, and inspection documentation."}},
+    {"@type": "Question", "name": "What is the document model inside each module?", "acceptedAnswer": {"@type": "Answer", "text": "Every module follows the same seven-stage model: Policy, Procedure, Work Instruction, Checklist, Register, Evidence, and Declaration, each linked to the next."}},
+    {"@type": "Question", "name": "Can a Declaration exist without supporting Evidence?", "acceptedAnswer": {"@type": "Answer", "text": "No. No declaration exists without supporting evidence — this is a structural rule of the traceability architecture, not a style preference."}},
+    {"@type": "Question", "name": "In what order does an inspector navigate the repository?", "acceptedAnswer": {"@type": "Answer", "text": "README, then DOCUMENT_INDEX, then the relevant Module, then its Register, Evidence, and Declaration, then the Traceability Matrix, then the Compliance Matrix."}},
+    {"@type": "Question", "name": "What governs the repository itself?", "acceptedAnswer": {"@type": "Answer", "text": "README, DOCUMENT_INDEX, DOCUMENT_TRACEABILITY_MATRIX, COMPLIANCE_MATRIX, CHANGELOG, AUDIT_PLAN, and INSPECTION_GUIDE."}},
+    {"@type": "Question", "name": "What does each release include?", "acceptedAnswer": {"@type": "Answer", "text": "A Git Tag, a GitHub Release, a Zenodo DOI, and a CHANGELOG update."}},
+    {"@type": "Question", "name": "What are the core architectural principles?", "acceptedAnswer": {"@type": "Answer", "text": "Compliance by Design, Documentation by Design, Evidence by Design, Traceability by Design, Inspection Readiness by Design, and Continuous Improvement."}}
+  ]
+}
+</script>
+
+<style>
+:root{--bg:#030508;--panel:#0a0d12;--panel2:#0d1117;--border:#1c1c1c;--electric:#00d4ff;--red:#e03a1e;--text:#ffffff;--muted:#a7acb5;--dim:#6f7580}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.65}
+body.light-mode{--bg:#f7f7f7;--panel:#ffffff;--panel2:#f1f1f1;--border:#e2e2e2;--text:#0a0a0a;--muted:#3f4552;--dim:#6a6f78}
+body.light-mode *{color:#0a0a0a !important}
+body.light-mode .card,body.light-mode .role-card,body.light-mode .quick-ref,body.light-mode .tree-node{background:#ffffff !important}
+a{color:inherit}
+
+#theme-toggle{position:fixed;top:68px;left:16px;z-index:999;width:34px;height:34px;border-radius:8px;background:var(--panel);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;color:var(--text)}
+#lang-select{position:fixed;top:68px;left:58px;z-index:999;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:0 30px 0 12px;height:34px;font-size:12px;font-family:inherit;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="%23ffffff"/></svg>');background-repeat:no-repeat;background-position:right 10px center}
+body.light-mode #lang-select{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="%23000000"/></svg>')}
+
+.breadcrumb{max-width:1080px;margin:0 auto;padding:14px 24px 0;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--dim)}
+.breadcrumb a{color:var(--dim);text-decoration:none}
+.breadcrumb a:hover{color:var(--electric)}
+.breadcrumb .sep{margin:0 6px}
+.breadcrumb .current{color:var(--electric)}
+
+header.hero{max-width:1080px;margin:0 auto;padding:36px 24px 44px;border-bottom:1px solid var(--border)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:14px;display:block}
+h1{font-family:Georgia,serif;font-weight:900;font-size:clamp(32px,6vw,58px);line-height:1.05;letter-spacing:-1px;margin-bottom:16px}
+.lede{color:var(--muted);font-size:17px;max-width:700px;line-height:1.7}
+.meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+.meta-row span{border:1px solid var(--border);border-radius:999px;padding:7px 14px;color:var(--muted)}
+.meta-row span b{color:var(--electric)}
+
+.quick-ref{max-width:1080px;margin:40px auto 0;padding:0 24px}
+.quick-ref .box{border:1px solid var(--electric);border-radius:14px;padding:26px 28px;background:rgba(0,212,255,.04)}
+.quick-ref h2{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--electric);margin-bottom:16px}
+.quick-ref ol{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 20px}
+.quick-ref li{font-size:14px;color:var(--muted);display:flex;gap:10px}
+.quick-ref li b{color:var(--text);font-family:"IBM Plex Mono",monospace;font-size:12px;flex:0 0 auto}
+.quick-ref li a{text-decoration:none;color:var(--muted)}
+.quick-ref li a:hover{color:var(--electric)}
+
+main{max-width:1080px;margin:0 auto;padding:20px 24px 100px}
+section.block{padding:56px 0;border-top:1px solid var(--border)}
+section.block:first-of-type{border-top:0}
+.block-label{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--red);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+h2{font-family:Georgia,serif;font-weight:900;font-size:clamp(24px,3.5vw,34px);letter-spacing:-.5px;margin-bottom:16px}
+h3{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;letter-spacing:.3px;color:var(--electric);margin:26px 0 12px}
+p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:760px}
+strong{color:var(--text)}
+
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}
+.card{border:1px solid var(--border);border-radius:12px;padding:20px;background:var(--panel)}
+.card .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--electric);margin-bottom:8px}
+.card p{font-size:14px;margin-bottom:0;color:var(--muted)}
+
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:18px}
+.stat{border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;background:var(--panel2)}
+.stat b{display:block;font-family:Georgia,serif;font-size:26px;color:var(--electric)}
+.stat span{font-size:12.5px;color:var(--dim)}
+
+.pipeline{display:flex;flex-wrap:wrap;align-items:center;gap:0;font-family:"IBM Plex Mono",monospace;font-size:13.5px;margin-top:18px}
+.pipeline .step{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:12px 16px;color:var(--text)}
+.pipeline .arrow{color:var(--electric);padding:0 8px;font-size:15px}
+
+.tree{font-family:"IBM Plex Mono",monospace;font-size:14px;line-height:2;color:var(--muted);background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:22px 26px;margin-top:18px;overflow-x:auto;white-space:pre}
+.tree .root{color:var(--text);font-weight:700}
+.tree .mod{color:var(--electric)}
+
+.ordered{margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.ordered .row{display:flex;gap:14px;align-items:center;font-size:15px;color:var(--muted)}
+.ordered .row .idx{font-family:"IBM Plex Mono",monospace;color:var(--electric);font-size:13px;min-width:22px}
+
+.checklist{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.checklist li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--muted)}
+.checklist li::before{content:"—";color:var(--electric);flex:0 0 auto}
+
+.warn{border:1px solid var(--red);border-left:3px solid var(--red);border-radius:10px;padding:18px 22px;margin:20px 0;background:rgba(224,58,30,.06);font-size:14.5px;color:var(--muted)}
+.warn strong{color:var(--red)}
+
+.faq-item{border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:12px;background:var(--panel)}
+.faq-item h3{margin:0 0 8px;color:var(--text)}
+.faq-item p{font-size:14.5px;margin-bottom:0}
+
+.prep-footer{max-width:1080px;margin:0 auto;padding:40px 24px 80px;border-top:1px solid var(--border)}
+.prep-footer .box{border:1px solid var(--border);border-radius:14px;padding:26px 28px;background:var(--panel);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.prep-footer .field{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--dim)}
+.prep-footer .field b{display:block;color:var(--text);font-family:-apple-system,sans-serif;font-size:15px;margin-top:4px}
+
+footer.site{text-align:center;padding:30px 20px 60px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--dim);border-top:1px solid var(--border)}
+
+@media(max-width:640px){
+  #theme-toggle{top:16px;left:12px}
+  #lang-select{top:16px;left:54px}
+  header.hero{padding-top:70px}
+  .breadcrumb{padding-top:70px}
+}
+</style>
+</head>
+<body>
+
+<button id="theme-toggle" aria-label="Toggle dark/light mode" onclick="document.body.classList.toggle('light-mode');this.textContent=document.body.classList.contains('light-mode')?'☀':'☾';">☾</button>
+<select id="lang-select" aria-label="Select language" onchange="console.log('Language selected:', this.value);">
+  <option value="en">🇬🇧 EN</option>
+  <option value="fr">🇫🇷 FR</option>
+  <option value="de">🇩🇪 DE</option>
+  <option value="es">🇪🇸 ES</option>
+  <option value="it">🇮🇹 IT</option>
+  <option value="ro">🇷🇴 RO</option>
+  <option value="pl">🇵🇱 PL</option>
+</select>
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="https://eu-ai-act-ready.eu/">Home</a>
+  <span class="sep">›</span>
+  <span class="current">Architecture</span>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">RRVI™ Repository · Reference Document</span>
+  <h1>Architecture</h1>
+  <p class="lede">The architecture of the EU AI Act Compliance Management System™ — repository structure, the module model every one of the 70 documents follows, traceability, governance, inspection navigation, and versioning.</p>
+  <div class="meta-row">
+    <span>System: <b>EU AI Act Compliance Management System™</b></span>
+    <span>Repository: <b>RRVI™</b></span>
+    <span>Version: <b>1.0.2</b></span>
+  </div>
+</header>
+
+<div class="quick-ref">
+  <div class="box">
+    <h2>On this page</h2>
+    <ol>
+      <li><b>01</b><a href="#purpose">Purpose</a></li>
+      <li><b>02</b><a href="#principles">Architectural Principles</a></li>
+      <li><b>03</b><a href="#repo-arch">Repository Architecture</a></li>
+      <li><b>04</b><a href="#module-arch">Module Architecture</a></li>
+      <li><b>05</b><a href="#compliance-arch">Compliance Architecture</a></li>
+      <li><b>06</b><a href="#trace-arch">Traceability Architecture</a></li>
+      <li><b>07</b><a href="#gov-arch">Governance Architecture</a></li>
+      <li><b>08</b><a href="#inspect-arch">Inspection Architecture</a></li>
+      <li><b>09</b><a href="#version-arch">Versioning Architecture</a></li>
+      <li><b>10</b><a href="#status">Architecture Status</a></li>
+      <li><b>FAQ</b><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+</div>
+
+<main>
+
+<section class="block" id="purpose">
+  <div class="block-label">01 — Purpose</div>
+  <h2>What this document describes</h2>
+  <p>This document describes the architecture of the EU AI Act Compliance Management System and the relationships between its components — how the repository is structured, how each module is built, and how everything traces back to evidence.</p>
+</section>
+
+<section class="block" id="principles">
+  <div class="block-label">02 — Architectural Principles</div>
+  <h2>Six principles the system is built on</h2>
+  <div class="card-grid">
+    <div class="card"><div class="n">01</div><p>Compliance by Design</p></div>
+    <div class="card"><div class="n">02</div><p>Documentation by Design</p></div>
+    <div class="card"><div class="n">03</div><p>Evidence by Design</p></div>
+    <div class="card"><div class="n">04</div><p>Traceability by Design</p></div>
+    <div class="card"><div class="n">05</div><p>Inspection Readiness by Design</p></div>
+    <div class="card"><div class="n">06</div><p>Continuous Improvement</p></div>
+  </div>
+</section>
+
+<section class="block" id="repo-arch">
+  <div class="block-label">03 — Repository Architecture</div>
+  <h2>How the repository is laid out</h2>
+  <p>Every module sits at the same level, alongside the root governance documents that apply across all of them.</p>
+  <div class="tree"><span class="root">Repository</span>
+    │
+    ├── Root Governance Documents
+    │
+    ├── <span class="mod">Module 01</span>
+    ├── <span class="mod">Module 02</span>
+    ├── <span class="mod">Module 03</span>
+    ├── <span class="mod">Module 04</span>
+    ├── <span class="mod">Module 05</span>
+    ├── <span class="mod">Module 06</span>
+    ├── <span class="mod">Module 07</span>
+    ├── <span class="mod">Module 08</span>
+    ├── <span class="mod">Module 09</span>
+    └── <span class="mod">Module 10</span></div>
+</section>
+
+<section class="block" id="module-arch">
+  <div class="block-label">04 — Module Architecture</div>
+  <h2>The model every module follows</h2>
+  <p>Every one of the 10 modules follows the same seven-stage engineering model, without exception:</p>
+  <div class="pipeline">
+    <span class="step">Policy</span><span class="arrow">↓</span>
+    <span class="step">Procedure</span><span class="arrow">↓</span>
+    <span class="step">Work Instruction</span><span class="arrow">↓</span>
+    <span class="step">Checklist</span><span class="arrow">↓</span>
+    <span class="step">Register</span><span class="arrow">↓</span>
+    <span class="step">Evidence</span><span class="arrow">↓</span>
+    <span class="step">Declaration</span>
+  </div>
+</section>
+
+<section class="block" id="compliance-arch">
+  <div class="block-label">05 — Compliance Architecture</div>
+  <h2>What the system consists of</h2>
+  <div class="stat-grid">
+    <div class="stat"><b>10</b><span>Modules</span></div>
+    <div class="stat"><b>70</b><span>Controlled Documents</span></div>
+  </div>
+  <p style="margin-top:20px;">Alongside the 10 modules and 70 controlled documents, the system includes Repository Governance Documents, Version Control, Audit Documentation, and Inspection Documentation.</p>
+</section>
+
+<section class="block" id="trace-arch">
+  <div class="block-label">06 — Traceability Architecture</div>
+  <h2>Every document links to the next</h2>
+  <div class="pipeline">
+    <span class="step">Policy</span><span class="arrow">↓</span>
+    <span class="step">Procedure</span><span class="arrow">↓</span>
+    <span class="step">Work Instruction</span><span class="arrow">↓</span>
+    <span class="step">Checklist</span><span class="arrow">↓</span>
+    <span class="step">Register</span><span class="arrow">↓</span>
+    <span class="step">Evidence</span><span class="arrow">↓</span>
+    <span class="step">Declaration</span>
+  </div>
+  <div class="warn"><strong>No declaration exists without supporting evidence.</strong> This is a structural rule of the traceability architecture — a Declaration with no linked Evidence is treated as incomplete, not as a stand-alone attestation.</div>
+</section>
+
+<section class="block" id="gov-arch">
+  <div class="block-label">07 — Governance Architecture</div>
+  <h2>What governs the repository</h2>
+  <ul class="checklist">
+    <li>README</li>
+    <li>DOCUMENT_INDEX</li>
+    <li>DOCUMENT_TRACEABILITY_MATRIX</li>
+    <li>COMPLIANCE_MATRIX</li>
+    <li>CHANGELOG</li>
+    <li>AUDIT_PLAN</li>
+    <li>INSPECTION_GUIDE</li>
+  </ul>
+</section>
+
+<section class="block" id="inspect-arch">
+  <div class="block-label">08 — Inspection Architecture</div>
+  <h2>How an inspector navigates the repository</h2>
+  <div class="ordered">
+    <div class="row"><span class="idx">01</span>README</div>
+    <div class="row"><span class="idx">02</span>DOCUMENT_INDEX</div>
+    <div class="row"><span class="idx">03</span>Module</div>
+    <div class="row"><span class="idx">04</span>Register</div>
+    <div class="row"><span class="idx">05</span>Evidence</div>
+    <div class="row"><span class="idx">06</span>Declaration</div>
+    <div class="row"><span class="idx">07</span>Traceability Matrix</div>
+    <div class="row"><span class="idx">08</span>Compliance Matrix</div>
+  </div>
+</section>
+
+<section class="block" id="version-arch">
+  <div class="block-label">09 — Versioning Architecture</div>
+  <h2>What each release includes</h2>
+  <div class="card-grid">
+    <div class="card"><div class="n">01</div><p>Git Tag</p></div>
+    <div class="card"><div class="n">02</div><p>GitHub Release</p></div>
+    <div class="card"><div class="n">03</div><p>Zenodo DOI</p></div>
+    <div class="card"><div class="n">04</div><p>CHANGELOG Update</p></div>
+  </div>
+</section>
+
+<section class="block" id="status">
+  <div class="block-label">10 — Architecture Status</div>
+  <h2>Current status</h2>
+  <div class="stat-grid">
+    <div class="stat"><b>1.0.2</b><span>Current Version</span></div>
+    <div class="stat"><b>Complete</b><span>Architecture Status</span></div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="block-label">FAQ</div>
+  <h2>Frequently asked questions</h2>
+
+  <div class="faq-item">
+    <h3>How many modules does the Compliance Management System have?</h3>
+    <p>10 modules, together forming 70 controlled documents, plus repository governance, version control, audit, and inspection documentation.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What is the document model inside each module?</h3>
+    <p>Every module follows the same seven-stage model: Policy, Procedure, Work Instruction, Checklist, Register, Evidence, and Declaration, each linked to the next.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Can a Declaration exist without supporting Evidence?</h3>
+    <p>No. No declaration exists without supporting evidence — this is a structural rule of the traceability architecture, not a style preference.</p>
+  </div>
+  <div class="faq-item">
+    <h3>In what order does an inspector navigate the repository?</h3>
+    <p>README, then DOCUMENT_INDEX, then the relevant Module, then its Register, Evidence, and Declaration, then the Traceability Matrix, then the Compliance Matrix.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What governs the repository itself?</h3>
+    <p>README, DOCUMENT_INDEX, DOCUMENT_TRACEABILITY_MATRIX, COMPLIANCE_MATRIX, CHANGELOG, AUDIT_PLAN, and INSPECTION_GUIDE.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What does each release include?</h3>
+    <p>A Git Tag, a GitHub Release, a Zenodo DOI, and a CHANGELOG update.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What are the core architectural principles?</h3>
+    <p>Compliance by Design, Documentation by Design, Evidence by Design, Traceability by Design, Inspection Readiness by Design, and Continuous Improvement.</p>
+  </div>
+
+</section>
+
+</main>
+
+<div class="prep-footer">
+  <div class="box">
+    <div class="field">Version<b>1.0.2</b></div>
+    <div class="field">Prepared by<b>{{RESPONSIBLE_PERSON}}</b></div>
+    <div class="field">Company<b>{{COMPANY_NAME}}</b></div>
+  </div>
+</div>
+
+<footer class="site">EU AI ACT READY™ — Architecture · RRVI™ Repository</footer>
+
+</body>
+</html>
