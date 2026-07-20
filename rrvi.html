@@ -5,6 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RRVI™ — Remote Regulatory Verification Infrastructure | Engineering Manifesto</title>
 <meta name="description" content="Remote Regulatory Verification Infrastructure™ (RRVI™) — the engineering reference architecture behind EU AI Act Ready™. What each letter means, the manifesto, and why it is a new category.">
+<link rel="canonical" href="https://eu-ai-act-ready.eu/rrvi.html">
+
+<meta property="og:title" content="RRVI™ — Remote Regulatory Verification Infrastructure">
+<meta property="og:description" content="The engineering reference architecture behind EU AI Act Ready™ — turning regulatory compliance from document exchange into structured, machine-verifiable evidence.">
+<meta property="og:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+<meta property="og:url" content="https://eu-ai-act-ready.eu/rrvi.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EU AI Act Ready™">
+<meta property="og:locale" content="en_EU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RRVI™ — Remote Regulatory Verification Infrastructure">
+<meta name="twitter:description" content="The engineering reference architecture behind EU AI Act Ready™ — turning regulatory compliance from document exchange into structured, machine-verifiable evidence.">
+<meta name="twitter:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "RRVI™ — Engineering Manifesto",
+  "description": "Remote Regulatory Verification Infrastructure™ (RRVI™) — the engineering reference architecture behind EU AI Act Ready™.",
+  "url": "https://eu-ai-act-ready.eu/rrvi.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EU AI Act Ready™",
+    "url": "https://eu-ai-act-ready.eu/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "RRVI™ Manifesto", "item": "https://eu-ai-act-ready.eu/rrvi.html"}
+    ]
+  }
+}
+</script>
+
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -71,11 +108,25 @@ a{color:inherit;}
   font-size:13px;
 }
 
+/* ---- breadcrumb ---- */
+.breadcrumb{
+  max-width:1200px;
+  margin:0 auto;
+  padding:14px 30px 0;
+  font-family:'Courier New',monospace;
+  font-size:12px;
+  color:var(--dim);
+}
+.breadcrumb a{color:var(--dim);text-decoration:none;}
+.breadcrumb a:hover{color:var(--cyan);}
+.breadcrumb .sep{margin:0 6px;}
+.breadcrumb .current{color:var(--cyan);}
+
 /* ---- back link ---- */
 .back-nav{
   max-width:1200px;
   margin:0 auto;
-  padding:120px 30px 0;
+  padding:20px 30px 0;
 }
 .back-nav a{
   color:var(--dim);
@@ -374,6 +425,7 @@ a{color:inherit;}
 @media(max-width:640px){
   .top-controls{top:16px;left:16px;}
   .back-nav{padding-top:80px;}
+  .breadcrumb{padding-top:80px;}
   .category-block{padding:30px;}
 }
 
@@ -395,6 +447,12 @@ a{color:inherit;}
     <option value="es">ES</option><option value="sv">SV</option>
   </select>
 </div>
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="https://eu-ai-act-ready.eu/">Home</a>
+  <span class="sep">›</span>
+  <span class="current">RRVI™ Manifesto</span>
+</nav>
 
 <div class="back-nav">
   <a href="/index.html">← Back to EU AI Act Ready™</a>
