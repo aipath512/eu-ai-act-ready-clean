@@ -1862,10 +1862,10 @@ document.querySelectorAll(".chips button").forEach(button => {
     }
   });
 
-  function lockGatedSections() {
+function lockGatedSections() {
     document.querySelectorAll("[data-gated]").forEach(function (el) {
       el.classList.add("gate-locked");
-      el.addEventListener("click", openGate, { once: false });
+      el.addEventListener("click", function(e){ e.preventDefault(); openGate(); }, { once: false });
     });
   }
 
