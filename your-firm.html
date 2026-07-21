@@ -84,7 +84,29 @@ select:focus { border-color: var(--red); }
 
 .bottom-lang a { color: var(--grey); text-decoration: none; font-size: 14px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; margin-right: 8px; white-space: nowrap; flex: 0 0 auto; }
 
-.bottom-lang a.active { color: var(--red-bright); border-color: var(--red); }</style>
+.bottom-lang a.active { color: var(--red-bright); border-color: var(--red); }
+
+.doclist { margin-top: 30px; border-top: 1px solid var(--border); padding-top: 20px; }
+.doclist h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); margin-bottom: 4px; }
+.doclist .hint { font-size: 13px; color: var(--grey); margin-bottom: 14px; }
+.modgroup { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+.modgroup summary { list-style: none; cursor: pointer; padding: 12px 14px; font-size: 14.5px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; background: rgb(15,15,15); }
+.modgroup summary::-webkit-details-marker { display: none; }
+.modgroup summary .cnt { color: var(--grey); font-weight: 400; font-size: 12.5px; }
+.doc-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; border-top: 1px solid var(--border); }
+.doc-row .doc-name { font-size: 13.5px; color: rgb(220,220,220); }
+.doc-row .doc-type { font-size: 11.5px; color: var(--grey); }
+.doc-actions { display: flex; gap: 6px; flex: 0 0 auto; }
+.doc-actions button { background: rgb(24,24,24); color: var(--white); border: 1px solid var(--border); border-radius: 7px; font-size: 12px; padding: 7px 10px; cursor: pointer; }
+.doc-actions button:active { background: rgb(40,40,40); }
+.doc-actions button:disabled { opacity: 0.5; cursor: not-allowed; }
+.viewer-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 50; padding: 20px 14px; }
+.viewer-overlay.show { display: flex; flex-direction: column; }
+.viewer-box { background: rgb(15,15,15); border: 1px solid var(--border); border-radius: 12px; max-width: 640px; width: 100%; margin: 0 auto; flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.viewer-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.viewer-head .t { font-weight: 700; font-size: 14px; }
+.viewer-head button { background: none; border: none; color: var(--grey); font-size: 20px; cursor: pointer; }
+.viewer-body { overflow-y: auto; padding: 16px; font-size: 13px; line-height: 1.55; color: rgb(220,220,220); white-space: pre-wrap; }</style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Firm — EU AI Act Ready™ RRVI Generator</title>
@@ -166,11 +188,18 @@ select:focus { border-color: var(--red); }
         <option value="ro">Română</option>
       </select>
     </div>
+    <div class="field">
+      <label for="docFormat">Document format</label>
+      <select id="docFormat" name="docFormat">
+        <option value="md">Markdown (.md)</option>
+        <option value="docx">Word (.docx)</option>
+      </select>
+    </div>
     <button type="submit" class="btn" id="genBtn">⚡ Generate all 70 documents</button>
   </form>
 
   <div class="status" id="status"></div>
-  <p class="meta">Docs are generated on request — nothing is stored. Delivered as a single .zip, ready to open in Word.</p>
+  <p class="meta">Docs are generated on request — nothing is stored. Delivered as a single .zip.</p>
 
   <div class="modules">
     <h2>What's inside — 10 modules × 7 doc types</h2>
@@ -185,6 +214,22 @@ select:focus { border-color: var(--red); }
       <div>Post-Market Monitoring</div>
       <div>Incident Reporting</div>
       <div>Conformity Assessment</div>
+    </div>
+  </div>
+
+  <div class="doclist">
+    <h2>Browse all 70 documents</h2>
+    <p class="hint">Fill in your firm name and responsible person above, then view or download each document individually — or use "Generate all 70" above for the full zip.</p>
+    <div id="docGroups"></div>
+  </div>
+
+  <div class="viewer-overlay" id="viewerOverlay">
+    <div class="viewer-box">
+      <div class="viewer-head">
+        <span class="t" id="viewerTitle">Document</span>
+        <button id="viewerClose">✕</button>
+      </div>
+      <div class="viewer-body" id="viewerBody">Loading…</div>
     </div>
   </div>
 
@@ -208,7 +253,12 @@ select:focus { border-color: var(--red); }
 // ── Configure once the RRVI generator Worker is deployed ──
 // Expected to accept: POST { firmName, responsiblePerson }
 // Expected to return: application/zip (binary) containing all 70 filled documents
-const RRVI_API = "https://eu-ai-act-rrvi-generator.aipath512.workers.dev/generate";
+const RRVI_BASE = "https://rrvi-generator-worker-test.aipath512.workers.dev";
+const RRVI_API = RRVI_BASE + "/generate";
+const RRVI_SINGLE_API = RRVI_BASE + "/generate-one";
+
+// The 70 compliance documents (10 modules × 7 doc types)
+const DOCS = [{"m":"AI System Inventory","c":"CHK-001","t":"Checklist","p":"01-ai-system-inventory/CHK-001_AI_System_Inventory_Checklist.md"},{"m":"AI System Inventory","c":"DEC-001","t":"Declaration","p":"01-ai-system-inventory/DEC-001_AI_System_Inventory_Declaration.md"},{"m":"AI System Inventory","c":"DOD-001","t":"Policy","p":"01-ai-system-inventory/DOD-001_AI_System_Inventory_Policy.md"},{"m":"AI System Inventory","c":"EVID-001","t":"Evidence","p":"01-ai-system-inventory/EVID-001_AI_System_Inventory_Evidence.md"},{"m":"AI System Inventory","c":"PROC-001","t":"Procedure","p":"01-ai-system-inventory/PROC-001_AI_System_Inventory_Procedure.md"},{"m":"AI System Inventory","c":"REG-001","t":"Register","p":"01-ai-system-inventory/REG-001_AI_System_Inventory_Register.md"},{"m":"AI System Inventory","c":"WI-001","t":"Work Instruction","p":"01-ai-system-inventory/WI-001_AI_System_Inventory_Work_Instruction.md"},{"m":"Risk Classification","c":"CHK-002","t":"Checklist","p":"02-risk-classification/CHK-002_Risk_Classification_Checklist.md"},{"m":"Risk Classification","c":"DEC-002","t":"Declaration","p":"02-risk-classification/DEC-002_Risk_Classification_Declaration.md"},{"m":"Risk Classification","c":"DOD-002","t":"Policy","p":"02-risk-classification/DOD-002_Risk_Classification_Policy.md"},{"m":"Risk Classification","c":"EVID-002","t":"Evidence","p":"02-risk-classification/EVID-002_Risk_Classification_Evidence.md"},{"m":"Risk Classification","c":"PROC-002","t":"Procedure","p":"02-risk-classification/PROC-002_Risk_Classification_Procedure.md"},{"m":"Risk Classification","c":"REG-002","t":"Register","p":"02-risk-classification/REG-002_Risk_Classification_Register.md"},{"m":"Risk Classification","c":"WI-002","t":"Work Instruction","p":"02-risk-classification/WI-002_Risk_Classification_Work_Instruction.md"},{"m":"AI Literacy","c":"CHK-003","t":"Checklist","p":"03-ai-literacy/CHK-003_AI_Literacy_Checklist.md"},{"m":"AI Literacy","c":"DEC-003","t":"Declaration","p":"03-ai-literacy/DEC-003_AI_Literacy_Declaration.md"},{"m":"AI Literacy","c":"DOD-003","t":"Policy","p":"03-ai-literacy/DOD-003_AI_Literacy_Policy.md"},{"m":"AI Literacy","c":"EVID-003","t":"Evidence","p":"03-ai-literacy/EVID-003_AI_Literacy_Evidence.md"},{"m":"AI Literacy","c":"PROC-003","t":"Procedure","p":"03-ai-literacy/PROC-003_AI_Literacy_Procedure.md"},{"m":"AI Literacy","c":"REG-003","t":"Register","p":"03-ai-literacy/REG-003_AI_Literacy_Register.md"},{"m":"AI Literacy","c":"WI-003","t":"Work Instruction","p":"03-ai-literacy/WI-003_AI_Literacy_Work_Instruction.md"},{"m":"Prohibited Practices","c":"CHK-004","t":"Checklist","p":"04-prohibited-practices/CHK-004_Prohibited_Practices_Checklist.md"},{"m":"Prohibited Practices","c":"DEC-004","t":"Declaration","p":"04-prohibited-practices/DEC-004_Prohibited_Practices_Declaration.md"},{"m":"Prohibited Practices","c":"DOD-004","t":"Policy","p":"04-prohibited-practices/DOD-004_Prohibited_Practices_Policy.md"},{"m":"Prohibited Practices","c":"EVID-004","t":"Evidence","p":"04-prohibited-practices/EVID-004_Prohibited_Practices_Evidence.md"},{"m":"Prohibited Practices","c":"PROC-004","t":"Procedure","p":"04-prohibited-practices/PROC-004_Prohibited_Practices_Procedure.md"},{"m":"Prohibited Practices","c":"REG-004","t":"Register","p":"04-prohibited-practices/REG-004_Prohibited_Practices_Register.md"},{"m":"Prohibited Practices","c":"WI-004","t":"Work Instruction","p":"04-prohibited-practices/WI-004_Prohibited_Practices_Work_Instruction.md"},{"m":"High-Risk Assessment","c":"CHK-005","t":"Checklist","p":"05-high-risk-assessment/CHK-005_High_Risk_Assessment_Checklist.md"},{"m":"High-Risk Assessment","c":"DEC-005","t":"Declaration","p":"05-high-risk-assessment/DEC-005_High_Risk_Assessment_Declaration.md"},{"m":"High-Risk Assessment","c":"DOD-005","t":"Policy","p":"05-high-risk-assessment/DOD-005_High_Risk_Assessment_Policy.md"},{"m":"High-Risk Assessment","c":"EVID-005","t":"Evidence","p":"05-high-risk-assessment/EVID-005_High_Risk_Assessment_Evidence.md"},{"m":"High-Risk Assessment","c":"PROC-005","t":"Procedure","p":"05-high-risk-assessment/PROC-005_High_Risk_Assessment_Procedure.md"},{"m":"High-Risk Assessment","c":"REG-005","t":"Register","p":"05-high-risk-assessment/REG-005_High_Risk_Assessment_Register.md"},{"m":"High-Risk Assessment","c":"WI-005","t":"Work Instruction","p":"05-high-risk-assessment/WI-005_High_Risk_Assessment_Work_Instruction.md"},{"m":"Technical Documentation","c":"CHK-006","t":"Checklist","p":"06-technical-documentation/CHK-006_Technical_Documentation_Checklist.md"},{"m":"Technical Documentation","c":"DEC-006","t":"Declaration","p":"06-technical-documentation/DEC-006_Technical_Documentation_Declaration.md"},{"m":"Technical Documentation","c":"DOD-006","t":"Policy","p":"06-technical-documentation/DOD-006_Technical_Documentation_Policy.md"},{"m":"Technical Documentation","c":"EVID-006","t":"Evidence","p":"06-technical-documentation/EVID-006_Technical_Documentation_Evidence.md"},{"m":"Technical Documentation","c":"PROC-006","t":"Procedure","p":"06-technical-documentation/PROC-006_Technical_Documentation_Procedure.md"},{"m":"Technical Documentation","c":"REG-006","t":"Register","p":"06-technical-documentation/REG-006_Technical_Documentation_Register.md"},{"m":"Technical Documentation","c":"WI-006","t":"Work Instruction","p":"06-technical-documentation/WI-006_Technical_Documentation_Work_Instruction.md"},{"m":"Human Oversight","c":"CHK-007","t":"Checklist","p":"07-human-oversight/CHK-007_Human_Oversight_Checklist.md"},{"m":"Human Oversight","c":"DEC-007","t":"Declaration","p":"07-human-oversight/DEC-007_Human_Oversight_Declaration.md"},{"m":"Human Oversight","c":"DOD-007","t":"Policy","p":"07-human-oversight/DOD-007_Human_Oversight_Policy.md"},{"m":"Human Oversight","c":"EVID-007","t":"Evidence","p":"07-human-oversight/EVID-007_Human_Oversight_Evidence.md"},{"m":"Human Oversight","c":"PROC-007","t":"Procedure","p":"07-human-oversight/PROC-007_Human_Oversight_Procedure.md"},{"m":"Human Oversight","c":"REG-007","t":"Register","p":"07-human-oversight/REG-007_Human_Oversight_Register.md"},{"m":"Human Oversight","c":"WI-007","t":"Work Instruction","p":"07-human-oversight/WI-007_Human_Oversight_Work_Instruction.md"},{"m":"Data Governance","c":"CHK-008","t":"Checklist","p":"08-data-governance/CHK-008_Data_Governance_Checklist.md"},{"m":"Data Governance","c":"DEC-008","t":"Declaration","p":"08-data-governance/DEC-008_Data_Governance_Declaration.md"},{"m":"Data Governance","c":"DOD-008","t":"Policy","p":"08-data-governance/DOD-008_Data_Governance_Policy.md"},{"m":"Data Governance","c":"EVID-008","t":"Evidence","p":"08-data-governance/EVID-008_Data_Governance_Evidence.md"},{"m":"Data Governance","c":"PROC-008","t":"Procedure","p":"08-data-governance/PROC-008_Data_Governance_Procedure.md"},{"m":"Data Governance","c":"REG-008","t":"Register","p":"08-data-governance/REG-008_Data_Governance_Register.md"},{"m":"Data Governance","c":"WI-008","t":"Work Instruction","p":"08-data-governance/WI-008_Data_Governance_Work_Instruction.md"},{"m":"Logging & Monitoring","c":"CHK-009","t":"Checklist","p":"09-logging-monitoring/CHK-009_Logging_Monitoring_Checklist.md"},{"m":"Logging & Monitoring","c":"DEC-009","t":"Declaration","p":"09-logging-monitoring/DEC-009_Logging_Monitoring_Declaration.md"},{"m":"Logging & Monitoring","c":"DOD-009","t":"Policy","p":"09-logging-monitoring/DOD-009_Logging_Monitoring_Policy.md"},{"m":"Logging & Monitoring","c":"EVID-009","t":"Evidence","p":"09-logging-monitoring/EVID-009_Logging_Monitoring_Evidence.md"},{"m":"Logging & Monitoring","c":"PROC-009","t":"Procedure","p":"09-logging-monitoring/PROC-009_Logging_Monitoring_Procedure.md"},{"m":"Logging & Monitoring","c":"REG-009","t":"Register","p":"09-logging-monitoring/REG-009_Logging_Monitoring_Register.md"},{"m":"Logging & Monitoring","c":"WI-009","t":"Work Instruction","p":"09-logging-monitoring/WI-009_Logging_Monitoring_Work_Instruction.md"},{"m":"Incident Reporting","c":"CHK-010","t":"Checklist","p":"10-incident-reporting/CHK-010_Incident_Reporting_Checklist.md"},{"m":"Incident Reporting","c":"DEC-010","t":"Declaration","p":"10-incident-reporting/DEC-010_Incident_Reporting_Declaration.md"},{"m":"Incident Reporting","c":"DOD-010","t":"Policy","p":"10-incident-reporting/DOD-010_Incident_Reporting_Policy.md"},{"m":"Incident Reporting","c":"EVID-010","t":"Evidence","p":"10-incident-reporting/EVID-010_Incident_Reporting_Evidence.md"},{"m":"Incident Reporting","c":"PROC-010","t":"Procedure","p":"10-incident-reporting/PROC-010_Incident_Reporting_Procedure.md"},{"m":"Incident Reporting","c":"REG-010","t":"Register","p":"10-incident-reporting/REG-010_Incident_Reporting_Register.md"},{"m":"Incident Reporting","c":"WI-010","t":"Work Instruction","p":"10-incident-reporting/WI-010_Incident_Reporting_Work_Instruction.md"}];
 
 const form = document.getElementById("rrvi-form");
 const btn = document.getElementById("genBtn");
@@ -233,6 +283,135 @@ bottomLang.querySelectorAll("a").forEach(a=>{
 docLangSelect.addEventListener("change", function(){
   setActiveLang(docLangSelect.value);
 });
+
+// ── Document list: view / download each of the 70 docs ──
+const docGroups = document.getElementById("docGroups");
+const viewerOverlay = document.getElementById("viewerOverlay");
+const viewerTitle = document.getElementById("viewerTitle");
+const viewerBody = document.getElementById("viewerBody");
+document.getElementById("viewerClose").addEventListener("click", function(){
+  viewerOverlay.classList.remove("show");
+});
+
+function currentFirmInputs(){
+  const firmName = document.getElementById("firmName").value.trim();
+  const responsiblePerson = document.getElementById("responsiblePerson").value.trim();
+  const format = document.getElementById("docFormat").value;
+  return { firmName, responsiblePerson, format };
+}
+
+function requireFirmInputs(){
+  const { firmName, responsiblePerson, format } = currentFirmInputs();
+  if(!firmName || !responsiblePerson){
+    setStatus("err", "Enter your firm name and responsible person above first.");
+    return null;
+  }
+  return { firmName, responsiblePerson, format };
+}
+
+async function fetchSingleDoc(path, firmName, responsiblePerson, format){
+  const res = await fetch(RRVI_SINGLE_API, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ path, companyName: firmName, responsiblePerson, lang: docLangSelect.value, format })
+  });
+  if(!res.ok) throw new Error("Server returned " + res.status);
+  return res;
+}
+
+async function viewDoc(doc, btn){
+  const inputs = requireFirmInputs();
+  if(!inputs) return;
+  const origLabel = btn.textContent;
+  btn.disabled = true; btn.textContent = "…";
+  try{
+    // Viewing always uses Markdown text, regardless of the format selector,
+    // since a .docx preview can't render as plain text meaningfully.
+    const res = await fetchSingleDoc(doc.p, inputs.firmName, inputs.responsiblePerson, "md");
+    const text = await res.text();
+    const fellBack = res.headers.get("X-Content-Lang-Fallback") === "true";
+    viewerTitle.textContent = doc.c + " — " + doc.m + " " + doc.t;
+    viewerBody.textContent = (fellBack ? "[Translation not yet available — showing English]\n\n" : "") + text;
+    viewerOverlay.classList.add("show");
+  }catch(err){
+    setStatus("err", "Could not load document (" + err.message + ").");
+  }finally{
+    btn.disabled = false; btn.textContent = origLabel;
+  }
+}
+
+async function downloadDoc(doc, btn){
+  const inputs = requireFirmInputs();
+  if(!inputs) return;
+  const origLabel = btn.textContent;
+  btn.disabled = true; btn.textContent = "…";
+  try{
+    const res = await fetchSingleDoc(doc.p, inputs.firmName, inputs.responsiblePerson, inputs.format);
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    const ext = inputs.format === "docx" ? ".docx" : ".md";
+    a.download = doc.p.split("/").pop().replace(/\.md$/, ext);
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(url);
+  }catch(err){
+    setStatus("err", "Download failed (" + err.message + ").");
+  }finally{
+    btn.disabled = false; btn.textContent = origLabel;
+  }
+}
+
+function renderDocGroups(){
+  const byModule = {};
+  const order = [];
+  DOCS.forEach(function(doc){
+    if(!byModule[doc.m]){ byModule[doc.m] = []; order.push(doc.m); }
+    byModule[doc.m].push(doc);
+  });
+
+  order.forEach(function(moduleName){
+    const docs = byModule[moduleName];
+    const details = document.createElement("details");
+    details.className = "modgroup";
+
+    const summary = document.createElement("summary");
+    summary.innerHTML = "<span>" + moduleName + "</span><span class=\"cnt\">" + docs.length + " docs</span>";
+    details.appendChild(summary);
+
+    docs.forEach(function(doc){
+      const row = document.createElement("div");
+      row.className = "doc-row";
+
+      const nameWrap = document.createElement("div");
+      nameWrap.innerHTML = "<div class=\"doc-name\">" + doc.c + "</div><div class=\"doc-type\">" + doc.t + "</div>";
+
+      const actions = document.createElement("div");
+      actions.className = "doc-actions";
+
+      const viewBtn = document.createElement("button");
+      viewBtn.textContent = "View";
+      viewBtn.addEventListener("click", function(){ viewDoc(doc, viewBtn); });
+
+      const dlBtn = document.createElement("button");
+      dlBtn.textContent = "Download";
+      dlBtn.addEventListener("click", function(){ downloadDoc(doc, dlBtn); });
+
+      actions.appendChild(viewBtn);
+      actions.appendChild(dlBtn);
+
+      row.appendChild(nameWrap);
+      row.appendChild(actions);
+      details.appendChild(row);
+    });
+
+    docGroups.appendChild(details);
+  });
+}
+
+renderDocGroups();
 
 function setStatus(kind, text){
   statusEl.className = "status show " + kind;
@@ -287,10 +466,11 @@ form.addEventListener("submit", async function(e){
   setStatus("pending", "Building your 70 documents — this usually takes under a minute.");
 
   try{
+    const bulkFormat = document.getElementById("docFormat").value;
     const res = await fetch(RRVI_API, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ firmName, responsiblePerson, lang: docLang })
+      body: JSON.stringify({ companyName: firmName, responsiblePerson, lang: docLang, format: bulkFormat })
     });
 
     if(!res.ok){
@@ -301,7 +481,7 @@ form.addEventListener("submit", async function(e){
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = firmName.replace(/[^a-z0-9]+/gi, "_") + "_EU_AI_Act_RRVI_Compliance_Pack_" + docLang.toUpperCase() + ".zip";
+    a.download = firmName.replace(/[^a-z0-9]+/gi, "_") + "_EU_AI_Act_RRVI_Compliance_Pack_" + docLang.toUpperCase() + "_" + bulkFormat + ".zip";
     document.body.appendChild(a);
     a.click();
     a.remove();
