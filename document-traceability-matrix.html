@@ -180,14 +180,16 @@ footer a{ color:var(--red2); text-decoration:none; }
   font-size:14px;
 }
 </style>
+<script src="js/site-lang.js"></script>
 </head>
 <body>
 <header>
   <a class="back" href="index.html">&larr; EU AI Act Ready™</a>
   <span class="brand">5thelement.AI</span>
+  <span id="site-lang-selector"></span>
 </header>
 <main>
-<div class="kicker">Governance Library</div>
+<div class="kicker" data-i18n="chrome.governance_kicker">Governance Library</div>
 <h1>Document Traceability Matrix</h1>
 <h2>EU AI Act Compliance Management System™</h2>
 <p>Repository: RRVI™</p>
@@ -356,10 +358,10 @@ Declaration</code></p>
 <p>Prepared by</p>
 <p>your compliance officer</p>
 <p>your organization</p>
-<a class="cta" href="generator.html">Generate Your Firm's Pack &rarr;</a>
+<a class="cta" href="generator.html" data-i18n="chrome.cta">Generate Your Firm's Pack &rarr;</a>
 </main>
 <footer>
-  <p>EU AI Act Ready™ &mdash; part of the 70-document governance library. <a href="index.html">Back to homepage</a></p>
+  <p><span data-i18n="chrome.footer_text">EU AI Act Ready™ &mdash; part of the 70-document governance library.</span> <a href="index.html" data-i18n="chrome.back_home">Back to homepage</a></p>
 </footer>
 </body>
 </html>
