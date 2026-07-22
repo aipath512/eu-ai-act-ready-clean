@@ -569,57 +569,219 @@ footer{
   "@graph": [
     {
       "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
       "url": "https://eu-ai-act-ready.eu/",
       "name": "EU AI Act Ready",
-      "description": "Infrastructură AI-FIRST pentru conformitate și guvernanță în ecosistemul digital european.",
-      "inLanguage": "en-EU",
-      "publisher": { "@id": "#organization" },
+      "description": "Multilingual, document-first EU AI Act readiness platform combining conversational regulatory guidance with a 70-document governance library.",
+      "inLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ],
+      "publisher": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://eu-ai-act-ready.eu/search?q={search_term_string}",
+        "target": "https://eu-ai-act-ready.eu/ask?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
     {
       "@type": "Organization",
-      "@id": "#organization",
+      "@id": "https://eu-ai-act-ready.eu/#organization",
       "name": "EU AI Act Ready™",
-      "legalName": "Aiventure S.R.L.",
+      "legalName": "AiVenture S.R.L.",
       "url": "https://eu-ai-act-ready.eu/",
-      "logo": "https://eu-ai-act-ready.eu/assets/logo.png",
-      "foundingDate": "2026",
-      "founder": { 
-        "@type": "Person", 
-        "name": "Dan Ionescu" 
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
       },
-      "areaServed": ["EU", "EEA"],
+      "foundingDate": "2026",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://eu-ai-act-ready.eu/#founder",
+        "name": "Dan Ionescu"
+      },
+      "areaServed": [
+        "EU",
+        "EEA"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
         "email": "support@eu-ai-act-ready.eu",
-        "availableLanguage": ["en", "ro", "fr", "de"]
+        "availableLanguage": [
+          "en",
+          "fr",
+          "de",
+          "es",
+          "it",
+          "ro",
+          "pl"
+        ]
       },
       "sameAs": [
         "https://twitter.com/eu_ai_act_ready",
         "https://linkedin.com/company/eu-ai-act-ready"
       ],
       "keywords": [
-        "EU AI Act", "AI Compliance", "AI Governance", "Regulatory Intelligence", 
-        "GPAI Obligations", "AI Inventory", "Compliance Generator", "AI Act Readiness"
+        "EU AI Act",
+        "AI Compliance",
+        "AI Governance",
+        "Regulatory Intelligence",
+        "GPAI Obligations",
+        "AI Inventory",
+        "Compliance Generator",
+        "AI Act Readiness"
       ],
       "knowsAbout": [
-        "Artificial Intelligence Act", "Machine Learning Governance", 
-        "Data Sovereignty", "EU Digital Strategy"
+        "Artificial Intelligence Act",
+        "Machine Learning Governance",
+        "Data Sovereignty",
+        "EU Digital Strategy"
       ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "AI Compliance Solutions",
-        "itemListElement": [
-          { "@type": "Offer", "name": "AI Act Readiness Assessment" },
-          { "@type": "Offer", "name": "Automated Compliance Generator" },
-          { "@type": "Offer", "name": "Predictive Mastery Engine" }
-        ]
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "PACK GENERATOR™",
+          "description": "Generates a complete, firm-branded EU AI Act compliance pack — 70 controlled documents across 10 operational modules.",
+          "url": "https://eu-ai-act-ready.eu/generator"
+        },
+        {
+          "@type": "Offer",
+          "name": "RRVI™ Remote Regulatory Verification",
+          "description": "Structured compliance evidence prepared for remote review by an EU AI Act auditor or inspector, anchored with SHA-256 hashing and OpenTimestamps.",
+          "url": "https://eu-ai-act-ready.eu/rrvi"
+        },
+        {
+          "@type": "Offer",
+          "name": "AI Act Readiness Assessment",
+          "description": "Instant Risk Exposure Score generated from your AI System Inventory and Risk Classification modules.",
+          "url": "https://eu-ai-act-ready.eu/demo"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://eu-ai-act-ready.eu/#ask-generator",
+      "name": "Ask & Generator™",
+      "url": "https://eu-ai-act-ready.eu/ask",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Regulatory Compliance Software",
+      "operatingSystem": "Web",
+      "description": "Conversational EU AI Act guidance and firm-branded compliance document generation, available in 27 EU languages.",
+      "provider": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "featureList": [
+        "Conversational EU AI Act guidance in 27 EU languages",
+        "70-document governance library across 10 operational modules",
+        "RRVI™ remote regulatory verification",
+        "Automatic firm-branded document generation"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://eu-ai-act-ready.eu/#compliance-service",
+      "name": "EU AI Act Compliance Pack Generation",
+      "serviceType": "Regulatory compliance documentation",
+      "provider": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "areaServed": [
+        "EU",
+        "EEA"
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small and medium-sized enterprises"
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://eu-ai-act-ready.eu/#operational-modules",
+      "name": "10 Operational Modules",
+      "description": "The 10 operational modules of the EU AI Act Ready™ governance library, 7 documents each.",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI System Inventory",
+          "url": "https://eu-ai-act-ready.eu/01-ai-system-inventory"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Risk Classification",
+          "url": "https://eu-ai-act-ready.eu/02-risk-classification"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Literacy",
+          "url": "https://eu-ai-act-ready.eu/03-ai-literacy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Prohibited Practices",
+          "url": "https://eu-ai-act-ready.eu/04-prohibited-practices"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "High-Risk Assessment",
+          "url": "https://eu-ai-act-ready.eu/05-high-risk-assessment"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Technical Documentation",
+          "url": "https://eu-ai-act-ready.eu/06-technical-documentation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Human Oversight",
+          "url": "https://eu-ai-act-ready.eu/07-human-oversight"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Data Governance",
+          "url": "https://eu-ai-act-ready.eu/08-data-governance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Logging & Monitoring",
+          "url": "https://eu-ai-act-ready.eu/09-logging-monitoring"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Incident Reporting",
+          "url": "https://eu-ai-act-ready.eu/10-incident-reporting"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://eu-ai-act-ready.eu/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eu-ai-act-ready.eu/"
+        }
+      ]
     }
   ]
 }
