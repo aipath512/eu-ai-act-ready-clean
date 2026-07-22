@@ -23,22 +23,126 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "EU AI Act — Why?",
-  "description": "Why does the EU AI Act exist? The real risk isn't AI — it's untraceable AI decisions affecting people without human accountability.",
-  "url": "https://eu-ai-act-ready.eu/why.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "EU AI Act Ready™",
-    "url": "https://eu-ai-act-ready.eu/"
-  },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
-      {"@type": "ListItem", "position": 2, "name": "Why?", "item": "https://eu-ai-act-ready.eu/why.html"}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready",
+      "inLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ],
+      "publisher": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://eu-ai-act-ready.eu/#organization",
+      "name": "EU AI Act Ready™",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://eu-ai-act-ready.eu/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
+      },
+      "founder": {
+        "@id": "https://eu-ai-act-ready.eu/#founder"
+      },
+      "contactPoint": {
+        "@id": "https://eu-ai-act-ready.eu/#contact"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://eu-ai-act-ready.eu/#founder",
+      "name": "Dan Ionescu",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://eu-ai-act-ready.eu/#contact",
+      "contactType": "customer support",
+      "email": "support@eu-ai-act-ready.eu",
+      "availableLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://eu-ai-act-ready.eu/why#page",
+      "url": "https://eu-ai-act-ready.eu/why",
+      "name": "EU AI Act — Why?",
+      "description": "Why does the EU AI Act exist? The real risk isn't AI — it's untraceable AI decisions affecting people without human accountability.",
+      "isPartOf": {
+        "@id": "https://eu-ai-act-ready.eu/#website"
+      },
+      "about": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "inLanguage": "en",
+      "breadcrumb": {
+        "@id": "https://eu-ai-act-ready.eu/why#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://eu-ai-act-ready.eu/why#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eu-ai-act-ready.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why?",
+          "item": "https://eu-ai-act-ready.eu/why"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://eu-ai-act-ready.eu/why#article",
+      "headline": "EU AI Act — Why?",
+      "about": "Artificial Intelligence Act",
+      "author": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "publisher": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://eu-ai-act-ready.eu/why#page"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@id": "https://eu-ai-act-ready.eu/#offer-pack-generator",
+      "@type": "Offer",
+      "name": "PACK GENERATOR™",
+      "url": "https://eu-ai-act-ready.eu/generator",
+      "price": "497",
+      "priceCurrency": "EUR"
+    }
+  ]
 }
 </script>
 

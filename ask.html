@@ -140,22 +140,114 @@ a { color: inherit; }
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Full Ask — EU AI Act Ready™",
-  "description": "Ask the EU AI Act — full-screen conversational search across 27 EU languages.",
-  "url": "https://eu-ai-act-ready.eu/ask.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "EU AI Act Ready™",
-    "url": "https://eu-ai-act-ready.eu/"
-  },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
-      {"@type": "ListItem", "position": 2, "name": "Full Ask", "item": "https://eu-ai-act-ready.eu/ask.html"}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready",
+      "inLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ],
+      "publisher": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://eu-ai-act-ready.eu/#organization",
+      "name": "EU AI Act Ready™",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://eu-ai-act-ready.eu/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
+      },
+      "founder": {
+        "@id": "https://eu-ai-act-ready.eu/#founder"
+      },
+      "contactPoint": {
+        "@id": "https://eu-ai-act-ready.eu/#contact"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://eu-ai-act-ready.eu/#founder",
+      "name": "Dan Ionescu",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://eu-ai-act-ready.eu/#contact",
+      "contactType": "customer support",
+      "email": "support@eu-ai-act-ready.eu",
+      "availableLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://eu-ai-act-ready.eu/ask#page",
+      "url": "https://eu-ai-act-ready.eu/ask",
+      "name": "Full Ask — EU AI Act Ready™",
+      "description": "Ask the EU AI Act — full-screen conversational search across 27 EU languages.",
+      "isPartOf": {
+        "@id": "https://eu-ai-act-ready.eu/#website"
+      },
+      "about": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "inLanguage": "en",
+      "breadcrumb": {
+        "@id": "https://eu-ai-act-ready.eu/ask#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://eu-ai-act-ready.eu/ask#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eu-ai-act-ready.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Full Ask",
+          "item": "https://eu-ai-act-ready.eu/ask"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://eu-ai-act-ready.eu/#ask-generator",
+      "name": "Ask & Generator™",
+      "url": "https://eu-ai-act-ready.eu/ask",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Conversational EU AI Act guidance available in 27 EU languages.",
+      "provider": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    }
+  ]
 }
 </script>
 

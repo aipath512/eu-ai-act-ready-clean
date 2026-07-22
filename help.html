@@ -24,22 +24,127 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "How HELP Works",
-  "description": "Work directly with an expert on EU AI Act compliance — firm-specific interpretation, document review, and a clear path to full-service implementation.",
-  "url": "https://eu-ai-act-ready.eu/help",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "EU AI Act Ready™",
-    "url": "https://eu-ai-act-ready.eu/"
-  },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
-      {"@type": "ListItem", "position": 2, "name": "Help", "item": "https://eu-ai-act-ready.eu/help"}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready",
+      "inLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ],
+      "publisher": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://eu-ai-act-ready.eu/#organization",
+      "name": "EU AI Act Ready™",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://eu-ai-act-ready.eu/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
+      },
+      "founder": {
+        "@id": "https://eu-ai-act-ready.eu/#founder"
+      },
+      "contactPoint": {
+        "@id": "https://eu-ai-act-ready.eu/#contact"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://eu-ai-act-ready.eu/#founder",
+      "name": "Dan Ionescu",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://eu-ai-act-ready.eu/#contact",
+      "contactType": "customer support",
+      "email": "support@eu-ai-act-ready.eu",
+      "availableLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://eu-ai-act-ready.eu/help#page",
+      "url": "https://eu-ai-act-ready.eu/help",
+      "name": "How HELP Works",
+      "description": "Work directly with an expert on EU AI Act compliance — firm-specific interpretation, document review, and a clear path to full-service implementation.",
+      "isPartOf": {
+        "@id": "https://eu-ai-act-ready.eu/#website"
+      },
+      "about": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "inLanguage": "en",
+      "breadcrumb": {
+        "@id": "https://eu-ai-act-ready.eu/help#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://eu-ai-act-ready.eu/help#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eu-ai-act-ready.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HELP",
+          "item": "https://eu-ai-act-ready.eu/help"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://eu-ai-act-ready.eu/#offer-help",
+      "name": "HELP — Expert Guidance",
+      "url": "https://eu-ai-act-ready.eu/help",
+      "price": "129",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "129",
+        "priceCurrency": "EUR",
+        "unitText": "HOUR"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://eu-ai-act-ready.eu/#offer-dfy",
+      "name": "DFY — Done For You",
+      "url": "https://eu-ai-act-ready.eu/help",
+      "description": "Full-service implementation of the complete compliance document set, entered into via a HELP session.",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "description": "Custom estimate provided per firm — not a fixed price"
+      }
+    }
+  ]
 }
 </script>
 

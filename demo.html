@@ -195,22 +195,111 @@ footer.cta a { background: var(--red); padding: 12px 26px; border-radius: 8px; t
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Demo — Full RRVI Document Library",
-  "description": "Preview EU AI Act Ready's 70-document RRVI compliance pack across 10 compliance modules.",
-  "url": "https://eu-ai-act-ready.eu/demo.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "EU AI Act Ready™",
-    "url": "https://eu-ai-act-ready.eu/"
-  },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
-      {"@type": "ListItem", "position": 2, "name": "Demo", "item": "https://eu-ai-act-ready.eu/demo.html"}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready",
+      "inLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ],
+      "publisher": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://eu-ai-act-ready.eu/#organization",
+      "name": "EU AI Act Ready™",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://eu-ai-act-ready.eu/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
+      },
+      "founder": {
+        "@id": "https://eu-ai-act-ready.eu/#founder"
+      },
+      "contactPoint": {
+        "@id": "https://eu-ai-act-ready.eu/#contact"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://eu-ai-act-ready.eu/#founder",
+      "name": "Dan Ionescu",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://eu-ai-act-ready.eu/#contact",
+      "contactType": "customer support",
+      "email": "support@eu-ai-act-ready.eu",
+      "availableLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://eu-ai-act-ready.eu/demo#page",
+      "url": "https://eu-ai-act-ready.eu/demo",
+      "name": "Demo — Full RRVI Document Library",
+      "description": "Preview EU AI Act Ready's compliance pack across 10 compliance modules.",
+      "isPartOf": {
+        "@id": "https://eu-ai-act-ready.eu/#website"
+      },
+      "about": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "inLanguage": "en",
+      "breadcrumb": {
+        "@id": "https://eu-ai-act-ready.eu/demo#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://eu-ai-act-ready.eu/demo#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eu-ai-act-ready.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Demo",
+          "item": "https://eu-ai-act-ready.eu/demo"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://eu-ai-act-ready.eu/#offer-readiness",
+      "name": "AI Act Readiness Assessment",
+      "url": "https://eu-ai-act-ready.eu/demo",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "description": "Instant Risk Exposure Score generated from your AI System Inventory and Risk Classification modules."
+    }
+  ]
 }
 </script>
 

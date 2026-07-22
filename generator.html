@@ -130,22 +130,194 @@ select:focus { border-color: var(--red); }
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Generator — RRVI Generator",
-  "description": "Generate your firm's 70-document EU AI Act compliance pack across 10 RRVI modules, personalized with your company and responsible person.",
-  "url": "https://eu-ai-act-ready.eu/generator.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "EU AI Act Ready™",
-    "url": "https://eu-ai-act-ready.eu/"
-  },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/"},
-      {"@type": "ListItem", "position": 2, "name": "Generator", "item": "https://eu-ai-act-ready.eu/generator.html"}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready",
+      "inLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ],
+      "publisher": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://eu-ai-act-ready.eu/#organization",
+      "name": "EU AI Act Ready™",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://eu-ai-act-ready.eu/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
+      },
+      "founder": {
+        "@id": "https://eu-ai-act-ready.eu/#founder"
+      },
+      "contactPoint": {
+        "@id": "https://eu-ai-act-ready.eu/#contact"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://eu-ai-act-ready.eu/#founder",
+      "name": "Dan Ionescu",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://eu-ai-act-ready.eu/#contact",
+      "contactType": "customer support",
+      "email": "support@eu-ai-act-ready.eu",
+      "availableLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://eu-ai-act-ready.eu/generator#page",
+      "url": "https://eu-ai-act-ready.eu/generator",
+      "name": "Generator — RRVI Generator",
+      "description": "Generate your firm's compliance pack across 10 RRVI modules, personalized with your company and responsible person.",
+      "isPartOf": {
+        "@id": "https://eu-ai-act-ready.eu/#website"
+      },
+      "about": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "inLanguage": "en",
+      "breadcrumb": {
+        "@id": "https://eu-ai-act-ready.eu/generator#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://eu-ai-act-ready.eu/generator#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eu-ai-act-ready.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Generator",
+          "item": "https://eu-ai-act-ready.eu/generator"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://eu-ai-act-ready.eu/#compliance-service",
+      "name": "EU AI Act Compliance Document Generation",
+      "serviceType": "Automated generation of firm-personalized EU AI Act compliance documentation",
+      "provider": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small and medium-sized enterprises"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://eu-ai-act-ready.eu/#offer-pack-generator",
+      "name": "PACK GENERATOR™",
+      "url": "https://eu-ai-act-ready.eu/generator",
+      "price": "497",
+      "priceCurrency": "EUR",
+      "itemOffered": {
+        "@id": "https://eu-ai-act-ready.eu/#compliance-service"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://eu-ai-act-ready.eu/#operational-modules",
+      "name": "10 Operational Modules",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI System Inventory",
+          "url": "https://eu-ai-act-ready.eu/01-ai-system-inventory"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Risk Classification",
+          "url": "https://eu-ai-act-ready.eu/02-risk-classification"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Literacy",
+          "url": "https://eu-ai-act-ready.eu/03-ai-literacy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Prohibited Practices",
+          "url": "https://eu-ai-act-ready.eu/04-prohibited-practices"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "High-Risk Assessment",
+          "url": "https://eu-ai-act-ready.eu/05-high-risk-assessment"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Technical Documentation",
+          "url": "https://eu-ai-act-ready.eu/06-technical-documentation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Human Oversight",
+          "url": "https://eu-ai-act-ready.eu/07-human-oversight"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Data Governance",
+          "url": "https://eu-ai-act-ready.eu/08-data-governance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Logging & Monitoring",
+          "url": "https://eu-ai-act-ready.eu/09-logging-monitoring"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Incident Reporting",
+          "url": "https://eu-ai-act-ready.eu/10-incident-reporting"
+        }
+      ]
+    }
+  ]
 }
 </script>
 
