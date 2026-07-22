@@ -1921,22 +1921,78 @@ SHA-256 • OpenTimestamps • Remote Inspector Access
 </section>
 
 <section id="offer" aria-labelledby="offer-title" style="max-width:1200px; margin:60px auto; padding:40px 30px 0; border-top:1px solid #2a2a2a; color:#fff;">
-  <h2 id="offer-title" style="font-size:32px; color:#ff3e3e; margin-bottom:20px; text-transform:uppercase;">Offer</h2>
-  <div class="offers" style="justify-content:flex-start;">
-  <a href="how-to.html">
-    <span class="tier-num">TIER 1</span>
-    <strong id="diy-label">🧩 DIY · FREE</strong>
-  </a>
-  <a href="help.html">
-    <span class="tier-num">TIER 2</span>
-    <strong id="help-label">🙋 HELP · €129/H</strong>
-  </a>
-  <a href="help.html">
-    <span class="tier-num">TIER 3</span>
-    <strong id="dfy-label">🚀 DFY · CUSTOM QUOTE</strong>
-  </a>
-</div>
+  <h2 id="offer-title" style="font-size:32px; color:#ff3e3e; margin-bottom:16px; text-transform:uppercase;">Offer</h2>
+  <p style="max-width:800px; color:#c9c9c9; font-size:16px; line-height:1.7; margin-bottom:32px;">
+    Three ways to get compliant, depending on how much you want to do yourself versus hand off.
+  </p>
+  <div class="offer-cards">
+
+    <a href="how-to.html" class="offer-card">
+      <span class="tier-num">TIER 1</span>
+      <h3>🧩 DIY · FREE</h3>
+      <p>Free path to EU AI Act readiness — ask questions, preview the document pack, and explore obligations at your own pace.</p>
+    </a>
+
+    <a href="help.html" class="offer-card">
+      <span class="tier-num">TIER 2</span>
+      <h3>🙋 HELP · €129/H</h3>
+      <p>Work directly with an expert on EU AI Act compliance — firm-specific interpretation, document review, and a clear path to full implementation.</p>
+    </a>
+
+    <a href="help.html" class="offer-card">
+      <span class="tier-num">TIER 3</span>
+      <h3>🚀 DFY · CUSTOM QUOTE</h3>
+      <p>Full-service implementation of the complete compliance document set, entered into via a HELP session. Priced per individual estimate.</p>
+    </a>
+
+  </div>
 </section>
+
+<style>
+.offer-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+@media(max-width:820px){
+  .offer-cards{ grid-template-columns:1fr; }
+}
+.offer-card{
+  position:relative;
+  display:block;
+  border:2px solid #ffb020;
+  border-radius:10px;
+  padding:28px 24px 24px;
+  background:linear-gradient(#0d0900,#050505);
+  color:#fff;
+  text-decoration:none;
+  transition:.2s;
+}
+.offer-card:hover{
+  background:linear-gradient(#1a1200,#0a0700);
+  border-color:#ffcf6b;
+  transform:translateY(-3px);
+}
+.offer-card .tier-num{
+  display:inline-block;
+  font-size:11px;
+  color:#ffb020;
+  font-weight:900;
+  letter-spacing:.08em;
+  margin-bottom:10px;
+}
+.offer-card h3{
+  margin:0 0 12px;
+  font-size:19px;
+  font-weight:900;
+}
+.offer-card p{
+  margin:0;
+  color:#c9c9c9;
+  font-size:14px;
+  line-height:1.6;
+}
+</style>
 
 <style>
 
