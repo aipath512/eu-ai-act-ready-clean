@@ -47,7 +47,7 @@
 
 
     {
-      "id": "your-firm-workspace",
+      "id": "generator-workspace",
 
       "name": "Your Firm™ Workspace",
 
@@ -56,7 +56,7 @@
       "access": "login_required",
 
       "url":
-      "https://eu-ai-act-ready.eu/your-firm",
+      "https://eu-ai-act-ready.eu/generator",
 
       "description":
       "Company-specific workspace for creating an AI Act readiness structure based on organization data and AI usage context.",

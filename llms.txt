@@ -97,7 +97,7 @@ Example EU AI Act Readiness Workspace
 
 3. Operational Layer
 
-/your-firm
+/generator
 
 Future company-specific readiness workspace
 
