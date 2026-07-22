@@ -389,6 +389,63 @@ main{
   font-size:14px;
 }
 
+.section-label{
+  text-align:center;
+  color:#999;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin:34px auto 0;
+}
+
+.offers{
+   display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin:14px auto 0;
+}
+.offers a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:190px;
+  height:84px;
+  gap:7px;
+  border:2px solid #ffb020;
+  border-radius:0px;
+  background:#0d0900;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:900;
+  transition:.2s;
+  position:relative;
+}
+
+.offers a:hover{
+  background:#ffb020;
+  color:#0a0a0a;
+}
+
+.offers .tier-num{
+  position:absolute;
+  top:6px;
+  left:8px;
+  font-size:10px;
+  color:#ffb020;
+  font-weight:900;
+  letter-spacing:.05em;
+}
+
+.offers a:hover .tier-num{
+  color:#0a0a0a;
+}
+
 .divider{
   width:1px;
   height:72px;
@@ -541,6 +598,10 @@ footer{
   }
 
   .links{
+    gap:14px;
+  }
+
+  .offers{
     gap:14px;
   }
 
@@ -774,7 +835,17 @@ footer{
         "@id": "https://eu-ai-act-ready.eu/#compliance-service"
       },
       "price": "497",
-      "priceCurrency": "EUR"
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "497",
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      }
     },
     {
       "@type": "Offer",
@@ -787,11 +858,16 @@ footer{
       },
       "price": "150",
       "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
         "price": "150",
         "priceCurrency": "EUR",
-        "unitText": "MONTH"
+        "unitText": "MONTH",
+        "valueAddedTaxIncluded": false
       }
     },
     {
@@ -801,7 +877,17 @@ footer{
       "description": "Instant Risk Exposure Score generated from your AI System Inventory and Risk Classification modules.",
       "url": "https://eu-ai-act-ready.eu/demo",
       "price": "0",
-      "priceCurrency": "EUR"
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      }
     },
     {
       "@type": "Offer",
@@ -810,7 +896,17 @@ footer{
       "description": "Free path to EU AI Act readiness — ask questions, preview the document pack, and explore obligations at your own pace.",
       "url": "https://eu-ai-act-ready.eu/how-to",
       "price": "0",
-      "priceCurrency": "EUR"
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      }
     },
     {
       "@type": "Offer",
@@ -820,11 +916,16 @@ footer{
       "url": "https://eu-ai-act-ready.eu/help",
       "price": "129",
       "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
         "price": "129",
         "priceCurrency": "EUR",
-        "unitText": "HOUR"
+        "unitText": "HOUR",
+        "valueAddedTaxIncluded": false
       }
     },
     {
@@ -833,9 +934,14 @@ footer{
       "name": "DFY — Done For You",
       "description": "Full-service implementation of the complete 90-document compliance set — entered into via a HELP session. Priced per individual estimate.",
       "url": "https://eu-ai-act-ready.eu/help",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
       "priceSpecification": {
         "@type": "PriceSpecification",
-        "description": "Custom estimate provided per firm — not a fixed price"
+        "description": "Custom estimate provided per firm — not a fixed price",
+        "valueAddedTaxIncluded": false
       }
     },
     {
@@ -1582,6 +1688,7 @@ div[style*="background:linear-gradient(#090909,#050505)"]{
 <style>
   #chipsTrack::-webkit-scrollbar{ display:none; }
 </style>
+  <div class="section-label">Explore</div>
   <div class="links">
   <a href="demo.html">
     <strong id="demo-label">🎯 DEMO</strong>
@@ -1592,11 +1699,21 @@ div[style*="background:linear-gradient(#090909,#050505)"]{
   <a href="generator.html"  data-gated="true">
     <strong id="yourfirm-label">💻 GENERATOR</strong>
   </a>
+</div>
+
+  <div class="section-label">Get Started</div>
+  <div class="offers">
   <a href="how-to.html">
+    <span class="tier-num">TIER 1</span>
     <strong id="diy-label">🧩 DIY · FREE</strong>
   </a>
   <a href="help.html">
+    <span class="tier-num">TIER 2</span>
     <strong id="help-label">🙋 HELP · €129/H</strong>
+  </a>
+  <a href="help.html">
+    <span class="tier-num">TIER 3</span>
+    <strong id="dfy-label">🚀 DFY · CUSTOM QUOTE</strong>
   </a>
 </div>
 
@@ -1762,7 +1879,7 @@ A complete, ready-to-deploy EU AI Act compliance pack: 70 controlled documents a
 
 <div class="why-card">
 <h3>02</h3>
-<h4 id="whyus-card2-h4" data-i18n="whyus.card2.h4">27-LANGUAGE CONVERSATION</h4>
+<h4 id="whyus-card2-h4" data-i18n="whyus.card2.h4">MULTI-LANGUAGE</h4>
 <p id="whyus-card2-p" data-i18n="whyus.card2.p">
 Ask anything about the EU AI Act in natural language and get grounded, cited answers — in all 27 EU languages, not machine-translated after the fact.
 </p>
@@ -2208,7 +2325,7 @@ const EXTRA_I18N = {
   "whyus.card1.h4": {"en": "TURN-KEY SME PACK", "fr": "PACK CLÉ EN MAIN POUR PME", "de": "SCHLÜSSELFERTIGES KMU-PAKET", "es": "PACK LLAVE EN MANO PARA PYMES", "it": "PACCHETTO CHIAVI IN MANO PER PMI", "ro": "PACHET TURN-KEY PENTRU IMM-URI", "pl": "GOTOWY PAKIET DLA MŚP", "nl": "KANT-EN-KLAAR MKB-PAKKET", "pt": "PACOTE CHAVE-NA-MÃO PARA PME", "sv": "NYCKELFÄRDIGT SME-PAKET", "cs": "BALÍČEK NA KLÍČ PRO MSP", "el": "ΕΤΟΙΜΟ ΠΑΚΕΤΟ ΓΙΑ ΜμΕ", "hu": "KULCSRAKÉSZ CSOMAG KKV-KNAK", "da": "NØGLEFÆRDIG PAKKE TIL SMV'ER", "fi": "AVAIMET KÄTEEN -PAKETTI PK-YRITYKSILLE", "bg": "ГОТОВ ПАКЕТ ЗА МСП", "sk": "BALÍČEK NA KĽÚČ PRE MSP"},
   "whyus.card1.p": {"en": "A complete, ready-to-deploy EU AI Act compliance pack: 70 controlled documents across 10 compliance modules, 7 document types per module — Policy, Procedure, Work Instruction, Checklist, Register, Evidence, Declaration. No blank-page drafting.", "fr": "Un pack complet et prêt à déployer pour la conformité à l'AI Act : 70 documents contrôlés répartis sur 10 modules de conformité, 7 types de documents par module — Politique, Procédure, Instruction de Travail, Liste de Contrôle, Registre, Preuve, Déclaration. Pas de rédaction depuis une page blanche.", "de": "Ein komplettes, einsatzbereites AI-Act-Compliance-Paket: 70 kontrollierte Dokumente in 10 Compliance-Modulen, 7 Dokumenttypen pro Modul — Richtlinie, Verfahren, Arbeitsanweisung, Checkliste, Register, Nachweis, Erklärung. Kein Entwurf auf leerer Seite.", "es": "Un pack completo y listo para implementar de cumplimiento de la AI Act: 70 documentos controlados en 10 módulos de cumplimiento, 7 tipos de documentos por módulo — Política, Procedimiento, Instrucción de Trabajo, Lista de Verificación, Registro, Evidencia, Declaración. Sin redactar desde cero.", "it": "Un pacchetto completo e pronto all'uso per la conformità all'AI Act: 70 documenti controllati in 10 moduli di conformità, 7 tipi di documenti per modulo — Politica, Procedura, Istruzione di Lavoro, Checklist, Registro, Evidenza, Dichiarazione. Nessuna stesura da zero.", "ro": "Un pachet complet, gata de utilizare, pentru conformitatea cu AI Act: 70 de documente controlate în 10 module de conformitate, 7 tipuri de documente per modul — Politică, Procedură, Instrucțiune de Lucru, Listă de Verificare, Registru, Dovadă, Declarație. Fără redactare de la zero.", "pl": "Kompletny, gotowy do wdrożenia pakiet zgodności z AI Act: 70 kontrolowanych dokumentów w 10 modułach zgodności, 7 typów dokumentów na moduł — Polityka, Procedura, Instrukcja Pracy, Lista Kontrolna, Rejestr, Dowód, Deklaracja. Bez pisania od zera.", "nl": "Een compleet, kant-en-klaar AI-Act-nalevingspakket: 70 gecontroleerde documenten over 10 nalevingsmodules, 7 documenttypes per module — Beleid, Procedure, Werkinstructie, Checklist, Register, Bewijs, Verklaring. Geen redactie vanaf nul.", "pt": "Um pacote completo e pronto a implementar de conformidade com a AI Act: 70 documentos controlados em 10 módulos de conformidade, 7 tipos de documentos por módulo — Política, Procedimento, Instrução de Trabalho, Lista de Verificação, Registo, Evidência, Declaração. Sem redigir a partir do zero.", "sv": "Ett komplett, driftklart AI Act-efterlevnadspaket: 70 kontrollerade dokument över 10 efterlevnadsmoduler, 7 dokumenttyper per modul — Policy, Procedur, Arbetsinstruktion, Checklista, Register, Bevis, Deklaration. Ingen skrivning från noll.", "cs": "Kompletní, ihned nasaditelný balíček shody s AI Act: 70 kontrolovaných dokumentů napříč 10 moduly shody, 7 typů dokumentů na modul — Politika, Postup, Pracovní Instrukce, Kontrolní Seznam, Registr, Důkaz, Prohlášení. Žádné psaní od nuly.", "el": "Ένα πλήρες, έτοιμο για ανάπτυξη πακέτο συμμόρφωσης με τον Κανονισμό AI: 70 ελεγχόμενα έγγραφα σε 10 ενότητες συμμόρφωσης, 7 τύποι εγγράφων ανά ενότητα — Πολιτική, Διαδικασία, Εργασιακή Οδηγία, Λίστα Ελέγχου, Μητρώο, Τεκμήριο, Δήλωση. Καμία σύνταξη από το μηδέν.", "hu": "Egy teljes, azonnal bevethető AI Act megfelelőségi csomag: 70 ellenőrzött dokumentum 10 megfelelőségi modulban, 7 dokumentumtípus modulonként — Szabályzat, Eljárás, Munkautasítás, Ellenőrzőlista, Nyilvántartás, Bizonyíték, Nyilatkozat. Nincs nulláról írás.", "da": "En komplet, klar-til-brug AI Act-overholdelsespakke: 70 kontrollerede dokumenter på tværs af 10 overholdelsesmoduler, 7 dokumenttyper pr. modul — Politik, Procedure, Arbejdsinstruktion, Tjekliste, Register, Bevis, Erklæring. Ingen udkast fra bunden.", "fi": "Täydellinen, käyttövalmis AI Act -vaatimustenmukaisuuspaketti: 70 valvottua asiakirjaa 10 vaatimustenmukaisuusmoduulissa, 7 asiakirjatyyppiä moduulia kohden — Politiikka, Menettely, Työohje, Tarkistuslista, Rekisteri, Todiste, Julistus. Ei kirjoittamista tyhjästä.", "bg": "Пълен, готов за внедряване пакет за съответствие с Акта за ИИ: 70 контролирани документа в 10 модула за съответствие, 7 типа документи на модул — Политика, Процедура, Работна Инструкция, Контролен Списък, Регистър, Доказателство, Декларация. Без изготвяне от нулата.", "sk": "Kompletný, okamžite nasaditeľný balíček zhody s AI Act: 70 kontrolovaných dokumentov naprieč 10 modulmi zhody, 7 typov dokumentov na modul — Politika, Postup, Pracovný Pokyn, Kontrolný Zoznam, Register, Dôkaz, Vyhlásenie. Žiadne písanie od nuly."},
   "whyus.card1.small": {"en": "10 Modules • 70 Documents • 7 Types/Module", "fr": "10 Modules • 70 Documents • 7 Types/Module", "de": "10 Module • 70 Dokumente • 7 Typen/Modul", "es": "10 Módulos • 70 Documentos • 7 Tipos/Módulo", "it": "10 Moduli • 70 Documenti • 7 Tipi/Modulo", "ro": "10 Module • 70 Documente • 7 Tipuri/Modul", "pl": "10 Modułów • 70 Dokumentów • 7 Typów/Moduł", "nl": "10 Modules • 70 Documenten • 7 Types/Module", "pt": "10 Módulos • 70 Documentos • 7 Tipos/Módulo", "sv": "10 Moduler • 70 Dokument • 7 Typer/Modul", "cs": "10 Modulů • 70 Dokumentů • 7 Typů/Modul", "el": "10 Ενότητες • 70 Έγγραφα • 7 Τύποι/Ενότητα", "hu": "10 Modul • 70 Dokumentum • 7 Típus/Modul", "da": "10 Moduler • 70 Dokumenter • 7 Typer/Modul", "fi": "10 Moduulia • 70 Asiakirjaa • 7 Tyyppiä/Moduuli", "bg": "10 Модула • 70 Документа • 7 Типа/Модул", "sk": "10 Modulov • 70 Dokumentov • 7 Typov/Modul"},
-  "whyus.card2.h4": {"en": "27-LANGUAGE CONVERSATION", "fr": "CONVERSATION EN 27 LANGUES", "de": "KONVERSATION IN 27 SPRACHEN", "es": "CONVERSACIÓN EN 27 IDIOMAS", "it": "CONVERSAZIONE IN 27 LINGUE", "ro": "CONVERSAȚIE ÎN 27 DE LIMBI", "pl": "ROZMOWA W 27 JĘZYKACH", "nl": "GESPREK IN 27 TALEN", "pt": "CONVERSA EM 27 IDIOMAS", "sv": "KONVERSATION PÅ 27 SPRÅK", "cs": "KONVERZACE VE 27 JAZYCÍCH", "el": "ΣΥΝΟΜΙΛΙΑ ΣΕ 27 ΓΛΩΣΣΕΣ", "hu": "BESZÉLGETÉS 27 NYELVEN", "da": "SAMTALE PÅ 27 SPROG", "fi": "KESKUSTELU 27 KIELELLÄ", "bg": "РАЗГОВОР НА 27 ЕЗИКА", "sk": "KONVERZÁCIA V 27 JAZYKOCH"},
+  "whyus.card2.h4": {"en": "MULTI-LANGUAGE", "fr": "CONVERSATION EN 27 LANGUES", "de": "KONVERSATION IN 27 SPRACHEN", "es": "CONVERSACIÓN EN 27 IDIOMAS", "it": "CONVERSAZIONE IN 27 LINGUE", "ro": "CONVERSAȚIE ÎN 27 DE LIMBI", "pl": "ROZMOWA W 27 JĘZYKACH", "nl": "GESPREK IN 27 TALEN", "pt": "CONVERSA EM 27 IDIOMAS", "sv": "KONVERSATION PÅ 27 SPRÅK", "cs": "KONVERZACE VE 27 JAZYCÍCH", "el": "ΣΥΝΟΜΙΛΙΑ ΣΕ 27 ΓΛΩΣΣΕΣ", "hu": "BESZÉLGETÉS 27 NYELVEN", "da": "SAMTALE PÅ 27 SPROG", "fi": "KESKUSTELU 27 KIELELLÄ", "bg": "РАЗГОВОР НА 27 ЕЗИКА", "sk": "KONVERZÁCIA V 27 JAZYKOCH"},
   "whyus.card2.p": {"en": "Ask anything about the EU AI Act in natural language and get grounded, cited answers — in all 27 EU languages, not machine-translated after the fact.", "fr": "Posez n'importe quelle question sur l'AI Act en langage naturel et obtenez des réponses fondées et citées — dans les 27 langues de l'UE, sans traduction automatique après coup.", "de": "Stellen Sie jede Frage zum AI Act in natürlicher Sprache und erhalten Sie fundierte, zitierte Antworten — in allen 27 EU-Sprachen, nicht nachträglich maschinell übersetzt.", "es": "Pregunta cualquier cosa sobre la AI Act en lenguaje natural y obtén respuestas fundamentadas y citadas — en los 27 idiomas de la UE, sin traducción automática posterior.", "it": "Fai qualsiasi domanda sull'AI Act in linguaggio naturale e ottieni risposte fondate e citate — in tutte le 27 lingue UE, senza traduzione automatica successiva.", "ro": "Întreabă orice despre AI Act în limbaj natural și primești răspunsuri fundamentate, cu citări — în toate cele 27 de limbi UE, nu traduse automat ulterior.", "pl": "Zadaj dowolne pytanie o AI Act w naturalnym języku i otrzymaj ugruntowane, cytowane odpowiedzi — we wszystkich 27 językach UE, bez automatycznego tłumaczenia po fakcie.", "nl": "Stel elke vraag over de AI Act in natuurlijke taal en krijg onderbouwde, geciteerde antwoorden — in alle 27 EU-talen, niet achteraf machinaal vertaald.", "pt": "Faça qualquer pergunta sobre a AI Act em linguagem natural e obtenha respostas fundamentadas e citadas — em todos os 27 idiomas da UE, sem tradução automática posterior.", "sv": "Ställ vilken fråga som helst om AI-förordningen på naturligt språk och få väl underbyggda, citerade svar — på alla 27 EU-språk, inte maskinöversatta i efterhand.", "cs": "Zeptejte se na cokoli o AI Act přirozeným jazykem a získejte podložené, citované odpovědi — ve všech 27 jazycích EU, ne dodatečně strojově přeložené.", "el": "Ρωτήστε οτιδήποτε για τον Κανονισμό AI σε φυσική γλώσσα και λάβετε τεκμηριωμένες, με παραπομπές απαντήσεις — σε όλες τις 27 γλώσσες της ΕΕ, όχι μηχανικά μεταφρασμένες εκ των υστέρων.", "hu": "Tegyen fel bármilyen kérdést az AI Actről természetes nyelven, és kapjon megalapozott, hivatkozott válaszokat — mind a 27 uniós nyelven, nem utólag gépi fordítással.", "da": "Stil ethvert spørgsmål om AI Act på naturligt sprog og få velunderbyggede, citerede svar — på alle 27 EU-sprog, ikke maskinoversat i efterhånden.", "fi": "Kysy mitä tahansa AI Actista luonnollisella kielellä ja saat perusteltuja, viitattuja vastauksia — kaikilla 27 EU-kielellä, ei jälkikäteen konekäännettynä.", "bg": "Задайте всякакъв въпрос за Акта за ИИ на естествен език и получете обосновани, цитирани отговори — на всичките 27 езика на ЕС, не машинно преведени впоследствие.", "sk": "Opýtajte sa čokoľvek o AI Act prirodzeným jazykom a získajte podložené, citované odpovede — vo všetkých 27 jazykoch EÚ, nie dodatočne strojovo preložené."},
   "whyus.card2.small": {"en": "Conversational • Multi-language • Grounded in the Regulation", "fr": "Conversationnel • Multilingue • Fondé sur le Règlement", "de": "Konversationell • Mehrsprachig • Auf der Verordnung Basierend", "es": "Conversacional • Multilingüe • Fundamentado en el Reglamento", "it": "Conversazionale • Multilingue • Fondato sul Regolamento", "ro": "Conversațional • Multilingv • Fundamentat pe Regulament", "pl": "Konwersacyjny • Wielojęzyczny • Oparty na Regulacji", "nl": "Conversationeel • Meertalig • Onderbouwd door de Regelgeving", "pt": "Conversacional • Multilingue • Fundamentado no Regulamento", "sv": "Konversationsbaserad • Flerspråkig • Underbyggd av Förordningen", "cs": "Konverzační • Vícejazyčný • Podložený Nařízením", "el": "Συνομιλιακό • Πολύγλωσσο • Τεκμηριωμένο στον Κανονισμό", "hu": "Beszélgetésalapú • Többnyelvű • A Rendeletre Alapozva", "da": "Samtalebaseret • Flersproget • Underbygget af Forordningen", "fi": "Keskusteleva • Monikielinen • Perustuu Asetukseen", "bg": "Разговорен • Многоезичен • Обоснован от Регламента", "sk": "Konverzačný • Viacjazyčný • Podložený Nariadením"},
   "whyus.card3.h4": {"en": "PERMANENT LIFECYCLE & MAINTENANCE", "fr": "CYCLE DE VIE ET MAINTENANCE PERMANENTS", "de": "DAUERHAFTER LEBENSZYKLUS UND WARTUNG", "es": "CICLO DE VIDA Y MANTENIMIENTO PERMANENTES", "it": "CICLO DI VITA E MANUTENZIONE PERMANENTI", "ro": "MENTENANȚĂ PERMANENTĂ", "pl": "STAŁY CYKL ŻYCIA I KONSERWACJA", "nl": "PERMANENTE LEVENSCYCLUS EN ONDERHOUD", "pt": "CICLO DE VIDA E MANUTENÇÃO PERMANENTES", "sv": "PERMANENT LIVSCYKEL OCH UNDERHÅLL", "cs": "TRVALÝ ŽIVOTNÍ CYKLUS A ÚDRŽBA", "el": "ΜΟΝΙΜΟΣ ΚΥΚΛΟΣ ΖΩΗΣ ΚΑΙ ΣΥΝΤΗΡΗΣΗ", "hu": "ÁLLANDÓ ÉLETCIKLUS ÉS KARBANTARTÁS", "da": "PERMANENT LIVSCYKLUS OG VEDLIGEHOLDELSE", "fi": "PYSYVÄ ELINKAARI JA YLLÄPITO", "bg": "ПОСТОЯНЕН ЖИЗНЕН ЦИКЪЛ И ПОДДРЪЖКА", "sk": "TRVALÝ ŽIVOTNÝ CYKLUS A ÚDRŽBA"},
@@ -2450,25 +2567,25 @@ const FAQ_DATA = {
 };
 
 const PAGE_EXTRAS = {
-  en: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONAL IN 27 EU LANGUAGES", faqTitle: "Compliance FAQ", login: "Login", newsLabel: "⚡  NEW GUIDANCE", newsItems: ["regulatory intelligence", "10 operational modules now live", "70-document governance library", "High-risk obligations guidance updated", "RRVI™ remote verification infrastructure", "National authority developments", "Article 50 transparency requirements", "Conversational AI Act guidance in 27 EU languages"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
-  fr: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Générateur™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONNEL EN 27 LANGUES DE L'UE", faqTitle: "FAQ Conformité", login: "Connexion", newsLabel: "⚡  NOUVELLES DIRECTIVES", newsItems: ["veille réglementaire", "10 modules opérationnels désormais actifs", "bibliothèque de gouvernance de 70 documents", "Directives sur les obligations à haut risque mises à jour", "infrastructure de vérification à distance RRVI™", "Évolutions des autorités nationales", "Exigences de transparence de l'article 50", "Guidance conversationnelle sur l'AI Act en 27 langues UE"], demoLabel: "🎯 DÉMO", yourFirmLabel: "💻 GÉNÉRATEUR", footerTagline: "Ask &amp; Generator™"},
-  de: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONVERSATIONELL IN 27 EU-SPRACHEN", faqTitle: "Konformität FAQ", login: "Anmelden", newsLabel: "⚡  NEUE LEITLINIEN", newsItems: ["Regulatorische Intelligenz", "10 operative Module jetzt live", "Governance-Bibliothek mit 70 Dokumenten", "Leitlinien zu Hochrisiko-Pflichten aktualisiert", "RRVI™ Fernverifizierungsinfrastruktur", "Entwicklungen nationaler Behörden", "Transparenzanforderungen nach Artikel 50", "Konversationelle AI-Act-Beratung in 27 EU-Sprachen"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
-  es: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generador™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSACIONAL EN 27 IDIOMAS DE LA UE", faqTitle: "FAQ de Cumplimiento", login: "Iniciar sesión", newsLabel: "⚡  NUEVA ORIENTACIÓN", newsItems: ["inteligencia regulatoria", "10 módulos operativos ya activos", "biblioteca de gobernanza de 70 documentos", "Orientación sobre obligaciones de alto riesgo actualizada", "infraestructura de verificación remota RRVI™", "Novedades de las autoridades nacionales", "Requisitos de transparencia del artículo 50", "Orientación conversacional sobre la AI Act en 27 idiomas UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERADOR", footerTagline: "Ask &amp; Generator™"},
-  it: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generatore™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAZIONALE IN 27 LINGUE UE", faqTitle: "FAQ sulla Conformità", login: "Accedi", newsLabel: "⚡  NUOVE LINEE GUIDA", newsItems: ["intelligence normativa", "10 moduli operativi ora attivi", "libreria di governance di 70 documenti", "Linee guida sugli obblighi ad alto rischio aggiornate", "infrastruttura di verifica remota RRVI™", "Sviluppi delle autorità nazionali", "Requisiti di trasparenza dell'articolo 50", "Guida conversazionale sull'AI Act in 27 lingue UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATORE", footerTagline: "Ask &amp; Generator™"},
-  ro: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAȚIONAL ÎN 27 DE LIMBI UE", faqTitle: "Întrebări despre Conformitate", login: "Autentificare", newsLabel: "⚡  GHID NOU", newsItems: ["informații de reglementare", "10 module operaționale acum active", "bibliotecă de guvernanță de 70 de documente", "Ghidul privind obligațiile de risc ridicat actualizat", "infrastructură de verificare la distanță RRVI™", "Evoluții ale autorităților naționale", "Cerințe de transparență conform articolului 50", "Ghidare conversațională AI Act în 27 de limbi UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
-  pl: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONWERSACYJNY W 27 JĘZYKACH UE", faqTitle: "FAQ Zgodności", login: "Zaloguj się", newsLabel: "⚡  NOWE WYTYCZNE", newsItems: ["analiza regulacyjna", "10 modułów operacyjnych już dostępnych", "biblioteka zarządzania z 70 dokumentami", "Zaktualizowano wytyczne dotyczące obowiązków wysokiego ryzyka", "infrastruktura zdalnej weryfikacji RRVI™", "Zmiany krajowych organów nadzoru", "Wymogi przejrzystości z artykułu 50", "Konwersacyjne wskazówki AI Act w 27 językach UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
+  en: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSATIONAL IN 27 LANGUAGES", faqTitle: "Compliance FAQ", login: "Login", newsLabel: "⚡  NEW GUIDANCE", newsItems: ["regulatory intelligence", "10 operational modules now live", "70-document governance library", "High-risk obligations guidance updated", "RRVI™ remote verification infrastructure", "National authority developments", "Article 50 transparency requirements", "Conversational AI Act guidance in 27 EU languages"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
+  fr: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Générateur™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSATIONNEL EN 27 LANGUES", faqTitle: "FAQ Conformité", login: "Connexion", newsLabel: "⚡  NOUVELLES DIRECTIVES", newsItems: ["veille réglementaire", "10 modules opérationnels désormais actifs", "bibliothèque de gouvernance de 70 documents", "Directives sur les obligations à haut risque mises à jour", "infrastructure de vérification à distance RRVI™", "Évolutions des autorités nationales", "Exigences de transparence de l'article 50", "Guidance conversationnelle sur l'AI Act en 27 langues UE"], demoLabel: "🎯 DÉMO", yourFirmLabel: "💻 GÉNÉRATEUR", footerTagline: "Ask &amp; Generator™"},
+  de: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — KONVERSATIONELL IN 27 SPRACHEN", faqTitle: "Konformität FAQ", login: "Anmelden", newsLabel: "⚡  NEUE LEITLINIEN", newsItems: ["Regulatorische Intelligenz", "10 operative Module jetzt live", "Governance-Bibliothek mit 70 Dokumenten", "Leitlinien zu Hochrisiko-Pflichten aktualisiert", "RRVI™ Fernverifizierungsinfrastruktur", "Entwicklungen nationaler Behörden", "Transparenzanforderungen nach Artikel 50", "Konversationelle AI-Act-Beratung in 27 EU-Sprachen"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
+  es: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generador™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSACIONAL EN 27 IDIOMAS", faqTitle: "FAQ de Cumplimiento", login: "Iniciar sesión", newsLabel: "⚡  NUEVA ORIENTACIÓN", newsItems: ["inteligencia regulatoria", "10 módulos operativos ya activos", "biblioteca de gobernanza de 70 documentos", "Orientación sobre obligaciones de alto riesgo actualizada", "infraestructura de verificación remota RRVI™", "Novedades de las autoridades nacionales", "Requisitos de transparencia del artículo 50", "Orientación conversacional sobre la AI Act en 27 idiomas UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERADOR", footerTagline: "Ask &amp; Generator™"},
+  it: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generatore™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSAZIONALE IN 27 LINGUE", faqTitle: "FAQ sulla Conformità", login: "Accedi", newsLabel: "⚡  NUOVE LINEE GUIDA", newsItems: ["intelligence normativa", "10 moduli operativi ora attivi", "libreria di governance di 70 documenti", "Linee guida sugli obblighi ad alto rischio aggiornate", "infrastruttura di verifica remota RRVI™", "Sviluppi delle autorità nazionali", "Requisiti di trasparenza dell'articolo 50", "Guida conversazionale sull'AI Act in 27 lingue UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATORE", footerTagline: "Ask &amp; Generator™"},
+  ro: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSAȚIONAL ÎN 27 DE LIMBI", faqTitle: "Întrebări despre Conformitate", login: "Autentificare", newsLabel: "⚡  GHID NOU", newsItems: ["informații de reglementare", "10 module operaționale acum active", "bibliotecă de guvernanță de 70 de documente", "Ghidul privind obligațiile de risc ridicat actualizat", "infrastructură de verificare la distanță RRVI™", "Evoluții ale autorităților naționale", "Cerințe de transparență conform articolului 50", "Ghidare conversațională AI Act în 27 de limbi UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
+  pl: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — KONWERSACYJNY W 27 JĘZYKACH", faqTitle: "FAQ Zgodności", login: "Zaloguj się", newsLabel: "⚡  NOWE WYTYCZNE", newsItems: ["analiza regulacyjna", "10 modułów operacyjnych już dostępnych", "biblioteka zarządzania z 70 dokumentami", "Zaktualizowano wytyczne dotyczące obowiązków wysokiego ryzyka", "infrastruktura zdalnej weryfikacji RRVI™", "Zmiany krajowych organów nadzoru", "Wymogi przejrzystości z artykułu 50", "Konwersacyjne wskazówki AI Act w 27 językach UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
 
-  nl: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONEEL IN 27 EU-TALEN", faqTitle: "Naleving FAQ", login: "Inloggen", newsLabel: "⚡  NIEUWE RICHTLIJN", newsItems: ["regelgevende intelligentie", "10 operationele modules nu live", "governance-bibliotheek met 70 documenten", "Richtlijnen over hoogrisicoverplichtingen bijgewerkt", "RRVI™ infrastructuur voor verificatie op afstand", "Ontwikkelingen nationale autoriteiten", "Transparantievereisten van artikel 50", "Conversationele AI Act-begeleiding in 27 EU-talen"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
-  pt: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Gerador™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSACIONAL EM 27 IDIOMAS DA UE", faqTitle: "FAQ de Conformidade", login: "Iniciar Sessão", newsLabel: "⚡  NOVA ORIENTAÇÃO", newsItems: ["inteligência regulamentar", "10 módulos operacionais já ativos", "biblioteca de governação de 70 documentos", "Orientação sobre obrigações de alto risco atualizada", "infraestrutura de verificação remota RRVI™", "Desenvolvimentos das autoridades nacionais", "Requisitos de transparência do artigo 50", "Orientação conversacional sobre a AI Act em 27 idiomas da UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GERADOR", footerTagline: "Ask &amp; Generator™"},
-  sv: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONVERSATIONSBASERAD PÅ 27 EU-SPRÅK", faqTitle: "FAQ om Efterlevnad", login: "Logga In", newsLabel: "⚡  NY VÄGLEDNING", newsItems: ["regulatorisk intelligens", "10 operativa moduler nu live", "styrningsbibliotek med 70 dokument", "Vägledning om högriskskyldigheter uppdaterad", "RRVI™ infrastruktur för fjärrverifiering", "Utveckling hos nationella myndigheter", "Transparenskrav enligt artikel 50", "Konversationsbaserad AI Act-vägledning på 27 EU-språk"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
+  nl: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSATIONEEL IN 27 TALEN", faqTitle: "Naleving FAQ", login: "Inloggen", newsLabel: "⚡  NIEUWE RICHTLIJN", newsItems: ["regelgevende intelligentie", "10 operationele modules nu live", "governance-bibliotheek met 70 documenten", "Richtlijnen over hoogrisicoverplichtingen bijgewerkt", "RRVI™ infrastructuur voor verificatie op afstand", "Ontwikkelingen nationale autoriteiten", "Transparantievereisten van artikel 50", "Conversationele AI Act-begeleiding in 27 EU-talen"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
+  pt: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Gerador™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSACIONAL EM 27 IDIOMAS", faqTitle: "FAQ de Conformidade", login: "Iniciar Sessão", newsLabel: "⚡  NOVA ORIENTAÇÃO", newsItems: ["inteligência regulamentar", "10 módulos operacionais já ativos", "biblioteca de governação de 70 documentos", "Orientação sobre obrigações de alto risco atualizada", "infraestrutura de verificação remota RRVI™", "Desenvolvimentos das autoridades nacionais", "Requisitos de transparência do artigo 50", "Orientação conversacional sobre a AI Act em 27 idiomas da UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GERADOR", footerTagline: "Ask &amp; Generator™"},
+  sv: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — KONVERSATIONSBASERAD PÅ 27 SPRÅK", faqTitle: "FAQ om Efterlevnad", login: "Logga In", newsLabel: "⚡  NY VÄGLEDNING", newsItems: ["regulatorisk intelligens", "10 operativa moduler nu live", "styrningsbibliotek med 70 dokument", "Vägledning om högriskskyldigheter uppdaterad", "RRVI™ infrastruktur för fjärrverifiering", "Utveckling hos nationella myndigheter", "Transparenskrav enligt artikel 50", "Konversationsbaserad AI Act-vägledning på 27 EU-språk"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
 
-  cs: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generátor™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONVERZAČNÍ VE 27 JAZYCÍCH EU", faqTitle: "FAQ o Shodě", login: "Přihlásit se", newsLabel: "⚡  NOVÝ POKYN", newsItems: ["regulační zpravodajství", "10 provozních modulů nyní živě", "knihovna správy se 70 dokumenty", "Pokyny k povinnostem vysokého rizika aktualizovány", "infrastruktura pro vzdálené ověřování RRVI™", "Vývoj vnitrostátních orgánů", "Požadavky na transparentnost podle článku 50", "Konverzační poradenství AI Act v 27 jazycích EU"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERÁTOR", footerTagline: "Ask &amp; Generator™"},
-  el: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Γεννήτρια™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 ΣΥΝΟΜΙΛΙΑΚΟ ΣΕ 27 ΓΛΩΣΣΕΣ ΤΗΣ ΕΕ", faqTitle: "Συχνές Ερωτήσεις Συμμόρφωσης", login: "Σύνδεση", newsLabel: "⚡  ΝΕΑ ΚΑΤΕΥΘΥΝΤΗΡΙΑ ΓΡΑΜΜΗ", newsItems: ["ρυθμιστική πληροφόρηση", "10 λειτουργικές ενότητες τώρα ζωντανά", "βιβλιοθήκη διακυβέρνησης 70 εγγράφων", "Ενημερώθηκαν οι κατευθυντήριες γραμμές για υποχρεώσεις υψηλού κινδύνου", "υποδομή απομακρυσμένης επαλήθευσης RRVI™", "Εξελίξεις εθνικών αρχών", "Απαιτήσεις διαφάνειας του άρθρου 50", "Συνομιλιακή καθοδήγηση AI Act σε 27 γλώσσες της ΕΕ"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 ΓΕΝΝΗΤΡΙΑ", footerTagline: "Ask &amp; Generator™"},
-  hu: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generátor™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 BESZÉLGETÉSALAPÚ 27 UNIÓS NYELVEN", faqTitle: "Megfelelőségi GYIK", login: "Bejelentkezés", newsLabel: "⚡  ÚJ ÚTMUTATÓ", newsItems: ["szabályozási intelligencia", "10 működési modul már élesben", "70 dokumentumos irányítási könyvtár", "Frissített útmutató a magas kockázatú kötelezettségekhez", "RRVI™ távoli ellenőrzési infrastruktúra", "Nemzeti hatóságok fejleményei", "Az 50. cikk átláthatósági követelményei", "Beszélgetésalapú AI Act útmutatás 27 uniós nyelven"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERÁTOR", footerTagline: "Ask &amp; Generator™"},
-  da: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 SAMTALEBASERET PÅ 27 EU-SPROG", faqTitle: "Overholdelse FAQ", login: "Log Ind", newsLabel: "⚡  NY VEJLEDNING", newsItems: ["regulatorisk intelligens", "10 operationelle moduler nu live", "70-dokument styringsbibliotek", "Vejledning om højrisikoforpligtelser opdateret", "RRVI™ infrastruktur til fjernverifikation", "Udvikling hos nationale myndigheder", "Gennemsigtighedskrav i artikel 50", "Samtalebaseret AI Act-vejledning på 27 EU-sprog"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
-  fi: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generaattori™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KESKUSTELEVA 27 EU-KIELELLÄ", faqTitle: "Vaatimustenmukaisuuden UKK", login: "Kirjaudu Sisään", newsLabel: "⚡  UUSI OHJEISTUS", newsItems: ["sääntelytiedustelu", "10 toiminnallista moduulia nyt käytössä", "70 asiakirjan hallintakirjasto", "Korkean riskin velvoitteita koskeva ohjeistus päivitetty", "RRVI™ etätarkastusinfrastruktuuri", "Kansallisten viranomaisten kehitys", "Artiklan 50 läpinäkyvyysvaatimukset", "Keskusteleva AI Act -ohjeistus 27 EU-kielellä"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERAATTORI", footerTagline: "Ask &amp; Generator™"},
-  bg: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Генератор™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 РАЗГОВОРЕН НА 27 ЕЗИКА НА ЕС", faqTitle: "ЧЗВ за Съответствие", login: "Вход", newsLabel: "⚡  НОВО НАСОКА", newsItems: ["регулаторна информация", "10 оперативни модула вече активни", "библиотека за управление със 70 документа", "Насоките относно задълженията за висок риск актуализирани", "инфраструктура за дистанционна верификация RRVI™", "Развитие на националните органи", "Изисквания за прозрачност съгласно член 50", "Разговорни насоки за Акта за ИИ на 27 езика на ЕС"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 ГЕНЕРАТОР", footerTagline: "Ask &amp; Generator™"},
-  sk: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generátor™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONVERZAČNÝ V 27 JAZYKOCH EÚ", faqTitle: "FAQ o Zhode", login: "Prihlásiť Sa", newsLabel: "⚡  NOVÝ POKYN", newsItems: ["regulačné spravodajstvo", "10 prevádzkových modulov teraz naživo", "knižnica správy so 70 dokumentmi", "Pokyny k povinnostiam vysokého rizika aktualizované", "infraštruktúra pre vzdialené overovanie RRVI™", "Vývoj národných orgánov", "Požiadavky na transparentnosť podľa článku 50", "Konverzačné poradenstvo AI Act v 27 jazykoch EÚ"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERÁTOR", footerTagline: "Ask &amp; Generator™"},
+  cs: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generátor™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — KONVERZAČNÍ VE 27 JAZYCÍCH", faqTitle: "FAQ o Shodě", login: "Přihlásit se", newsLabel: "⚡  NOVÝ POKYN", newsItems: ["regulační zpravodajství", "10 provozních modulů nyní živě", "knihovna správy se 70 dokumenty", "Pokyny k povinnostem vysokého rizika aktualizovány", "infrastruktura pro vzdálené ověřování RRVI™", "Vývoj vnitrostátních orgánů", "Požadavky na transparentnost podle článku 50", "Konverzační poradenství AI Act v 27 jazycích EU"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERÁTOR", footerTagline: "Ask &amp; Generator™"},
+  el: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Γεννήτρια™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — ΣΥΝΟΜΙΛΙΑΚΟ ΣΕ 27 ΓΛΩΣΣΕΣ", faqTitle: "Συχνές Ερωτήσεις Συμμόρφωσης", login: "Σύνδεση", newsLabel: "⚡  ΝΕΑ ΚΑΤΕΥΘΥΝΤΗΡΙΑ ΓΡΑΜΜΗ", newsItems: ["ρυθμιστική πληροφόρηση", "10 λειτουργικές ενότητες τώρα ζωντανά", "βιβλιοθήκη διακυβέρνησης 70 εγγράφων", "Ενημερώθηκαν οι κατευθυντήριες γραμμές για υποχρεώσεις υψηλού κινδύνου", "υποδομή απομακρυσμένης επαλήθευσης RRVI™", "Εξελίξεις εθνικών αρχών", "Απαιτήσεις διαφάνειας του άρθρου 50", "Συνομιλιακή καθοδήγηση AI Act σε 27 γλώσσες της ΕΕ"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 ΓΕΝΝΗΤΡΙΑ", footerTagline: "Ask &amp; Generator™"},
+  hu: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generátor™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — BESZÉLGETÉSALAPÚ 27 NYELVEN", faqTitle: "Megfelelőségi GYIK", login: "Bejelentkezés", newsLabel: "⚡  ÚJ ÚTMUTATÓ", newsItems: ["szabályozási intelligencia", "10 működési modul már élesben", "70 dokumentumos irányítási könyvtár", "Frissített útmutató a magas kockázatú kötelezettségekhez", "RRVI™ távoli ellenőrzési infrastruktúra", "Nemzeti hatóságok fejleményei", "Az 50. cikk átláthatósági követelményei", "Beszélgetésalapú AI Act útmutatás 27 uniós nyelven"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERÁTOR", footerTagline: "Ask &amp; Generator™"},
+  da: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — SAMTALEBASERET PÅ 27 SPROG", faqTitle: "Overholdelse FAQ", login: "Log Ind", newsLabel: "⚡  NY VEJLEDNING", newsItems: ["regulatorisk intelligens", "10 operationelle moduler nu live", "70-dokument styringsbibliotek", "Vejledning om højrisikoforpligtelser opdateret", "RRVI™ infrastruktur til fjernverifikation", "Udvikling hos nationale myndigheder", "Gennemsigtighedskrav i artikel 50", "Samtalebaseret AI Act-vejledning på 27 EU-sprog"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
+  fi: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generaattori™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — KESKUSTELEVA 27 KIELELLÄ", faqTitle: "Vaatimustenmukaisuuden UKK", login: "Kirjaudu Sisään", newsLabel: "⚡  UUSI OHJEISTUS", newsItems: ["sääntelytiedustelu", "10 toiminnallista moduulia nyt käytössä", "70 asiakirjan hallintakirjasto", "Korkean riskin velvoitteita koskeva ohjeistus päivitetty", "RRVI™ etätarkastusinfrastruktuuri", "Kansallisten viranomaisten kehitys", "Artiklan 50 läpinäkyvyysvaatimukset", "Keskusteleva AI Act -ohjeistus 27 EU-kielellä"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERAATTORI", footerTagline: "Ask &amp; Generator™"},
+  bg: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Генератор™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — РАЗГОВОРЕН НА 27 ЕЗИКА", faqTitle: "ЧЗВ за Съответствие", login: "Вход", newsLabel: "⚡  НОВО НАСОКА", newsItems: ["регулаторна информация", "10 оперативни модула вече активни", "библиотека за управление със 70 документа", "Насоките относно задълженията за висок риск актуализирани", "инфраструктура за дистанционна верификация RRVI™", "Развитие на националните органи", "Изисквания за прозрачност съгласно член 50", "Разговорни насоки за Акта за ИИ на 27 езика на ЕС"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 ГЕНЕРАТОР", footerTagline: "Ask &amp; Generator™"},
+  sk: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generátor™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — KONVERZAČNÝ V 27 JAZYKOCH", faqTitle: "FAQ o Zhode", login: "Prihlásiť Sa", newsLabel: "⚡  NOVÝ POKYN", newsItems: ["regulačné spravodajstvo", "10 prevádzkových modulov teraz naživo", "knižnica správy so 70 dokumentmi", "Pokyny k povinnostiam vysokého rizika aktualizované", "infraštruktúra pre vzdialené overovanie RRVI™", "Vývoj národných orgánov", "Požiadavky na transparentnosť podľa článku 50", "Konverzačné poradenstvo AI Act v 27 jazykoch EÚ"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERÁTOR", footerTagline: "Ask &amp; Generator™"},
 };
 
 const UI_LABELS = {
