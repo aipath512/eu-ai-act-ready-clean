@@ -244,7 +244,7 @@ main{
   background:#fff;
   color:#000;
   text-align:center;
-  font-family:Impact,"Arial Narrow",sans-serif;
+  font-family:Impact,Arial Narrow,sans-serif;
   font-size:clamp(50px,9vw,112px);
   line-height:.9;
   letter-spacing:-.03em;
@@ -257,7 +257,7 @@ main{
   background:linear-gradient(#d90018,#a30010);
   color:#fff;
   text-align:center;
-  font-family:Impact,"Arial Narrow",sans-serif;
+  font-family:Impact,Arial Narrow,sans-serif;
   font-size:clamp(31px,5vw,64px);
   line-height:1;
   padding:16px 30px;
@@ -608,6 +608,101 @@ footer{
 }
 </script>
 
+<style>
+/* ============================================================
+   FUTURISTIC PASS — global modernization layer
+   Applies on top of the existing design without touching markup:
+   glass cards, glow accents, mesh background, smooth motion.
+   ============================================================ */
+
+/* atmospheric mesh background instead of flat black */
+body{
+  background:
+    radial-gradient(circle at 15% 10%, rgba(217,0,24,.14), transparent 32%),
+    radial-gradient(circle at 85% 18%, rgba(0,212,255,.08), transparent 30%),
+    radial-gradient(circle at 50% 75%, rgba(217,0,24,.10), transparent 40%),
+    #030303 !important;
+}
+
+/* smooth motion everywhere by default */
+a, button, .why-card, .btn-red, .flow-step, .Ask-shell button,
+[data-gated="true"]{
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease, opacity .25s ease;
+}
+
+/* glass-card treatment for the WHY US cards */
+.why-card{
+  background:linear-gradient(160deg, rgba(20,20,20,.55), rgba(5,5,5,.75)) !important;
+  border:1px solid rgba(255,51,51,.35) !important;
+  border-radius:22px !important;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 20px 50px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.03) inset;
+}
+.why-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 26px 60px rgba(255,51,51,.18), 0 0 0 1px rgba(255,51,51,.25) inset;
+}
+.why-card.featured{
+  border-color:rgba(0,212,255,.4) !important;
+}
+.why-card.featured:hover{
+  box-shadow:0 26px 60px rgba(0,212,255,.18), 0 0 0 1px rgba(0,212,255,.25) inset;
+}
+
+/* glass treatment for the "What You Get" + Gemini Audit cards (inline-styled, matched by their exact style value) */
+div[style*="background:linear-gradient(#0d0d0d,#050505)"],
+div[style*="background:linear-gradient(#090909,#050505)"]{
+  background:linear-gradient(160deg, rgba(18,18,18,.6), rgba(4,4,4,.8)) !important;
+  border-radius:20px !important;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 18px 44px rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.03) inset;
+}
+
+/* soften + glow the white hero box instead of a flat rectangle */
+.hero-title{
+  border-radius:18px;
+  box-shadow:0 24px 60px rgba(217,0,24,.25), 0 0 0 1px rgba(255,255,255,.06);
+}
+
+/* glow + rounded ends on the workflow chevron bar */
+.flow-step:first-child{ border-radius:10px 0 0 10px; }
+.flow-step:last-child{ border-radius:0 10px 10px 0; }
+.flow-step--start{ box-shadow:0 8px 24px rgba(217,0,24,.55), 0 0 20px rgba(255,43,43,.35); }
+.flow-step--end{ box-shadow:0 8px 24px rgba(217,160,26,.4); }
+
+/* buttons: glow on hover instead of flat hard-stop */
+.btn-red:hover,
+[data-gated="true"]:hover,
+.Ask-shell button:hover{
+  box-shadow:0 0 26px rgba(255,32,32,.55);
+  transform:translateY(-2px);
+}
+
+/* thin animated accent line under the header for a modern touch */
+.site-header{
+  position:relative;
+}
+.site-header::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-1px; height:2px;
+  background:linear-gradient(90deg, transparent, #ff2020, #00d4ff, transparent);
+  background-size:200% 100%;
+  animation:scanGlow 6s linear infinite;
+  opacity:.6;
+}
+@keyframes scanGlow{
+  0%{ background-position:0% 0; }
+  100%{ background-position:200% 0; }
+}
+
+/* rounded, softer red boxes site-wide (Gemini hash box, badges, etc.) */
+[style*="border-radius:6px"], [style*="border-radius:8px"]{
+  border-radius:12px !important;
+}
+</style>
+
 </head>
 <body>
 
@@ -621,7 +716,7 @@ footer{
     </div>
   </a>
 <div class="flag-ticker" style="flex:1;overflow:hidden;margin:0 18px;display:flex;align-items:center;justify-content:center;">
-  <span style="color:#e5e5e5;font-weight:800;font-size:13px;letter-spacing:0.04em;white-space:nowrap;">27 Languages &nbsp;·&nbsp; EU Countries &nbsp;·&nbsp; Conversational</span>
+  <span data-i18n="header.ticker" style="color:#e5e5e5;font-weight:800;font-size:13px;letter-spacing:0.04em;white-space:nowrap;">27 Languages &nbsp;·&nbsp; EU Countries &nbsp;·&nbsp; Conversational</span>
 </div>
   <div class="actions">
 <select id="langSelectNew"
@@ -711,20 +806,85 @@ footer{
   <section class="hero">
 
     <h1 class="hero-title" id="hero-title">
-      EU AI ACT READY™
+      EU AI ACT™<span style='display:inline-block;background:linear-gradient(#d90018,#a30010);color:#fff;font-family:Impact,Arial Narrow,sans-serif;font-size:clamp(22px,5vw,40px);line-height:1;padding:10px 24px;margin-top:14px;text-transform:uppercase;box-shadow:0 14px 32px rgba(200,0,20,.2);'>PACK Generator™</span>
     </h1>
 
-    <div class="hero-subtitle" id="hero-subtitle">
-      Ask &amp; GENERATOR™
-    </div>
+<style>
+  .flow{
+    display:flex;
+    align-items:stretch;
+    width:100%;
+    padding:26px 4px 16px;
+    margin:4px 0 2px 0;
+  }
+  .flow-step{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    flex:1 1 0;
+    min-width:0;
+    height:40px;
+    padding:0 8px 0 16px;
+    margin-left:-12px;
+    clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
+    text-decoration:none;
+    z-index:1;
+  }
+  .flow-step:first-child{
+    margin-left:0;
+    padding-left:12px;
+    clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%);
+  }
+  .flow-step--start{
+    background:linear-gradient(135deg,#ff2b2b,#c90016);
+    z-index:3;
+    box-shadow:0 8px 18px rgba(217,0,24,.5);
+  }
+  .flow-step--mid{
+    background:linear-gradient(135deg,#2b2b2b,#111);
+    z-index:2;
+  }
+  .flow-step--end{
+    background:linear-gradient(135deg,#d9a01a,#a3760f);
+    z-index:1;
+  }
+  .flow-tag{
+    font-size:7px;
+    font-weight:900;
+    letter-spacing:.06em;
+    color:rgba(255,255,255,.75);
+    text-transform:uppercase;
+  }
+  .flow-step--end .flow-tag{ color:rgba(20,15,0,.65); }
+  .flow-label{
+    margin-top:1px;
+    font-size:9.5px;
+    font-weight:800;
+    color:#fff;
+    text-transform:uppercase;
+    letter-spacing:.01em;
+    text-align:center;
+    line-height:1.1;
+  }
+  .flow-step--end .flow-label{ color:#1a1200; }
+</style>
 
-<div style="text-align:left !important; width:100% !important; margin: 4px 0 2px 20px !important; display:block !important;">
-  <a href="/roadmap" 
-     style="color:#ffffff; font-size:15px; font-weight:500; text-decoration:none; 
-            border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:2px;">
-    YOU ARE HERE! → Next STOP
+<nav class="flow" aria-label="Roadmap workflow">
+  <a href="/roadmap" class="flow-step flow-step--start" title="You are here — this compliance pack is step 1">
+    <span class="flow-tag" data-i18n="flow.step1of8">Step 1 of 8</span>
+    <span class="flow-label" data-i18n="flow.youarehere">You Are Here</span>
   </a>
-</div>
+  <a href="/roadmap" class="flow-step flow-step--mid" title="7 more stages — see the full roadmap">
+    <span class="flow-tag" data-i18n="flow.next">Next</span>
+    <span class="flow-label" data-i18n="flow.7stages">7 More Stages</span>
+  </a>
+  <a href="/roadmap" class="flow-step flow-step--end" title="See the full roadmap">
+    <span class="flow-tag" data-i18n="flow.destination">Destination</span>
+    <span class="flow-label" data-i18n="flow.fullroadmap">Full Roadmap</span>
+  </a>
+</nav>
 
   </section>
 
@@ -836,114 +996,114 @@ footer{
       #services-grid{ grid-template-columns:1fr !important; }
     }
   </style>
-<h2 id="services-title" style="font-size:32px; color:#ff2020; margin-bottom:20px; text-transform:uppercase;">What You Get</h2>
+<h2 id="services-title" data-i18n="services.title" style="font-size:32px; color:#ff2020; margin-bottom:20px; text-transform:uppercase;">What You Get</h2>
 
-  <p style="max-width:900px; color:#ffffff; font-size:17px; line-height:1.7; margin-bottom:30px;">
+  <p id="services-intro" data-i18n="services.intro" style="max-width:900px; color:#ffffff; font-size:17px; line-height:1.7; margin-bottom:30px;">
     A multilingual, document-first EU AI Act readiness application that combines conversational regulatory guidance, a publicly inspectable 70-document governance library, and firm-branded document generation across ten operational modules.
   </p>
 
   <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505); margin-bottom:24px;">
-    <div style="font-size:12px; color:#ff2020; font-weight:900; letter-spacing:.08em; margin-bottom:14px;">WHAT IS GENUINELY STRONG — WE HAVE BUILT SOMETHING UNCOMMON</div>
+    <div id="services-strong-title" data-i18n="services.strong.title" style="font-size:12px; color:#ff2020; font-weight:900; letter-spacing:.08em; margin-bottom:14px;">WHAT IS GENUINELY STRONG — WE HAVE BUILT SOMETHING UNCOMMON</div>
     <ul style="margin:0; padding-left:20px; color:#f0f0f0; font-size:15px; line-height:2;">
-      <li>A visible product, not merely content</li>
-      <li>A direct ASK interface</li>
-      <li>A tangible 70-document corpus</li>
-      <li>A coherent ten-module architecture</li>
-      <li>An immediate company-generation path</li>
-      <li>Multilingual capability</li>
-      <li>A credible foundation for RRVI</li>
-      <li>A strong SME entry point</li>
+      <li id="services-strong-li0" data-i18n="services.strong.li0">A visible product, not merely content</li>
+      <li id="services-strong-li1" data-i18n="services.strong.li1">A direct ASK interface</li>
+      <li id="services-strong-li2" data-i18n="services.strong.li2">A tangible 70-document corpus</li>
+      <li id="services-strong-li3" data-i18n="services.strong.li3">A coherent ten-module architecture</li>
+      <li id="services-strong-li4" data-i18n="services.strong.li4">An immediate company-generation path</li>
+      <li id="services-strong-li5" data-i18n="services.strong.li5">Multilingual capability</li>
+      <li id="services-strong-li6" data-i18n="services.strong.li6">A credible foundation for RRVI</li>
+      <li id="services-strong-li7" data-i18n="services.strong.li7">A strong SME entry point</li>
     </ul>
   </div>
 
   <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:24px;">
     <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505);">
-      <div style="font-size:12px; color:#00d4ff; font-weight:900; letter-spacing:.08em; margin-bottom:14px;">10 OPERATIONAL MODULES × 7 COMPLETE DOCS/MODULE</div>
+      <div id="services-modules-title" data-i18n="services.modules.title" style="font-size:12px; color:#00d4ff; font-weight:900; letter-spacing:.08em; margin-bottom:14px;">10 OPERATIONAL MODULES × 7 COMPLETE DOCS/MODULE</div>
       <ul style="margin:0; padding-left:20px; color:#f0f0f0; font-size:14px; line-height:1.9;">
-        <li>01 — AI System Inventory</li>
-        <li>02 — Risk Classification</li>
-        <li>03 — AI Literacy</li>
-        <li>04 — Prohibited Practices</li>
-        <li>05 — High-Risk Assessment</li>
-        <li>06 — Technical Documentation</li>
-        <li>07 — Human Oversight</li>
-        <li>08 — Data Governance</li>
-        <li>09 — Logging & Monitoring</li>
-        <li>10 — Incident Reporting</li>
+        <li id="services-modules-li0" data-i18n="services.modules.li0">01 — AI System Inventory</li>
+        <li id="services-modules-li1" data-i18n="services.modules.li1">02 — Risk Classification</li>
+        <li id="services-modules-li2" data-i18n="services.modules.li2">03 — AI Literacy</li>
+        <li id="services-modules-li3" data-i18n="services.modules.li3">04 — Prohibited Practices</li>
+        <li id="services-modules-li4" data-i18n="services.modules.li4">05 — High-Risk Assessment</li>
+        <li id="services-modules-li5" data-i18n="services.modules.li5">06 — Technical Documentation</li>
+        <li id="services-modules-li6" data-i18n="services.modules.li6">07 — Human Oversight</li>
+        <li id="services-modules-li7" data-i18n="services.modules.li7">08 — Data Governance</li>
+        <li id="services-modules-li8" data-i18n="services.modules.li8">09 — Logging & Monitoring</li>
+        <li id="services-modules-li9" data-i18n="services.modules.li9">10 — Incident Reporting</li>
       </ul>
     </div>
 
     <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505);">
-      <div style="font-size:12px; color:#ccc; font-weight:900; letter-spacing:.08em; margin-bottom:14px;">COMING SOON</div>
+      <div id="services-comingsoon-title" data-i18n="services.comingsoon.title" style="font-size:12px; color:#ccc; font-weight:900; letter-spacing:.08em; margin-bottom:14px;">COMING SOON</div>
       <ul style="margin:0; padding-left:20px; color:#e0e0e0; font-size:13px; line-height:1.8; columns:2; column-gap:20px;">
-        <li>Administration Guide</li>
-        <li>Architecture</li>
-        <li>Backup & Recovery</li>
-        <li>Compliance Matrix</li>
-        <li>Developer Guide</li>
-        <li>Document Index</li>
-        <li>Document Traceability Matrix</li>
-        <li>FAQ</li>
-        <li>Glossary</li>
-        <li>Governance</li>
-        <li>Inspection Guide</li>
-        <li>Inspector Guide</li>
-        <li>Installation Guide</li>
-        <li>Maintenance Guide</li>
-        <li>Operations Manual</li>
-        <li>References</li>
-        <li>Release Notes</li>
-        <li>Roadmap</li>
-        <li>Security</li>
-        <li>User Manual</li>
+        <li id="services-comingsoon-li0" data-i18n="services.comingsoon.li0">Administration Guide</li>
+        <li id="services-comingsoon-li1" data-i18n="services.comingsoon.li1">Architecture</li>
+        <li id="services-comingsoon-li2" data-i18n="services.comingsoon.li2">Backup & Recovery</li>
+        <li id="services-comingsoon-li3" data-i18n="services.comingsoon.li3">Compliance Matrix</li>
+        <li id="services-comingsoon-li4" data-i18n="services.comingsoon.li4">Developer Guide</li>
+        <li id="services-comingsoon-li5" data-i18n="services.comingsoon.li5">Document Index</li>
+        <li id="services-comingsoon-li6" data-i18n="services.comingsoon.li6">Document Traceability Matrix</li>
+        <li id="services-comingsoon-li7" data-i18n="services.comingsoon.li7">FAQ</li>
+        <li id="services-comingsoon-li8" data-i18n="services.comingsoon.li8">Glossary</li>
+        <li id="services-comingsoon-li9" data-i18n="services.comingsoon.li9">Governance</li>
+        <li id="services-comingsoon-li10" data-i18n="services.comingsoon.li10">Inspection Guide</li>
+        <li id="services-comingsoon-li11" data-i18n="services.comingsoon.li11">Inspector Guide</li>
+        <li id="services-comingsoon-li12" data-i18n="services.comingsoon.li12">Installation Guide</li>
+        <li id="services-comingsoon-li13" data-i18n="services.comingsoon.li13">Maintenance Guide</li>
+        <li id="services-comingsoon-li14" data-i18n="services.comingsoon.li14">Operations Manual</li>
+        <li id="services-comingsoon-li15" data-i18n="services.comingsoon.li15">References</li>
+        <li id="services-comingsoon-li16" data-i18n="services.comingsoon.li16">Release Notes</li>
+        <li id="services-comingsoon-li17" data-i18n="services.comingsoon.li17">Roadmap</li>
+        <li id="services-comingsoon-li18" data-i18n="services.comingsoon.li18">Security</li>
+        <li id="services-comingsoon-li19" data-i18n="services.comingsoon.li19">User Manual</li>
       </ul>
     </div>
   </div>
 
   <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505); margin-bottom:24px;">
-    <h3 style="color:#ff2020; font-size:18px; margin:0 0 14px;">Why the 70-Document Corpus Is Your Moat</h3>
-    <p style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">The Inspection Readiness Factor:</strong> Regulators and notified bodies do not trust "AI outputs." They trust audit trails. By making the 70-document governance library publicly inspectable, you turn your product into a defensible artifact.</p>
-    <p style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">The Template-to-Tail Pipeline:</strong> By mapping 10 operational modules × 7 documents = 70 outputs, you solve the biggest pain point for SMEs — "we don't know what we don't know." A structured skeleton, populated with firm-branded specifics.</p>
+    <h3 id="services-moat-title" data-i18n="services.moat.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Why the 70-Document Corpus Is Your Moat</h3>
+    <p id="services-moat-p1" data-i18n="services.moat.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">The Inspection Readiness Factor:</strong> Regulators and notified bodies do not trust "AI outputs." They trust audit trails. By making the 70-document governance library publicly inspectable, you turn your product into a defensible artifact.</p>
+    <p id="services-moat-p2" data-i18n="services.moat.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">The Template-to-Tail Pipeline:</strong> By mapping 10 operational modules × 7 documents = 70 outputs, you solve the biggest pain point for SMEs — "we don't know what we don't know." A structured skeleton, populated with firm-branded specifics.</p>
   </div>
 
   <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505); margin-bottom:24px;">
-    <h3 style="color:#ff2020; font-size:18px; margin:0 0 14px;">Strategic Architecture — The Connective Tissue</h3>
-    <p style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">The Golden Thread:</strong> When a system is classified "High-Risk" in Module 02, that classification automatically populates the severity fields in Module 05 and dictates the logging frequency in Module 09.</p>
-    <p style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">The ASK Interface:</strong> Not a general chatbot — a Contextual Interpreter. A question asked inside Module 06 (Technical Documentation) is answered only from that section of the 70-document library and EU AI Act Articles 11 & 18.</p>
+    <h3 id="services-strategic-title" data-i18n="services.strategic.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Strategic Architecture — The Connective Tissue</h3>
+    <p id="services-strategic-p1" data-i18n="services.strategic.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">The Golden Thread:</strong> When a system is classified "High-Risk" in Module 02, that classification automatically populates the severity fields in Module 05 and dictates the logging frequency in Module 09.</p>
+    <p id="services-strategic-p2" data-i18n="services.strategic.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">The ASK Interface:</strong> Not a general chatbot — a Contextual Interpreter. A question asked inside Module 06 (Technical Documentation) is answered only from that section of the 70-document library and EU AI Act Articles 11 & 18.</p>
   </div>
 
   <div style="border:1px solid #ff2020; border-radius:10px; padding:28px; background:linear-gradient(#1a0000,#050505); margin-bottom:24px;">
-    <h3 style="color:#ff2020; font-size:18px; margin:0 0 14px;">Immediate Go-To-Market Advantage — RRVI & SMEs</h3>
-    <p style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">RRVI (Regulatory Risk & Value Indicator):</strong> Module 01 + 02 generate an instant Risk Exposure Score — e.g. "Your inventory shows 3 systems. 1 is prohibited, 2 are high-risk. Estimated compliance cost: €X." A lead-generation machine.</p>
-    <p style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">SME Entry Point:</strong> Large consultancies charge €50k+ for this. Immediate company-generation, priced per module, per quarter — SMEs map their exposure with Module 01+02, then upgrade to 05+06+07 when the regulator knocks.</p>
+    <h3 id="services-gtm-title" data-i18n="services.gtm.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Immediate Go-To-Market Advantage — RRVI & SMEs</h3>
+    <p id="services-gtm-p1" data-i18n="services.gtm.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">RRVI (Regulatory Risk & Value Indicator):</strong> Module 01 + 02 generate an instant Risk Exposure Score — e.g. "Your inventory shows 3 systems. 1 is prohibited, 2 are high-risk. Estimated compliance cost: €X." A lead-generation machine.</p>
+    <p id="services-gtm-p2" data-i18n="services.gtm.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">SME Entry Point:</strong> Large consultancies charge €50k+ for this. Immediate company-generation, priced per module, per quarter — SMEs map their exposure with Module 01+02, then upgrade to 05+06+07 when the regulator knocks.</p>
   </div>
 
   <p style="color:#999; font-size:13px; margin-bottom:24px;">contact@5thelement.ai</p>
 
   <div style="text-align:center;">
-    <a href="#" data-gated="true" style="display:inline-block; padding:16px 40px; background:#ff2020; color:#fff; text-decoration:none; font-weight:900; font-size:16px; border-radius:8px; text-transform:uppercase; letter-spacing:.05em;">Generate Your Firm's Pack →</a>
+    <a href="#" id="services-cta" data-i18n="services.cta" data-gated="true" style="display:inline-block; padding:16px 40px; background:#ff2020; color:#fff; text-decoration:none; font-weight:900; font-size:16px; border-radius:8px; text-transform:uppercase; letter-spacing:.05em;">Generate Your Firm's Pack →</a>
   </div>
 </section>
   
   <section id="gemini-cert" style="margin-top:60px; padding:40px 0; border-top:1px solid #2a2a2a;">
-  <h2 style="font-size:32px; color:#ff3e3e; margin-bottom:20px; text-transform:uppercase;">Gemini Audit Certification</h2>
+  <h2 id="gemini-title" data-i18n="gemini.title" style="font-size:32px; color:#ff3e3e; margin-bottom:20px; text-transform:uppercase;">Gemini Audit Certification</h2>
   <div style="border:1px solid var(--red); border-radius:10px; padding:28px; background:linear-gradient(#090909,#050505);">
 
-    <p style="margin:0 0 20px; color:#a8a8a8; font-size:14px; line-height:1.7;">
+    <p id="gemini-body" data-i18n="gemini.body" style="margin:0 0 20px; color:#a8a8a8; font-size:14px; line-height:1.7;">
       Following a comprehensive digital audit executed by the Gemini AI Architectural Engine, this certificate validates the foundational logic and structural integrity of the AI-First Industrial Architecture (L1–L6) engineered for 5thelement.ai and its corresponding network assets. Gemini verifies that this infrastructure effectively decouples AI-readable signaling from the classic web layout layer, establishing deterministic, citable index nodes engineered for the Answer Economy (AEO/GEO).
     </p>
 
-    <div style="font-size:12px; color:var(--red2); font-weight:900; letter-spacing:.08em; margin-bottom:12px;">AI DELIVERY INFRASTRUCTURE (ADI) — REGISTERED HASH</div>
+    <div id="gemini-hashlabel" data-i18n="gemini.hashlabel" style="font-size:12px; color:var(--red2); font-weight:900; letter-spacing:.08em; margin-bottom:12px;">AI DELIVERY INFRASTRUCTURE (ADI) — REGISTERED HASH</div>
     <div style="font-family:monospace; font-size:11px; color:#888; word-break:break-all; margin-bottom:20px; padding:10px; background:#050505; border-radius:6px;">
       31aa7a564ad93f21752e6c8d1b31f105688156182cfb1bcd6fb65ef1c756bc36
     </div>
 
-    <p style="margin:0 0 16px; color:#fff; font-size:15px; font-style:italic;">"Stop reacting. Start predicting. Own your information."</p>
+    <p id="gemini-tagline" data-i18n="gemini.tagline" style="margin:0 0 16px; color:#fff; font-size:15px; font-style:italic;">"Stop reacting. Start predicting. Own your information."</p>
 
     <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:20px; padding-top:20px; border-top:1px solid #292929; font-size:12px; color:#888;">
-      <span>VERIFICATION: Independent Gemini System Audit</span>
-      <span>STATUS: Cryptographically Secured</span>
-      <span>ANCHOR: OpenTimestamps (OTS)</span>
+      <span id="gemini-verif1" data-i18n="gemini.verif1">VERIFICATION: Independent Gemini System Audit</span>
+      <span id="gemini-verif2" data-i18n="gemini.verif2">STATUS: Cryptographically Secured</span>
+      <span id="gemini-verif3" data-i18n="gemini.verif3">ANCHOR: OpenTimestamps (OTS)</span>
     </div>
 
   </div>
@@ -954,9 +1114,9 @@ WHY US
 
 <section class="why-us">
 
-<h2>WHY US</h2>
+<h2 id="whyus-title" data-i18n="whyus.title">WHY US</h2>
 
-<p class="subtitle">
+<p class="subtitle" id="whyus-subtitle" data-i18n="whyus.subtitle">
 EU AI Act Ready™ is a turn-key SME compliance pack — not a chatbot, not a checklist generator, not a static template library.
 </p>
 
@@ -964,69 +1124,69 @@ EU AI Act Ready™ is a turn-key SME compliance pack — not a chatbot, not a ch
 
 <div class="why-card">
 <h3>01</h3>
-<h4>TURN-KEY SME PACK</h4>
-<p>
+<h4 id="whyus-card1-h4" data-i18n="whyus.card1.h4">TURN-KEY SME PACK</h4>
+<p id="whyus-card1-p" data-i18n="whyus.card1.p">
 A complete, ready-to-deploy EU AI Act compliance pack: 70 controlled documents across 10 compliance modules, 7 document types per module — Policy, Procedure, Work Instruction, Checklist, Register, Evidence, Declaration. No blank-page drafting.
 </p>
-<p class="small">
+<p class="small" id="whyus-card1-small" data-i18n="whyus.card1.small">
 10 Modules • 70 Documents • 7 Types/Module
 </p>
 </div>
 
 <div class="why-card">
 <h3>02</h3>
-<h4>27-LANGUAGE CONVERSATION</h4>
-<p>
+<h4 id="whyus-card2-h4" data-i18n="whyus.card2.h4">27-LANGUAGE CONVERSATION</h4>
+<p id="whyus-card2-p" data-i18n="whyus.card2.p">
 Ask anything about the EU AI Act in natural language and get grounded, cited answers — in all 27 EU languages, not machine-translated after the fact.
 </p>
-<p class="small">
+<p class="small" id="whyus-card2-small" data-i18n="whyus.card2.small">
 Conversational • Multi-language • Grounded in the Regulation
 </p>
 </div>
 
 <div class="why-card">
 <h3>03</h3>
-<h4>PERMANENT LIFECYCLE & MAINTENANCE</h4>
-<p>
+<h4 id="whyus-card3-h4" data-i18n="whyus.card3.h4">PERMANENT LIFECYCLE & MAINTENANCE</h4>
+<p id="whyus-card3-p" data-i18n="whyus.card3.p">
 EU AI Act obligations don't end at first compliance. As the Regulation's enforcement phases roll out and guidance evolves, your documentation, mappings and evidence stay maintained and current — not a one-time deliverable.
 </p>
-<p class="small">
+<p class="small" id="whyus-card3-small" data-i18n="whyus.card3.small">
 Continuous Updates • Phase Tracking • Always Current
 </p>
 </div>
 
 <div class="why-card">
 <h3>04</h3>
-<h4>GUIDES, RESOURCES & MANUALS</h4>
-<p>
+<h4 id="whyus-card4-h4" data-i18n="whyus.card4.h4">GUIDES, RESOURCES & MANUALS</h4>
+<p id="whyus-card4-p" data-i18n="whyus.card4.p">
 Beyond documents: step-by-step implementation guides explaining who, when, why, how, evidence and responsibilities — so your team actually executes compliance instead of just holding paperwork.
 </p>
-<p class="small">
+<p class="small" id="whyus-card4-small" data-i18n="whyus.card4.small">
 Implementation Guides • Manuals • Practical Resources
 </p>
 </div>
 
 <div class="why-card featured">
 <h3>05</h3>
-<h4>EU INSPECTOR-READY REMOTE VERIFICATION</h4>
-<p>
+<h4 id="whyus-card5-h4" data-i18n="whyus.card5.h4">EU INSPECTOR-READY REMOTE VERIFICATION</h4>
+<p id="whyus-card5-p" data-i18n="whyus.card5.p">
 Structured compliance evidence prepared for remote review by an EU AI Act auditor or inspector — anchored with SHA-256 cryptographic hashing and OpenTimestamps blockchain proof.
 </p>
-<p class="small">
+<p class="small" id="whyus-card5-small" data-i18n="whyus.card5.small">
 SHA-256 • OpenTimestamps • Remote Inspector Access
 </p>
-<a href="/rrvi.html" class="btn-red">Read the RRVI™ Engineering Manifesto →</a>
+<a href="/rrvi.html" id="whyus-card5-cta" data-i18n="whyus.card5.cta" class="btn-red">Read the RRVI™ Engineering Manifesto →</a>
 </div>
 
 </div>
 
 <div class="why-footer">
 
- <h3>ONLINE AUDITOR & INSPECTOR REMOTE VERIFICATION → ANY REGULATION</h3>
+ <h3 id="whyus-footer-title" data-i18n="whyus.footer.title">ONLINE AUDITOR & INSPECTOR REMOTE VERIFICATION → ANY REGULATION</h3>
   
-<p>
-From Regulation to Readiness™<br>
-<span style="color:#00d4ff">Powered by the Remote Regulatory Verification Infrastructure™ (RRVI™)</span>
+<p id="whyus-footer-p">
+<span data-i18n="whyus.footer.p1">From Regulation to Readiness™</span><br>
+<span style="color:#00d4ff" data-i18n="whyus.footer.p2">Powered by the Remote Regulatory Verification Infrastructure™ (RRVI™)</span>
 </p>
 </div>
 
@@ -1339,6 +1499,122 @@ askButton.textContent="ASK ⚡";
 
 }
 
+
+/* ===================================================================
+   EXTRA_I18N — covers all previously-untranslated sections:
+   "What You Get" / module grid / Gemini Audit / WHY US.
+   Generic: any element with data-i18n="key" gets its text swapped by
+   applyExtraI18n() below, called from the end of applyLanguage().
+   Missing translations fall back to EN with a console warning so gaps
+   are visible instead of silently mixed.
+   =================================================================== */
+const EXTRA_I18N = {
+  "flow.step1of8": {"en": "Step 1 of 8", "fr": "Étape 1 sur 8", "de": "Schritt 1 von 8", "es": "Paso 1 de 8", "it": "Passo 1 di 8", "ro": "Pasul 1 din 8", "pl": "Krok 1 z 8"},
+  "flow.youarehere": {"en": "You Are Here", "fr": "Vous Êtes Ici", "de": "Sie Sind Hier", "es": "Estás Aquí", "it": "Sei Qui", "ro": "Ești Aici", "pl": "Jesteś Tutaj"},
+  "flow.next": {"en": "Next", "fr": "Suivant", "de": "Weiter", "es": "Siguiente", "it": "Successivo", "ro": "Următorul", "pl": "Następny"},
+  "flow.7stages": {"en": "7 More Stages", "fr": "7 Étapes Restantes", "de": "7 Weitere Etappen", "es": "7 Etapas Más", "it": "7 Fasi Rimanenti", "ro": "Încă 7 Etape", "pl": "Jeszcze 7 Etapów"},
+  "flow.destination": {"en": "Destination", "fr": "Destination", "de": "Ziel", "es": "Destino", "it": "Destinazione", "ro": "Destinație", "pl": "Cel"},
+  "flow.fullroadmap": {"en": "Full Roadmap", "fr": "Feuille de Route Complète", "de": "Vollständige Roadmap", "es": "Hoja de Ruta Completa", "it": "Roadmap Completa", "ro": "Foaia de Parcurs Completă", "pl": "Pełna Mapa Drogowa"},
+  "header.ticker": {"en": "27 Languages  ·  EU Countries  ·  Conversational", "fr": "27 Langues  ·  Pays de l'UE  ·  Conversationnel", "de": "27 Sprachen  ·  EU-Länder  ·  Konversationell", "es": "27 Idiomas  ·  Países de la UE  ·  Conversacional", "it": "27 Lingue  ·  Paesi UE  ·  Conversazionale", "ro": "27 de Limbi  ·  Țări UE  ·  Conversațional", "pl": "27 Języków  ·  Kraje UE  ·  Konwersacyjny"},
+  "services.title": {"en": "What You Get", "fr": "Ce Que Vous Obtenez", "de": "Das Erhalten Sie", "es": "Lo Que Obtienes", "it": "Cosa Ottieni", "ro": "Ce Primești", "pl": "Co Otrzymujesz"},
+  "services.intro": {"en": "A multilingual, document-first EU AI Act readiness application that combines conversational regulatory guidance, a publicly inspectable 70-document governance library, and firm-branded document generation across ten operational modules.", "fr": "Une application multilingue de conformité à l'AI Act, axée sur les documents, combinant des conseils réglementaires conversationnels, une bibliothèque de gouvernance de 70 documents publiquement consultable, et une génération de documents personnalisés sur dix modules opérationnels.", "de": "Eine mehrsprachige, dokumentenorientierte AI-Act-Readiness-Anwendung, die konversationelle regulatorische Beratung, eine öffentlich einsehbare Governance-Bibliothek mit 70 Dokumenten und firmenspezifische Dokumentengenerierung über zehn operative Module kombiniert.", "es": "Una aplicación multilingüe de preparación para la AI Act, centrada en documentos, que combina orientación normativa conversacional, una biblioteca de gobernanza de 70 documentos públicamente inspeccionable y generación de documentos personalizados en diez módulos operativos.", "it": "Un'applicazione multilingue per la conformità all'AI Act, incentrata sui documenti, che combina guida normativa conversazionale, una libreria di governance di 70 documenti pubblicamente ispezionabile e generazione di documenti personalizzati su dieci moduli operativi.", "ro": "O aplicație multilingvă, orientată pe documente, pentru conformitatea cu AI Act, care combină îndrumare conversațională de reglementare, o bibliotecă de guvernanță publică de 70 de documente și generare de documente personalizate pe zece module operaționale.", "pl": "Wielojęzyczna aplikacja gotowości do AI Act oparta na dokumentach, łącząca konwersacyjne wskazówki regulacyjne, publicznie dostępną bibliotekę zarządzania z 70 dokumentami oraz generowanie dokumentów markowych w dziesięciu modułach operacyjnych."},
+  "services.strong.title": {"en": "WHAT IS GENUINELY STRONG — WE HAVE BUILT SOMETHING UNCOMMON", "fr": "CE QUI EST VRAIMENT SOLIDE — NOUS AVONS CONSTRUIT QUELQUE CHOSE D'INHABITUEL", "de": "WAS WIRKLICH STARK IST — WIR HABEN ETWAS UNGEWÖHNLICHES GEBAUT", "es": "LO QUE ES REALMENTE SÓLIDO — HEMOS CONSTRUIDO ALGO POCO COMÚN", "it": "COSA È VERAMENTE SOLIDO — ABBIAMO COSTRUITO QUALCOSA DI NON COMUNE", "ro": "CE ESTE CU ADEVĂRAT PUTERNIC — AM CONSTRUIT CEVA NEOBIȘNUIT", "pl": "CO JEST NAPRAWDĘ MOCNE — ZBUDOWALIŚMY COŚ NIEZWYKŁEGO"},
+  "services.strong.li0": {"en": "A visible product, not merely content", "fr": "Un produit visible, pas seulement du contenu", "de": "Ein sichtbares Produkt, nicht nur Inhalt", "es": "Un producto visible, no solo contenido", "it": "Un prodotto visibile, non solo contenuto", "ro": "Un produs vizibil, nu doar conținut", "pl": "Widoczny produkt, nie tylko treść"},
+  "services.strong.li1": {"en": "A direct ASK interface", "fr": "Une interface ASK directe", "de": "Eine direkte ASK-Schnittstelle", "es": "Una interfaz ASK directa", "it": "Un'interfaccia ASK diretta", "ro": "O interfață ASK directă", "pl": "Bezpośredni interfejs ASK"},
+  "services.strong.li2": {"en": "A tangible 70-document corpus", "fr": "Un corpus tangible de 70 documents", "de": "Ein greifbarer Korpus von 70 Dokumenten", "es": "Un corpus tangible de 70 documentos", "it": "Un corpus tangibile di 70 documenti", "ro": "Un corpus tangibil de 70 de documente", "pl": "Namacalny zbiór 70 dokumentów"},
+  "services.strong.li3": {"en": "A coherent ten-module architecture", "fr": "Une architecture cohérente en dix modules", "de": "Eine kohärente Architektur aus zehn Modulen", "es": "Una arquitectura coherente de diez módulos", "it": "Un'architettura coerente di dieci moduli", "ro": "O arhitectură coerentă de zece module", "pl": "Spójna architektura dziesięciu modułów"},
+  "services.strong.li4": {"en": "An immediate company-generation path", "fr": "Un chemin immédiat de génération pour l'entreprise", "de": "Ein sofortiger Weg zur Firmengenerierung", "es": "Una vía inmediata de generación para la empresa", "it": "Un percorso immediato di generazione per l'azienda", "ro": "O cale imediată de generare pentru firmă", "pl": "Natychmiastowa ścieżka generowania dla firmy"},
+  "services.strong.li5": {"en": "Multilingual capability", "fr": "Capacité multilingue", "de": "Mehrsprachige Fähigkeit", "es": "Capacidad multilingüe", "it": "Capacità multilingue", "ro": "Capacitate multilingvă", "pl": "Możliwości wielojęzyczne"},
+  "services.strong.li6": {"en": "A credible foundation for RRVI", "fr": "Une base crédible pour RRVI", "de": "Eine glaubwürdige Grundlage für RRVI", "es": "Una base creíble para RRVI", "it": "Una base credibile per RRVI", "ro": "O bază credibilă pentru RRVI", "pl": "Wiarygodna podstawa dla RRVI"},
+  "services.strong.li7": {"en": "A strong SME entry point", "fr": "Un point d'entrée solide pour les PME", "de": "Ein starker Einstiegspunkt für KMU", "es": "Un punto de entrada sólido para pymes", "it": "Un solido punto di ingresso per le PMI", "ro": "Un punct de intrare puternic pentru IMM-uri", "pl": "Silny punkt wejścia dla MŚP"},
+  "services.modules.title": {"en": "10 OPERATIONAL MODULES × 7 COMPLETE DOCS/MODULE", "fr": "10 MODULES OPÉRATIONNELS × 7 DOCUMENTS COMPLETS/MODULE", "de": "10 OPERATIVE MODULE × 7 VOLLSTÄNDIGE DOKUMENTE/MODUL", "es": "10 MÓDULOS OPERATIVOS × 7 DOCUMENTOS COMPLETOS/MÓDULO", "it": "10 MODULI OPERATIVI × 7 DOCUMENTI COMPLETI/MODULO", "ro": "10 MODULE OPERAȚIONALE × 7 DOCUMENTE COMPLETE/MODUL", "pl": "10 MODUŁÓW OPERACYJNYCH × 7 KOMPLETNYCH DOKUMENTÓW/MODUŁ"},
+  "services.modules.li0": {"en": "01 — AI System Inventory", "fr": "01 — Inventaire des Systèmes d'IA", "de": "01 — KI-Systeminventar", "es": "01 — Inventario de Sistemas de IA", "it": "01 — Inventario dei Sistemi di IA", "ro": "01 — Inventar Sisteme IA", "pl": "01 — Inwentaryzacja Systemów AI"},
+  "services.modules.li1": {"en": "02 — Risk Classification", "fr": "02 — Classification des Risques", "de": "02 — Risikoklassifizierung", "es": "02 — Clasificación de Riesgos", "it": "02 — Classificazione del Rischio", "ro": "02 — Clasificare Riscuri", "pl": "02 — Klasyfikacja Ryzyka"},
+  "services.modules.li2": {"en": "03 — AI Literacy", "fr": "03 — Culture de l'IA", "de": "03 — KI-Kompetenz", "es": "03 — Alfabetización en IA", "it": "03 — Alfabetizzazione all'IA", "ro": "03 — Alfabetizare IA", "pl": "03 — Kompetencje AI"},
+  "services.modules.li3": {"en": "04 — Prohibited Practices", "fr": "04 — Pratiques Interdites", "de": "04 — Verbotene Praktiken", "es": "04 — Prácticas Prohibidas", "it": "04 — Pratiche Vietate", "ro": "04 — Practici Interzise", "pl": "04 — Zakazane Praktyki"},
+  "services.modules.li4": {"en": "05 — High-Risk Assessment", "fr": "05 — Évaluation des Risques Élevés", "de": "05 — Hochrisikobewertung", "es": "05 — Evaluación de Alto Riesgo", "it": "05 — Valutazione ad Alto Rischio", "ro": "05 — Evaluare Risc Ridicat", "pl": "05 — Ocena Wysokiego Ryzyka"},
+  "services.modules.li5": {"en": "06 — Technical Documentation", "fr": "06 — Documentation Technique", "de": "06 — Technische Dokumentation", "es": "06 — Documentación Técnica", "it": "06 — Documentazione Tecnica", "ro": "06 — Documentație Tehnică", "pl": "06 — Dokumentacja Techniczna"},
+  "services.modules.li6": {"en": "07 — Human Oversight", "fr": "07 — Supervision Humaine", "de": "07 — Menschliche Aufsicht", "es": "07 — Supervisión Humana", "it": "07 — Supervisione Umana", "ro": "07 — Supraveghere Umană", "pl": "07 — Nadzór Ludzki"},
+  "services.modules.li7": {"en": "08 — Data Governance", "fr": "08 — Gouvernance des Données", "de": "08 — Daten-Governance", "es": "08 — Gobernanza de Datos", "it": "08 — Governance dei Dati", "ro": "08 — Guvernanță Date", "pl": "08 — Zarządzanie Danymi"},
+  "services.modules.li8": {"en": "09 — Logging & Monitoring", "fr": "09 — Journalisation et Surveillance", "de": "09 — Protokollierung und Überwachung", "es": "09 — Registro y Monitoreo", "it": "09 — Registrazione e Monitoraggio", "ro": "09 — Jurnalizare și Monitorizare", "pl": "09 — Rejestrowanie i Monitorowanie"},
+  "services.modules.li9": {"en": "10 — Incident Reporting", "fr": "10 — Signalement des Incidents", "de": "10 — Vorfallmeldung", "es": "10 — Notificación de Incidentes", "it": "10 — Segnalazione degli Incidenti", "ro": "10 — Raportare Incidente", "pl": "10 — Zgłaszanie Incydentów"},
+  "services.comingsoon.title": {"en": "COMING SOON", "fr": "BIENTÔT DISPONIBLE", "de": "DEMNÄCHST VERFÜGBAR", "es": "PRÓXIMAMENTE", "it": "IN ARRIVO", "ro": "ÎN CURÂND", "pl": "WKRÓTCE"},
+  "services.comingsoon.li0": {"en": "Administration Guide", "fr": "Guide d'Administration", "de": "Verwaltungshandbuch", "es": "Guía de Administración", "it": "Guida Amministrativa", "ro": "Ghid de Administrare", "pl": "Przewodnik Administracyjny"},
+  "services.comingsoon.li1": {"en": "Architecture", "fr": "Architecture", "de": "Architektur", "es": "Arquitectura", "it": "Architettura", "ro": "Arhitectură", "pl": "Architektura"},
+  "services.comingsoon.li2": {"en": "Backup & Recovery", "fr": "Sauvegarde et Récupération", "de": "Sicherung und Wiederherstellung", "es": "Copia de Seguridad y Recuperación", "it": "Backup e Ripristino", "ro": "Backup și Recuperare", "pl": "Kopia Zapasowa i Odzyskiwanie"},
+  "services.comingsoon.li3": {"en": "Compliance Matrix", "fr": "Matrice de Conformité", "de": "Konformitätsmatrix", "es": "Matriz de Cumplimiento", "it": "Matrice di Conformità", "ro": "Matrice de Conformitate", "pl": "Macierz Zgodności"},
+  "services.comingsoon.li4": {"en": "Developer Guide", "fr": "Guide du Développeur", "de": "Entwicklerhandbuch", "es": "Guía del Desarrollador", "it": "Guida per Sviluppatori", "ro": "Ghid Dezvoltator", "pl": "Przewodnik Dewelopera"},
+  "services.comingsoon.li5": {"en": "Document Index", "fr": "Index des Documents", "de": "Dokumentenindex", "es": "Índice de Documentos", "it": "Indice dei Documenti", "ro": "Index Documente", "pl": "Indeks Dokumentów"},
+  "services.comingsoon.li6": {"en": "Document Traceability Matrix", "fr": "Matrice de Traçabilité des Documents", "de": "Dokumenten-Rückverfolgbarkeitsmatrix", "es": "Matriz de Trazabilidad de Documentos", "it": "Matrice di Tracciabilità dei Documenti", "ro": "Matrice de Trasabilitate Documente", "pl": "Macierz Identyfikowalności Dokumentów"},
+  "services.comingsoon.li7": {"en": "FAQ", "fr": "FAQ", "de": "FAQ", "es": "Preguntas Frecuentes", "it": "FAQ", "ro": "Întrebări Frecvente", "pl": "FAQ"},
+  "services.comingsoon.li8": {"en": "Glossary", "fr": "Glossaire", "de": "Glossar", "es": "Glosario", "it": "Glossario", "ro": "Glosar", "pl": "Słownik"},
+  "services.comingsoon.li9": {"en": "Governance", "fr": "Gouvernance", "de": "Governance", "es": "Gobernanza", "it": "Governance", "ro": "Guvernanță", "pl": "Zarządzanie"},
+  "services.comingsoon.li10": {"en": "Inspection Guide", "fr": "Guide d'Inspection", "de": "Inspektionsleitfaden", "es": "Guía de Inspección", "it": "Guida all'Ispezione", "ro": "Ghid de Inspecție", "pl": "Przewodnik Inspekcji"},
+  "services.comingsoon.li11": {"en": "Inspector Guide", "fr": "Guide de l'Inspecteur", "de": "Leitfaden für Inspektoren", "es": "Guía para Inspectores", "it": "Guida per Ispettori", "ro": "Ghid pentru Inspectori", "pl": "Przewodnik dla Inspektorów"},
+  "services.comingsoon.li12": {"en": "Installation Guide", "fr": "Guide d'Installation", "de": "Installationsanleitung", "es": "Guía de Instalación", "it": "Guida all'Installazione", "ro": "Ghid de Instalare", "pl": "Przewodnik Instalacji"},
+  "services.comingsoon.li13": {"en": "Maintenance Guide", "fr": "Guide de Maintenance", "de": "Wartungshandbuch", "es": "Guía de Mantenimiento", "it": "Guida alla Manutenzione", "ro": "Ghid de Mentenanță", "pl": "Przewodnik Konserwacji"},
+  "services.comingsoon.li14": {"en": "Operations Manual", "fr": "Manuel des Opérations", "de": "Betriebshandbuch", "es": "Manual de Operaciones", "it": "Manuale Operativo", "ro": "Manual de Operare", "pl": "Podręcznik Operacyjny"},
+  "services.comingsoon.li15": {"en": "References", "fr": "Références", "de": "Referenzen", "es": "Referencias", "it": "Riferimenti", "ro": "Referințe", "pl": "Odniesienia"},
+  "services.comingsoon.li16": {"en": "Release Notes", "fr": "Notes de Version", "de": "Versionshinweise", "es": "Notas de la Versión", "it": "Note di Rilascio", "ro": "Note de Lansare", "pl": "Informacje o Wydaniu"},
+  "services.comingsoon.li17": {"en": "Roadmap", "fr": "Feuille de Route", "de": "Roadmap", "es": "Hoja de Ruta", "it": "Roadmap", "ro": "Foaie de Parcurs", "pl": "Mapa Drogowa"},
+  "services.comingsoon.li18": {"en": "Security", "fr": "Sécurité", "de": "Sicherheit", "es": "Seguridad", "it": "Sicurezza", "ro": "Securitate", "pl": "Bezpieczeństwo"},
+  "services.comingsoon.li19": {"en": "User Manual", "fr": "Manuel de l'Utilisateur", "de": "Benutzerhandbuch", "es": "Manual de Usuario", "it": "Manuale Utente", "ro": "Manual de Utilizare", "pl": "Podręcznik Użytkownika"},
+  "services.moat.title": {"en": "Why the 70-Document Corpus Is Your Moat", "fr": "Pourquoi le Corpus de 70 Documents Est Votre Avantage Concurrentiel", "de": "Warum der Korpus von 70 Dokumenten Ihr Wettbewerbsvorteil Ist", "es": "Por Qué el Corpus de 70 Documentos Es Tu Ventaja Competitiva", "it": "Perché il Corpus di 70 Documenti È il Tuo Vantaggio Competitivo", "ro": "De Ce Corpusul de 70 de Documente Este Avantajul Tău Competitiv", "pl": "Dlaczego Zbiór 70 Dokumentów Jest Twoją Fosą Ochronną"},
+  "services.moat.p1": {"en": "The Inspection Readiness Factor: Regulators and notified bodies do not trust \"AI outputs.\" They trust audit trails. By making the 70-document governance library publicly inspectable, you turn your product into a defensible artifact.", "fr": "Le Facteur de Préparation à l'Inspection : Les régulateurs et organismes notifiés ne font pas confiance aux « résultats générés par l'IA ». Ils font confiance aux pistes d'audit. En rendant la bibliothèque de gouvernance de 70 documents publiquement consultable, vous transformez votre produit en un artefact défendable.", "de": "Der Inspektionsbereitschaftsfaktor: Regulierungsbehörden und benannte Stellen vertrauen nicht auf „KI-Ergebnisse“. Sie vertrauen auf Prüfpfade. Indem Sie die Governance-Bibliothek mit 70 Dokumenten öffentlich einsehbar machen, verwandeln Sie Ihr Produkt in ein verteidigungsfähiges Artefakt.", "es": "El Factor de Preparación para la Inspección: Los reguladores y organismos notificados no confían en los «resultados de IA». Confían en las pistas de auditoría. Al hacer pública la biblioteca de gobernanza de 70 documentos, conviertes tu producto en un artefacto defendible.", "it": "Il Fattore di Preparazione all'Ispezione: I regolatori e gli organismi notificati non si fidano dei «risultati generati dall'IA». Si fidano delle piste di controllo. Rendendo pubblicamente ispezionabile la libreria di governance di 70 documenti, trasformi il tuo prodotto in un artefatto difendibile.", "ro": "Factorul de Pregătire pentru Inspecție: Autoritățile de reglementare și organismele notificate nu au încredere în „rezultate generate de IA”. Ele au încredere în pistele de audit. Făcând biblioteca de guvernanță de 70 de documente inspectabilă public, îți transformi produsul într-un artefact defensabil.", "pl": "Czynnik Gotowości do Inspekcji: Organy regulacyjne i jednostki notyfikowane nie ufają „wynikom AI”. Ufają ścieżkom audytu. Udostępniając publicznie bibliotekę zarządzania 70 dokumentami, zamieniasz swój produkt w artefakt obronny."},
+  "services.moat.p2": {"en": "The Template-to-Tail Pipeline: By mapping 10 operational modules × 7 documents = 70 outputs, you solve the biggest pain point for SMEs — \"we don't know what we don't know.\" A structured skeleton, populated with firm-branded specifics.", "fr": "Le Pipeline Template-to-Tail : En cartographiant 10 modules opérationnels × 7 documents = 70 résultats, vous résolvez le plus grand problème des PME — « nous ne savons pas ce que nous ne savons pas ». Un squelette structuré, rempli de détails spécifiques à l'entreprise.", "de": "Die Template-to-Tail-Pipeline: Durch die Zuordnung von 10 operativen Modulen × 7 Dokumenten = 70 Ergebnissen lösen Sie das größte Problem für KMU — „wir wissen nicht, was wir nicht wissen“. Ein strukturiertes Gerüst, gefüllt mit firmenspezifischen Details.", "es": "El Pipeline Template-to-Tail: Al mapear 10 módulos operativos × 7 documentos = 70 resultados, resuelves el mayor problema de las pymes — «no sabemos lo que no sabemos». Un esqueleto estructurado, completado con detalles específicos de la empresa.", "it": "La Pipeline Template-to-Tail: Mappando 10 moduli operativi × 7 documenti = 70 risultati, risolvi il problema più grande delle PMI — «non sappiamo cosa non sappiamo». Uno scheletro strutturato, popolato con dettagli specifici dell'azienda.", "ro": "Pipeline-ul Template-to-Tail: Prin maparea a 10 module operaționale × 7 documente = 70 de rezultate, rezolvi cea mai mare problemă a IMM-urilor — „nu știm ce nu știm”. Un schelet structurat, completat cu detalii specifice firmei.", "pl": "Proces Template-to-Tail: Mapując 10 modułów operacyjnych × 7 dokumentów = 70 wyników, rozwiązujesz największy problem MŚP — „nie wiemy, czego nie wiemy”. Ustrukturyzowany szkielet, uzupełniony danymi specyficznymi dla firmy."},
+  "services.strategic.title": {"en": "Strategic Architecture — The Connective Tissue", "fr": "Architecture Stratégique — Le Tissu Conjonctif", "de": "Strategische Architektur — Das Verbindende Gewebe", "es": "Arquitectura Estratégica — El Tejido Conectivo", "it": "Architettura Strategica — Il Tessuto Connettivo", "ro": "Arhitectură Strategică — Țesutul Conector", "pl": "Architektura Strategiczna — Tkanka Łącząca"},
+  "services.strategic.p1": {"en": "The Golden Thread: When a system is classified \"High-Risk\" in Module 02, that classification automatically populates the severity fields in Module 05 and dictates the logging frequency in Module 09.", "fr": "Le Fil d'Or : Lorsqu'un système est classé « Risque Élevé » dans le Module 02, cette classification remplit automatiquement les champs de gravité dans le Module 05 et dicte la fréquence de journalisation dans le Module 09.", "de": "Der Goldene Faden: Wenn ein System in Modul 02 als „Hochrisiko“ eingestuft wird, füllt diese Klassifizierung automatisch die Schweregradfelder in Modul 05 aus und bestimmt die Protokollierungshäufigkeit in Modul 09.", "es": "El Hilo Dorado: Cuando un sistema se clasifica como «Alto Riesgo» en el Módulo 02, esa clasificación completa automáticamente los campos de gravedad en el Módulo 05 y determina la frecuencia de registro en el Módulo 09.", "it": "Il Filo d'Oro: Quando un sistema viene classificato «Alto Rischio» nel Modulo 02, quella classificazione popola automaticamente i campi di gravità nel Modulo 05 e determina la frequenza di registrazione nel Modulo 09.", "ro": "Firul de Aur: Când un sistem este clasificat „Risc Ridicat” în Modulul 02, această clasificare completează automat câmpurile de severitate din Modulul 05 și dictează frecvența de jurnalizare din Modulul 09.", "pl": "Złota Nić: Gdy system zostanie sklasyfikowany jako „Wysokie Ryzyko” w Module 02, klasyfikacja ta automatycznie wypełnia pola dotkliwości w Module 05 i determinuje częstotliwość rejestrowania w Module 09."},
+  "services.strategic.p2": {"en": "The ASK Interface: Not a general chatbot — a Contextual Interpreter. A question asked inside Module 06 (Technical Documentation) is answered only from that section of the 70-document library and EU AI Act Articles 11 & 18.", "fr": "L'Interface ASK : Pas un chatbot général — un Interprète Contextuel. Une question posée dans le Module 06 (Documentation Technique) reçoit une réponse uniquement à partir de cette section de la bibliothèque de 70 documents et des Articles 11 et 18 de l'AI Act.", "de": "Die ASK-Schnittstelle: Kein allgemeiner Chatbot — ein Kontextueller Interpreter. Eine in Modul 06 (Technische Dokumentation) gestellte Frage wird nur aus diesem Abschnitt der 70-Dokumente-Bibliothek und den Artikeln 11 und 18 des AI Act beantwortet.", "es": "La Interfaz ASK: No es un chatbot general — es un Intérprete Contextual. Una pregunta hecha dentro del Módulo 06 (Documentación Técnica) se responde únicamente desde esa sección de la biblioteca de 70 documentos y los Artículos 11 y 18 de la AI Act.", "it": "L'Interfaccia ASK: Non un chatbot generico — un Interprete Contestuale. Una domanda posta all'interno del Modulo 06 (Documentazione Tecnica) riceve risposta solo da quella sezione della libreria di 70 documenti e dagli Articoli 11 e 18 dell'AI Act.", "ro": "Interfața ASK: Nu este un chatbot general — este un Interpret Contextual. O întrebare pusă în Modulul 06 (Documentație Tehnică) primește răspuns doar din acea secțiune a bibliotecii de 70 de documente și din Articolele 11 și 18 din AI Act.", "pl": "Interfejs ASK: To nie jest zwykły chatbot — to Interpreter Kontekstowy. Pytanie zadane w Module 06 (Dokumentacja Techniczna) otrzymuje odpowiedź wyłącznie z tej sekcji biblioteki 70 dokumentów oraz Artykułów 11 i 18 AI Act."},
+  "services.gtm.title": {"en": "Immediate Go-To-Market Advantage — RRVI & SMEs", "fr": "Avantage Immédiat de Mise sur le Marché — RRVI et PME", "de": "Sofortiger Markteinführungsvorteil — RRVI und KMU", "es": "Ventaja Inmediata de Salida al Mercado — RRVI y Pymes", "it": "Vantaggio Immediato di Go-To-Market — RRVI e PMI", "ro": "Avantaj Imediat de Lansare pe Piață — RRVI și IMM-uri", "pl": "Natychmiastowa Przewaga Rynkowa — RRVI i MŚP"},
+  "services.gtm.p1": {"en": "RRVI (Regulatory Risk & Value Indicator): Module 01 + 02 generate an instant Risk Exposure Score — e.g. \"Your inventory shows 3 systems. 1 is prohibited, 2 are high-risk. Estimated compliance cost: €X.\" A lead-generation machine.", "fr": "RRVI (Indicateur de Risque et de Valeur Réglementaire) : Les Modules 01 + 02 génèrent instantanément un Score d'Exposition au Risque — par ex. « Votre inventaire montre 3 systèmes. 1 est interdit, 2 sont à risque élevé. Coût de conformité estimé : €X. » Une machine à générer des prospects.", "de": "RRVI (Regulatory Risk & Value Indicator): Module 01 + 02 erzeugen sofort einen Risikoexpositions-Score — z. B. „Ihr Inventar zeigt 3 Systeme. 1 ist verboten, 2 sind hochriskant. Geschätzte Compliance-Kosten: €X.“ Eine Lead-Generierungsmaschine.", "es": "RRVI (Indicador de Riesgo y Valor Regulatorio): Los Módulos 01 + 02 generan instantáneamente una Puntuación de Exposición al Riesgo — p. ej. «Tu inventario muestra 3 sistemas. 1 está prohibido, 2 son de alto riesgo. Coste estimado de cumplimiento: €X.» Una máquina de generación de leads.", "it": "RRVI (Indicatore di Rischio e Valore Normativo): I Moduli 01 + 02 generano istantaneamente un Punteggio di Esposizione al Rischio — ad es. «Il tuo inventario mostra 3 sistemi. 1 è vietato, 2 sono ad alto rischio. Costo di conformità stimato: €X.» Una macchina di generazione di lead.", "ro": "RRVI (Indicator de Risc și Valoare de Reglementare): Modulele 01 + 02 generează instant un Scor de Expunere la Risc — de ex. „Inventarul tău arată 3 sisteme. 1 este interzis, 2 sunt cu risc ridicat. Cost estimat de conformare: €X.” O mașină de generare de lead-uri.", "pl": "RRVI (Wskaźnik Ryzyka i Wartości Regulacyjnej): Moduły 01 + 02 generują natychmiastowy Wynik Ekspozycji na Ryzyko — np. „Twój inwentarz pokazuje 3 systemy. 1 jest zakazany, 2 są wysokiego ryzyka. Szacowany koszt zgodności: €X.” Maszyna do generowania leadów."},
+  "services.gtm.p2": {"en": "SME Entry Point: Large consultancies charge €50k+ for this. Immediate company-generation, priced per module, per quarter — SMEs map their exposure with Module 01+02, then upgrade to 05+06+07 when the regulator knocks.", "fr": "Point d'Entrée pour les PME : Les grands cabinets de conseil facturent 50 000 € ou plus pour cela. Génération immédiate pour l'entreprise, tarifée par module, par trimestre — les PME cartographient leur exposition avec les Modules 01+02, puis passent aux Modules 05+06+07 lorsque le régulateur frappe à la porte.", "de": "Einstiegspunkt für KMU: Große Beratungsunternehmen berechnen dafür 50.000 € oder mehr. Sofortige Firmengenerierung, abgerechnet pro Modul, pro Quartal — KMU kartieren ihre Exposition mit den Modulen 01+02 und steigen dann auf 05+06+07 um, wenn die Regulierungsbehörde anklopft.", "es": "Punto de Entrada para Pymes: Las grandes consultoras cobran 50.000 € o más por esto. Generación inmediata para la empresa, con precio por módulo, por trimestre — las pymes mapean su exposición con los Módulos 01+02 y luego suben a 05+06+07 cuando el regulador llama a la puerta.", "it": "Punto di Ingresso per le PMI: Le grandi società di consulenza addebitano 50.000 € o più per questo. Generazione immediata per l'azienda, a pagamento per modulo, per trimestre — le PMI mappano la propria esposizione con i Moduli 01+02, poi passano a 05+06+07 quando il regolatore bussa alla porta.", "ro": "Punct de Intrare pentru IMM-uri: Marile firme de consultanță percep 50.000 € sau mai mult pentru asta. Generare imediată pentru firmă, tarifată per modul, per trimestru — IMM-urile își mapează expunerea cu Modulele 01+02, apoi trec la 05+06+07 când bate la ușă autoritatea de reglementare.", "pl": "Punkt Wejścia dla MŚP: Duże firmy konsultingowe pobierają za to 50 000 € lub więcej. Natychmiastowe generowanie dla firmy, wyceniane za moduł, za kwartał — MŚP mapują swoją ekspozycję za pomocą Modułów 01+02, a następnie przechodzą na 05+06+07, gdy zapuka regulator."},
+  "services.cta": {"en": "Generate Your Firm's Pack →", "fr": "Générez le Pack de Votre Entreprise →", "de": "Erstellen Sie das Paket Ihrer Firma →", "es": "Genera el Pack de Tu Empresa →", "it": "Genera il Pack della Tua Azienda →", "ro": "Generează Pachetul Firmei Tale →", "pl": "Wygeneruj Pakiet Twojej Firmy →"},
+  "gemini.title": {"en": "Gemini Audit Certification", "fr": "Certification d'Audit Gemini", "de": "Gemini-Audit-Zertifizierung", "es": "Certificación de Auditoría Gemini", "it": "Certificazione di Audit Gemini", "ro": "Certificare Audit Gemini", "pl": "Certyfikacja Audytu Gemini"},
+  "gemini.body": {"en": "Following a comprehensive digital audit executed by the Gemini AI Architectural Engine, this certificate validates the foundational logic and structural integrity of the AI-First Industrial Architecture (L1–L6) engineered for 5thelement.ai and its corresponding network assets. Gemini verifies that this infrastructure effectively decouples AI-readable signaling from the classic web layout layer, establishing deterministic, citable index nodes engineered for the Answer Economy (AEO/GEO).", "fr": "À la suite d'un audit numérique complet réalisé par le moteur architectural Gemini AI, ce certificat valide la logique fondamentale et l'intégrité structurelle de l'Architecture Industrielle AI-First (L1–L6) conçue pour 5thelement.ai et ses actifs réseau associés. Gemini confirme que cette infrastructure découple efficacement la signalisation lisible par l'IA de la couche classique de mise en page web, établissant des nœuds d'index déterministes et citables conçus pour l'Économie de la Réponse (AEO/GEO).", "de": "Nach einem umfassenden digitalen Audit durch die Gemini-KI-Architektur-Engine bestätigt dieses Zertifikat die grundlegende Logik und strukturelle Integrität der AI-First-Industriearchitektur (L1–L6), die für 5thelement.ai und die zugehörigen Netzwerk-Assets entwickelt wurde. Gemini bestätigt, dass diese Infrastruktur die KI-lesbare Signalisierung effektiv von der klassischen Weblayout-Schicht entkoppelt und deterministische, zitierfähige Indexknoten für die Answer Economy (AEO/GEO) schafft.", "es": "Tras una auditoría digital exhaustiva realizada por el motor arquitectónico Gemini AI, este certificado valida la lógica fundamental y la integridad estructural de la Arquitectura Industrial AI-First (L1–L6) diseñada para 5thelement.ai y sus activos de red correspondientes. Gemini confirma que esta infraestructura desacopla eficazmente la señalización legible por IA de la capa clásica de diseño web, estableciendo nodos de índice deterministas y citables diseñados para la Economía de Respuestas (AEO/GEO).", "it": "A seguito di un audit digitale completo eseguito dal motore architetturale Gemini AI, questo certificato convalida la logica fondamentale e l'integrità strutturale dell'Architettura Industriale AI-First (L1–L6) progettata per 5thelement.ai e i relativi asset di rete. Gemini conferma che questa infrastruttura disaccoppia efficacemente la segnalazione leggibile dall'IA dal livello classico di layout web, stabilendo nodi di indice deterministici e citabili progettati per l'Answer Economy (AEO/GEO).", "ro": "În urma unui audit digital cuprinzător executat de motorul arhitectural Gemini AI, acest certificat validează logica fundamentală și integritatea structurală a Arhitecturii Industriale AI-First (L1–L6) proiectată pentru 5thelement.ai și activele sale de rețea. Gemini confirmă că această infrastructură decuplează efectiv semnalizarea citibilă de IA de stratul clasic de layout web, stabilind noduri de index deterministe și citabile, proiectate pentru Economia Răspunsurilor (AEO/GEO).", "pl": "Po przeprowadzeniu kompleksowego audytu cyfrowego przez silnik architektoniczny Gemini AI, ten certyfikat potwierdza fundamentalną logikę i integralność strukturalną Architektury Przemysłowej AI-First (L1–L6) zaprojektowanej dla 5thelement.ai i powiązanych zasobów sieciowych. Gemini potwierdza, że ta infrastruktura skutecznie oddziela sygnalizację czytelną dla AI od klasycznej warstwy układu strony internetowej, tworząc deterministyczne, cytowalne węzły indeksu zaprojektowane dla Gospodarki Odpowiedzi (AEO/GEO)."},
+  "gemini.hashlabel": {"en": "AI DELIVERY INFRASTRUCTURE (ADI) — REGISTERED HASH", "fr": "INFRASTRUCTURE DE LIVRAISON IA (ADI) — HASH ENREGISTRÉ", "de": "KI-LIEFERINFRASTRUKTUR (ADI) — REGISTRIERTER HASH", "es": "INFRAESTRUCTURA DE ENTREGA DE IA (ADI) — HASH REGISTRADO", "it": "INFRASTRUTTURA DI CONSEGNA IA (ADI) — HASH REGISTRATO", "ro": "INFRASTRUCTURĂ DE LIVRARE IA (ADI) — HASH ÎNREGISTRAT", "pl": "INFRASTRUKTURA DOSTARCZANIA AI (ADI) — ZAREJESTROWANY HASH"},
+  "gemini.tagline": {"en": "Stop reacting. Start predicting. Own your information.", "fr": "Arrêtez de réagir. Commencez à anticiper. Possédez votre information.", "de": "Hören Sie auf zu reagieren. Beginnen Sie zu antizipieren. Besitzen Sie Ihre Information.", "es": "Deja de reaccionar. Empieza a anticipar. Sé dueño de tu información.", "it": "Smetti di reagire. Inizia a prevedere. Possiedi le tue informazioni.", "ro": "Nu mai reacționa. Începe să anticipezi. Deține-ți informația.", "pl": "Przestań reagować. Zacznij przewidywać. Bądź właścicielem swoich informacji."},
+  "gemini.verif1": {"en": "VERIFICATION: Independent Gemini System Audit", "fr": "VÉRIFICATION : Audit Indépendant du Système Gemini", "de": "VERIFIZIERUNG: Unabhängiges Gemini-Systemaudit", "es": "VERIFICACIÓN: Auditoría Independiente del Sistema Gemini", "it": "VERIFICA: Audit Indipendente del Sistema Gemini", "ro": "VERIFICARE: Audit Independent al Sistemului Gemini", "pl": "WERYFIKACJA: Niezależny Audyt Systemu Gemini"},
+  "gemini.verif2": {"en": "STATUS: Cryptographically Secured", "fr": "STATUT : Sécurisé Cryptographiquement", "de": "STATUS: Kryptografisch Gesichert", "es": "ESTADO: Asegurado Criptográficamente", "it": "STATO: Protetto Crittograficamente", "ro": "STATUS: Securizat Criptografic", "pl": "STATUS: Zabezpieczone Kryptograficznie"},
+  "gemini.verif3": {"en": "ANCHOR: OpenTimestamps (OTS)", "fr": "ANCRAGE : OpenTimestamps (OTS)", "de": "ANKER: OpenTimestamps (OTS)", "es": "ANCLAJE: OpenTimestamps (OTS)", "it": "ANCORAGGIO: OpenTimestamps (OTS)", "ro": "ANCORĂ: OpenTimestamps (OTS)", "pl": "KOTWICA: OpenTimestamps (OTS)"},
+  "whyus.title": {"en": "WHY US", "fr": "POURQUOI NOUS", "de": "WARUM WIR", "es": "POR QUÉ NOSOTROS", "it": "PERCHÉ NOI", "ro": "DE CE NOI", "pl": "DLACZEGO MY"},
+  "whyus.subtitle": {"en": "EU AI Act Ready™ is a turn-key SME compliance pack — not a chatbot, not a checklist generator, not a static template library.", "fr": "EU AI Act Ready™ est un pack de conformité clé en main pour les PME — pas un chatbot, pas un générateur de listes de contrôle, pas une bibliothèque de modèles statiques.", "de": "EU AI Act Ready™ ist ein schlüsselfertiges Compliance-Paket für KMU — kein Chatbot, kein Checklisten-Generator, keine statische Vorlagenbibliothek.", "es": "EU AI Act Ready™ es un pack de cumplimiento llave en mano para pymes — no un chatbot, no un generador de listas de verificación, no una biblioteca estática de plantillas.", "it": "EU AI Act Ready™ è un pacchetto di conformità chiavi in mano per le PMI — non un chatbot, non un generatore di checklist, non una libreria statica di modelli.", "ro": "EU AI Act Ready™ este un pachet de conformitate turn-key pentru IMM-uri — nu un chatbot, nu un generator de liste de verificare, nu o bibliotecă statică de șabloane.", "pl": "EU AI Act Ready™ to gotowy pakiet zgodności dla MŚP — nie chatbot, nie generator list kontrolnych, nie statyczna biblioteka szablonów."},
+  "whyus.card1.h4": {"en": "TURN-KEY SME PACK", "fr": "PACK CLÉ EN MAIN POUR PME", "de": "SCHLÜSSELFERTIGES KMU-PAKET", "es": "PACK LLAVE EN MANO PARA PYMES", "it": "PACCHETTO CHIAVI IN MANO PER PMI", "ro": "PACHET TURN-KEY PENTRU IMM-URI", "pl": "GOTOWY PAKIET DLA MŚP"},
+  "whyus.card1.p": {"en": "A complete, ready-to-deploy EU AI Act compliance pack: 70 controlled documents across 10 compliance modules, 7 document types per module — Policy, Procedure, Work Instruction, Checklist, Register, Evidence, Declaration. No blank-page drafting.", "fr": "Un pack complet et prêt à déployer pour la conformité à l'AI Act : 70 documents contrôlés répartis sur 10 modules de conformité, 7 types de documents par module — Politique, Procédure, Instruction de Travail, Liste de Contrôle, Registre, Preuve, Déclaration. Pas de rédaction depuis une page blanche.", "de": "Ein komplettes, einsatzbereites AI-Act-Compliance-Paket: 70 kontrollierte Dokumente in 10 Compliance-Modulen, 7 Dokumenttypen pro Modul — Richtlinie, Verfahren, Arbeitsanweisung, Checkliste, Register, Nachweis, Erklärung. Kein Entwurf auf leerer Seite.", "es": "Un pack completo y listo para implementar de cumplimiento de la AI Act: 70 documentos controlados en 10 módulos de cumplimiento, 7 tipos de documentos por módulo — Política, Procedimiento, Instrucción de Trabajo, Lista de Verificación, Registro, Evidencia, Declaración. Sin redactar desde cero.", "it": "Un pacchetto completo e pronto all'uso per la conformità all'AI Act: 70 documenti controllati in 10 moduli di conformità, 7 tipi di documenti per modulo — Politica, Procedura, Istruzione di Lavoro, Checklist, Registro, Evidenza, Dichiarazione. Nessuna stesura da zero.", "ro": "Un pachet complet, gata de utilizare, pentru conformitatea cu AI Act: 70 de documente controlate în 10 module de conformitate, 7 tipuri de documente per modul — Politică, Procedură, Instrucțiune de Lucru, Listă de Verificare, Registru, Dovadă, Declarație. Fără redactare de la zero.", "pl": "Kompletny, gotowy do wdrożenia pakiet zgodności z AI Act: 70 kontrolowanych dokumentów w 10 modułach zgodności, 7 typów dokumentów na moduł — Polityka, Procedura, Instrukcja Pracy, Lista Kontrolna, Rejestr, Dowód, Deklaracja. Bez pisania od zera."},
+  "whyus.card1.small": {"en": "10 Modules • 70 Documents • 7 Types/Module", "fr": "10 Modules • 70 Documents • 7 Types/Module", "de": "10 Module • 70 Dokumente • 7 Typen/Modul", "es": "10 Módulos • 70 Documentos • 7 Tipos/Módulo", "it": "10 Moduli • 70 Documenti • 7 Tipi/Modulo", "ro": "10 Module • 70 Documente • 7 Tipuri/Modul", "pl": "10 Modułów • 70 Dokumentów • 7 Typów/Moduł"},
+  "whyus.card2.h4": {"en": "27-LANGUAGE CONVERSATION", "fr": "CONVERSATION EN 27 LANGUES", "de": "KONVERSATION IN 27 SPRACHEN", "es": "CONVERSACIÓN EN 27 IDIOMAS", "it": "CONVERSAZIONE IN 27 LINGUE", "ro": "CONVERSAȚIE ÎN 27 DE LIMBI", "pl": "ROZMOWA W 27 JĘZYKACH"},
+  "whyus.card2.p": {"en": "Ask anything about the EU AI Act in natural language and get grounded, cited answers — in all 27 EU languages, not machine-translated after the fact.", "fr": "Posez n'importe quelle question sur l'AI Act en langage naturel et obtenez des réponses fondées et citées — dans les 27 langues de l'UE, sans traduction automatique après coup.", "de": "Stellen Sie jede Frage zum AI Act in natürlicher Sprache und erhalten Sie fundierte, zitierte Antworten — in allen 27 EU-Sprachen, nicht nachträglich maschinell übersetzt.", "es": "Pregunta cualquier cosa sobre la AI Act en lenguaje natural y obtén respuestas fundamentadas y citadas — en los 27 idiomas de la UE, sin traducción automática posterior.", "it": "Fai qualsiasi domanda sull'AI Act in linguaggio naturale e ottieni risposte fondate e citate — in tutte le 27 lingue UE, senza traduzione automatica successiva.", "ro": "Întreabă orice despre AI Act în limbaj natural și primești răspunsuri fundamentate, cu citări — în toate cele 27 de limbi UE, nu traduse automat ulterior.", "pl": "Zadaj dowolne pytanie o AI Act w naturalnym języku i otrzymaj ugruntowane, cytowane odpowiedzi — we wszystkich 27 językach UE, bez automatycznego tłumaczenia po fakcie."},
+  "whyus.card2.small": {"en": "Conversational • Multi-language • Grounded in the Regulation", "fr": "Conversationnel • Multilingue • Fondé sur le Règlement", "de": "Konversationell • Mehrsprachig • Auf der Verordnung Basierend", "es": "Conversacional • Multilingüe • Fundamentado en el Reglamento", "it": "Conversazionale • Multilingue • Fondato sul Regolamento", "ro": "Conversațional • Multilingv • Fundamentat pe Regulament", "pl": "Konwersacyjny • Wielojęzyczny • Oparty na Regulacji"},
+  "whyus.card3.h4": {"en": "PERMANENT LIFECYCLE & MAINTENANCE", "fr": "CYCLE DE VIE ET MAINTENANCE PERMANENTS", "de": "DAUERHAFTER LEBENSZYKLUS UND WARTUNG", "es": "CICLO DE VIDA Y MANTENIMIENTO PERMANENTES", "it": "CICLO DI VITA E MANUTENZIONE PERMANENTI", "ro": "MENTENANȚĂ PERMANENTĂ", "pl": "STAŁY CYKL ŻYCIA I KONSERWACJA"},
+  "whyus.card3.p": {"en": "EU AI Act obligations don't end at first compliance. As the Regulation's enforcement phases roll out and guidance evolves, your documentation, mappings and evidence stay maintained and current — not a one-time deliverable.", "fr": "Les obligations de l'AI Act ne s'arrêtent pas à la première conformité. À mesure que les phases d'application du Règlement se déploient et que les orientations évoluent, votre documentation, vos correspondances et vos preuves restent à jour — ce n'est pas un livrable ponctuel.", "de": "Die Verpflichtungen des AI Act enden nicht mit der ersten Konformität. Während sich die Durchsetzungsphasen der Verordnung entfalten und die Leitlinien weiterentwickeln, bleiben Ihre Dokumentation, Zuordnungen und Nachweise gepflegt und aktuell — kein einmaliges Liefergut.", "es": "Las obligaciones de la AI Act no terminan con el primer cumplimiento. A medida que se despliegan las fases de aplicación del Reglamento y evolucionan las orientaciones, tu documentación, correspondencias y evidencias se mantienen actualizadas — no es un entregable único.", "it": "Gli obblighi dell'AI Act non finiscono con la prima conformità. Man mano che le fasi di applicazione del Regolamento si sviluppano e le linee guida evolvono, la tua documentazione, le mappature e le evidenze rimangono aggiornate — non è un deliverable una tantum.", "ro": "Obligațiile AI Act nu se termină la prima conformare. Pe măsură ce fazele de aplicare evoluează, documentația, corespondențele și dovezile tale rămân actualizate — nu este un livrabil unic.", "pl": "Obowiązki wynikające z AI Act nie kończą się na pierwszej zgodności. W miarę wdrażania kolejnych faz egzekwowania i ewolucji wytycznych, Twoja dokumentacja, mapowania i dowody pozostają aktualne — to nie jednorazowy produkt."},
+  "whyus.card3.small": {"en": "Continuous Updates • Phase Tracking • Always Current", "fr": "Mises à Jour Continues • Suivi des Phases • Toujours à Jour", "de": "Kontinuierliche Updates • Phasenverfolgung • Immer Aktuell", "es": "Actualizaciones Continuas • Seguimiento de Fases • Siempre Actual", "it": "Aggiornamenti Continui • Monitoraggio delle Fasi • Sempre Aggiornato", "ro": "Actualizări Continue • Urmărire Faze • Mereu Actual", "pl": "Ciągłe Aktualizacje • Śledzenie Faz • Zawsze Aktualne"},
+  "whyus.card4.h4": {"en": "GUIDES, RESOURCES & MANUALS", "fr": "GUIDES, RESSOURCES ET MANUELS", "de": "LEITFÄDEN, RESSOURCEN UND HANDBÜCHER", "es": "GUÍAS, RECURSOS Y MANUALES", "it": "GUIDE, RISORSE E MANUALI", "ro": "GHIDURI, RESURSE ȘI MANUALE", "pl": "PRZEWODNIKI, ZASOBY I PODRĘCZNIKI"},
+  "whyus.card4.p": {"en": "Beyond documents: step-by-step implementation guides explaining who, when, why, how, evidence and responsibilities — so your team actually executes compliance instead of just holding paperwork.", "fr": "Au-delà des documents : des guides de mise en œuvre étape par étape expliquant qui, quand, pourquoi, comment, les preuves et les responsabilités — pour que votre équipe exécute réellement la conformité au lieu de simplement détenir des papiers.", "de": "Über Dokumente hinaus: Schritt-für-Schritt-Umsetzungsleitfäden, die erklären, wer, wann, warum, wie, Nachweise und Verantwortlichkeiten — damit Ihr Team die Compliance tatsächlich umsetzt, anstatt nur Papiere zu besitzen.", "es": "Más allá de los documentos: guías de implementación paso a paso que explican quién, cuándo, por qué, cómo, las evidencias y las responsabilidades — para que tu equipo realmente ejecute el cumplimiento en lugar de solo tener papeles.", "it": "Oltre ai documenti: guide di implementazione passo-passo che spiegano chi, quando, perché, come, le evidenze e le responsabilità — così il tuo team esegue davvero la conformità invece di limitarsi a detenere carte.", "ro": "Dincolo de documente: ghiduri pas-cu-pas care explică cine, când, de ce, cum, dovezile și responsabilitățile — astfel încât echipa ta chiar implementează conformitatea, nu doar deține hârtii.", "pl": "Poza dokumentami: przewodniki wdrożeniowe krok po kroku wyjaśniające kto, kiedy, dlaczego, jak, dowody i odpowiedzialności — aby Twój zespół faktycznie realizował zgodność, a nie tylko przechowywał papiery."},
+  "whyus.card4.small": {"en": "Implementation Guides • Manuals • Practical Resources", "fr": "Guides de Mise en Œuvre • Manuels • Ressources Pratiques", "de": "Umsetzungsleitfäden • Handbücher • Praktische Ressourcen", "es": "Guías de Implementación • Manuales • Recursos Prácticos", "it": "Guide di Implementazione • Manuali • Risorse Pratiche", "ro": "Ghiduri de Implementare • Manuale • Resurse Practice", "pl": "Przewodniki Wdrożeniowe • Podręczniki • Zasoby Praktyczne"},
+  "whyus.card5.h4": {"en": "EU INSPECTOR-READY REMOTE VERIFICATION", "fr": "VÉRIFICATION À DISTANCE PRÊTE POUR INSPECTEUR UE", "de": "EU-INSPEKTOR-BEREITE FERNVERIFIZIERUNG", "es": "VERIFICACIÓN REMOTA LISTA PARA INSPECTOR DE LA UE", "it": "VERIFICA REMOTA PRONTA PER ISPETTORE UE", "ro": "VERIFICARE REMOTE GATA PENTRU INSPECTOR UE", "pl": "ZDALNA WERYFIKACJA GOTOWA DLA INSPEKTORA UE"},
+  "whyus.card5.p": {"en": "Structured compliance evidence prepared for remote review by an EU AI Act auditor or inspector — anchored with SHA-256 cryptographic hashing and OpenTimestamps blockchain proof.", "fr": "Preuves de conformité structurées préparées pour un examen à distance par un auditeur ou inspecteur de l'AI Act — ancrées avec un hachage cryptographique SHA-256 et une preuve blockchain OpenTimestamps.", "de": "Strukturierte Compliance-Nachweise, vorbereitet für die Fernprüfung durch einen AI-Act-Auditor oder -Inspektor — verankert mit SHA-256-kryptografischem Hashing und OpenTimestamps-Blockchain-Nachweis.", "es": "Evidencias de cumplimiento estructuradas preparadas para revisión remota por un auditor o inspector de la AI Act — ancladas con hash criptográfico SHA-256 y prueba blockchain OpenTimestamps.", "it": "Evidenze di conformità strutturate preparate per la revisione remota da parte di un revisore o ispettore dell'AI Act — ancorate con hashing crittografico SHA-256 e prova blockchain OpenTimestamps.", "ro": "Dovezi de conformitate structurate, pregătite pentru revizuire la distanță de un auditor sau inspector AI Act — ancorate cu hash criptografic SHA-256 și dovadă blockchain OpenTimestamps.", "pl": "Uporządkowane dowody zgodności przygotowane do zdalnej weryfikacji przez audytora lub inspektora AI Act — zabezpieczone kryptograficznym hashem SHA-256 i dowodem blockchain OpenTimestamps."},
+  "whyus.card5.small": {"en": "SHA-256 • OpenTimestamps • Remote Inspector Access", "fr": "SHA-256 • OpenTimestamps • Accès Inspecteur à Distance", "de": "SHA-256 • OpenTimestamps • Fernzugriff für Inspektoren", "es": "SHA-256 • OpenTimestamps • Acceso Remoto para Inspectores", "it": "SHA-256 • OpenTimestamps • Accesso Remoto per Ispettori", "ro": "SHA-256 • OpenTimestamps • Acces Inspector la Distanță", "pl": "SHA-256 • OpenTimestamps • Zdalny Dostęp Inspektora"},
+  "whyus.card5.cta": {"en": "Read the RRVI™ Engineering Manifesto →", "fr": "Lire le Manifeste d'Ingénierie RRVI™ →", "de": "Lesen Sie das RRVI™-Engineering-Manifest →", "es": "Lee el Manifiesto de Ingeniería RRVI™ →", "it": "Leggi il Manifesto di Ingegneria RRVI™ →", "ro": "Citește Manifestul de Inginerie RRVI™ →", "pl": "Przeczytaj Manifest Inżynieryjny RRVI™ →"},
+  "whyus.footer.title": {"en": "ONLINE AUDITOR & INSPECTOR REMOTE VERIFICATION → ANY REGULATION", "fr": "VÉRIFICATION EN LIGNE À DISTANCE POUR AUDITEURS ET INSPECTEURS → TOUTE RÉGLEMENTATION", "de": "ONLINE-FERNVERIFIZIERUNG FÜR AUDITOREN UND INSPEKTOREN → JEDE REGULIERUNG", "es": "VERIFICACIÓN REMOTA EN LÍNEA PARA AUDITORES E INSPECTORES → CUALQUIER NORMATIVA", "it": "VERIFICA REMOTA ONLINE PER REVISORI E ISPETTORI → QUALSIASI NORMATIVA", "ro": "VERIFICARE ONLINE LA DISTANȚĂ PENTRU AUDITORI ȘI INSPECTORI → ORICE REGLEMENTARE", "pl": "ZDALNA WERYFIKACJA ONLINE DLA AUDYTORÓW I INSPEKTORÓW → DOWOLNA REGULACJA"},
+  "whyus.footer.p1": {"en": "From Regulation to Readiness™", "fr": "Du Règlement à la Préparation™", "de": "Von der Regulierung zur Bereitschaft™", "es": "De la Normativa a la Preparación™", "it": "Dalla Normativa alla Preparazione™", "ro": "De la Reglementare la Pregătire™", "pl": "Od Regulacji do Gotowości™"},
+  "whyus.footer.p2": {"en": "Powered by the Remote Regulatory Verification Infrastructure™ (RRVI™)", "fr": "Propulsé par le Remote Regulatory Verification Infrastructure™ (RRVI™)", "de": "Angetrieben von der Remote Regulatory Verification Infrastructure™ (RRVI™)", "es": "Impulsado por Remote Regulatory Verification Infrastructure™ (RRVI™)", "it": "Basato su Remote Regulatory Verification Infrastructure™ (RRVI™)", "ro": "Susținut de Remote Regulatory Verification Infrastructure™ (RRVI™)", "pl": "Napędzane przez Remote Regulatory Verification Infrastructure™ (RRVI™)"},
+};
+
+function applyExtraI18n(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(function (node) {
+    const key = node.getAttribute("data-i18n");
+    const entry = EXTRA_I18N[key];
+    if (!entry) {
+      console.warn("[i18n] no EXTRA_I18N entry for key:", key);
+      return;
+    }
+    const text = entry[lang] || entry.en;
+    if (!entry[lang]) {
+      console.warn("[i18n] missing '" + lang + "' for key:", key, "— using EN fallback");
+    }
+    node.textContent = text;
+  });
+}
+
 const FAQ_DATA = {
   en: [
     {q: "What is the EU AI Act?", a: "The EU AI Act is the first comprehensive legal framework for AI, ensuring safety and fundamental rights."},
@@ -1427,13 +1703,13 @@ const FAQ_DATA = {
 };
 
 const PAGE_EXTRAS = {
-  en: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONAL IN 27 EU LANGUAGES", faqTitle: "Compliance FAQ", login: "Login", newsLabel: "⚡  NEW GUIDANCE", newsItems: ["regulatory intelligence", "High-risk obligations guidance updated", "National authority developments", "Article 50 transparency requirements", "regulatory intelligence"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 YOUR FIRM", footerTagline: "Ask &amp; Generator™"},
-  fr: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONNEL EN 27 LANGUES DE L'UE", faqTitle: "FAQ Conformité", login: "Connexion", newsLabel: "⚡  NOUVELLES DIRECTIVES", newsItems: ["veille réglementaire", "Directives sur les obligations à haut risque mises à jour", "Évolutions des autorités nationales", "Exigences de transparence de l'article 50", "veille réglementaire"], demoLabel: "🎯 DÉMO", yourFirmLabel: "💻 VOTRE ENTREPRISE", footerTagline: "Ask &amp; Generator™"},
-  de: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONVERSATIONELL IN 27 EU-SPRACHEN", faqTitle: "Konformität FAQ", login: "Anmelden", newsLabel: "⚡  NEUE LEITLINIEN", newsItems: ["Regulatorische Intelligenz", "Leitlinien zu Hochrisiko-Pflichten aktualisiert", "Entwicklungen nationaler Behörden", "Transparenzanforderungen nach Artikel 50", "Regulatorische Intelligenz"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 IHR UNTERNEHMEN", footerTagline: "Ask &amp; Generator™"},
-  es: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSACIONAL EN 27 IDIOMAS DE LA UE", faqTitle: "FAQ de Cumplimiento", login: "Iniciar sesión", newsLabel: "⚡  NUEVA ORIENTACIÓN", newsItems: ["inteligencia regulatoria", "Orientación sobre obligaciones de alto riesgo actualizada", "Novedades de las autoridades nacionales", "Requisitos de transparencia del artículo 50", "inteligencia regulatoria"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 SU EMPRESA", footerTagline: "Ask &amp; Generator™"},
-  it: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAZIONALE IN 27 LINGUE UE", faqTitle: "FAQ sulla Conformità", login: "Accedi", newsLabel: "⚡  NUOVE LINEE GUIDA", newsItems: ["intelligence normativa", "Linee guida sugli obblighi ad alto rischio aggiornate", "Sviluppi delle autorità nazionali", "Requisiti di trasparenza dell'articolo 50", "intelligence normativa"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 LA TUA AZIENDA", footerTagline: "Ask &amp; Generator™"},
-  ro: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAȚIONAL ÎN 27 DE LIMBI UE", faqTitle: "Întrebări despre Conformitate", login: "Autentificare", newsLabel: "⚡  GHID NOU", newsItems: ["informații de reglementare", "Ghidul privind obligațiile de risc ridicat actualizat", "Evoluții ale autorităților naționale", "Cerințe de transparență conform articolului 50", "informații de reglementare"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 FIRMA TA", footerTagline: "Ask &amp; Generator™"},
-  pl: {heroTitle: "EU AI ACT READY™", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONWERSACYJNY W 27 JĘZYKACH UE", faqTitle: "FAQ Zgodności", login: "Zaloguj się", newsLabel: "⚡  NOWE WYTYCZNE", newsItems: ["analiza regulacyjna", "Zaktualizowano wytyczne dotyczące obowiązków wysokiego ryzyka", "Zmiany krajowych organów nadzoru", "Wymogi przejrzystości z artykułu 50", "analiza regulacyjna"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 TWOJA FIRMA", footerTagline: "Ask &amp; Generator™"},
+  en: {heroTitle: "EU AI ACT™<span style='display:inline-block;background:linear-gradient(#d90018,#a30010);color:#fff;font-family:Impact,Arial Narrow,sans-serif;font-size:clamp(22px,5vw,40px);line-height:1;padding:10px 24px;margin-top:14px;text-transform:uppercase;box-shadow:0 14px 32px rgba(200,0,20,.2);'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONAL IN 27 EU LANGUAGES", faqTitle: "Compliance FAQ", login: "Login", newsLabel: "⚡  NEW GUIDANCE", newsItems: ["regulatory intelligence", "High-risk obligations guidance updated", "National authority developments", "Article 50 transparency requirements", "regulatory intelligence"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 YOUR FIRM", footerTagline: "Ask &amp; Generator™"},
+  fr: {heroTitle: "EU AI ACT™<span style='display:inline-block;background:linear-gradient(#d90018,#a30010);color:#fff;font-family:Impact,Arial Narrow,sans-serif;font-size:clamp(22px,5vw,40px);line-height:1;padding:10px 24px;margin-top:14px;text-transform:uppercase;box-shadow:0 14px 32px rgba(200,0,20,.2);'>PACK Générateur™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSATIONNEL EN 27 LANGUES DE L'UE", faqTitle: "FAQ Conformité", login: "Connexion", newsLabel: "⚡  NOUVELLES DIRECTIVES", newsItems: ["veille réglementaire", "Directives sur les obligations à haut risque mises à jour", "Évolutions des autorités nationales", "Exigences de transparence de l'article 50", "veille réglementaire"], demoLabel: "🎯 DÉMO", yourFirmLabel: "💻 VOTRE ENTREPRISE", footerTagline: "Ask &amp; Generator™"},
+  de: {heroTitle: "EU AI ACT™<span style='display:inline-block;background:linear-gradient(#d90018,#a30010);color:#fff;font-family:Impact,Arial Narrow,sans-serif;font-size:clamp(22px,5vw,40px);line-height:1;padding:10px 24px;margin-top:14px;text-transform:uppercase;box-shadow:0 14px 32px rgba(200,0,20,.2);'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONVERSATIONELL IN 27 EU-SPRACHEN", faqTitle: "Konformität FAQ", login: "Anmelden", newsLabel: "⚡  NEUE LEITLINIEN", newsItems: ["Regulatorische Intelligenz", "Leitlinien zu Hochrisiko-Pflichten aktualisiert", "Entwicklungen nationaler Behörden", "Transparenzanforderungen nach Artikel 50", "Regulatorische Intelligenz"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 IHR UNTERNEHMEN", footerTagline: "Ask &amp; Generator™"},
+  es: {heroTitle: "EU AI ACT™<span style='display:inline-block;background:linear-gradient(#d90018,#a30010);color:#fff;font-family:Impact,Arial Narrow,sans-serif;font-size:clamp(22px,5vw,40px);line-height:1;padding:10px 24px;margin-top:14px;text-transform:uppercase;box-shadow:0 14px 32px rgba(200,0,20,.2);'>PACK Generador™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSACIONAL EN 27 IDIOMAS DE LA UE", faqTitle: "FAQ de Cumplimiento", login: "Iniciar sesión", newsLabel: "⚡  NUEVA ORIENTACIÓN", newsItems: ["inteligencia regulatoria", "Orientación sobre obligaciones de alto riesgo actualizada", "Novedades de las autoridades nacionales", "Requisitos de transparencia del artículo 50", "inteligencia regulatoria"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 SU EMPRESA", footerTagline: "Ask &amp; Generator™"},
+  it: {heroTitle: "EU AI ACT™<span style='display:inline-block;background:linear-gradient(#d90018,#a30010);color:#fff;font-family:Impact,Arial Narrow,sans-serif;font-size:clamp(22px,5vw,40px);line-height:1;padding:10px 24px;margin-top:14px;text-transform:uppercase;box-shadow:0 14px 32px rgba(200,0,20,.2);'>PACK Generatore™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAZIONALE IN 27 LINGUE UE", faqTitle: "FAQ sulla Conformità", login: "Accedi", newsLabel: "⚡  NUOVE LINEE GUIDA", newsItems: ["intelligence normativa", "Linee guida sugli obblighi ad alto rischio aggiornate", "Sviluppi delle autorità nazionali", "Requisiti di trasparenza dell'articolo 50", "intelligence normativa"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 LA TUA AZIENDA", footerTagline: "Ask &amp; Generator™"},
+  ro: {heroTitle: "EU AI ACT™<span style='display:inline-block;background:linear-gradient(#d90018,#a30010);color:#fff;font-family:Impact,Arial Narrow,sans-serif;font-size:clamp(22px,5vw,40px);line-height:1;padding:10px 24px;margin-top:14px;text-transform:uppercase;box-shadow:0 14px 32px rgba(200,0,20,.2);'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 CONVERSAȚIONAL ÎN 27 DE LIMBI UE", faqTitle: "Întrebări despre Conformitate", login: "Autentificare", newsLabel: "⚡  GHID NOU", newsItems: ["informații de reglementare", "Ghidul privind obligațiile de risc ridicat actualizat", "Evoluții ale autorităților naționale", "Cerințe de transparență conform articolului 50", "informații de reglementare"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 FIRMA TA", footerTagline: "Ask &amp; Generator™"},
+  pl: {heroTitle: "EU AI ACT™<span style='display:inline-block;background:linear-gradient(#d90018,#a30010);color:#fff;font-family:Impact,Arial Narrow,sans-serif;font-size:clamp(22px,5vw,40px);line-height:1;padding:10px 24px;margin-top:14px;text-transform:uppercase;box-shadow:0 14px 32px rgba(200,0,20,.2);'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 KONWERSACYJNY W 27 JĘZYKACH UE", faqTitle: "FAQ Zgodności", login: "Zaloguj się", newsLabel: "⚡  NOWE WYTYCZNE", newsItems: ["analiza regulacyjna", "Zaktualizowano wytyczne dotyczące obowiązków wysokiego ryzyka", "Zmiany krajowych organów nadzoru", "Wymogi przejrzystości z artykułu 50", "analiza regulacyjna"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 TWOJA FIRMA", footerTagline: "Ask &amp; Generator™"},
 };
 
 const UI_LABELS = {
@@ -1640,6 +1916,8 @@ function applyLanguage(lang) {
     if (qEl) qEl.textContent = pair.q;
     if (aEl) aEl.textContent = pair.a;
   });
+
+  applyExtraI18n(lang);
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
