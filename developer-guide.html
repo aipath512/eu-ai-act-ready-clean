@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Guide — EU AI Act Ready™</title>
+<meta name="robots" content="index, follow">
+<style>
+:root{
+  --bg:#030508;
+  --red:#e03a1e;
+  --red2:#ff2020;
+  --text:#f0f0f0;
+  --muted:#a8a8a8;
+  --border:#2a2a2a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+header{
+  border-bottom:1px solid var(--border);
+  padding:18px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+header a.back{
+  color:var(--red2);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+header .brand{
+  font-weight:900;
+  letter-spacing:.04em;
+  color:#fff;
+  font-size:14px;
+  text-transform:uppercase;
+}
+main{
+  max-width:820px;
+  margin:0 auto;
+  padding:48px 24px 80px;
+}
+h1{
+  font-size:clamp(28px,5vw,42px);
+  color:#fff;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  letter-spacing:-.01em;
+}
+.kicker{
+  color:var(--red2);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+h2{
+  color:var(--red2);
+  font-size:20px;
+  margin:36px 0 12px;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+}
+h3{
+  color:#fff;
+  font-size:16px;
+  margin:22px 0 8px;
+}
+p{ color:var(--text); margin-bottom:14px; }
+ul, ol{ margin:0 0 14px 22px; color:var(--text); }
+li{ margin-bottom:6px; }
+hr{ border:none; border-top:1px solid var(--border); margin:24px 0; }
+table{ width:100%; border-collapse:collapse; margin:16px 0; font-size:14px; }
+th, td{ border:1px solid var(--border); padding:8px 12px; text-align:left; }
+th{ background:#0d0d0d; color:var(--red2); }
+strong{ color:#fff; }
+footer{
+  border-top:1px solid var(--border);
+  padding:24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+footer a{ color:var(--red2); text-decoration:none; }
+.cta{
+  display:inline-block;
+  margin-top:28px;
+  padding:14px 28px;
+  background:var(--red);
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  border-radius:8px;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+  font-size:14px;
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">&larr; EU AI Act Ready™</a>
+  <span class="brand">5thelement.AI</span>
+</header>
+<main>
+<div class="kicker">Governance Library</div>
+<h1>Developer Guide</h1>
+<h2>EU AI Act Compliance Management System™</h2>
+<p>Repository: RRVI™</p>
+<p>Version: 1.0.2</p>
+<hr />
+<h1>1. Purpose</h1>
+<p>This guide describes how developers shall extend, maintain and version the EU AI Act Compliance Management System without compromising its engineering integrity, traceability or regulatory compliance.</p>
+<hr />
+<h1>2. Engineering Principles</h1>
+<p>Development shall follow these principles:</p>
+<ul>
+<li>Compliance by Design</li>
+<li>Documentation by Design</li>
+<li>Evidence by Design</li>
+<li>Traceability by Design</li>
+<li>Versioning by Design</li>
+<li>Inspection Readiness by Design</li>
+</ul>
+<hr />
+<h1>3. Repository Structure</h1>
+<p>Developers shall preserve the repository structure.</p>
+<p>Do not rename:</p>
+<ul>
+<li>modules;</li>
+<li>controlled documents;</li>
+<li>document identifiers.</li>
+</ul>
+<hr />
+<h1>4. Document Naming</h1>
+<p>Controlled documents shall follow:</p>
+<p><code>TYPE-NNN_Title.md</code></p>
+<p>Examples:</p>
+<p><code>DOD-001_AI_System_Inventory_Policy.md
+PROC-001_AI_System_Inventory_Procedure.md
+REG-005_High_Risk_Assessment_Register.md</code></p>
+<hr />
+<h1>5. Version Control</h1>
+<p>Every change shall:</p>
+<ul>
+<li>update Git history;</li>
+<li>update CHANGELOG;</li>
+<li>receive a version number;</li>
+<li>be included in the next GitHub Release.</li>
+</ul>
+<hr />
+<h1>6. Extending the Repository</h1>
+<p>New modules shall include exactly:</p>
+<ul>
+<li>Policy</li>
+<li>Procedure</li>
+<li>Work Instruction</li>
+<li>Checklist</li>
+<li>Register</li>
+<li>Evidence</li>
+<li>Declaration</li>
+</ul>
+<hr />
+<h1>7. Traceability</h1>
+<p>Maintain:</p>
+<p>Policy</p>
+<p>↓</p>
+<p>Procedure</p>
+<p>↓</p>
+<p>Work Instruction</p>
+<p>↓</p>
+<p>Checklist</p>
+<p>↓</p>
+<p>Register</p>
+<p>↓</p>
+<p>Evidence</p>
+<p>↓</p>
+<p>Declaration</p>
+<p>No document shall exist without traceability.</p>
+<hr />
+<h1>8. Quality Assurance</h1>
+<p>Before publishing verify:</p>
+<ul>
+<li>document consistency;</li>
+<li>internal references;</li>
+<li>version numbers;</li>
+<li>repository structure;</li>
+<li>Markdown rendering.</li>
+</ul>
+<hr />
+<h1>9. Release Process</h1>
+<p>For every release:</p>
+<ol>
+<li>Update documentation.</li>
+<li>Update CHANGELOG.</li>
+<li>Commit changes.</li>
+<li>Create Git tag.</li>
+<li>Publish GitHub Release.</li>
+<li>Verify Zenodo DOI.</li>
+</ol>
+<hr />
+<h1>10. Development Rules</h1>
+<p>Never:</p>
+<ul>
+<li>rename controlled IDs;</li>
+<li>remove traceability;</li>
+<li>break repository structure.</li>
+</ul>
+<p>Always:</p>
+<ul>
+<li>preserve document relationships;</li>
+<li>maintain inspection readiness.</li>
+</ul>
+<hr />
+<p>Version</p>
+<p>1.0.2</p>
+<p>Prepared by</p>
+<p>your compliance officer</p>
+<p>your organization</p>
+<a class="cta" href="generator.html">Generate Your Firm's Pack &rarr;</a>
+</main>
+<footer>
+  <p>EU AI Act Ready™ &mdash; part of the 70-document governance library. <a href="index.html">Back to homepage</a></p>
+</footer>
+</body>
+</html>
