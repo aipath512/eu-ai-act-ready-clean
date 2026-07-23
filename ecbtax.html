@@ -131,7 +131,7 @@
   .box{
     background:#fff; border:1px solid var(--paper-line); border-radius:4px; padding:18px;
   }
-  .box .label{ font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:6px;}
+  .box .label{ font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 6px; font-weight:400;}
   .box .val{ font-family:'Fraunces',serif; font-size:22px; }
   .anchor{
     margin-top:16px;
@@ -164,6 +164,85 @@
 
 <div class="ledger-lines">
 <header>
+  <nav aria-label="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:18px;">
+    <a href="https://eu-ai-act-ready.eu/" style="color:var(--muted);text-decoration:none;">Acasă</a>
+    <span style="margin:0 6px;">›</span>
+    <a href="https://eu-ai-act-ready.eu/resources" style="color:var(--muted);text-decoration:none;">Studii de caz</a>
+    <span style="margin:0 6px;">›</span>
+    <span style="color:var(--ink);">ECBTax</span>
+  </nav>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Acasă","item":"https://eu-ai-act-ready.eu/"},
+          {"@type":"ListItem","position":2,"name":"Studii de caz","item":"https://eu-ai-act-ready.eu/resources"},
+          {"@type":"ListItem","position":3,"name":"ECBTax","item":"https://eu-ai-act-ready.eu/ecbtax"}
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://eu-ai-act-ready.eu/#organization",
+        "name": "EU AI Act Ready",
+        "url": "https://eu-ai-act-ready.eu/",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "AiVenture S.R.L.",
+          "alternateName": "5thElement.ai"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://eu-ai-act-ready.eu/ecbtax#organization",
+        "name": "ECBTax",
+        "url": "https://ecbtax.com",
+        "description": "Firmă de contabilitate și consultanță fiscală.",
+        "founder": {"@id": "https://eu-ai-act-ready.eu/ecbtax#person"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://eu-ai-act-ready.eu/ecbtax#person",
+        "name": "Roxana Deak",
+        "jobTitle": "CEO & Fondator",
+        "worksFor": {"@id": "https://eu-ai-act-ready.eu/ecbtax#organization"},
+        "hasCredential": [
+          {"@type": "EducationalOccupationalCredential", "name": "FCCA"},
+          {"@type": "EducationalOccupationalCredential", "name": "CPA"},
+          {"@type": "EducationalOccupationalCredential", "name": "CCF"}
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://eu-ai-act-ready.eu/ecbtax#article",
+        "headline": "Primul client care a implementat EU AI Act Ready™",
+        "description": "ECBTax a adoptat pachetul complet de conformitate EU AI Act — 10 module, 70 de documente.",
+        "url": "https://eu-ai-act-ready.eu/ecbtax",
+        "about": {"@id": "https://eu-ai-act-ready.eu/ecbtax#organization"},
+        "author": {"@id": "https://eu-ai-act-ready.eu/#organization"},
+        "publisher": {"@id": "https://eu-ai-act-ready.eu/#organization"},
+        "inLanguage": "ro"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"Ce este EU AI Act Ready™?","acceptedAnswer":{"@type":"Answer","text":"Un pachet de conformitate pentru Regulamentul UE 2024/1689, format din 10 module operaționale și 70 de documente de guvernanță, plus RRVI™ pentru verificare la distanță."}},
+          {"@type":"Question","name":"Cine este primul client care a implementat pachetul?","acceptedAnswer":{"@type":"Answer","text":"ECBTax, firmă de contabilitate condusă de Roxana Deak."}},
+          {"@type":"Question","name":"Cine este Roxana Deak?","acceptedAnswer":{"@type":"Answer","text":"CEO și Fondator ECBTax.com, expert contabil FCCA, CPA, CCF, partener strategic tehnologic al AiVenture / 5thElement.ai."}},
+          {"@type":"Question","name":"Ce este ECBTax?","acceptedAnswer":{"@type":"Answer","text":"O firmă de contabilitate și consultanță fiscală care folosește instrumente AI în activitatea zilnică."}},
+          {"@type":"Question","name":"Câte module a implementat ECBTax?","acceptedAnswer":{"@type":"Answer","text":"Toate cele 10 module operaționale ale pachetului."}},
+          {"@type":"Question","name":"Câte documente a primit ECBTax?","acceptedAnswer":{"@type":"Answer","text":"70 de documente de guvernanță, plus ghidurile și manualele de implementare."}},
+          {"@type":"Question","name":"Ce este RRVI™?","acceptedAnswer":{"@type":"Answer","text":"Infrastructura de verificare la distanță pentru inspectori, pentru reconstituirea traseului dovezilor de conformitate."}},
+          {"@type":"Question","name":"Sunt ancorate criptografic credențialele Roxanei Deak?","acceptedAnswer":{"@type":"Answer","text":"Da, patru documente verificate independent via OpenTimestamps."}},
+          {"@type":"Question","name":"Pe ce blockchain sunt ancorate documentele?","acceptedAnswer":{"@type":"Answer","text":"Bitcoin, bloc de referință 954297."}},
+          {"@type":"Question","name":"De ce a ales ECBTax pachetul EU AI Act Ready™?","acceptedAnswer":{"@type":"Answer","text":"Ca firmă care folosește AI zilnic fără echipă internă de conformitate, a găsit în RRVI™ o logică de proveniență verificabilă similară cu ancorarea deja folosită pentru propriile credențiale."}}
+        ]
+      }
+    ]
+  }
+  </script>
   <div class="eyebrow">Studiu de caz client · #001</div>
   <h1>Primul client care a implementat<br><em>EU AI Act Ready™</em></h1>
   <p class="sub">ECBTax — firmă de contabilitate și consultanță fiscală condusă de Roxana Deak — a adoptat pachetul de conformitate EU AI Act ca prim client verificat.</p>
@@ -174,6 +253,7 @@
 
   <section>
     <div class="stamp">Partener confirmat · permisiune publică acordată</div>
+    <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Partener implementator</h2>
     <div class="profile">
       <div class="avatar">RD</div>
       <div>
@@ -199,9 +279,9 @@
     <h2>Ce s-a implementat</h2>
     <p>ECBTax a primit pachetul complet: toate cele 10 module operaționale, corpusul integral de 70 de documente de guvernanță (Politică, Procedură, Instrucțiune de Lucru, Checklist, Registru, Evidență, Declarație — câte 7 per modul), plus ghidurile și manualele de implementare aferente.</p>
     <div class="grid3">
-      <div class="box"><div class="label">Module active</div><div class="val">10 / 10</div></div>
-      <div class="box"><div class="label">Documente livrate</div><div class="val">70</div></div>
-      <div class="box"><div class="label">Ghiduri &amp; manuale</div><div class="val">incluse</div></div>
+      <div class="box"><h4 class="label">Module active</h4><div class="val">10 / 10</div></div>
+      <div class="box"><h4 class="label">Documente livrate</h4><div class="val">70</div></div>
+      <div class="box"><h4 class="label">Ghiduri &amp; manuale</h4><div class="val">incluse</div></div>
     </div>
     <div class="placeholder">
       <strong>De completat, dacă vrei să adaugi mai jos</strong>
@@ -216,6 +296,52 @@
       SHA-256 (credențiale Roxana Deak, ancorate): document verificabil independent via OpenTimestamps<br>
       Bloc Bitcoin de referință: 954297<br>
       Documente acoperite: ACCA-FCCA · CCF · CECCAR-EXPERT · CECCAR-COMPANY
+    </div>
+  </section>
+
+  <section>
+    <h2>Întrebări frecvente</h2>
+    <div style="display:flex;flex-direction:column;gap:2px;">
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Ce este EU AI Act Ready™?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">Un pachet de conformitate pentru Regulamentul UE 2024/1689 (EU AI Act), format din 10 module operaționale și 70 de documente de guvernanță, plus infrastructură de verificare la distanță pentru inspectori (RRVI™).</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Cine este primul client care a implementat pachetul?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">ECBTax, firmă de contabilitate și consultanță fiscală condusă de Roxana Deak, a fost primul client care a adoptat pachetul complet.</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Cine este Roxana Deak?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">CEO și Fondator ECBTax.com, expert contabil cu credențiale FCCA, CPA și CCF, și partener strategic tehnologic al AiVenture / 5thElement.ai.</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Ce este ECBTax?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">O firmă de contabilitate și consultanță fiscală care folosește instrumente AI în activitatea zilnică — asistenți conversaționali, procesare de documente, suport în decizii de consultanță.</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Câte module a implementat ECBTax?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">Toate cele 10 module operaționale ale pachetului EU AI Act Ready™.</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Câte documente a primit ECBTax?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">70 de documente de guvernanță — Politică, Procedură, Instrucțiune de Lucru, Checklist, Registru, Evidență și Declarație, câte 7 pentru fiecare din cele 10 module — plus ghidurile și manualele de implementare aferente.</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Ce este RRVI™?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">Infrastructura de verificare la distanță pentru inspectori (Remote Regulatory Verification Infrastructure), care permite reconstituirea traseului dovezilor de conformitate.</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Sunt ancorate criptografic credențialele Roxanei Deak?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">Da. Patru documente (ACCA-FCCA, CCF, CECCAR-Expert, CECCAR-Company) sunt verificate independent via OpenTimestamps.</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">Pe ce blockchain sunt ancorate documentele?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">Pe blockchain-ul Bitcoin, bloc de referință 954297.</p>
+      </details>
+      <details style="border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line);padding:14px 0;">
+        <summary style="cursor:pointer;font-weight:600;">De ce a ales ECBTax pachetul EU AI Act Ready™?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;">Ca firmă care folosește AI zilnic dar nu are o echipă internă dedicată de conformitate, ECBTax a găsit în arhitectura de proveniență verificabilă a RRVI™ o logică similară cu ancorarea criptografică deja folosită pentru propriile credențiale profesionale.</p>
+      </details>
     </div>
   </section>
 
