@@ -1,0 +1,96 @@
+# EU AI ACT READY — GitHub Upload Manifest
+# File: eu-ai-act-ready-clean/index.html  (single file, edited in place, top to bottom)
+# All 10 patch files listed below, in the order you'll hit them in the live file.
+
+---
+
+## 1. HERO REPLACEMENT
+FIND:    <section class="hero">  ...through matching...  </section>
+         (right before <section id="applies-to-you")
+ACTION:  Delete that whole block. Paste in: new-hero-section.html
+
+## 1b. HERO EN SYNC (same file, further down)
+FIND:    heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>"
+         (inside PAGE_EXTRAS, the "en:" block, ~line 2665)
+ACTION:  Replace with instructions in: hero-title-extras-en.txt
+
+## 2. HOW IT WORKS (new insertion)
+FIND:    </section>  closing "Does this apply to you?" (right after the "Journalists use AI" line)
+ACTION:  Paste how-it-works.html right after that </section>,
+         before <section class="Ask-wrap">
+
+## 3. STATS BAR (new insertion)
+FIND:    right after how-it-works.html's closing </section> (from step 2 above)
+ACTION:  Paste stats-bar.html there, still before <section class="Ask-wrap">
+
+## 4. COMPARISON TABLE (new insertion)
+FIND:    right after stats-bar.html's closing </section>
+ACTION:  Paste comparison-table.html there, still before <section class="Ask-wrap">
+
+## 5. OUTCOMES LIST (replace existing)
+FIND:    the <ul> under "AT THE END, YOU RECEIVE" — 8 <li> items,
+         id="services-strong-li0" through "li7"
+ACTION:  Delete that <ul>...</ul>. Paste in: outcomes-list-block.html
+
+## 6. REMOVE RRVI/ARCHITECTURE BLOCKS FROM "WHAT YOU GET"
+FIND:    three <div> blocks starting with "Why the 70-Document Corpus Is Your Moat"
+         through "Immediate Go-To-Market Advantage — RRVI & SMEs",
+         PLUS the line <p>contact@5thelement.ai</p> right after them
+ACTION:  Delete all of it (content is moving, not disappearing — see step 9)
+
+## 7. PROOF SECTION (new insertion)
+FIND:    </section>  closing "Why Us" (right before <section id="offer")
+ACTION:  Paste proof-section.html there
+
+## 8. TESTIMONIALS (new insertion)
+FIND:    right after proof-section.html's closing </section> (from step 7)
+ACTION:  Paste testimonials.html there
+
+## 9. RRVI DEEP-DIVE (new insertion — this is where step 6's content lands)
+FIND:    right after testimonials.html's closing </section> (from step 8)
+ACTION:  Paste rrvi-deep-dive.html there, right before <section id="offer">
+
+## 10. CLOSING CTA (new insertion)
+FIND:    the last FAQ item ("How to start readiness?") → its closing </section>,
+         right before </main> and <footer>
+ACTION:  Paste closing-cta.html there
+
+---
+
+## SEPARATE FILE — NOT index.html
+howto-schema-10-modules.json
+FIND:    inside the SECOND <script type="application/ld+json"> block,
+         right after the "Module 10 — Incident Reporting" CreativeWork entry,
+         before the closing "]\n}\n</script>"
+ACTION:  Add a comma after that entry's closing "}", then paste the
+         contents of howto-schema-10-modules.json
+
+---
+
+## FINAL PAGE ORDER AFTER ALL EDITS
+Hero → Problem ("Does this apply to you?") → How It Works → Stats →
+Comparison Table → Ask Box → What You Get (now clean) → Why Us →
+Proof → Testimonials → RRVI Deep-Dive → Offer → FAQ → Closing CTA → Footer
+
+---
+
+## AFTER UPLOADING
+1. Commit the change on GitHub
+2. Cloudflare dashboard → Workers & Pages → eu-ai-act-ready-clean → Deployments
+   → confirm the new deployment is tagged "Production" (promote manually if not —
+   this is the same step that was blocking the RO language fix)
+3. Hard-refresh eu-ai-act-ready.eu (Ctrl+Shift+R) and check it end to end
+
+## STILL OPEN — NOT IN THESE FILES, NEEDS YOU
+- RO language switch: confirm Production slot actually promoted
+- Ask box (#question): still data-gated="true" — needs to actually allow
+  one free question for the new Closing CTA's promise to be true
+- 6 real screenshots for proof-section.html (assets/proof/01-screenshot.png
+  through 06-evidence.png)
+- 3 real testimonial quotes in testimonials.html (ECBTax, AiVenture.ro,
+  5thElement.ai — currently bracketed placeholders)
+- Gemini testimonial card: still pending, needs the real scored response
+  (see the RRVI-specific prompt from earlier in this conversation)
+- Module-list mismatch: Gemini's remote-auditor proposal uses invented
+  module names (M01 "AI System Classification & Risk Profiling," etc.) —
+  confirmed you want the REAL module list used instead when that gets built

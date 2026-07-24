@@ -1,0 +1,510 @@
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/01-ai-system-inventory#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/01-ai-system-inventory",
+      "name": "How to Complete Module 01 — AI System Inventory",
+      "description": "Identify and log every AI system in use across the organization, establishing the baseline for EU AI Act compliance.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt an AI System Inventory Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the AI System Inventory Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the AI System Inventory Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the AI System Inventory Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the AI System Inventory Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for AI System Inventory."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the AI System Inventory Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/02-risk-classification#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/02-risk-classification",
+      "name": "How to Complete Module 02 — Risk Classification",
+      "description": "Classify each AI system into its EU AI Act risk category (prohibited, high-risk, limited-risk, minimal-risk) based on intended purpose and impact.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt a Risk Classification Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the Risk Classification Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the Risk Classification Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the Risk Classification Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the Risk Classification Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for Risk Classification."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the Risk Classification Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/03-ai-literacy#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/03-ai-literacy",
+      "name": "How to Complete Module 03 — AI Literacy",
+      "description": "Ensure staff have sufficient understanding of AI systems, their capabilities, limitations, and risks as required by Article 4.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt an AI Literacy Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the AI Literacy Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the AI Literacy Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the AI Literacy Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the AI Literacy Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for AI Literacy."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the AI Literacy Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/04-prohibited-practices#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/04-prohibited-practices",
+      "name": "How to Complete Module 04 — Prohibited Practices",
+      "description": "Identify and eliminate AI practices banned outright under the EU AI Act, such as social scoring and manipulative techniques.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt a Prohibited Practices Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the Prohibited Practices Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the Prohibited Practices Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the Prohibited Practices Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the Prohibited Practices Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for Prohibited Practices."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the Prohibited Practices Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/05-high-risk-assessment#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/05-high-risk-assessment",
+      "name": "How to Complete Module 05 — High-Risk Assessment",
+      "description": "Conduct a detailed risk and conformity assessment for AI systems classified as high-risk.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt a High-Risk Assessment Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the High-Risk Assessment Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the High-Risk Assessment Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the High-Risk Assessment Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the High-Risk Assessment Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for High-Risk Assessment."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the High-Risk Assessment Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/06-technical-documentation#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/06-technical-documentation",
+      "name": "How to Complete Module 06 — Technical Documentation",
+      "description": "Compile the technical documentation required under Articles 11 and 18 to demonstrate system compliance.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt a Technical Documentation Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the Technical Documentation Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the Technical Documentation Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the Technical Documentation Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the Technical Documentation Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for Technical Documentation."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the Technical Documentation Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/07-human-oversight#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/07-human-oversight",
+      "name": "How to Complete Module 07 — Human Oversight",
+      "description": "Establish human oversight procedures ensuring a person can intervene in or override AI system decisions.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt a Human Oversight Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the Human Oversight Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the Human Oversight Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the Human Oversight Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the Human Oversight Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for Human Oversight."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the Human Oversight Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/08-data-governance#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/08-data-governance",
+      "name": "How to Complete Module 08 — Data Governance",
+      "description": "Implement data governance controls covering training data quality, provenance, and bias mitigation.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt a Data Governance Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the Data Governance Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the Data Governance Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the Data Governance Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the Data Governance Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for Data Governance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the Data Governance Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/09-logging-monitoring#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/09-logging-monitoring",
+      "name": "How to Complete Module 09 — Logging & Monitoring",
+      "description": "Set up logging and post-market monitoring systems to track AI system performance and incidents over time.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt a Logging & Monitoring Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the Logging & Monitoring Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the Logging & Monitoring Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the Logging & Monitoring Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the Logging & Monitoring Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for Logging & Monitoring."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the Logging & Monitoring Declaration confirming completeness and accuracy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://eu-ai-act-ready.eu/10-incident-reporting#howto",
+      "mainEntityOfPage": "https://eu-ai-act-ready.eu/10-incident-reporting",
+      "name": "How to Complete Module 10 — Incident Reporting",
+      "description": "Establish procedures to detect, document, and report serious AI incidents to the relevant authorities.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Policy",
+          "text": "Adopt an Incident Reporting Policy defining scope, ownership, and update frequency."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procedure",
+          "text": "Follow the Incident Reporting Procedure to systematically execute this module's requirements."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Work Instruction",
+          "text": "Use the Incident Reporting Work Instruction for step-by-step task-level guidance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Checklist",
+          "text": "Complete the Incident Reporting Checklist to confirm all required items are addressed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Register",
+          "text": "Record the relevant entries in the Incident Reporting Register."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Evidence",
+          "text": "Collect supporting evidence (documents, configs, records) for Incident Reporting."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Declaration",
+          "text": "Sign the Incident Reporting Declaration confirming completeness and accuracy."
+        }
+      ]
+    }

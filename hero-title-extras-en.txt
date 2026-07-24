@@ -1,0 +1,13 @@
+FIND (inside PAGE_EXTRAS, the "en:" line — around line 2665 of index.html):
+
+heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>"
+
+REPLACE WITH:
+
+heroTitle: "<span class='hero-title-main'>Using AI in your company?</span>"
+
+NOTE: this only updates the EN entry. The fr/de/es/it/ro/pl/nl/pt/sv/cs/el/hu/da/fi/bg/sk
+entries still hold the OLD headline text — so switching language away from EN and back
+will currently revert to the old H1 in translation. Flagging as a follow-up translation
+pass across all 16 PAGE_EXTRAS language blocks, rather than guess-translating a
+CTA-critical headline into 16 languages silently.
