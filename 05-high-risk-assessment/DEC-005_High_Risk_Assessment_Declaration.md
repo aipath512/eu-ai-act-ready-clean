@@ -1,120 +1,120 @@
 # DEC-005
 
-# High-Risk AI System Assessment Declaration
+# Declarație de Evaluare a Sistemelor AI cu Risc Ridicat
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DEC-005 |
-| Title | High-Risk AI System Assessment Declaration |
+| ID Document | DEC-005 |
+| Titlu | Declarație de Evaluare a Sistemelor AI cu Risc Ridicat |
 | Repository | RRVI™ |
-| Module | 05 – High-Risk Assessment |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 05 – Evaluare Risc Ridicat |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This declaration confirms that {{COMPANY_NAME}} has established and implemented a documented process for determining whether Artificial Intelligence systems qualify as High-Risk AI Systems under Regulation (EU) 2024/1689 (EU AI Act).
+Această declarație confirmă că {{COMPANY_NAME}} a stabilit și implementat un proces documentat pentru determinarea dacă sistemele de Inteligență Artificială se califică drept Sisteme AI cu Risc Ridicat conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-The declaration demonstrates management commitment to performing objective, documented and repeatable High-Risk assessments before operational deployment.
-
----
-
-# 2. Declaration
-
-{{COMPANY_NAME}} declares that:
-
-- every AI system recorded in the AI System Inventory is subject to a documented High-Risk Assessment;
-- High-Risk Assessments are performed before operational deployment;
-- assessment decisions are supported by objective evidence;
-- assessment results are recorded in the High-Risk Assessment Register;
-- significant changes trigger reassessment;
-- periodic reviews are performed to maintain regulatory compliance.
+Declarația demonstrează angajamentul conducerii de a efectua evaluări Risc Ridicat obiective, documentate și repetabile înainte de implementarea operațională.
 
 ---
 
-# 3. Management Commitment
+# 2. Declarație
 
-Management commits to:
+{{COMPANY_NAME}} declară că:
 
-- maintain the High-Risk Assessment process;
-- allocate sufficient resources for assessments;
-- ensure qualified personnel perform assessments;
-- maintain objective evidence supporting every assessment;
-- review assessments periodically;
-- support regulatory inspections and external audits.
-
----
-
-# 4. Scope
-
-This declaration applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- proof-of-concept AI systems;
-- production AI systems;
-- future AI developments;
-- AI systems integrated into products and services.
+- fiecare sistem AI înregistrat în Inventarul Sistemelor AI face obiectul unei Evaluări Risc Ridicat documentate;
+- evaluările Risc Ridicat se efectuează înainte de implementarea operațională;
+- deciziile de evaluare sunt susținute de dovezi obiective;
+- rezultatele evaluării sunt înregistrate în Registrul de Evaluare Risc Ridicat;
+- modificările semnificative declanșează reevaluarea;
+- se efectuează revizuiri periodice pentru menținerea conformității de reglementare.
 
 ---
 
-# 5. Review Frequency
+# 3. Angajamentul Conducerii
 
-High-Risk Assessments shall be reviewed:
+Conducerea se angajează să:
 
-- annually;
-- before production deployment;
-- after significant functional changes;
-- after changes to intended purpose;
-- following amendments to Regulation (EU) 2024/1689;
-- before regulatory inspections.
-
----
-
-# 6. Related Documents
-
-- DOD-005 High-Risk AI System Assessment Policy
-- PROC-005 High-Risk AI System Assessment Procedure
-- WI-005 High-Risk AI System Assessment Work Instruction
-- CHK-005 High-Risk AI System Assessment Checklist
-- REG-005 High-Risk AI System Assessment Register
-- EVID-005 High-Risk AI System Assessment Evidence
-- REG-001 AI System Inventory Register
-- REG-002 Risk Classification Register
+- mențină procesul de Evaluare Risc Ridicat;
+- aloce resurse suficiente pentru evaluări;
+- asigure că evaluările sunt efectuate de personal calificat;
+- mențină dovezi obiective care susțin fiecare evaluare;
+- revizuiască evaluările periodic;
+- sprijine inspecțiile de reglementare și auditurile externe.
 
 ---
 
-# 7. Declaration
+# 4. Domeniu de Aplicare
 
-I declare that, to the best of my knowledge, {{COMPANY_NAME}} has established a documented and repeatable process for determining whether Artificial Intelligence systems qualify as High-Risk AI Systems under the EU AI Act.
+Această declarație se aplică:
 
-At the date of this declaration, all assessed operational AI systems used by {{COMPANY_NAME}} have been documented, reviewed and classified according to the established assessment methodology.
-
-The organization commits to maintaining this process and updating assessments whenever regulatory, technical or operational changes occur.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- dezvoltărilor AI viitoare;
+- sistemelor AI integrate în produse și servicii.
 
 ---
 
-# 8. Approval
+# 5. Frecvența Revizuirii
 
-| Field | Value |
+Evaluările Risc Ridicat se revizuiesc:
+
+- anual;
+- înainte de implementarea în producție;
+- după modificări funcționale semnificative;
+- după modificări ale scopului preconizat;
+- în urma modificărilor aduse Regulamentului (UE) 2024/1689;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 6. Documente Conexe
+
+- DOD-005 Politica de Evaluare a Sistemelor AI cu Risc Ridicat
+- PROC-005 Procedura de Evaluare a Sistemelor AI cu Risc Ridicat
+- WI-005 Instrucțiune de Lucru — Evaluare Sisteme AI cu Risc Ridicat
+- CHK-005 Checklist de Evaluare a Sistemelor AI cu Risc Ridicat
+- REG-005 Registrul de Evaluare a Sistemelor AI cu Risc Ridicat
+- EVID-005 Dovezile de Evaluare a Sistemelor AI cu Risc Ridicat
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-002 Registrul de Clasificare a Riscului
+
+---
+
+# 7. Declarație
+
+Declar că, după cunoștințele mele, {{COMPANY_NAME}} a stabilit un proces documentat și repetabil pentru determinarea dacă sistemele de Inteligență Artificială se califică drept Sisteme AI cu Risc Ridicat conform EU AI Act.
+
+La data acestei declarații, toate sistemele AI operaționale evaluate, folosite de {{COMPANY_NAME}}, au fost documentate, revizuite și clasificate conform metodologiei de evaluare stabilite.
+
+Organizația se angajează să mențină acest proces și să actualizeze evaluările ori de câte ori apar modificări de reglementare, tehnice sau operaționale.
+
+---
+
+# 8. Aprobare
+
+| Câmp | Valoare |
 |--------|-------|
-| Approved By | {{RESPONSIBLE_PERSON}} |
-| Position | Managing Director |
-| Company | {{COMPANY_NAME}} |
-| Approval Date | 2026-07-02 |
-| Status | Approved |
+| Aprobat de | {{RESPONSIBLE_PERSON}} |
+| Funcție | Director General |
+| Firma | {{COMPANY_NAME}} |
+| Data Aprobării | |
+| Status | Aprobat |
 
 ---
 
-# Document Control
+# Control Document
 
-| Version | Date | Description |
+| Versiune | Data | Descriere |
 |---------|------|-------------|
-| 1.0.0 | 2026-07-02 | Initial release |
+| 1.0.0 | | Versiune inițială |

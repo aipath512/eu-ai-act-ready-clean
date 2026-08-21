@@ -1,131 +1,127 @@
 # EVID-005
 
-# High-Risk AI System Assessment Evidence
+# Dovezi de Evaluare a Sistemelor AI cu Risc Ridicat
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | EVID-005 |
-| Title | High-Risk AI System Assessment Evidence |
+| ID Document | EVID-005 |
+| Titlu | Dovezi de Evaluare a Sistemelor AI cu Risc Ridicat |
 | Repository | RRVI™ |
-| Module | 05 – High-Risk Assessment |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Evidence Register |
+| Modul | 05 – Evaluare Risc Ridicat |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru de Dovezi Activ |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This document records the objective evidence supporting the High-Risk AI System Assessments performed by {{COMPANY_NAME}}.
+Acest document înregistrează dovezile obiective care susțin Evaluările Sistemelor AI cu Risc Ridicat efectuate de {{COMPANY_NAME}}.
 
-Its purpose is to demonstrate that every assessment is supported by verifiable documentation and can be reproduced during internal audits or regulatory inspections.
+Scopul este să demonstreze că fiecare evaluare este susținută de documentație verificabilă și poate fi reprodusă în cadrul auditurilor interne sau inspecțiilor de reglementare.
 
 ---
 
-# 2. Evidence Principles
+# 2. Principii ale Dovezilor
 
-Evidence shall be:
+Dovezile trebuie să fie:
 
-- objective;
-- verifiable;
-- traceable;
+- obiective;
+- verificabile;
+- trasabile;
 - complete;
-- version controlled;
-- retained according to the company's document retention policy.
+- controlate ca versiune;
+- păstrate conform politicii de retenție a documentelor firmei.
 
 ---
 
-# 3. High-Risk Assessment Evidence Register
+# 3. Registrul de Dovezi de Evaluare Risc Ridicat
 
-| Evidence ID | AI ID | Evidence Description | Evidence Location | Status |
+| ID Dovadă | ID AI | Descrierea Dovezii | Locația Dovezii | Status |
 |--------------|-------|----------------------|-------------------|--------|
-| HR-001 | AI-001 | High-Risk Assessment completed | REG-005 | Active |
-| HR-002 | AI-002 | High-Risk Assessment completed | REG-005 | Active |
-| HR-003 | AI-003 | High-Risk Assessment completed | REG-005 | Active |
-| HR-004 | AI-004 | High-Risk Assessment completed | REG-005 | Active |
-| HR-005 | AI-005 | High-Risk Assessment completed | REG-005 | Active |
-| HR-006 | AI-006 | Architecture review | GitHub Repository | Planned |
-| HR-007 | AI-007 | Architecture review | GitHub Repository | POC |
-| HR-008 | AI-008 | Technical review | GitHub Repository | Optional |
-| HR-009 | AI-009 | Design specification | GitHub Repository | Draft |
-| HR-010 | AI-010 | Design specification | GitHub Repository | Draft |
-| HR-011 | AI-011 | Design specification | GitHub Repository | Draft |
-| HR-012 | AI-012 | Design specification | GitHub Repository | Draft |
-| HR-013 | AI-013 | Design specification | GitHub Repository | Draft |
-| HR-014 | AI-014 | Design specification | GitHub Repository | Draft |
-| HR-015 | AI-015 | Design specification | GitHub Repository | Draft |
-| HR-016 | AI-016 | Design specification | GitHub Repository | Draft |
+| HR-001 | AI-001 | | | |
+| HR-002 | AI-002 | | | |
+| HR-003 | AI-003 | | | |
+| HR-004 | AI-004 | | | |
+| HR-005 | AI-005 | | | |
+| HR-006 | AI-006 | | | |
+| HR-007 | AI-007 | | | |
+| HR-008 | AI-008 | | | |
+| HR-009 | AI-009 | | | |
+| HR-010 | AI-010 | | | |
+
+*Rândurile se completează de fiecare firmă cu dovezile proprii, corespunzătoare sistemelor din REG-001.*
 
 ---
 
-# 4. Supporting Evidence
+# 4. Dovezi Justificative
 
-Supporting evidence may include:
+Dovezile justificative pot include:
 
-- AI System Inventory records;
-- Risk Classification records;
-- Technical Documentation;
-- Architecture diagrams;
-- Intended purpose documentation;
-- Design specifications;
-- Human Oversight documentation;
-- Regulatory analysis;
-- Management approvals;
-- Change records.
-
----
-
-# 5. Evidence Storage
-
-Evidence may be maintained in:
-
-- GitHub Repository;
-- Internal Documentation Repository;
-- Technical Documentation;
-- AI Governance Documentation;
-- Architecture Documentation;
-- Compliance Records.
+- înregistrări din Inventarul Sistemelor AI;
+- înregistrări de Clasificare a Riscului;
+- Documentație Tehnică;
+- diagrame de arhitectură;
+- documentația scopului preconizat;
+- specificații de proiectare;
+- documentația Supravegherii Umane;
+- analiză de reglementare;
+- aprobări de conducere;
+- înregistrări de modificări.
 
 ---
 
-# 6. Review Requirements
+# 5. Stocarea Dovezilor
 
-Evidence shall be reviewed:
+Dovezile pot fi menținute în:
 
-- annually;
-- after significant AI system changes;
-- after regulatory updates;
-- before external inspections;
-- before conformity assessments where applicable.
-
----
-
-# 7. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Annex I
-- Annex III
-- DOD-005 High-Risk Assessment Policy
-- PROC-005 High-Risk Assessment Procedure
-- REG-005 High-Risk Assessment Register
-- DEC-005 High-Risk Assessment Declaration
+- Repository GitHub;
+- Repository Intern de Documentație;
+- Documentație Tehnică;
+- Documentație de Guvernanță AI;
+- Documentație de Arhitectură;
+- Înregistrări de Conformitate.
 
 ---
 
-# 8. Approval
+# 6. Cerințe de Revizuire
 
-Prepared by
+Dovezile se revizuiesc:
+
+- anual;
+- după modificări semnificative ale sistemelor AI;
+- după actualizări de reglementare;
+- înainte de inspecțiile externe;
+- înainte de evaluările de conformitate, unde e cazul.
+
+---
+
+# 7. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Anexa I
+- Anexa III
+- DOD-005 Politica de Evaluare Risc Ridicat
+- PROC-005 Procedura de Evaluare Risc Ridicat
+- REG-005 Registrul de Evaluare Risc Ridicat
+- DEC-005 Declarația de Evaluare Risc Ridicat
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

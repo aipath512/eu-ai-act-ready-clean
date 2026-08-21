@@ -1,160 +1,160 @@
 # DOD-005
 
-# High-Risk AI System Assessment Policy
+# Politica de Evaluare a Sistemelor AI cu Risc Ridicat
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DOD-005 |
-| Title | High-Risk AI System Assessment Policy |
+| ID Document | DOD-005 |
+| Titlu | Politica de Evaluare a Sistemelor AI cu Risc Ridicat |
 | Repository | RRVI™ |
-| Module | 05 – High-Risk Assessment |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 05 – Evaluare Risc Ridicat |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-The purpose of this policy is to establish the principles and requirements for determining whether an Artificial Intelligence system used, developed, deployed or integrated by {{COMPANY_NAME}} qualifies as a High-Risk AI System under Regulation (EU) 2024/1689 (EU AI Act).
+Scopul acestei politici este de a stabili principiile și cerințele pentru determinarea dacă un sistem de Inteligență Artificială utilizat, dezvoltat, implementat sau integrat de {{COMPANY_NAME}} se califică drept Sistem AI cu Risc Ridicat conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-This policy ensures that all AI systems are consistently assessed before operational deployment and throughout their lifecycle.
-
----
-
-# 2. Scope
-
-This policy applies to:
-
-- all AI systems recorded in the AI System Inventory;
-- internally developed AI systems;
-- third-party AI services;
-- proof-of-concept AI systems;
-- production AI systems;
-- future AI deployments.
+Această politică asigură că toate sistemele AI sunt evaluate consecvent înainte de implementarea operațională și pe tot parcursul ciclului lor de viață.
 
 ---
 
-# 3. Policy Statement
+# 2. Domeniu de Aplicare
 
-Every AI system shall undergo a documented High-Risk Assessment before operational deployment.
+Această politică se aplică:
 
-No AI system shall be classified as Non-High-Risk without documented justification.
-
----
-
-# 4. Assessment Principles
-
-The assessment shall consider:
-
-- intended purpose;
-- deployment context;
-- affected persons;
-- Annex I;
-- Annex III;
-- substantial modifications;
-- safety components;
-- applicable harmonised standards;
-- regulatory guidance.
+- tuturor sistemelor AI înregistrate în Inventarul Sistemelor AI;
+- sistemelor AI dezvoltate intern;
+- serviciilor AI terțe;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- implementărilor AI viitoare.
 
 ---
 
-# 5. Classification Outcomes
+# 3. Declarația de Politică
 
-Each AI system shall be classified as one of the following:
+Fiecare sistem AI trece printr-o Evaluare Risc Ridicat documentată înainte de implementarea operațională.
 
-- High-Risk AI System;
-- Not High-Risk AI System;
-- Assessment Pending.
-
-The assessment shall be documented and supported by objective evidence.
+Niciun sistem AI nu se clasifică drept „Non-High-Risk" fără justificare documentată.
 
 ---
 
-# 6. Roles and Responsibilities
+# 4. Principii de Evaluare
 
-## Managing Director
+Evaluarea ia în considerare:
 
-Approves this policy.
-
----
-
-## AI Governance Owner
-
-Responsible for:
-
-- coordinating High-Risk Assessments;
-- maintaining the High-Risk Assessment Register;
-- ensuring periodic reviews.
+- scopul preconizat;
+- contextul de implementare;
+- persoanele afectate;
+- Anexa I;
+- Anexa III;
+- modificările substanțiale;
+- componentele de siguranță;
+- standardele armonizate aplicabile;
+- ghidurile de reglementare.
 
 ---
 
-## AI System Owners
+# 5. Rezultatele Clasificării
 
-Responsible for:
+Fiecare sistem AI se clasifică într-una din următoarele categorii:
 
-- providing complete technical information;
-- reporting changes affecting classification;
-- supporting reassessments.
+- Sistem AI cu Risc Ridicat;
+- Sistem AI fără Risc Ridicat;
+- Evaluare în Așteptare.
 
----
-
-## Compliance Owner
-
-Responsible for:
-
-- validating regulatory interpretation;
-- monitoring legislative changes;
-- supporting inspections.
+Evaluarea se documentează și se susține cu dovezi obiective.
 
 ---
 
-# 7. Review Requirements
+# 6. Roluri și Responsabilități
 
-This policy shall be reviewed:
+## Director General
 
-- annually;
-- after amendments to the EU AI Act;
-- after significant AI system changes;
-- following publication of harmonised standards;
-- after major regulatory guidance.
+Aprobă această politică.
 
 ---
 
-# 8. Compliance
+## Responsabilul de Guvernanță AI
 
-Compliance with this policy is mandatory.
+Responsabil pentru:
 
-Any AI system identified as High-Risk shall comply with all applicable obligations before being placed into service.
-
----
-
-# 9. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Annex I
-- Annex III
-- DOD-001 AI System Inventory Policy
-- DOD-002 Risk Classification Policy
-- DOD-004 Prohibited AI Practices Policy
-- REG-005 High-Risk Assessment Register
+- coordonarea Evaluărilor Risc Ridicat;
+- menținerea Registrului de Evaluare Risc Ridicat;
+- asigurarea revizuirilor periodice.
 
 ---
 
-# 10. Approval
+## Responsabilii de Sisteme AI
 
-Prepared by
+Responsabili pentru:
+
+- furnizarea de informații tehnice complete;
+- raportarea modificărilor care afectează clasificarea;
+- sprijinirea reevaluărilor.
+
+---
+
+## Responsabilul de Conformitate
+
+Responsabil pentru:
+
+- validarea interpretării de reglementare;
+- monitorizarea modificărilor legislative;
+- sprijinirea inspecțiilor.
+
+---
+
+# 7. Cerințe de Revizuire
+
+Această politică se revizuiește:
+
+- anual;
+- după modificări aduse EU AI Act;
+- după modificări semnificative ale sistemelor AI;
+- în urma publicării de standarde armonizate;
+- după ghiduri majore de reglementare.
+
+---
+
+# 8. Conformitate
+
+Respectarea acestei politici este obligatorie.
+
+Orice sistem AI identificat ca fiind cu Risc Ridicat respectă toate obligațiile aplicabile înainte de a fi pus în funcțiune.
+
+---
+
+# 9. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Anexa I
+- Anexa III
+- DOD-001 Politica de Inventar al Sistemelor AI
+- DOD-002 Politica de Clasificare a Riscului
+- DOD-004 Politica de Practici AI Interzise
+- REG-005 Registrul de Evaluare Risc Ridicat
+
+---
+
+# 10. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

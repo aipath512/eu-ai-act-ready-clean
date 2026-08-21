@@ -1,222 +1,222 @@
 # WI-005
 
-# High-Risk AI System Assessment Work Instruction
+# Instrucțiune de Lucru — Evaluare Sisteme AI cu Risc Ridicat
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-005 |
-| Title | High-Risk AI System Assessment Work Instruction |
+| ID Document | WI-005 |
+| Titlu | Instrucțiune de Lucru — Evaluare Sisteme AI cu Risc Ridicat |
 | Repository | RRVI™ |
-| Module | 05 – High-Risk Assessment |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 05 – Evaluare Risc Ridicat |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed guidance for determining whether an Artificial Intelligence system qualifies as a High-Risk AI System under Regulation (EU) 2024/1689 (EU AI Act).
+Această Instrucțiune de Lucru oferă îndrumări detaliate pentru determinarea dacă un sistem de Inteligență Artificială se califică drept Sistem AI cu Risc Ridicat conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-The objective is to ensure a documented, objective and repeatable assessment for every AI system.
-
----
-
-# 2. Preconditions
-
-Before starting the assessment verify that:
-
-- the AI System exists in the AI System Inventory;
-- the intended purpose is documented;
-- the provider has been identified;
-- sufficient technical information is available.
+Obiectivul este să asigure o evaluare documentată, obiectivă și repetabilă pentru fiecare sistem AI.
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-Collect the following information:
+Înainte de a începe evaluarea, se verifică dacă:
 
-- AI System ID
-- AI System Name
-- Provider
-- Intended Purpose
-- Business Process
-- Deployment Environment
-- Users
-- Human Oversight
-- Input Data
-- Output Data
-- Safety Function (if applicable)
+- Sistemul AI există în Inventarul Sistemelor AI;
+- scopul preconizat este documentat;
+- furnizorul a fost identificat;
+- există suficiente informații tehnice.
 
 ---
 
-# 4. Work Instructions
+# 3. Informații Necesare
 
-## Step 1
+Se colectează următoarele informații:
 
-Open:
+- ID Sistem AI
+- Nume Sistem AI
+- Furnizor
+- Scop Preconizat
+- Proces de Business
+- Mediu de Implementare
+- Utilizatori
+- Supraveghere Umană
+- Date de Intrare
+- Date de Ieșire
+- Funcție de Siguranță (dacă e cazul)
+
+---
+
+# 4. Instrucțiuni de Lucru
+
+## Pasul 1
+
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
-Locate the AI system.
+Se localizează sistemul AI.
 
 ---
 
-## Step 2
+## Pasul 2
 
-Review the intended purpose.
+Se revizuiește scopul preconizat.
 
-Determine:
+Se determină:
 
-- why the AI system exists;
-- who uses it;
-- what business process it supports;
-- whether it affects natural persons.
-
----
-
-## Step 3
-
-Evaluate Annex I
-
-Determine whether the AI system is a safety component of a regulated product.
-
-Record the result.
+- de ce există sistemul AI;
+- cine îl folosește;
+- ce proces de business susține;
+- dacă afectează persoane fizice.
 
 ---
 
-## Step 4
+## Pasul 3
 
-Evaluate Annex III
+Se evaluează Anexa I.
 
-Determine whether the AI system belongs to one of the High-Risk categories defined in Annex III.
+Se determină dacă sistemul AI este o componentă de siguranță a unui produs reglementat.
 
-Record the result.
-
----
-
-## Step 5
-
-Evaluate Substantial Modification
-
-Determine whether modifications made by {{COMPANY_NAME}} could change the regulatory classification.
-
-Record the result.
+Se înregistrează rezultatul.
 
 ---
 
-## Step 6
+## Pasul 4
 
-Determine Final Classification
+Se evaluează Anexa III.
 
-Assign one of the following:
+Se determină dacă sistemul AI aparține uneia din categoriile de Risc Ridicat definite în Anexa III.
 
-- High-Risk AI System
-- Not High-Risk AI System
-- Assessment Pending
-
-Document the justification.
+Se înregistrează rezultatul.
 
 ---
 
-## Step 7
+## Pasul 5
 
-Update Register
+Se evaluează Modificarea Substanțială.
 
-Open:
+Se determină dacă modificările efectuate de {{COMPANY_NAME}} ar putea schimba clasificarea de reglementare.
+
+Se înregistrează rezultatul.
+
+---
+
+## Pasul 6
+
+Se determină Clasificarea Finală.
+
+Se atribuie una din următoarele:
+
+- Sistem AI cu Risc Ridicat
+- Sistem AI fără Risc Ridicat
+- Evaluare în Așteptare
+
+Se documentează justificarea.
+
+---
+
+## Pasul 7
+
+Se actualizează Registrul.
+
+Se deschide:
 
 REG-005_High_Risk_Assessment_Register.md
 
-Record:
+Se înregistrează:
 
-- assessment result;
-- justification;
-- reviewer;
-- assessment date.
+- rezultatul evaluării;
+- justificarea;
+- evaluatorul;
+- data evaluării.
 
 ---
 
-## Step 8
+## Pasul 8
 
-Collect Evidence
+Se colectează Dovezile.
 
-Store supporting evidence in:
+Dovezile justificative se stochează în:
 
 EVID-005_High_Risk_Assessment_Evidence.md
 
 ---
 
-## Step 9
+## Pasul 9
 
-Review
+Revizuire.
 
-Repeat the assessment whenever:
+Evaluarea se repetă ori de câte ori:
 
-- intended purpose changes;
-- provider changes;
-- functionality changes;
-- regulatory requirements change.
-
----
-
-# 5. Quality Checks
-
-Verify that:
-
-✓ AI System exists.
-
-✓ Intended Purpose is documented.
-
-✓ Provider is identified.
-
-✓ Annex I assessment completed.
-
-✓ Annex III assessment completed.
-
-✓ High-Risk determination documented.
-
-✓ Justification recorded.
-
-✓ Assessment Date recorded.
-
-✓ Reviewer identified.
+- se schimbă scopul preconizat;
+- se schimbă furnizorul;
+- se schimbă funcționalitatea;
+- se modifică cerințele de reglementare.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-005 High-Risk Assessment Register
-- EVID-005 High-Risk Assessment Evidence
-- DEC-005 High-Risk Assessment Declaration
+✓ Sistemul AI există.
+
+✓ Scopul Preconizat este documentat.
+
+✓ Furnizorul este identificat.
+
+✓ Evaluarea Anexei I este completă.
+
+✓ Evaluarea Anexei III este completă.
+
+✓ Determinarea Risc Ridicat este documentată.
+
+✓ Justificarea este înregistrată.
+
+✓ Data Evaluării este înregistrată.
+
+✓ Evaluatorul este identificat.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- DOD-005 High-Risk Assessment Policy
-- PROC-005 High-Risk Assessment Procedure
-- REG-001 AI System Inventory Register
-- Regulation (EU) 2024/1689 (EU AI Act)
+Această instrucțiune actualizează:
+
+- REG-005 Registrul de Evaluare Risc Ridicat
+- EVID-005 Dovezile de Evaluare Risc Ridicat
+- DEC-005 Declarația de Evaluare Risc Ridicat
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- DOD-005 Politica de Evaluare Risc Ridicat
+- PROC-005 Procedura de Evaluare Risc Ridicat
+- REG-001 Registrul de Inventar al Sistemelor AI
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

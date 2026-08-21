@@ -1,77 +1,67 @@
 # CHK-005
 
-# High-Risk AI System Assessment Checklist
+# Checklist de Evaluare a Sistemelor AI cu Risc Ridicat
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-005 |
-| Title | High-Risk AI System Assessment Checklist |
+| ID Document | CHK-005 |
+| Titlu | Checklist de Evaluare a Sistemelor AI cu Risc Ridicat |
 | Repository | RRVI™ |
-| Module | 05 – High-Risk Assessment |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 05 – Evaluare Risc Ridicat |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that every Artificial Intelligence system has been properly assessed for High-Risk classification in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Acest checklist se utilizează pentru a verifica dacă fiecare sistem de Inteligență Artificială a fost evaluat corespunzător pentru clasificarea High-Risk, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# High-Risk Assessment Verification Checklist
+# Checklist de Verificare a Evaluării Risc Ridicat
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI System exists in REG-001 AI System Inventory Register | ☐ | ☐ | ☐ | |
-| 2 | Intended purpose is documented | ☐ | ☐ | ☐ | |
-| 3 | AI provider is identified | ☐ | ☐ | ☐ | |
-| 4 | Business owner is assigned | ☐ | ☐ | ☐ | |
-| 5 | Human Oversight has been evaluated | ☐ | ☐ | ☐ | |
-| 6 | Annex I assessment completed | ☐ | ☐ | ☐ | |
-| 7 | Annex III assessment completed | ☐ | ☐ | ☐ | |
-| 8 | Safety component assessment completed | ☐ | ☐ | ☐ | |
-| 9 | Substantial modification assessment completed | ☐ | ☐ | ☐ | |
-| 10 | Applicable harmonised standards reviewed | ☐ | ☐ | ☐ | |
-| 11 | Regulatory guidance reviewed | ☐ | ☐ | ☐ | |
-| 12 | High-Risk determination documented | ☐ | ☐ | ☐ | |
-| 13 | Classification justification documented | ☐ | ☐ | ☐ | |
-| 14 | Supporting evidence collected | ☐ | ☐ | ☐ | |
-| 15 | Register updated | ☐ | ☐ | ☐ | |
-| 16 | Assessment independently reviewed | ☐ | ☐ | ☐ | |
-| 17 | Assessment approved | ☐ | ☐ | ☐ | |
-| 18 | Corrective actions identified (if required) | ☐ | ☐ | ☐ | |
-| 19 | Assessment ready for inspection | ☐ | ☐ | ☐ | |
-| 20 | Next review date assigned | ☐ | ☐ | ☐ | |
+| 1 | Sistemul AI există în REG-001 Registrul de Inventar al Sistemelor AI | ☐ | ☐ | ☐ | |
+| 2 | Scopul preconizat este documentat | ☐ | ☐ | ☐ | |
+| 3 | Furnizorul AI este identificat | ☐ | ☐ | ☐ | |
+| 4 | Responsabilul de business este desemnat | ☐ | ☐ | ☐ | |
+| 5 | Supravegherea Umană a fost evaluată | ☐ | ☐ | ☐ | |
+| 6 | Evaluarea Anexei I este completă | ☐ | ☐ | ☐ | |
+| 7 | Evaluarea Anexei III este completă | ☐ | ☐ | ☐ | |
+| 8 | Evaluarea componentei de siguranță este completă | ☐ | ☐ | ☐ | |
+| 9 | Evaluarea modificării substanțiale este completă | ☐ | ☐ | ☐ | |
+| 10 | Standardele armonizate aplicabile au fost revizuite | ☐ | ☐ | ☐ | |
+| 11 | Ghidurile de reglementare au fost revizuite | ☐ | ☐ | ☐ | |
+| 12 | Determinarea Risc Ridicat este documentată | ☐ | ☐ | ☐ | |
+| 13 | Justificarea clasificării este documentată | ☐ | ☐ | ☐ | |
+| 14 | Dovezile justificative au fost colectate | ☐ | ☐ | ☐ | |
+| 15 | Registrul a fost actualizat | ☐ | ☐ | ☐ | |
+| 16 | Evaluarea a fost revizuită independent | ☐ | ☐ | ☐ | |
+| 17 | Evaluarea a fost aprobată | ☐ | ☐ | ☐ | |
+| 18 | Acțiunile corective au fost identificate (dacă e cazul) | ☐ | ☐ | ☐ | |
+| 19 | Evaluarea este pregătită pentru inspecție | ☐ | ☐ | ☐ | |
+| 20 | Data următoarei revizuiri a fost alocată | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,39 +71,49 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Annex I
-- Annex III
-- DOD-005 High-Risk Assessment Policy
-- PROC-005 High-Risk Assessment Procedure
-- WI-005 High-Risk Assessment Work Instruction
-- REG-005 High-Risk Assessment Register
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Anexa I
+- Anexa III
+- DOD-005 Politica de Evaluare Risc Ridicat
+- PROC-005 Procedura de Evaluare Risc Ridicat
+- WI-005 Instrucțiune de Lucru — Evaluare Risc Ridicat
+- REG-005 Registrul de Evaluare Risc Ridicat
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

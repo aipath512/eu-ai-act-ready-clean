@@ -1,218 +1,248 @@
-# High-Risk AI System Assessment Procedure
+# PROC-005
 
-**Document ID:** PROC-005-001  
-**Module:** 05 – High-Risk Assessment  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Compliance Core Procedure  
-**Owner:** Compliance Officer  
-**Effective Date:** [YYYY-MM-DD]  
-**Next Review Date:** [YYYY-MM-DD]
+# Procedura de Evaluare a Sistemelor AI cu Risc Ridicat
 
 ---
 
-# 1. PURPOSE
+## Informații Document
 
-This procedure defines the standardized process for determining whether an Artificial Intelligence system qualifies as a **High-Risk AI System** under Regulation (EU) 2024/1689 (EU AI Act).
-
-The objective is to ensure consistent, repeatable, and auditable classification decisions.
-
----
-
-# 2. SCOPE
-
-This procedure applies to:
-
-- All AI systems developed or used by the organization  
-- All third-party AI systems integrated into internal workflows  
-- All procurement, deployment, or modification of AI systems  
-- All business units and operational environments  
+| Câmp | Valoare |
+|--------|-------|
+| ID Document | PROC-005 |
+| Titlu | Procedura de Evaluare a Sistemelor AI cu Risc Ridicat |
+| Repository | RRVI™ |
+| Modul | 05 – Evaluare Risc Ridicat |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 3. INPUT REQUIREMENTS
+# 1. Scop
 
-The following inputs are required before classification:
+Această procedură definește procesul standardizat pentru determinarea dacă un sistem de Inteligență Artificială se califică drept **Sistem AI cu Risc Ridicat** conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-- AI System Inventory Record  
-- Intended Purpose Description  
-- Technical Documentation (if available)  
-- Vendor/Supplier Information  
-- Use Case Description  
-- Deployment Context  
-- Relevant regulatory references (Annex I / Annex III)
+Obiectivul este să asigure decizii de clasificare consecvente, repetabile și auditabile.
 
 ---
 
-# 4. PROCEDURE OVERVIEW
+# 2. Domeniu de Aplicare
 
-The classification process follows a deterministic step-by-step assessment:
+Această procedură se aplică:
 
----
-
-## STEP 1 — AI SYSTEM IDENTIFICATION
-
-Assign a unique identifier from the AI Inventory.
-
-Output:
-
-- AI_System_ID
-- System Name
-- Owner
+- tuturor sistemelor AI dezvoltate sau folosite de organizație;
+- tuturor sistemelor AI terțe integrate în fluxurile interne de lucru;
+- tuturor achizițiilor, implementărilor sau modificărilor de sisteme AI;
+- tuturor unităților de business și mediilor operaționale.
 
 ---
 
-## STEP 2 — INTENDED PURPOSE ANALYSIS
+# 3. Cerințe de Intrare
 
-Document the intended use of the AI system.
+Următoarele elemente sunt necesare înainte de clasificare:
 
-Include:
-
-- functional purpose  
-- operational environment  
-- affected stakeholders  
-- decision-making role (if any)
-
-Output:
-
-- Intended Purpose Statement
+- Înregistrarea din Inventarul Sistemelor AI;
+- Descrierea Scopului Preconizat;
+- Documentație Tehnică (dacă e disponibilă);
+- Informații despre Furnizor;
+- Descrierea Cazului de Utilizare;
+- Contextul de Implementare;
+- Referințe de reglementare relevante (Anexa I / Anexa III).
 
 ---
 
-## STEP 3 — DEPLOYER / PROVIDER ROLE IDENTIFICATION
+# 4. Prezentare Generală a Procedurii
 
-Determine organizational role:
-
-- Provider  
-- Deployer  
-- Importer  
-- Distributor  
-- Product Manufacturer (if applicable)
-
-Output:
-
-- Role Classification
+Procesul de clasificare urmează o evaluare deterministă, pas cu pas.
 
 ---
 
-## STEP 4 — ANNEX I SCREENING
+## Pasul 1 — Identificarea Sistemului AI
 
-Check whether the AI system is subject to Annex I regulated product integration.
+Se atribuie un identificator unic din Inventarul AI.
 
-Output:
+Rezultat:
 
-- Annex I relevance: YES / NO  
-- Justification
-
----
-
-## STEP 5 — ANNEX III SCREENING
-
-Evaluate whether the AI system falls under Annex III high-risk categories, including but not limited to:
-
-- biometric identification  
-- employment-related decision systems  
-- education and training systems  
-- access to essential services  
-- law enforcement-related systems  
-- migration, asylum, border control systems  
-- justice and democratic processes
-
-Output:
-
-- Annex III relevance: YES / NO  
-- Category mapping (if applicable)
+- ID Sistem AI
+- Numele Sistemului
+- Responsabil
 
 ---
 
-## STEP 6 — EXCLUSION CHECK
+## Pasul 2 — Analiza Scopului Preconizat
 
-Verify whether the system qualifies for exclusion or exception under applicable regulation.
+Se documentează utilizarea preconizată a sistemului AI.
 
-Output:
+Se include:
 
-- Exclusion status  
-- Legal justification
+- scopul funcțional;
+- mediul operațional;
+- părțile interesate afectate;
+- rolul decizional (dacă există).
 
----
+Rezultat:
 
-## STEP 7 — RISK CLASSIFICATION DECISION
-
-Based on previous steps, classify the system:
-
-- HIGH RISK  
-- NOT HIGH RISK  
-- REQUIRES LEGAL REVIEW
-
-Decision must be justified.
+- Declarația Scopului Preconizat
 
 ---
 
-## STEP 8 — DOCUMENTATION OF EVIDENCE
+## Pasul 3 — Identificarea Rolului de Implementator/Furnizor
 
-All supporting evidence must be recorded in the compliance system:
+Se determină rolul organizațional:
 
-- assessment forms  
-- system documentation  
-- vendor declarations  
-- screenshots / logs (if applicable)  
-- internal review notes  
+- Provider;
+- Deployer;
+- Importator;
+- Distribuitor;
+- Producător de Produs (dacă e cazul).
 
----
+Rezultat:
 
-## STEP 9 — COMPLIANCE REVIEW
-
-The Compliance Officer shall:
-
-- validate assessment completeness  
-- confirm classification decision  
-- ensure evidence adequacy  
-- approve or reject classification  
+- Clasificarea Rolului
 
 ---
 
-## STEP 10 — REGISTRATION & ARCHIVING
+## Pasul 4 — Verificarea Anexei I
 
-Final results must be stored in:
+Se verifică dacă sistemul AI face obiectul integrării în produse reglementate din Anexa I.
 
-- High-Risk Assessment Register  
-- AI System Inventory  
-- Compliance Evidence Repository  
+Rezultat:
 
----
-
-# 5. OUTPUT ARTIFACTS
-
-This procedure produces:
-
-- High-Risk Classification Record  
-- Assessment Checklist  
-- Compliance Declaration  
-- Evidence Package  
-- Audit-Ready Register Entry  
+- Relevanța Anexei I: DA / NU
+- Justificare
 
 ---
 
-# 6. REVIEW & UPDATE
+## Pasul 5 — Verificarea Anexei III
 
-This procedure must be:
+Se evaluează dacă sistemul AI se încadrează în categoriile cu risc ridicat din Anexa III, incluzând, dar fără a se limita la:
 
-- reviewed annually  
-- updated upon EU AI Act amendments  
-- revised when new Annex III interpretations are issued  
-- audited during compliance cycles  
+- identificare biometrică;
+- sisteme de decizie legate de angajare;
+- sisteme de educație și formare;
+- acces la servicii esențiale;
+- sisteme legate de aplicarea legii;
+- sisteme de migrație, azil, control al frontierei;
+- justiție și procese democratice.
 
----
+Rezultat:
 
-# 7. NON-COMPLIANCE
-
-Failure to follow this procedure may result in:
-
-- invalid risk classification  
-- regulatory exposure  
-- audit failure  
-- suspension of AI system deployment  
+- Relevanța Anexei III: DA / NU
+- Maparea categoriei (dacă e cazul)
 
 ---
 
-# END OF DOCUMENT
+## Pasul 6 — Verificarea Excluderilor
+
+Se verifică dacă sistemul se califică pentru excludere sau excepție conform reglementării aplicabile.
+
+Rezultat:
+
+- Statusul de excludere
+- Justificare juridică
+
+---
+
+## Pasul 7 — Decizia de Clasificare a Riscului
+
+Pe baza pașilor anteriori, se clasifică sistemul:
+
+- RISC RIDICAT;
+- FĂRĂ RISC RIDICAT;
+- NECESITĂ REVIZUIRE JURIDICĂ.
+
+Decizia trebuie justificată.
+
+---
+
+## Pasul 8 — Documentarea Dovezilor
+
+Toate dovezile justificative se înregistrează în sistemul de conformitate:
+
+- formulare de evaluare;
+- documentația sistemului;
+- declarații ale furnizorului;
+- capturi de ecran/loguri (dacă e cazul);
+- note de revizuire internă.
+
+---
+
+## Pasul 9 — Revizuirea de Conformitate
+
+Responsabilul de Conformitate:
+
+- validează completitudinea evaluării;
+- confirmă decizia de clasificare;
+- asigură caracterul adecvat al dovezilor;
+- aprobă sau respinge clasificarea.
+
+---
+
+## Pasul 10 — Înregistrare și Arhivare
+
+Rezultatele finale se stochează în:
+
+- Registrul de Evaluare Risc Ridicat;
+- Inventarul Sistemelor AI;
+- Repository-ul de Dovezi de Conformitate.
+
+---
+
+# 5. Rezultate Produse
+
+Această procedură produce:
+
+- Înregistrarea de Clasificare Risc Ridicat;
+- Checklist-ul de Evaluare;
+- Declarația de Conformitate;
+- Pachetul de Dovezi;
+- Intrarea în Registru, pregătită pentru audit.
+
+---
+
+# 6. Revizuire și Actualizare
+
+Această procedură trebuie:
+
+- revizuită anual;
+- actualizată la modificări aduse EU AI Act;
+- revizuită când sunt emise interpretări noi ale Anexei III;
+- auditată în cadrul ciclurilor de conformitate.
+
+---
+
+# 7. Neconformitate
+
+Nerespectarea acestei proceduri poate duce la:
+
+- clasificare de risc invalidă;
+- expunere de reglementare;
+- eșec la audit;
+- suspendarea implementării sistemului AI.
+
+---
+
+# 8. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Anexa I
+- Anexa III
+- DOD-005 Politica de Evaluare Risc Ridicat
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-005 Registrul de Evaluare Risc Ridicat
+
+---
+
+# 9. Aprobare
+
+Întocmit de
+
+{{RESPONSIBLE_PERSON}}
+
+Firma
+
+{{COMPANY_NAME}}
+
+Status
+
+Aprobat
