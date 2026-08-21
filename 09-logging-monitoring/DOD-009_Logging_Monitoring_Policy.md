@@ -1,155 +1,189 @@
 # DOD-009
 
-# Logging and Monitoring Policy
+# Politica de Logging și Monitorizare
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DOD-009 |
-| Title | Logging and Monitoring Policy |
+| ID Document | DOD-009 |
+| Titlu | Politica de Logging și Monitorizare |
 | Repository | RRVI™ |
-| Module | 09 – Logging and Monitoring |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 09 – Logging și Monitorizare |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-The purpose of this policy is to establish the principles and requirements for logging and monitoring Artificial Intelligence systems used, developed or deployed by {{COMPANY_NAME}}.
+Scopul acestei politici este de a stabili principiile și cerințele pentru logging-ul și monitorizarea sistemelor de Inteligență Artificială utilizate, dezvoltate sau implementate de {{COMPANY_NAME}}.
 
-This policy supports compliance with Regulation (EU) 2024/1689 (EU AI Act) by ensuring that AI system activities are appropriately recorded, monitored and retained to support governance, incident investigation, continuous improvement and regulatory inspection.
-
----
-
-# 2. Scope
-
-This policy applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- proof-of-concept AI systems;
-- production AI systems;
-- supporting AI infrastructure;
-- AI-related operational activities.
+Această politică sprijină conformitatea cu Regulamentul (UE) 2024/1689 (EU AI Act), asigurând că activitățile sistemelor AI sunt înregistrate, monitorizate și păstrate corespunzător, pentru a sprijini guvernanța, investigarea incidentelor, îmbunătățirea continuă și inspecția de reglementare.
 
 ---
 
-# 3. Policy Statement
+# 2. Domeniu de Aplicare
 
-{{COMPANY_NAME}} shall maintain appropriate logging and monitoring mechanisms for all AI systems proportionate to their intended purpose, operational context and associated risks.
+Această politică se aplică:
 
-Logs shall be protected against unauthorized modification and retained according to company retention requirements.
-
----
-
-# 4. Logging Objectives
-
-Logging shall enable:
-
-- traceability of AI operations;
-- reconstruction of significant events;
-- incident investigation;
-- operational monitoring;
-- security monitoring;
-- compliance verification.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- infrastructurii AI suport;
+- activităților operaționale legate de AI.
 
 ---
 
-# 5. Monitoring Objectives
+# 3. Cadrul Legal — Articolele 12, 19 și 26
 
-Monitoring shall detect:
+Obligațiile de logging diferă în funcție de articol și de rolul organizației:
 
-- abnormal AI behaviour;
-- system failures;
-- security events;
-- performance degradation;
-- configuration changes;
-- operational anomalies.
+- **Articolul 12** (Provider) — sistemele AI cu risc ridicat trebuie proiectate cu capacitate tehnică de înregistrare automată a evenimentelor (loguri) pe toată durata de viață a sistemului.
+- **Articolul 19** (Provider) — providerul păstrează logurile generate automat de sistem, pe care le controlează, pentru cel puțin perioada prevăzută de reglementare sau de legislația sectorială aplicabilă.
+- **Articolul 26 alin. 5** (Deployer) — implementatorul păstrează logurile generate automat de sistemul AI, în măsura în care se află sub controlul său, pentru o perioadă de **cel puțin 6 luni**, cu excepția cazului în care legislația aplicabilă (inclusiv legislația privind protecția datelor personale) prevede altfel.
 
----
-
-# 6. Roles and Responsibilities
-
-## Managing Director
-
-Approves this policy.
+{{COMPANY_NAME}} identifică rolul său (provider/deployer) pentru fiecare sistem AI și aplică termenul de retenție corespunzător, nu unul generic.
 
 ---
 
-## AI Governance Owner
+# 4. Realitatea Tehnică a Logurilor pentru Instrumentele Comerciale
 
-Responsible for:
+Pentru instrumentele AI comerciale folosite ca simplu abonament (de ex. ChatGPT, Gemini, Claude, Perplexity în varianta de consum), {{COMPANY_NAME}} NU presupune automat că logging-ul este activat sau exportabil.
 
-- overseeing logging activities;
-- reviewing monitoring reports;
-- ensuring compliance.
+Un abonament obișnuit, fără cont enterprise/API cu jurnalizare dedicată, de regulă **nu expune loguri accesibile și exportabile** de către utilizator.
 
----
-
-## AI System Owner
-
-Responsible for:
-
-- implementing logging;
-- maintaining monitoring controls;
-- reviewing operational events.
+{{COMPANY_NAME}} documentează, pentru fiecare sistem, coloana **„Jurnale Accesibile"** ca DA sau NU, verificat efectiv (nu presupus). Absența documentată a jurnalelor accesibile este o formă de diligență corectă; o căsuță lăsată necompletată sau afirmată greșit ca „Da" este o omisiune.
 
 ---
 
-## Compliance Owner
+# 5. Stratul GDPR pe Loguri
 
-Responsible for:
+Acolo unde logurile conțin date cu caracter personal (ex. conținutul interacțiunilor cu utilizatori, identificatori), {{COMPANY_NAME}} aplică suplimentar:
 
-- supporting audits;
-- verifying record retention;
-- reviewing compliance evidence.
-
----
-
-# 7. Review Requirements
-
-This policy shall be reviewed:
-
-- annually;
-- after significant AI system changes;
-- after major incidents;
-- after regulatory updates;
-- before regulatory inspections.
+- o durată de păstrare justificată, nu nelimitată;
+- controlul accesului la loguri (trasabilitate a accesului);
+- informarea angajaților despre existența logging-ului;
+- interzicerea evaluării individuale a angajaților exclusiv pe baza logurilor, fără bază legală și, unde e cazul, fără consultarea reprezentanților angajaților.
 
 ---
 
-# 8. Compliance
+# 6. Declarația de Politică
 
-Compliance with this policy is mandatory.
+{{COMPANY_NAME}} menține mecanisme adecvate de logging și monitorizare pentru toate sistemele AI, proporțional cu scopul preconizat, contextul operațional și riscurile asociate.
 
-Logging and monitoring controls shall remain operational throughout the lifecycle of each AI system.
-
----
-
-# 9. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-001 AI System Inventory Policy
-- DOD-002 Risk Classification Policy
-- REG-009 Logging and Monitoring Register
+Logurile sunt protejate împotriva modificării neautorizate și păstrate conform termenelor din Secțiunea 3, nu conform unui termen generic uniform.
 
 ---
 
-# 10. Approval
+# 7. Obiective de Logging
 
-Prepared by
+Logging-ul trebuie să permită:
+
+- trasabilitatea operațiunilor AI;
+- reconstituirea evenimentelor semnificative;
+- investigarea incidentelor;
+- monitorizarea operațională;
+- monitorizarea de securitate;
+- verificarea conformității.
+
+---
+
+# 8. Obiective de Monitorizare
+
+Monitorizarea trebuie să detecteze:
+
+- comportamentul anormal al AI;
+- defecțiuni de sistem;
+- evenimente de securitate;
+- degradarea performanței;
+- modificări de configurare;
+- anomalii operaționale.
+
+---
+
+# 9. Roluri și Responsabilități
+
+## Director General
+
+Aprobă această politică.
+
+---
+
+## Responsabilul de Guvernanță AI
+
+Responsabil pentru:
+
+- supravegherea activităților de logging;
+- revizuirea rapoartelor de monitorizare;
+- asigurarea conformității cu Art. 12/19/26.
+
+---
+
+## Responsabilul de Sistem AI
+
+Responsabil pentru:
+
+- verificarea reală (nu presupusă) a disponibilității logurilor;
+- implementarea logging-ului unde e posibil;
+- menținerea controalelor de monitorizare.
+
+---
+
+## Responsabilul de Conformitate
+
+Responsabil pentru:
+
+- sprijinirea auditurilor;
+- verificarea retenției corecte pe rol (provider/deployer);
+- revizuirea dovezilor de conformitate.
+
+---
+
+# 10. Cerințe de Revizuire
+
+Această politică se revizuiește:
+
+- anual;
+- după modificări semnificative ale sistemelor AI;
+- după incidente majore;
+- după actualizări de reglementare;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 11. Conformitate
+
+Respectarea acestei politici este obligatorie.
+
+Controalele de logging și monitorizare rămân operaționale pe tot parcursul ciclului de viață al fiecărui sistem AI.
+
+---
+
+# 12. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolele 12, 19, 26
+- Regulamentul (UE) 2016/679 (GDPR)
+- DOD-001 Politica de Inventar al Sistemelor AI
+- DOD-002 Politica de Clasificare a Riscului
+- REG-009 Registrul de Logging și Monitorizare
+
+---
+
+# 13. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

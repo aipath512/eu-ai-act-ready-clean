@@ -1,115 +1,111 @@
 # REG-009
 
-# Logging and Monitoring Register
+# Registrul de Logging și Monitorizare
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | REG-009 |
-| Title | Logging and Monitoring Register |
+| ID Document | REG-009 |
+| Titlu | Registrul de Logging și Monitorizare |
 | Repository | RRVI™ |
-| Module | 09 – Logging and Monitoring |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Register |
+| Modul | 09 – Logging și Monitorizare |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru Activ |
 
 ---
 
-# Purpose
+# Scop
 
-This register records the logging and monitoring controls implemented for every Artificial Intelligence system operated by {{COMPANY_NAME}}.
+Acest registru înregistrează controalele de logging și monitorizare implementate pentru fiecare sistem de Inteligență Artificială operat de {{COMPANY_NAME}}.
 
-It provides objective evidence that AI activities are monitored, logged and periodically reviewed in accordance with Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# Logging and Monitoring Register
-
-| AI ID | AI System | Logging Enabled | Monitoring Enabled | Retention | Last Review | Reviewer | Status |
-|-------|-----------|-----------------|-------------------|-----------|-------------|----------|--------|
-| AI-001 | ChatGPT | Yes | Yes | 12 Months | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Active |
-| AI-002 | Gemini | Yes | Yes | 12 Months | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Active |
-| AI-003 | Claude | Yes | Yes | 12 Months | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Active |
-| AI-004 | DeepSeek | Yes | Yes | 12 Months | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Active |
-| AI-005 | Perplexity | Yes | Yes | 12 Months | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Active |
-| AI-006 | Cloudflare Workers AI | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Planned |
-| AI-007 | Cloudflare Vectorize | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | POC |
-| AI-008 | GitHub Copilot | Yes | Yes | 12 Months | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Active |
-| AI-009 | EU-112™ AI Governance Agent | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-010 | Economic Twins™ Engine | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-011 | Business Discovery Engine™ | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-012 | Business Change Intelligence™ | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-013 | AI Market Intelligence Agent™ | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-014 | EU AI Act Intelligence Agent™ | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-015 | Remote Inspection Agent™ | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Concept |
-| AI-016 | Compliance Documentation Generator™ | Planned | Planned | TBD | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Concept |
+Oferă dovada obiectivă că activitățile AI sunt monitorizate, înregistrate și revizuite periodic, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# Logged Events
+# Registrul de Logging și Monitorizare
 
-The following events shall be logged where applicable:
+| ID AI | Sistem AI | Rol (Provider/Deployer) | Jurnale Accesibile | Monitorizare Activă | Retenție Aplicabilă | Ultima Revizuire | Evaluator | Status |
+|-------|-----------|-----------------|--------------------|-------------------|-----------|-------------|----------|--------|
+| AI-001 | | | | | | | | |
+| AI-002 | | | | | | | | |
+| AI-003 | | | | | | | | |
+| AI-004 | | | | | | | | |
+| AI-005 | | | | | | | | |
+| AI-006 | | | | | | | | |
+| AI-007 | | | | | | | | |
+| AI-008 | | | | | | | | |
+| AI-009 | | | | | | | | |
+| AI-010 | | | | | | | | |
 
-- User authentication
-- AI requests
-- AI responses
-- Administrative actions
-- Configuration changes
-- Security events
-- Errors and exceptions
-- System availability
-- Service failures
-- Monitoring alerts
-
----
-
-# Review Requirements
-
-The register shall be updated whenever:
-
-- a new AI system is introduced;
-- logging configuration changes;
-- monitoring configuration changes;
-- security incidents occur;
-- regulatory requirements change.
+*Rândurile se completează de fiecare firmă cu date verificate real. „Jurnale Accesibile" se completează DA doar dacă firma poate efectiv exporta/consulta jurnalele — un abonament comercial obișnuit (ChatGPT, Gemini, Claude, Perplexity fără cont enterprise/API) de regulă NU le oferă, deci se completează NU, nu se lasă implicit „Da". Retenția Aplicabilă: minim 6 luni pentru deployer (Art. 26), conform politicii pentru provider (Art. 19).*
 
 ---
 
-# Register Owner
+# Evenimente Înregistrate
 
-| Field | Value |
+Următoarele evenimente se înregistrează, unde e cazul:
+
+- Autentificarea utilizatorilor
+- Cererile către AI
+- Răspunsurile AI
+- Acțiunile administrative
+- Modificările de configurare
+- Evenimentele de securitate
+- Erorile și excepțiile
+- Disponibilitatea sistemului
+- Defecțiunile de serviciu
+- Alertele de monitorizare
+
+---
+
+# Cerințe de Revizuire
+
+Registrul se actualizează ori de câte ori:
+
+- este introdus un sistem AI nou;
+- se schimbă configurarea de logging;
+- se schimbă configurarea de monitorizare;
+- apar incidente de securitate;
+- se modifică cerințele de reglementare.
+
+---
+
+# Responsabilul Registrului
+
+| Câmp | Valoare |
 |--------|-------|
-| Register Owner | AI Governance Owner |
-| Custodian | {{RESPONSIBLE_PERSON}} |
-| Company | {{COMPANY_NAME}} |
-| Review Frequency | Annual or upon significant change |
+| Responsabil Registru | Responsabilul de Guvernanță AI |
+| Custode | {{RESPONSIBLE_PERSON}} |
+| Firma | {{COMPANY_NAME}} |
+| Frecvența Revizuirii | Anual sau la modificare semnificativă |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-009 Logging and Monitoring Policy
-- PROC-009 Logging and Monitoring Procedure
-- WI-009 Logging and Monitoring Work Instruction
-- EVID-009 Logging and Monitoring Evidence
-- DEC-009 Logging and Monitoring Declaration
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolele 12, 19, 26
+- DOD-009 Politica de Logging și Monitorizare
+- PROC-009 Procedura de Logging și Monitorizare
+- WI-009 Instrucțiune de Lucru — Logging și Monitorizare
+- EVID-009 Dovezile de Logging și Monitorizare
+- DEC-009 Declarația de Logging și Monitorizare
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved Register
+Registru Aprobat

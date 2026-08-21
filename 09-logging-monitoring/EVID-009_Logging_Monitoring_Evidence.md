@@ -1,130 +1,126 @@
 # EVID-009
 
-# Logging and Monitoring Evidence
+# Dovezi de Logging și Monitorizare
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | EVID-009 |
-| Title | Logging and Monitoring Evidence |
+| ID Document | EVID-009 |
+| Titlu | Dovezi de Logging și Monitorizare |
 | Repository | RRVI™ |
-| Module | 09 – Logging and Monitoring |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Evidence Register |
+| Modul | 09 – Logging și Monitorizare |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru de Dovezi Activ |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This document records the objective evidence supporting the Logging and Monitoring controls implemented for Artificial Intelligence systems operated by {{COMPANY_NAME}}.
+Acest document înregistrează dovezile obiective care susțin controalele de Logging și Monitorizare implementate pentru sistemele de Inteligență Artificială operate de {{COMPANY_NAME}}.
 
-The evidence demonstrates that AI system activities are recorded, monitored and periodically reviewed in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Dovezile demonstrează că activitățile sistemelor AI sunt înregistrate, monitorizate și revizuite periodic, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 2. Evidence Principles
+# 2. Principii ale Dovezilor
 
-Evidence shall be:
+Dovezile trebuie să fie:
 
-- objective;
-- verifiable;
-- traceable;
+- obiective;
+- verificabile;
+- trasabile;
 - complete;
-- version controlled;
-- retained according to company retention requirements.
+- controlate ca versiune;
+- păstrate conform cerințelor de retenție a firmei.
 
 ---
 
-# 3. Logging and Monitoring Evidence Register
+# 3. Registrul de Dovezi de Logging și Monitorizare
 
-| Evidence ID | AI ID | Evidence Description | Evidence Location | Status |
+| ID Dovadă | ID AI | Descrierea Dovezii | Locația Dovezii | Status |
 |--------------|-------|----------------------|-------------------|--------|
-| LM-001 | AI-001 | ChatGPT activity logs | GitHub Repository | Active |
-| LM-002 | AI-002 | Gemini activity logs | GitHub Repository | Active |
-| LM-003 | AI-003 | Claude activity logs | GitHub Repository | Active |
-| LM-004 | AI-004 | DeepSeek activity logs | GitHub Repository | Active |
-| LM-005 | AI-005 | Perplexity activity logs | GitHub Repository | Active |
-| LM-006 | AI-006 | Workers AI monitoring design | GitHub Repository | Planned |
-| LM-007 | AI-007 | Vectorize monitoring design | GitHub Repository | POC |
-| LM-008 | AI-008 | Copilot logging records | GitHub Repository | Active |
-| LM-009 | AI-009 | Logging architecture | GitHub Repository | Draft |
-| LM-010 | AI-010 | Monitoring architecture | GitHub Repository | Draft |
-| LM-011 | AI-011 | Monitoring specification | GitHub Repository | Draft |
-| LM-012 | AI-012 | Monitoring specification | GitHub Repository | Draft |
-| LM-013 | AI-013 | Monitoring specification | GitHub Repository | Draft |
-| LM-014 | AI-014 | Monitoring specification | GitHub Repository | Draft |
-| LM-015 | AI-015 | Monitoring specification | GitHub Repository | Draft |
-| LM-016 | AI-016 | Monitoring specification | GitHub Repository | Draft |
+| LM-001 | AI-001 | | | |
+| LM-002 | AI-002 | | | |
+| LM-003 | AI-003 | | | |
+| LM-004 | AI-004 | | | |
+| LM-005 | AI-005 | | | |
+| LM-006 | AI-006 | | | |
+| LM-007 | AI-007 | | | |
+| LM-008 | AI-008 | | | |
+| LM-009 | AI-009 | | | |
+| LM-010 | AI-010 | | | |
+
+*Rândurile se completează de fiecare firmă doar cu dovezi verificate real — nu presupune că un abonament comercial (ChatGPT, Gemini, Claude etc.) oferă automat jurnale exportabile. Afirmarea unei dovezi de logging inexistente este mai gravă decât un registru gol.*
 
 ---
 
-# 4. Acceptable Evidence
+# 4. Dovezi Acceptabile
 
-Supporting evidence may include:
+Dovezile justificative pot include:
 
-- application logs;
-- audit logs;
-- security logs;
-- monitoring dashboards;
-- alert notifications;
-- incident reports;
-- screenshots;
-- infrastructure monitoring reports;
-- Cloudflare logs;
-- GitHub Actions logs;
-- system health reports.
-
----
-
-# 5. Evidence Storage
-
-Evidence may be maintained in:
-
-- GitHub Repository;
-- Internal Documentation Repository;
-- Cloudflare Logs;
-- Monitoring Platform;
-- Security Monitoring System;
-- Compliance Documentation Repository.
+- jurnale de aplicație;
+- jurnale de audit;
+- jurnale de securitate;
+- dashboard-uri de monitorizare;
+- notificări de alertă;
+- rapoarte de incident;
+- capturi de ecran;
+- rapoarte de monitorizare a infrastructurii;
+- jurnale Cloudflare;
+- jurnale GitHub Actions;
+- rapoarte de sănătate a sistemului.
 
 ---
 
-# 6. Review Requirements
+# 5. Stocarea Dovezilor
 
-Evidence shall be reviewed:
+Dovezile pot fi menținute în:
 
-- annually;
-- after significant AI system changes;
-- after major incidents;
-- after security events;
-- before regulatory inspections.
-
----
-
-# 7. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-009 Logging and Monitoring Policy
-- PROC-009 Logging and Monitoring Procedure
-- REG-009 Logging and Monitoring Register
-- DEC-009 Logging and Monitoring Declaration
+- Repository GitHub;
+- Repository Intern de Documentație;
+- Jurnale Cloudflare;
+- Platforma de Monitorizare;
+- Sistemul de Monitorizare a Securității;
+- Repository de Documentație de Conformitate.
 
 ---
 
-# 8. Approval
+# 6. Cerințe de Revizuire
 
-Prepared by
+Dovezile se revizuiesc:
+
+- anual;
+- după modificări semnificative ale sistemelor AI;
+- după incidente majore;
+- după evenimente de securitate;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 7. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-009 Politica de Logging și Monitorizare
+- PROC-009 Procedura de Logging și Monitorizare
+- REG-009 Registrul de Logging și Monitorizare
+- DEC-009 Declarația de Logging și Monitorizare
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

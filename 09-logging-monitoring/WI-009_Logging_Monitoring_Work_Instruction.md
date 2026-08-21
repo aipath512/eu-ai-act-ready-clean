@@ -1,221 +1,229 @@
 # WI-009
 
-# Logging and Monitoring Work Instruction
+# Instrucțiune de Lucru — Logging și Monitorizare
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-009 |
-| Title | Logging and Monitoring Work Instruction |
+| ID Document | WI-009 |
+| Titlu | Instrucțiune de Lucru — Logging și Monitorizare |
 | Repository | RRVI™ |
-| Module | 09 – Logging and Monitoring |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 09 – Logging și Monitorizare |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed guidance for implementing, operating and reviewing logging and monitoring controls for Artificial Intelligence systems used by {{COMPANY_NAME}}.
+Această Instrucțiune de Lucru oferă îndrumări detaliate pentru implementarea, operarea și revizuirea controalelor de logging și monitorizare pentru sistemele de Inteligență Artificială folosite de {{COMPANY_NAME}}.
 
-The objective is to ensure that AI system activities remain traceable, auditable and continuously monitored throughout their operational lifecycle.
-
----
-
-# 2. Preconditions
-
-Before implementing logging and monitoring verify that:
-
-- the AI System exists in the AI System Inventory;
-- the AI System Owner has been assigned;
-- logging requirements have been defined;
-- monitoring responsibilities have been assigned.
+Obiectivul este să asigure că activitățile sistemelor AI rămân trasabile, auditabile și monitorizate continuu pe tot parcursul ciclului lor de viață operațional.
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-Collect the following information:
+Înainte de a implementa logging și monitorizare, se verifică dacă:
 
-- AI System ID
-- AI System Name
-- AI System Owner
-- Logging Location
-- Monitoring Tool
-- Event Types
-- Retention Period
-- Review Frequency
-- Responsible Reviewer
+- Sistemul AI există în Inventarul Sistemelor AI;
+- Responsabilul Sistemului AI a fost desemnat;
+- cerințele de logging au fost definite;
+- responsabilitățile de monitorizare au fost alocate.
 
 ---
 
-# 4. Work Instructions
+# 3. Informații Necesare
 
-## Step 1
+Se colectează următoarele informații:
 
-Open:
+- ID Sistem AI
+- Nume Sistem AI
+- Responsabilul Sistemului AI
+- Locația Jurnalelor (dacă există și sunt accesibile)
+- Instrumentul de Monitorizare
+- Tipurile de Evenimente
+- Perioada de Retenție (conform rolului: Art. 19 provider / Art. 26 minim 6 luni deployer)
+- Frecvența Revizuirii
+- Evaluatorul Responsabil
+
+---
+
+# 4. Instrucțiuni de Lucru
+
+## Pasul 1
+
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
-Locate the AI system.
+Se localizează sistemul AI.
 
 ---
 
-## Step 2
+## Pasul 2
 
-Configure Logging.
+Se verifică real disponibilitatea jurnalelor.
 
-Ensure the following events are recorded where applicable:
-
-- user authentication;
-- AI requests;
-- AI responses;
-- configuration changes;
-- administrator activities;
-- security events;
-- application errors;
-- system failures.
+Nu se presupune că un abonament comercial (ChatGPT, Gemini, Claude, Perplexity fără cont enterprise/API) oferă jurnale accesibile — se verifică efectiv în contul/platforma respectivă.
 
 ---
 
-## Step 3
+## Pasul 3
 
-Configure Monitoring.
+Se configurează Logging-ul, unde e tehnic posibil.
 
-Monitor:
+Se asigură înregistrarea, unde e cazul, a:
 
-- system availability;
-- response time;
-- resource utilization;
-- AI service failures;
-- unusual activity;
-- security alerts.
-
----
-
-## Step 4
-
-Review Logs.
-
-Verify:
-
-- log completeness;
-- timestamp accuracy;
-- abnormal events;
-- repeated failures;
-- unauthorized activities.
-
-Document significant observations.
+- autentificării utilizatorilor;
+- cererilor către AI;
+- răspunsurilor AI;
+- modificărilor de configurare;
+- activităților administratorului;
+- evenimentelor de securitate;
+- erorilor de aplicație;
+- defecțiunilor de sistem.
 
 ---
 
-## Step 5
+## Pasul 4
 
-Update Register.
+Se configurează Monitorizarea.
 
-Open:
+Se monitorizează:
+
+- disponibilitatea sistemului;
+- timpul de răspuns;
+- utilizarea resurselor;
+- defecțiunile serviciului AI;
+- activitatea neobișnuită;
+- alertele de securitate.
+
+---
+
+## Pasul 5
+
+Se revizuiesc Jurnalele (acolo unde există și sunt accesibile).
+
+Se verifică:
+
+- completitudinea jurnalelor;
+- exactitatea marcajelor temporale;
+- evenimentele anormale;
+- eșecurile repetate;
+- activitățile neautorizate.
+
+Se documentează observațiile semnificative.
+
+---
+
+## Pasul 6
+
+Se actualizează Registrul.
+
+Se deschide:
 
 REG-009_Logging_Monitoring_Register.md
 
-Record:
+Se înregistrează:
 
-- logging status;
-- monitoring status;
-- reviewer;
-- review date;
-- observations.
+- statusul jurnalelor accesibile (verificat real);
+- statusul monitorizării;
+- evaluatorul;
+- data revizuirii;
+- observațiile.
 
 ---
 
-## Step 6
+## Pasul 7
 
-Collect Supporting Evidence.
+Se colectează Dovezile Justificative.
 
-Store evidence in:
+Dovezile se stochează în:
 
 EVID-009_Logging_Monitoring_Evidence.md
 
-Examples include:
+Exemple:
 
-- log extracts;
-- monitoring dashboards;
-- system alerts;
-- screenshots;
-- incident reports;
-- audit reports.
-
----
-
-## Step 7
-
-Periodic Review.
-
-Review logging and monitoring whenever:
-
-- AI systems change;
-- infrastructure changes;
-- security incidents occur;
-- regulatory requirements change.
+- extrase de jurnal;
+- dashboard-uri de monitorizare;
+- alerte de sistem;
+- capturi de ecran;
+- rapoarte de incident;
+- rapoarte de audit.
 
 ---
 
-# 5. Quality Checks
+## Pasul 8
 
-Verify that:
+Revizuire Periodică.
 
-✓ Logging is enabled.
+Logging-ul și monitorizarea se revizuiesc ori de câte ori:
 
-✓ Monitoring is operational.
-
-✓ Time synchronization is correct.
-
-✓ Security events are logged.
-
-✓ Errors are recorded.
-
-✓ Logs are protected against modification.
-
-✓ Retention period is defined.
-
-✓ Register updated.
-
-✓ Supporting evidence collected.
+- se schimbă sistemele AI;
+- se schimbă infrastructura;
+- apar incidente de securitate;
+- se modifică cerințele de reglementare.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-009 Logging and Monitoring Register
-- EVID-009 Logging and Monitoring Evidence
-- DEC-009 Logging and Monitoring Declaration
+✓ Disponibilitatea reală a jurnalelor a fost verificată (nu presupusă).
+
+✓ Monitorizarea este funcțională.
+
+✓ Sincronizarea timpului este corectă.
+
+✓ Evenimentele de securitate sunt înregistrate, unde e posibil.
+
+✓ Erorile sunt înregistrate, unde e posibil.
+
+✓ Jurnalele sunt protejate împotriva modificării.
+
+✓ Perioada de retenție este definită conform rolului (provider/deployer).
+
+✓ Registrul a fost actualizat.
+
+✓ Dovezile justificative au fost colectate.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-009 Logging and Monitoring Policy
-- PROC-009 Logging and Monitoring Procedure
-- REG-001 AI System Inventory Register
+Această instrucțiune actualizează:
+
+- REG-009 Registrul de Logging și Monitorizare
+- EVID-009 Dovezile de Logging și Monitorizare
+- DEC-009 Declarația de Logging și Monitorizare
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolele 12, 19, 26
+- DOD-009 Politica de Logging și Monitorizare
+- PROC-009 Procedura de Logging și Monitorizare
+- REG-001 Registrul de Inventar al Sistemelor AI
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

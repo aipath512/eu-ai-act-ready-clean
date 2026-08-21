@@ -1,77 +1,67 @@
 # CHK-009
 
-# Logging and Monitoring Checklist
+# Checklist de Logging și Monitorizare
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-009 |
-| Title | Logging and Monitoring Checklist |
+| ID Document | CHK-009 |
+| Titlu | Checklist de Logging și Monitorizare |
 | Repository | RRVI™ |
-| Module | 09 – Logging and Monitoring |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 09 – Logging și Monitorizare |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that logging and monitoring controls have been implemented and are operating effectively for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Acest checklist se utilizează pentru a verifica dacă controalele de logging și monitorizare au fost implementate și funcționează efectiv pentru sistemele de Inteligență Artificială, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# Logging and Monitoring Verification Checklist
+# Checklist de Verificare a Logging-ului și Monitorizării
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI System exists in REG-001 AI System Inventory Register | ☐ | ☐ | ☐ | |
-| 2 | Logging is enabled | ☐ | ☐ | ☐ | |
-| 3 | Monitoring is enabled | ☐ | ☐ | ☐ | |
-| 4 | AI System Owner is assigned | ☐ | ☐ | ☐ | |
-| 5 | Log retention period is defined | ☐ | ☐ | ☐ | |
-| 6 | Timestamps are synchronized | ☐ | ☐ | ☐ | |
-| 7 | Authentication events are logged | ☐ | ☐ | ☐ | |
-| 8 | AI requests are logged | ☐ | ☐ | ☐ | |
-| 9 | AI responses are logged where appropriate | ☐ | ☐ | ☐ | |
-| 10 | Errors and exceptions are logged | ☐ | ☐ | ☐ | |
-| 11 | Security events are logged | ☐ | ☐ | ☐ | |
-| 12 | Configuration changes are logged | ☐ | ☐ | ☐ | |
-| 13 | Monitoring alerts are configured | ☐ | ☐ | ☐ | |
-| 14 | Logs are protected against unauthorized modification | ☐ | ☐ | ☐ | |
-| 15 | Backup of logs is performed | ☐ | ☐ | ☐ | |
-| 16 | Monitoring dashboards are operational | ☐ | ☐ | ☐ | |
-| 17 | Register has been updated | ☐ | ☐ | ☐ | |
-| 18 | Supporting evidence has been collected | ☐ | ☐ | ☐ | |
-| 19 | Next review date has been assigned | ☐ | ☐ | ☐ | |
-| 20 | Logging and Monitoring are inspection-ready | ☐ | ☐ | ☐ | |
+| 1 | Sistemul AI există în REG-001 Registrul de Inventar al Sistemelor AI | ☐ | ☐ | ☐ | |
+| 2 | Rolul (provider/deployer) a fost verificat pentru stabilirea termenului de retenție corect | ☐ | ☐ | ☐ | |
+| 3 | Disponibilitatea reală a jurnalelor a fost verificată (nu presupusă) | ☐ | ☐ | ☐ | |
+| 4 | Monitorizarea este activată | ☐ | ☐ | ☐ | |
+| 5 | Responsabilul Sistemului AI este desemnat | ☐ | ☐ | ☐ | |
+| 6 | Perioada de retenție a jurnalelor respectă minimul legal (6 luni pentru deployer, Art. 26) | ☐ | ☐ | ☐ | |
+| 7 | Marcajele temporale sunt sincronizate | ☐ | ☐ | ☐ | |
+| 8 | Evenimentele de autentificare sunt înregistrate | ☐ | ☐ | ☐ | |
+| 9 | Cererile către AI sunt înregistrate | ☐ | ☐ | ☐ | |
+| 10 | Răspunsurile AI sunt înregistrate, unde e cazul | ☐ | ☐ | ☐ | |
+| 11 | Erorile și excepțiile sunt înregistrate | ☐ | ☐ | ☐ | |
+| 12 | Evenimentele de securitate sunt înregistrate | ☐ | ☐ | ☐ | |
+| 13 | Modificările de configurare sunt înregistrate | ☐ | ☐ | ☐ | |
+| 14 | Alertele de monitorizare sunt configurate | ☐ | ☐ | ☐ | |
+| 15 | Jurnalele sunt protejate împotriva modificării neautorizate | ☐ | ☐ | ☐ | |
+| 16 | Backup-ul jurnalelor este efectuat | ☐ | ☐ | ☐ | |
+| 17 | Dashboard-urile de monitorizare sunt funcționale | ☐ | ☐ | ☐ | |
+| 18 | Stratul GDPR pentru jurnale cu date personale a fost aplicat | ☐ | ☐ | ☐ | |
+| 19 | Registrul a fost actualizat | ☐ | ☐ | ☐ | |
+| 20 | Logging-ul și Monitorizarea sunt pregătite pentru inspecție | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,37 +71,47 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-009 Logging and Monitoring Policy
-- PROC-009 Logging and Monitoring Procedure
-- WI-009 Logging and Monitoring Work Instruction
-- REG-009 Logging and Monitoring Register
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-009 Politica de Logging și Monitorizare
+- PROC-009 Procedura de Logging și Monitorizare
+- WI-009 Instrucțiune de Lucru — Logging și Monitorizare
+- REG-009 Registrul de Logging și Monitorizare
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat
