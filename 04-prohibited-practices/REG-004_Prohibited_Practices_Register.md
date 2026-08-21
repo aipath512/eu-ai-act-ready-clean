@@ -1,109 +1,105 @@
 # REG-004
 
-# Prohibited Practices Register
+# Registrul de Practici Interzise
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | REG-004 |
-| Title | Prohibited Practices Register |
+| ID Document | REG-004 |
+| Titlu | Registrul de Practici Interzise |
 | Repository | RRVI™ |
-| Module | 04 – Prohibited Practices |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Register |
+| Modul | 04 – Practici Interzise |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru Activ |
 
 ---
 
-# Purpose
+# Scop
 
-This register records the assessment of every Artificial Intelligence system against the prohibited AI practices defined by Regulation (EU) 2024/1689 (EU AI Act).
+Acest registru înregistrează evaluarea fiecărui sistem de Inteligență Artificială în raport cu practicile AI interzise definite de Regulamentul (UE) 2024/1689 (EU AI Act).
 
-It provides objective evidence that {{COMPANY_NAME}} has evaluated each AI system before operational deployment.
+Oferă dovada obiectivă că {{COMPANY_NAME}} a evaluat fiecare sistem AI înainte de implementarea operațională.
 
 ---
 
-# Prohibited Practices Register
+# Registrul de Practici Interzise
 
-| AI ID | AI System | Assessment Result | Prohibited Practice Identified | Justification | Assessment Date | Reviewer | Status |
+| ID AI | Sistem AI | Rezultatul Evaluării | Practică Interzisă Identificată | Justificare | Data Evaluării | Evaluator | Status |
 |-------|-----------|-------------------|-------------------------------|---------------|-----------------|----------|--------|
-| AI-001 | ChatGPT | PASS | No | Used for documentation and engineering with mandatory human oversight | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
-| AI-002 | Gemini | PASS | No | Used for research and technical validation | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
-| AI-003 | Claude | PASS | No | Used for technical writing and architecture | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
-| AI-004 | DeepSeek | PASS | No | Used as software engineering assistant | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
-| AI-005 | Perplexity | PASS | No | Used for information retrieval | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Approved |
-| AI-006 | Cloudflare Workers AI | PASS | No | Planned infrastructure component | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Planned |
-| AI-007 | Cloudflare Vectorize | PASS | No | Semantic retrieval platform | 2026-07-02 | {{RESPONSIBLE_PERSON}} | POC |
-| AI-008 | GitHub Copilot | PASS | No | Developer assistance only | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Optional |
-| AI-009 | EU-112™ AI Governance Agent | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-010 | Economic Twins™ Engine | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-011 | Business Discovery Engine™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-012 | Business Change Intelligence™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-013 | AI Market Intelligence Agent™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-014 | EU AI Act Intelligence Agent™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Design |
-| AI-015 | Remote Inspection Agent™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Concept |
-| AI-016 | Compliance Documentation Generator™ | Pending | TBD | Product under design | 2026-07-02 | {{RESPONSIBLE_PERSON}} | Concept |
+| AI-001 | | | | | | | |
+| AI-002 | | | | | | | |
+| AI-003 | | | | | | | |
+| AI-004 | | | | | | | |
+| AI-005 | | | | | | | |
+| AI-006 | | | | | | | |
+| AI-007 | | | | | | | |
+| AI-008 | | | | | | | |
+| AI-009 | | | | | | | |
+| AI-010 | | | | | | | |
+
+*Nicio linie nu se pre-completează. Rândurile se completează de fiecare firmă, cu rezultatul real al evaluării pentru sistemele proprii din REG-001 — un verdict „CONFORM" pre-completat afirmă o evaluare care nu a avut loc, mai grav decât un registru gol în fața unui inspector.*
 
 ---
 
-# Summary
+# Sumar
 
-| Item | Value |
+| Element | Valoare |
 |------|------:|
-| AI Systems Assessed | 16 |
-| Prohibited Practices Identified | 0 |
-| Assessments Passed | 8 |
-| Pending Assessments | 8 |
+| Sisteme AI Evaluate | |
+| Practici Interzise Identificate | |
+| Evaluări Conforme | |
+| Evaluări în Așteptare | |
 
 ---
 
-# Review Requirements
+# Cerințe de Revizuire
 
-This register shall be reviewed whenever:
+Acest registru se revizuiește ori de câte ori:
 
-- a new AI system is introduced;
-- intended purpose changes;
-- deployment changes;
-- provider changes;
-- regulatory requirements change;
-- significant incidents occur.
+- este introdus un sistem AI nou;
+- se schimbă scopul preconizat;
+- se schimbă modul de implementare;
+- se schimbă furnizorul;
+- se modifică cerințele de reglementare;
+- apar incidente semnificative.
 
 ---
 
-# Register Owner
+# Responsabilul Registrului
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Register Owner | AI Governance Owner |
-| Custodian | {{RESPONSIBLE_PERSON}} |
-| Company | {{COMPANY_NAME}} |
-| Review Frequency | Annual or upon significant change |
+| Responsabil Registru | Responsabilul de Guvernanță AI |
+| Custode | {{RESPONSIBLE_PERSON}} |
+| Firma | {{COMPANY_NAME}} |
+| Frecvența Revizuirii | Anual sau la modificare semnificativă |
 
 ---
 
-# References
+# Referințe
 
-- DOD-004 Prohibited AI Practices Policy
-- PROC-004 Prohibited AI Practices Procedure
-- WI-004 Prohibited AI Practices Work Instruction
-- REG-001 AI System Inventory Register
-- Regulation (EU) 2024/1689 (EU AI Act)
+- DOD-004 Politica de Practici AI Interzise
+- PROC-004 Procedura de Practici AI Interzise
+- WI-004 Instrucțiune de Lucru — Practici AI Interzise
+- REG-001 Registrul de Inventar al Sistemelor AI
+- Regulamentul (UE) 2024/1689 (EU AI Act)
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved Register
+Registru Aprobat

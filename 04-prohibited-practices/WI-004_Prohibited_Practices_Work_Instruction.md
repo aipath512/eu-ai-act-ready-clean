@@ -1,205 +1,205 @@
 # WI-004
 
-# Prohibited AI Practices Work Instruction
+# Instrucțiune de Lucru — Practici AI Interzise
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-004 |
-| Title | Prohibited AI Practices Work Instruction |
+| ID Document | WI-004 |
+| Titlu | Instrucțiune de Lucru — Practici AI Interzise |
 | Repository | RRVI™ |
-| Module | 04 – Prohibited AI Practices |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 04 – Practici AI Interzise |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed guidance for assessing whether an Artificial Intelligence system involves a prohibited AI practice under Regulation (EU) 2024/1689 (EU AI Act).
+Această Instrucțiune de Lucru oferă îndrumări detaliate pentru evaluarea dacă un sistem de Inteligență Artificială implică o practică AI interzisă conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-The objective is to ensure a consistent, documented and repeatable assessment process before any AI system is placed into operational use.
-
----
-
-# 2. Preconditions
-
-Before starting the assessment, verify that:
-
-- the AI system is recorded in the AI System Inventory;
-- the intended purpose is documented;
-- the system owner has been identified;
-- sufficient technical and business information is available.
+Obiectivul este să asigure un proces de evaluare consecvent, documentat și repetabil înainte ca orice sistem AI să fie pus în uz operațional.
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-Collect the following information:
+Înainte de a începe evaluarea, se verifică dacă:
 
-- AI System ID
-- AI System Name
-- Provider
-- Business Purpose
-- Intended Users
-- Deployment Environment
-- Input Data
-- Output Data
-- Human Oversight
-- Business Process Supported
+- sistemul AI este înregistrat în Inventarul Sistemelor AI;
+- scopul preconizat este documentat;
+- responsabilul sistemului a fost identificat;
+- există suficiente informații tehnice și de business.
 
 ---
 
-# 4. Work Instructions
+# 3. Informații Necesare
 
-## Step 1
+Se colectează următoarele informații:
 
-Open:
+- ID Sistem AI
+- Nume Sistem AI
+- Furnizor
+- Scop de Business
+- Utilizatori Preconizați
+- Mediu de Implementare
+- Date de Intrare
+- Date de Ieșire
+- Supraveghere Umană
+- Procesul de Business Susținut
+
+---
+
+# 4. Instrucțiuni de Lucru
+
+## Pasul 1
+
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
-Locate the AI system.
+Se localizează sistemul AI.
 
 ---
 
-## Step 2
+## Pasul 2
 
-Review the intended purpose.
+Se revizuiește scopul preconizat.
 
-Determine:
+Se determină:
 
-- why the AI system exists;
-- who uses it;
-- what decisions it supports;
-- whether natural persons are affected.
+- de ce există sistemul AI;
+- cine îl folosește;
+- ce decizii sprijină;
+- dacă sunt afectate persoane fizice.
 
 ---
 
-## Step 3
+## Pasul 3
 
-Evaluate prohibited practices.
+Se evaluează practicile interzise.
 
-Verify that the AI system does NOT involve:
+Se verifică că sistemul AI NU implică:
 
-- harmful manipulation;
-- exploitation of vulnerable persons;
+- manipulare dăunătoare;
+- exploatarea persoanelor vulnerabile;
 - social scoring;
-- prohibited biometric categorisation;
-- prohibited emotion recognition;
-- untargeted facial image scraping;
-- prohibited real-time biometric identification;
-- any other prohibited practice defined by the EU AI Act.
+- categorizare biometrică interzisă;
+- recunoașterea emoțiilor interzisă;
+- colectare (scraping) nedirecționată de imagini faciale;
+- identificare biometrică în timp real interzisă;
+- orice altă practică interzisă definită de EU AI Act.
 
 ---
 
-## Step 4
+## Pasul 4
 
-Document the assessment.
+Se documentează evaluarea.
 
-Open:
+Se deschide:
 
 REG-004_Prohibited_Practices_Register.md
 
-Record:
+Se înregistrează:
 
-- assessment result;
-- justification;
-- assessor;
-- assessment date.
-
----
-
-## Step 5
-
-Escalate if required.
-
-If any prohibited practice is identified:
-
-- stop deployment;
-- notify the AI Governance Owner;
-- notify management;
-- initiate corrective actions.
+- rezultatul evaluării;
+- justificarea;
+- evaluatorul;
+- data evaluării.
 
 ---
 
-## Step 6
+## Pasul 5
 
-Collect supporting evidence.
+Se escaladează dacă este necesar.
 
-Record supporting evidence in:
+Dacă este identificată orice practică interzisă:
+
+- se oprește implementarea;
+- se notifică Responsabilul de Guvernanță AI;
+- se notifică conducerea;
+- se inițiază acțiuni corective.
+
+---
+
+## Pasul 6
+
+Se colectează dovezile justificative.
+
+Dovezile se înregistrează în:
 
 EVID-004_Prohibited_Practices_Evidence.md
 
 ---
 
-## Step 7
+## Pasul 7
 
-Review.
+Revizuire.
 
-Repeat the assessment whenever:
+Evaluarea se repetă ori de câte ori:
 
-- intended purpose changes;
-- provider changes;
-- functionality changes;
-- regulatory requirements change.
-
----
-
-# 5. Quality Checks
-
-Verify that:
-
-✓ AI System exists in the Inventory.
-
-✓ Intended Purpose is documented.
-
-✓ Business Process is identified.
-
-✓ Human Oversight has been evaluated.
-
-✓ No prohibited practice has been identified.
-
-✓ Assessment is justified.
-
-✓ Assessment Date is recorded.
-
-✓ Reviewer is identified.
+- se schimbă scopul preconizat;
+- se schimbă furnizorul;
+- se schimbă funcționalitatea;
+- se modifică cerințele de reglementare.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-004 Prohibited Practices Register
-- EVID-004 Prohibited Practices Evidence
-- DEC-004 Prohibited Practices Declaration
+✓ Sistemul AI există în Inventar.
+
+✓ Scopul Preconizat este documentat.
+
+✓ Procesul de Business este identificat.
+
+✓ Supravegherea Umană a fost evaluată.
+
+✓ Nu a fost identificată nicio practică interzisă.
+
+✓ Evaluarea este justificată.
+
+✓ Data Evaluării este înregistrată.
+
+✓ Evaluatorul este identificat.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- DOD-004 Prohibited AI Practices Policy
-- PROC-004 Prohibited AI Practices Procedure
-- REG-001 AI System Inventory Register
-- Regulation (EU) 2024/1689 (EU AI Act)
+Această instrucțiune actualizează:
+
+- REG-004 Registrul de Practici Interzise
+- EVID-004 Dovezile de Practici Interzise
+- DEC-004 Declarația de Practici Interzise
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- DOD-004 Politica de Practici AI Interzise
+- PROC-004 Procedura de Practici AI Interzise
+- REG-001 Registrul de Inventar al Sistemelor AI
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

@@ -1,128 +1,124 @@
 # EVID-004
 
-# Prohibited Practices Evidence
+# Dovezi de Practici Interzise
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | EVID-004 |
-| Title | Prohibited Practices Evidence |
+| ID Document | EVID-004 |
+| Titlu | Dovezi de Practici Interzise |
 | Repository | RRVI™ |
-| Module | 04 – Prohibited Practices |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Evidence Register |
+| Modul | 04 – Practici Interzise |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru de Dovezi Activ |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This document records the objective evidence supporting the assessment of Artificial Intelligence systems against the prohibited AI practices defined by Regulation (EU) 2024/1689 (EU AI Act).
+Acest document înregistrează dovezile obiective care susțin evaluarea sistemelor de Inteligență Artificială în raport cu practicile AI interzise definite de Regulamentul (UE) 2024/1689 (EU AI Act).
 
-The objective is to demonstrate that {{COMPANY_NAME}} performs documented assessments before any AI system is placed into operational use.
-
----
-
-# 2. Evidence Principles
-
-Evidence shall be:
-
-- objective;
-- verifiable;
-- traceable;
-- version controlled;
-- available for internal audit and regulatory inspection.
+Obiectivul este să demonstreze că {{COMPANY_NAME}} efectuează evaluări documentate înainte ca orice sistem AI să fie pus în uz operațional.
 
 ---
 
-# 3. Evidence Register
+# 2. Principii ale Dovezilor
 
-| Evidence ID | AI ID | Evidence Description | Evidence Location | Status |
+Dovezile trebuie să fie:
+
+- obiective;
+- verificabile;
+- trasabile;
+- controlate ca versiune;
+- disponibile pentru audit intern și inspecție de reglementare.
+
+---
+
+# 3. Registrul de Dovezi
+
+| ID Dovadă | ID AI | Descrierea Dovezii | Locația Dovezii | Status |
 |--------------|-------|---------------------|-------------------|--------|
-| PP-001 | AI-001 | ChatGPT intended use assessment | REG-004 | Active |
-| PP-002 | AI-002 | Gemini intended use assessment | REG-004 | Active |
-| PP-003 | AI-003 | Claude intended use assessment | REG-004 | Active |
-| PP-004 | AI-004 | DeepSeek intended use assessment | REG-004 | Active |
-| PP-005 | AI-005 | Perplexity intended use assessment | REG-004 | Active |
-| PP-006 | AI-006 | Cloudflare Workers AI architecture review | GitHub Repository | Planned |
-| PP-007 | AI-007 | Cloudflare Vectorize architecture review | GitHub Repository | POC |
-| PP-008 | AI-008 | GitHub Copilot intended use assessment | GitHub Repository | Optional |
-| PP-009 | AI-009 | Governance Agent design review | GitHub Repository | Draft |
-| PP-010 | AI-010 | Economic Twins™ design review | GitHub Repository | Draft |
-| PP-011 | AI-011 | Business Discovery Engine™ design review | GitHub Repository | Draft |
-| PP-012 | AI-012 | Business Change Intelligence™ design review | GitHub Repository | Draft |
-| PP-013 | AI-013 | AI Market Intelligence Agent™ design review | GitHub Repository | Draft |
-| PP-014 | AI-014 | EU AI Act Intelligence Agent™ design review | GitHub Repository | Draft |
-| PP-015 | AI-015 | Remote Inspection Agent™ design review | GitHub Repository | Draft |
-| PP-016 | AI-016 | Compliance Documentation Generator™ design review | GitHub Repository | Draft |
+| PP-001 | AI-001 | | | |
+| PP-002 | AI-002 | | | |
+| PP-003 | AI-003 | | | |
+| PP-004 | AI-004 | | | |
+| PP-005 | AI-005 | | | |
+| PP-006 | AI-006 | | | |
+| PP-007 | AI-007 | | | |
+| PP-008 | AI-008 | | | |
+| PP-009 | AI-009 | | | |
+| PP-010 | AI-010 | | | |
+
+*Rândurile se completează de fiecare firmă cu dovezile proprii, corespunzătoare sistemelor din REG-001.*
 
 ---
 
-# 4. Supporting Evidence
+# 4. Dovezi Justificative
 
-Supporting evidence may include:
+Dovezile justificative pot include:
 
-- AI System Inventory records;
-- intended purpose documentation;
-- technical architecture;
-- system specifications;
-- deployment documentation;
-- risk assessments;
-- management reviews;
-- meeting minutes;
-- design documentation;
-- regulatory assessments.
-
----
-
-# 5. Evidence Storage
-
-Evidence may be maintained in:
-
-- GitHub Repository
-- Internal Documentation Repository
-- Technical Documentation
-- AI System Inventory
-- Architecture Documentation
-- Compliance Records
+- înregistrări din Inventarul Sistemelor AI;
+- documentația scopului preconizat;
+- arhitectura tehnică;
+- specificațiile sistemului;
+- documentația de implementare;
+- evaluări de risc;
+- revizuiri de conducere;
+- procese-verbale de ședință;
+- documentație de proiectare;
+- evaluări de reglementare.
 
 ---
 
-# 6. Review Requirements
+# 5. Stocarea Dovezilor
 
-Evidence shall be reviewed:
+Dovezile pot fi menținute în:
 
-- annually;
-- before production deployment;
-- after significant functional changes;
-- after regulatory updates;
-- before external inspections.
-
----
-
-# 7. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-004 Prohibited AI Practices Policy
-- PROC-004 Prohibited AI Practices Procedure
-- REG-004 Prohibited Practices Register
-- DEC-004 Prohibited Practices Declaration
+- Repository GitHub
+- Repository Intern de Documentație
+- Documentație Tehnică
+- Inventarul Sistemelor AI
+- Documentație de Arhitectură
+- Înregistrări de Conformitate
 
 ---
 
-# 8. Approval
+# 6. Cerințe de Revizuire
 
-Prepared by
+Dovezile se revizuiesc:
+
+- anual;
+- înainte de implementarea în producție;
+- după modificări funcționale semnificative;
+- după actualizări de reglementare;
+- înainte de inspecțiile externe.
+
+---
+
+# 7. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-004 Politica de Practici AI Interzise
+- PROC-004 Procedura de Practici AI Interzise
+- REG-004 Registrul de Practici Interzise
+- DEC-004 Declarația de Practici Interzise
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

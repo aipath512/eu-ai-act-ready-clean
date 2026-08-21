@@ -1,77 +1,67 @@
 # CHK-004
 
-# Prohibited AI Practices Checklist
+# Checklist de Practici AI Interzise
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-004 |
-| Title | Prohibited AI Practices Checklist |
+| ID Document | CHK-004 |
+| Titlu | Checklist de Practici AI Interzise |
 | Repository | RRVI™ |
-| Module | 04 – Prohibited AI Practices |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 04 – Practici AI Interzise |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that every Artificial Intelligence system has been assessed for prohibited AI practices before operational deployment, in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Acest checklist se utilizează pentru a verifica dacă fiecare sistem de Inteligență Artificială a fost evaluat pentru practici AI interzise înainte de implementarea operațională, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# Prohibited AI Practices Verification Checklist
+# Checklist de Verificare a Practicilor AI Interzise
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI System exists in REG-001 AI System Inventory Register | ☐ | ☐ | ☐ | |
-| 2 | Intended purpose is documented | ☐ | ☐ | ☐ | |
-| 3 | AI provider is identified | ☐ | ☐ | ☐ | |
-| 4 | Business owner is assigned | ☐ | ☐ | ☐ | |
-| 5 | Human oversight has been evaluated | ☐ | ☐ | ☐ | |
-| 6 | Harmful manipulation has been assessed | ☐ | ☐ | ☐ | |
-| 7 | Exploitation of vulnerable persons has been assessed | ☐ | ☐ | ☐ | |
-| 8 | Social scoring has been assessed | ☐ | ☐ | ☐ | |
-| 9 | Criminal risk prediction has been assessed | ☐ | ☐ | ☐ | |
-| 10 | Emotion recognition has been assessed | ☐ | ☐ | ☐ | |
-| 11 | Biometric categorisation has been assessed | ☐ | ☐ | ☐ | |
-| 12 | Facial image scraping has been assessed | ☐ | ☐ | ☐ | |
-| 13 | Remote biometric identification has been assessed | ☐ | ☐ | ☐ | |
-| 14 | No prohibited AI practice has been identified | ☐ | ☐ | ☐ | |
-| 15 | Assessment justification is documented | ☐ | ☐ | ☐ | |
-| 16 | Supporting evidence exists | ☐ | ☐ | ☐ | |
-| 17 | Assessment has been reviewed | ☐ | ☐ | ☐ | |
-| 18 | Register has been updated | ☐ | ☐ | ☐ | |
-| 19 | Management approval has been obtained | ☐ | ☐ | ☐ | |
-| 20 | Assessment is ready for audit or inspection | ☐ | ☐ | ☐ | |
+| 1 | Sistemul AI există în REG-001 Registrul de Inventar al Sistemelor AI | ☐ | ☐ | ☐ | |
+| 2 | Scopul preconizat este documentat | ☐ | ☐ | ☐ | |
+| 3 | Furnizorul AI este identificat | ☐ | ☐ | ☐ | |
+| 4 | Responsabilul de business este desemnat | ☐ | ☐ | ☐ | |
+| 5 | Supravegherea umană a fost evaluată | ☐ | ☐ | ☐ | |
+| 6 | Manipularea dăunătoare a fost evaluată | ☐ | ☐ | ☐ | |
+| 7 | Exploatarea persoanelor vulnerabile a fost evaluată | ☐ | ☐ | ☐ | |
+| 8 | Social scoring a fost evaluat | ☐ | ☐ | ☐ | |
+| 9 | Predicția riscului penal a fost evaluată | ☐ | ☐ | ☐ | |
+| 10 | Recunoașterea emoțiilor a fost evaluată | ☐ | ☐ | ☐ | |
+| 11 | Categorizarea biometrică a fost evaluată | ☐ | ☐ | ☐ | |
+| 12 | Colectarea (scraping) de imagini faciale a fost evaluată | ☐ | ☐ | ☐ | |
+| 13 | Identificarea biometrică la distanță a fost evaluată | ☐ | ☐ | ☐ | |
+| 14 | Nu a fost identificată nicio practică AI interzisă | ☐ | ☐ | ☐ | |
+| 15 | Justificarea evaluării este documentată | ☐ | ☐ | ☐ | |
+| 16 | Există dovezi justificative | ☐ | ☐ | ☐ | |
+| 17 | Evaluarea a fost revizuită | ☐ | ☐ | ☐ | |
+| 18 | Registrul a fost actualizat | ☐ | ☐ | ☐ | |
+| 19 | A fost obținută aprobarea conducerii | ☐ | ☐ | ☐ | |
+| 20 | Evaluarea este pregătită pentru audit sau inspecție | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,37 +71,47 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-004 Prohibited AI Practices Policy
-- PROC-004 Prohibited AI Practices Procedure
-- WI-004 Prohibited AI Practices Work Instruction
-- REG-004 Prohibited Practices Register
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-004 Politica de Practici AI Interzise
+- PROC-004 Procedura de Practici AI Interzise
+- WI-004 Instrucțiune de Lucru — Practici AI Interzise
+- REG-004 Registrul de Practici Interzise
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

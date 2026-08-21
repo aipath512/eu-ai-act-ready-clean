@@ -1,194 +1,195 @@
 # PROC-004
 
-# Prohibited AI Practices Procedure
+# Procedura de Practici AI Interzise
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | PROC-004 |
-| Title | Prohibited AI Practices Procedure |
+| ID Document | PROC-004 |
+| Titlu | Procedura de Practici AI Interzise |
 | Repository | RRVI™ |
-| Module | 04 – Prohibited AI Practices |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 04 – Practici AI Interzise |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This procedure defines the process used by {{COMPANY_NAME}} to identify, assess, document and prevent the use of Artificial Intelligence practices prohibited under Regulation (EU) 2024/1689 (EU AI Act).
+Această procedură definește procesul folosit de {{COMPANY_NAME}} pentru identificarea, evaluarea, documentarea și prevenirea utilizării practicilor AI interzise conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-The procedure ensures that prohibited AI practices are identified before any AI system is deployed or used.
-
----
-
-# 2. Scope
-
-This procedure applies to:
-
-- all AI systems recorded in the AI System Inventory;
-- internally developed AI systems;
-- third-party AI services;
-- proof-of-concept projects;
-- production systems;
-- future AI deployments.
+Procedura asigură că practicile AI interzise sunt identificate înainte ca orice sistem AI să fie implementat sau utilizat.
 
 ---
 
-# 3. Responsibilities
+# 2. Domeniu de Aplicare
 
-## Managing Director
+Această procedură se aplică:
 
-- approves corrective actions when prohibited practices are identified.
-
----
-
-## AI Governance Owner
-
-Responsible for:
-
-- coordinating prohibited practice assessments;
-- maintaining the Prohibited Practices Register;
-- reporting findings.
+- tuturor sistemelor AI înregistrate în Inventarul Sistemelor AI;
+- sistemelor AI dezvoltate intern;
+- serviciilor AI terțe;
+- proiectelor de tip proof-of-concept;
+- sistemelor de producție;
+- implementărilor AI viitoare.
 
 ---
 
-## AI System Owner
+# 3. Responsabilități
 
-Responsible for:
+## Director General
 
-- providing technical and business information;
-- supporting assessments;
-- reporting significant changes.
+- aprobă acțiunile corective atunci când sunt identificate practici interzise.
 
 ---
 
-## Compliance Owner
+## Responsabilul de Guvernanță AI
 
-Responsible for:
+Responsabil pentru:
 
-- validating assessment results;
-- monitoring regulatory developments;
-- supporting inspections.
+- coordonarea evaluărilor practicilor interzise;
+- menținerea Registrului de Practici Interzise;
+- raportarea constatărilor.
 
 ---
 
-# 4. Procedure
+## Responsabilul de Sistem AI
 
-## Step 1 — Identify AI System
+Responsabil pentru:
 
-Locate the AI system in:
+- furnizarea de informații tehnice și de business;
+- sprijinirea evaluărilor;
+- raportarea modificărilor semnificative.
+
+---
+
+## Responsabilul de Conformitate
+
+Responsabil pentru:
+
+- validarea rezultatelor evaluării;
+- monitorizarea evoluțiilor de reglementare;
+- sprijinirea inspecțiilor.
+
+---
+
+# 4. Procedura
+
+## Pasul 1 — Identificarea Sistemului AI
+
+Se localizează sistemul AI în:
 
 REG-001_AI_System_Inventory_Register.md
 
 ---
 
-## Step 2 — Review Intended Use
+## Pasul 2 — Revizuirea Utilizării Preconizate
 
-Determine:
+Se determină:
 
-- business purpose;
-- users;
-- affected persons;
-- deployment context;
-- processing activities.
+- scopul de business;
+- utilizatorii;
+- persoanele afectate;
+- contextul de implementare;
+- activitățile de prelucrare.
 
 ---
 
-## Step 3 — Evaluate Against EU AI Act
+## Pasul 3 — Evaluarea Față de EU AI Act
 
-Determine whether the AI system involves:
+Se determină dacă sistemul AI implică:
 
-- prohibited manipulation;
-- exploitation of vulnerable persons;
+- manipulare interzisă;
+- exploatarea persoanelor vulnerabile;
 - social scoring;
-- prohibited biometric categorisation;
-- prohibited emotion recognition;
-- prohibited facial image scraping;
-- prohibited real-time biometric identification;
-- any other prohibited practice defined by the EU AI Act.
+- categorizare biometrică interzisă;
+- recunoașterea emoțiilor interzisă;
+- colectare (scraping) de imagini faciale interzisă;
+- identificare biometrică în timp real interzisă;
+- predicție a riscului penal individual interzisă;
+- orice altă practică interzisă definită de EU AI Act.
 
 ---
 
-## Step 4 — Record Assessment
+## Pasul 4 — Înregistrarea Evaluării
 
-Document the assessment in:
+Evaluarea se documentează în:
 
 REG-004_Prohibited_Practices_Register.md
 
-Record:
+Se înregistrează:
 
-- assessment result;
-- justification;
-- assessor;
-- assessment date.
-
----
-
-## Step 5 — Escalation
-
-If a prohibited practice is identified:
-
-- immediately notify management;
-- suspend deployment;
-- initiate corrective actions;
-- document all actions taken.
+- rezultatul evaluării;
+- justificarea;
+- evaluatorul;
+- data evaluării.
 
 ---
 
-## Step 6 — Approval
+## Pasul 5 — Escaladare
 
-The completed assessment shall be reviewed and approved by the AI Governance Owner.
+Dacă este identificată o practică interzisă:
 
----
-
-## Step 7 — Periodic Review
-
-Repeat the assessment whenever:
-
-- intended purpose changes;
-- functionality changes;
-- deployment changes;
-- legislation changes;
-- significant incidents occur.
+- se notifică imediat conducerea;
+- se suspendă implementarea;
+- se inițiază acțiuni corective;
+- se documentează toate acțiunile întreprinse.
 
 ---
 
-# 5. Records
+## Pasul 6 — Aprobare
 
-This procedure produces:
-
-- Prohibited Practices Register;
-- Prohibited Practices Evidence;
-- Prohibited Practices Declaration.
+Evaluarea completată este revizuită și aprobată de Responsabilul de Guvernanță AI.
 
 ---
 
-# 6. References
+## Pasul 7 — Revizuire Periodică
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-004 Prohibited AI Practices Policy
-- REG-001 AI System Inventory Register
-- REG-004 Prohibited Practices Register
-- EVID-004 Prohibited Practices Evidence
-- DEC-004 Prohibited Practices Declaration
+Evaluarea se repetă ori de câte ori:
+
+- se schimbă scopul preconizat;
+- se schimbă funcționalitatea;
+- se schimbă modul de implementare;
+- se modifică legislația;
+- apar incidente semnificative.
 
 ---
 
-# 7. Approval
+# 5. Înregistrări
 
-Prepared by
+Această procedură produce:
+
+- Registrul de Practici Interzise;
+- Dovezile de Practici Interzise;
+- Declarația de Practici Interzise.
+
+---
+
+# 6. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-004 Politica de Practici AI Interzise
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-004 Registrul de Practici Interzise
+- EVID-004 Dovezile de Practici Interzise
+- DEC-004 Declarația de Practici Interzise
+
+---
+
+# 7. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

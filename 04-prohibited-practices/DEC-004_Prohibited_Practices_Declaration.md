@@ -1,114 +1,114 @@
 # DEC-004
 
-# Prohibited Practices Declaration
+# Declarație de Practici Interzise
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DEC-004 |
-| Title | Prohibited Practices Declaration |
+| ID Document | DEC-004 |
+| Titlu | Declarație de Practici Interzise |
 | Repository | RRVI™ |
-| Module | 04 – Prohibited Practices |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 04 – Practici Interzise |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This declaration confirms that {{COMPANY_NAME}} has established and implemented a documented process to identify, assess and prevent the use of Artificial Intelligence systems involving prohibited AI practices under Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# 2. Declaration
-
-{{COMPANY_NAME}} declares that:
-
-- all AI systems are assessed for prohibited AI practices before operational deployment;
-- prohibited AI practices are not intentionally developed, acquired, deployed or used;
-- assessment results are documented;
-- objective evidence supporting each assessment is maintained;
-- significant changes trigger reassessment;
-- management reviews the assessment process periodically.
+Această declarație confirmă că {{COMPANY_NAME}} a stabilit și implementat un proces documentat pentru identificarea, evaluarea și prevenirea utilizării sistemelor de Inteligență Artificială care implică practici AI interzise conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 3. Management Commitment
+# 2. Declarație
 
-Management commits to:
+{{COMPANY_NAME}} declară că:
 
-- maintain the Prohibited Practices assessment process;
-- ensure compliance with Regulation (EU) 2024/1689 (EU AI Act);
-- immediately investigate any suspected prohibited AI practice;
-- suspend deployment where prohibited AI practices are identified;
-- implement corrective actions;
-- maintain objective evidence supporting all assessments.
-
----
-
-# 4. Scope
-
-This declaration applies to:
-
-- internally developed AI systems;
-- externally acquired AI services;
-- proof-of-concept AI systems;
-- production AI systems;
-- future AI deployments;
-- contractors and consultants acting on behalf of {{COMPANY_NAME}}.
+- toate sistemele AI sunt evaluate pentru practici AI interzise înainte de implementarea operațională;
+- practicile AI interzise nu sunt dezvoltate, achiziționate, implementate sau utilizate în mod intenționat;
+- rezultatele evaluării sunt documentate;
+- se mențin dovezi obiective care susțin fiecare evaluare;
+- modificările semnificative declanșează reevaluarea;
+- conducerea revizuiește periodic procesul de evaluare.
 
 ---
 
-# 5. Review Frequency
+# 3. Angajamentul Conducerii
 
-The Prohibited Practices assessment shall be reviewed:
+Conducerea se angajează să:
 
-- annually;
-- before production deployment of new AI systems;
-- after significant functional changes;
-- following amendments to the EU AI Act;
-- before regulatory inspections.
-
----
-
-# 6. Related Documents
-
-- DOD-004 Prohibited AI Practices Policy
-- PROC-004 Prohibited AI Practices Procedure
-- WI-004 Prohibited AI Practices Work Instruction
-- CHK-004 Prohibited AI Practices Checklist
-- REG-004 Prohibited Practices Register
-- EVID-004 Prohibited Practices Evidence
-- REG-001 AI System Inventory Register
+- mențină procesul de evaluare a Practicilor Interzise;
+- asigure conformitatea cu Regulamentul (UE) 2024/1689 (EU AI Act);
+- investigheze imediat orice suspiciune de practică AI interzisă;
+- suspende implementarea acolo unde sunt identificate practici AI interzise;
+- implementeze acțiuni corective;
+- mențină dovezi obiective care susțin toate evaluările.
 
 ---
 
-# 7. Declaration
+# 4. Domeniu de Aplicare
 
-I declare that, to the best of my knowledge, {{COMPANY_NAME}} does not intentionally develop, deploy or operate Artificial Intelligence systems involving prohibited AI practices as defined by Regulation (EU) 2024/1689 (EU AI Act).
+Această declarație se aplică:
 
-The organization commits to maintaining continuous compliance through documented assessments, periodic reviews and objective evidence.
+- sistemelor AI dezvoltate intern;
+- serviciilor AI achiziționate extern;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- implementărilor AI viitoare;
+- contractorilor și consultanților care acționează în numele {{COMPANY_NAME}}.
 
 ---
 
-# 8. Approval
+# 5. Frecvența Revizuirii
 
-| Field | Value |
+Evaluarea Practicilor Interzise se revizuiește:
+
+- anual;
+- înainte de implementarea în producție a sistemelor AI noi;
+- după modificări funcționale semnificative;
+- în urma modificărilor aduse EU AI Act;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 6. Documente Conexe
+
+- DOD-004 Politica de Practici AI Interzise
+- PROC-004 Procedura de Practici AI Interzise
+- WI-004 Instrucțiune de Lucru — Practici AI Interzise
+- CHK-004 Checklist de Practici AI Interzise
+- REG-004 Registrul de Practici Interzise
+- EVID-004 Dovezile de Practici Interzise
+- REG-001 Registrul de Inventar al Sistemelor AI
+
+---
+
+# 7. Declarație
+
+Declar că, după cunoștințele mele, {{COMPANY_NAME}} nu dezvoltă, nu implementează și nu operează în mod intenționat sisteme de Inteligență Artificială care implică practici AI interzise, conform definiției din Regulamentul (UE) 2024/1689 (EU AI Act).
+
+Organizația se angajează să mențină conformitatea continuă prin evaluări documentate, revizuiri periodice și dovezi obiective.
+
+---
+
+# 8. Aprobare
+
+| Câmp | Valoare |
 |--------|-------|
-| Approved By | {{RESPONSIBLE_PERSON}} |
-| Position | Managing Director |
-| Company | {{COMPANY_NAME}} |
-| Approval Date | 2026-07-02 |
-| Status | Approved |
+| Aprobat de | {{RESPONSIBLE_PERSON}} |
+| Funcție | Director General |
+| Firma | {{COMPANY_NAME}} |
+| Data Aprobării | |
+| Status | Aprobat |
 
 ---
 
-# Document Control
+# Control Document
 
-| Version | Date | Description |
+| Versiune | Data | Descriere |
 |---------|------|-------------|
-| 1.0.0 | 2026-07-02 | Initial release |
+| 1.0.0 | | Versiune inițială |
