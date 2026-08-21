@@ -1,237 +1,237 @@
 # WI-008
 
-# Data Governance Work Instruction
+# Instrucțiune de Lucru — Guvernanță Date
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-008 |
-| Title | Data Governance Work Instruction |
+| ID Document | WI-008 |
+| Titlu | Instrucțiune de Lucru — Guvernanță Date |
 | Repository | RRVI™ |
-| Module | 08 – Data Governance |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 08 – Guvernanță Date |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed guidance for identifying, documenting, reviewing and maintaining data used by Artificial Intelligence systems within {{COMPANY_NAME}}.
+Această Instrucțiune de Lucru oferă îndrumări detaliate pentru identificarea, documentarea, revizuirea și menținerea datelor folosite de sistemele de Inteligență Artificială din {{COMPANY_NAME}}.
 
-The objective is to ensure that AI systems use reliable, secure and well-governed data throughout their operational lifecycle.
-
----
-
-# 2. Preconditions
-
-Before performing Data Governance activities verify that:
-
-- the AI System exists in the AI System Inventory;
-- the AI System Owner has been assigned;
-- data sources are known;
-- intended purpose has been documented.
+Obiectivul este să asigure că sistemele AI folosesc date fiabile, sigure și bine guvernate pe tot parcursul ciclului lor de viață operațional.
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-Collect the following information:
+Înainte de a efectua activități de Guvernanță a Datelor, se verifică dacă:
 
-- AI System ID
-- AI System Name
-- Data Owner
-- Data Source
-- Data Category
-- Data Classification
-- Personal Data (Yes/No)
-- Data Quality Level
-- Data Retention Period
-- Review Date
+- Sistemul AI există în Inventarul Sistemelor AI;
+- Responsabilul Sistemului AI a fost desemnat;
+- sursele de date sunt cunoscute;
+- scopul preconizat a fost documentat.
 
 ---
 
-# 4. Work Instructions
+# 3. Informații Necesare
 
-## Step 1
+Se colectează următoarele informații:
 
-Open:
+- ID Sistem AI
+- Nume Sistem AI
+- Responsabil de Date
+- Sursa de Date
+- Categoria de Date
+- Clasificarea Datelor
+- Date Personale (Da/Nu)
+- Nivelul de Calitate a Datelor
+- Perioada de Retenție a Datelor
+- Data Revizuirii
+
+---
+
+# 4. Instrucțiuni de Lucru
+
+## Pasul 1
+
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
-Locate the AI system.
+Se localizează sistemul AI.
 
 ---
 
-## Step 2
+## Pasul 2
 
-Identify all data sources.
+Se identifică toate sursele de date.
 
-Document:
+Se documentează:
 
-- internal databases;
-- cloud services;
-- uploaded files;
-- APIs;
-- public datasets;
-- manually entered information.
-
----
-
-## Step 3
-
-Classify the data.
-
-Identify whether the data is:
-
-- Public;
-- Internal;
-- Confidential;
-- Restricted;
-- Personal Data;
-- Sensitive Personal Data (if applicable).
+- baze de date interne;
+- servicii cloud;
+- fișiere încărcate;
+- API-uri;
+- seturi de date publice;
+- informații introduse manual (inclusiv prompturi și documente lipite în asistenți AI).
 
 ---
 
-## Step 4
+## Pasul 3
 
-Evaluate Data Quality.
+Se clasifică datele.
 
-Verify:
+Se identifică dacă datele sunt:
 
-- accuracy;
-- completeness;
-- consistency;
-- integrity;
-- relevance;
-- timeliness.
-
-Document any limitations.
+- Publice;
+- Interne;
+- Confidențiale;
+- Restricționate;
+- Date Personale;
+- Date Personale Sensibile (dacă e cazul).
 
 ---
 
-## Step 5
+## Pasul 4
 
-Verify Security Controls.
+Se evaluează Calitatea Datelor.
 
-Confirm:
+Se verifică:
 
-- access control;
-- authentication;
-- authorization;
-- encryption where applicable;
-- backup procedures;
-- retention policy.
+- exactitatea;
+- completitudinea;
+- consecvența;
+- integritatea;
+- relevanța;
+- actualitatea.
+
+Se documentează orice limitări.
 
 ---
 
-## Step 6
+## Pasul 5
 
-Update Register.
+Se verifică Controalele de Securitate.
 
-Open:
+Se confirmă:
+
+- controlul accesului;
+- autentificarea;
+- autorizarea;
+- criptarea, unde e cazul;
+- procedurile de backup;
+- politica de retenție.
+
+---
+
+## Pasul 6
+
+Se actualizează Registrul.
+
+Se deschide:
 
 REG-008_Data_Governance_Register.md
 
-Record:
+Se înregistrează:
 
-- data source;
-- owner;
-- classification;
-- review date;
-- status.
+- sursa de date;
+- responsabilul;
+- clasificarea;
+- data revizuirii;
+- statusul.
 
 ---
 
-## Step 7
+## Pasul 7
 
-Collect Supporting Evidence.
+Se colectează Dovezile Justificative.
 
-Store evidence in:
+Dovezile se stochează în:
 
 EVID-008_Data_Governance_Evidence.md
 
-Examples include:
+Exemple:
 
-- data flow diagrams;
-- database schemas;
-- API specifications;
-- access control documentation;
-- GDPR documentation;
-- security policies.
-
----
-
-## Step 8
-
-Review.
-
-Repeat Data Governance review whenever:
-
-- data sources change;
-- AI systems change;
-- legislation changes;
-- security incidents occur.
+- diagrame de flux al datelor;
+- scheme de baze de date;
+- specificații API;
+- documentație de control al accesului;
+- documentație GDPR;
+- politici de securitate.
 
 ---
 
-# 5. Quality Checks
+## Pasul 8
 
-Verify that:
+Revizuire.
 
-✓ Data sources identified.
+Revizuirea Guvernanței Datelor se repetă ori de câte ori:
 
-✓ Data Owner assigned.
-
-✓ Data classified.
-
-✓ Data quality evaluated.
-
-✓ Security controls documented.
-
-✓ GDPR compliance considered.
-
-✓ Register updated.
-
-✓ Supporting evidence collected.
-
-✓ Review date assigned.
+- se schimbă sursele de date;
+- se schimbă sistemele AI;
+- se modifică legislația;
+- apar incidente de securitate.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-008 Data Governance Register
-- EVID-008 Data Governance Evidence
-- DEC-008 Data Governance Declaration
+✓ Sursele de date sunt identificate.
+
+✓ Responsabilul de Date este desemnat.
+
+✓ Datele sunt clasificate.
+
+✓ Calitatea datelor este evaluată.
+
+✓ Controalele de securitate sunt documentate.
+
+✓ Conformitatea GDPR a fost luată în considerare.
+
+✓ Registrul a fost actualizat.
+
+✓ Dovezile justificative au fost colectate.
+
+✓ Data de revizuire este alocată.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Regulation (EU) 2016/679 (GDPR)
-- DOD-008 Data Governance Policy
-- PROC-008 Data Governance Procedure
-- REG-001 AI System Inventory Register
+Această instrucțiune actualizează:
+
+- REG-008 Registrul de Guvernanță a Datelor
+- EVID-008 Dovezile de Guvernanță a Datelor
+- DEC-008 Declarația de Guvernanță a Datelor
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Regulamentul (UE) 2016/679 (GDPR)
+- DOD-008 Politica de Guvernanță a Datelor
+- PROC-008 Procedura de Guvernanță a Datelor
+- REG-001 Registrul de Inventar al Sistemelor AI
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

@@ -1,117 +1,117 @@
 # DEC-008
 
-# Data Governance Declaration
+# Declarație de Guvernanță a Datelor
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DEC-008 |
-| Title | Data Governance Declaration |
+| ID Document | DEC-008 |
+| Titlu | Declarație de Guvernanță a Datelor |
 | Repository | RRVI™ |
-| Module | 08 – Data Governance |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 08 – Guvernanță Date |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This declaration confirms that {{COMPANY_NAME}} has established, implemented and maintains a documented Data Governance framework for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act) and Regulation (EU) 2016/679 (GDPR).
+Această declarație confirmă că {{COMPANY_NAME}} a stabilit, implementat și menține un cadru documentat de Guvernanță a Datelor pentru sistemele de Inteligență Artificială, conform Regulamentului (UE) 2024/1689 (EU AI Act) și Regulamentului (UE) 2016/679 (GDPR).
 
-The declaration demonstrates management commitment to ensuring that data used by AI systems is properly governed throughout its lifecycle.
-
----
-
-# 2. Declaration
-
-{{COMPANY_NAME}} declares that:
-
-- data used by AI systems is identified and documented;
-- data sources are known and periodically reviewed;
-- Data Owners have been assigned where applicable;
-- data quality is monitored;
-- appropriate security controls are implemented;
-- personal data is processed in accordance with GDPR;
-- objective evidence supporting Data Governance is maintained.
+Declarația demonstrează angajamentul conducerii de a asigura că datele folosite de sistemele AI sunt guvernate corespunzător pe tot parcursul ciclului lor de viață.
 
 ---
 
-# 3. Management Commitment
+# 2. Declarație
 
-Management commits to:
+{{COMPANY_NAME}} declară că:
 
-- maintain an effective Data Governance framework;
-- ensure data quality and integrity;
-- protect confidential and personal data;
-- review Data Governance periodically;
-- maintain objective evidence;
-- continuously improve governance practices.
-
----
-
-# 4. Scope
-
-This declaration applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- production AI systems;
-- proof-of-concept AI systems;
-- structured and unstructured datasets;
-- internal and external data sources.
+- datele folosite de sistemele AI sunt identificate și documentate;
+- sursele de date sunt cunoscute și revizuite periodic;
+- Responsabilii de Date au fost desemnați, unde e cazul;
+- calitatea datelor este monitorizată;
+- controale de securitate adecvate sunt implementate;
+- datele personale sunt prelucrate conform GDPR;
+- se mențin dovezi obiective care susțin Guvernanța Datelor.
 
 ---
 
-# 5. Review Frequency
+# 3. Angajamentul Conducerii
 
-Data Governance shall be reviewed:
+Conducerea se angajează să:
 
-- annually;
-- after significant changes to data sources;
-- after security incidents;
-- after regulatory updates;
-- before regulatory inspections.
-
----
-
-# 6. Related Documents
-
-- DOD-008 Data Governance Policy
-- PROC-008 Data Governance Procedure
-- WI-008 Data Governance Work Instruction
-- CHK-008 Data Governance Checklist
-- REG-008 Data Governance Register
-- EVID-008 Data Governance Evidence
-- REG-001 AI System Inventory Register
+- mențină un cadru efectiv de Guvernanță a Datelor;
+- asigure calitatea și integritatea datelor;
+- protejeze datele confidențiale și personale;
+- revizuiască periodic Guvernanța Datelor;
+- mențină dovezi obiective;
+- îmbunătățească continuu practicile de guvernanță.
 
 ---
 
-# 7. Declaration
+# 4. Domeniu de Aplicare
 
-I declare that, to the best of my knowledge, {{COMPANY_NAME}} has implemented appropriate Data Governance controls for all Artificial Intelligence systems currently identified in the AI System Inventory.
+Această declarație se aplică:
 
-The organization commits to maintaining accurate, secure, traceable and compliant data throughout the lifecycle of every AI system and to updating governance measures whenever technical, operational or regulatory changes occur.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI de producție;
+- sistemelor AI de tip proof-of-concept;
+- seturilor de date structurate și nestructurate;
+- surselor de date interne și externe.
 
 ---
 
-# 8. Approval
+# 5. Frecvența Revizuirii
 
-| Field | Value |
+Guvernanța Datelor se revizuiește:
+
+- anual;
+- după modificări semnificative ale surselor de date;
+- după incidente de securitate;
+- după actualizări de reglementare;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 6. Documente Conexe
+
+- DOD-008 Politica de Guvernanță a Datelor
+- PROC-008 Procedura de Guvernanță a Datelor
+- WI-008 Instrucțiune de Lucru — Guvernanță Date
+- CHK-008 Checklist de Guvernanță a Datelor
+- REG-008 Registrul de Guvernanță a Datelor
+- EVID-008 Dovezile de Guvernanță a Datelor
+- REG-001 Registrul de Inventar al Sistemelor AI
+
+---
+
+# 7. Declarație
+
+Declar că, după cunoștințele mele, {{COMPANY_NAME}} a implementat controale adecvate de Guvernanță a Datelor pentru toate sistemele de Inteligență Artificială identificate curent în Inventarul Sistemelor AI.
+
+Organizația se angajează să mențină date exacte, sigure, trasabile și conforme pe tot parcursul ciclului de viață al fiecărui sistem AI și să actualizeze măsurile de guvernanță ori de câte ori apar modificări tehnice, operaționale sau de reglementare.
+
+---
+
+# 8. Aprobare
+
+| Câmp | Valoare |
 |--------|-------|
-| Approved By | {{RESPONSIBLE_PERSON}} |
-| Position | Managing Director |
-| Company | {{COMPANY_NAME}} |
-| Approval Date | 2026-07-02 |
-| Status | Approved |
+| Aprobat de | {{RESPONSIBLE_PERSON}} |
+| Funcție | Director General |
+| Firma | {{COMPANY_NAME}} |
+| Data Aprobării | |
+| Status | Aprobat |
 
 ---
 
-# Document Control
+# Control Document
 
-| Version | Date | Description |
+| Versiune | Data | Descriere |
 |---------|------|-------------|
-| 1.0.0 | 2026-07-02 | Initial release |
+| 1.0.0 | | Versiune inițială |

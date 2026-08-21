@@ -1,210 +1,221 @@
 # PROC-008
 
-# Data Governance Procedure
+# Procedura de Guvernanță a Datelor
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | PROC-008 |
-| Title | Data Governance Procedure |
+| ID Document | PROC-008 |
+| Titlu | Procedura de Guvernanță a Datelor |
 | Repository | RRVI™ |
-| Module | 08 – Data Governance |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 08 – Guvernanță Date |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This procedure defines how {{COMPANY_NAME}} governs, documents, reviews and maintains data used by Artificial Intelligence systems throughout their lifecycle.
+Această procedură definește cum {{COMPANY_NAME}} guvernează, documentează, revizuiește și menține datele folosite de sistemele de Inteligență Artificială pe tot parcursul ciclului lor de viață.
 
-The objective is to ensure that data used by AI systems remains accurate, complete, secure, traceable and compliant with Regulation (EU) 2024/1689 (EU AI Act) and Regulation (EU) 2016/679 (GDPR).
-
----
-
-# 2. Scope
-
-This procedure applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- proof-of-concept AI systems;
-- production AI systems;
-- structured and unstructured data;
-- operational, validation and reference datasets.
+Obiectivul este să asigure că datele folosite de sistemele AI rămân exacte, complete, sigure, trasabile și conforme cu Regulamentul (UE) 2024/1689 (EU AI Act) și Regulamentul (UE) 2016/679 (GDPR).
 
 ---
 
-# 3. Responsibilities
+# 2. Domeniu de Aplicare
 
-## Managing Director
+Această procedură se aplică:
 
-- approves major Data Governance changes where required.
-
----
-
-## AI Governance Owner
-
-Responsible for:
-
-- coordinating Data Governance activities;
-- maintaining the Data Governance Register;
-- initiating periodic reviews.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- datelor structurate și nestructurate;
+- seturilor de date operaționale, de validare și de referință.
 
 ---
 
-## Data Owner
+# 3. Responsabilități
 
-Responsible for:
+## Director General
 
-- approving data usage;
-- ensuring data quality;
-- reporting data issues.
+- aprobă modificările majore de Guvernanță a Datelor, unde e cazul.
 
 ---
 
-## AI System Owner
+## Responsabilul de Guvernanță AI
 
-Responsible for:
+Responsabil pentru:
 
-- documenting data sources;
-- identifying data limitations;
-- maintaining technical documentation.
-
----
-
-## Compliance Owner
-
-Responsible for:
-
-- monitoring compliance with the EU AI Act and GDPR;
-- supporting audits and inspections.
+- coordonarea activităților de Guvernanță a Datelor;
+- menținerea Registrului de Guvernanță a Datelor;
+- inițierea revizuirilor periodice.
 
 ---
 
-# 4. Procedure
+## Responsabilul de Date
 
-## Step 1 — Identify AI System
+Responsabil pentru:
 
-Locate the AI system in:
+- aprobarea utilizării datelor;
+- asigurarea calității datelor;
+- raportarea problemelor legate de date.
+
+---
+
+## Responsabilul de Sistem AI
+
+Responsabil pentru:
+
+- documentarea surselor de date;
+- identificarea limitărilor datelor;
+- menținerea documentației tehnice.
+
+---
+
+## Responsabilul de Conformitate
+
+Responsabil pentru:
+
+- monitorizarea conformității cu EU AI Act și GDPR;
+- sprijinirea auditurilor și inspecțiilor.
+
+---
+
+# 4. Procedura
+
+## Pasul 1 — Identificarea Sistemului AI
+
+Se localizează sistemul AI în:
 
 REG-001_AI_System_Inventory_Register.md
 
 ---
 
-## Step 2 — Identify Data Sources
+## Pasul 2 — Determinarea Rolului (Provider / Deployer)
 
-Document:
+Se verifică rolul firmei pentru acest sistem AI (conform REG-001), pentru a determina tipul corect de date de documentat:
 
-- source systems;
-- internal datasets;
-- external datasets;
-- public data;
-- manually entered data.
+- **Provider** → date de antrenare, validare, testare;
+- **Deployer** → date de intrare, inclusiv conținutul din prompturi sau documente lipite direct în asistenți AI.
 
 ---
 
-## Step 3 — Assess Data Quality
+## Pasul 3 — Identificarea Surselor de Date
 
-Evaluate:
+Se documentează:
 
-- accuracy;
-- completeness;
-- consistency;
-- relevance;
-- timeliness;
-- integrity.
-
-Record identified limitations.
+- sistemele sursă;
+- seturile de date interne;
+- seturile de date externe;
+- date publice;
+- date introduse manual (inclusiv prompturi și documente lipite în asistenți AI).
 
 ---
 
-## Step 4 — Assess Data Protection
+## Pasul 4 — Evaluarea Calității Datelor
 
-Verify:
+Se evaluează:
 
-- lawful processing;
-- access controls;
-- confidentiality;
-- retention requirements;
-- data minimisation.
+- exactitatea;
+- completitudinea;
+- consecvența;
+- relevanța;
+- actualitatea;
+- integritatea.
+
+Se înregistrează limitările identificate.
 
 ---
 
-## Step 5 — Record Governance Information
+## Pasul 5 — Evaluarea Protecției Datelor
 
-Update:
+Se verifică:
+
+- prelucrarea legală;
+- controalele de acces;
+- confidențialitatea;
+- cerințele de retenție;
+- minimizarea datelor;
+- necesitatea unei DPIA (Art. 35 GDPR) — dacă prelucrarea prezintă risc ridicat pentru drepturile persoanelor;
+- necesitatea unei AIDF (Art. 27 EU AI Act) — dacă sistemul e high-risk și firma e deployer.
+
+---
+
+## Pasul 6 — Înregistrarea Informațiilor de Guvernanță
+
+Se actualizează:
 
 REG-008_Data_Governance_Register.md
 
-Record:
+Se înregistrează:
 
-- data source;
-- owner;
-- classification;
-- quality assessment;
-- review date.
-
----
-
-## Step 6 — Correct Issues
-
-Where deficiencies are identified:
-
-- document the issue;
-- implement corrective actions;
-- verify effectiveness;
-- update documentation.
+- sursa de date;
+- responsabilul;
+- clasificarea;
+- evaluarea calității;
+- data revizuirii.
 
 ---
 
-## Step 7 — Review
+## Pasul 7 — Corectarea Problemelor
 
-Review Data Governance whenever:
+Acolo unde sunt identificate deficiențe:
 
-- data sources change;
-- AI systems change;
-- legislation changes;
-- significant incidents occur.
-
----
-
-# 5. Records
-
-This procedure produces:
-
-- Data Governance Register;
-- Data Governance Evidence;
-- Data Governance Declaration.
+- se documentează problema;
+- se implementează acțiuni corective;
+- se verifică eficacitatea;
+- se actualizează documentația.
 
 ---
 
-# 6. References
+## Pasul 8 — Revizuire
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Regulation (EU) 2016/679 (GDPR)
-- DOD-008 Data Governance Policy
-- REG-001 AI System Inventory Register
-- REG-008 Data Governance Register
-- EVID-008 Data Governance Evidence
-- DEC-008 Data Governance Declaration
+Guvernanța Datelor se revizuiește ori de câte ori:
+
+- se schimbă sursele de date;
+- se schimbă sistemele AI;
+- se modifică legislația;
+- apar incidente semnificative.
 
 ---
 
-# 7. Approval
+# 5. Înregistrări
 
-Prepared by
+Această procedură produce:
+
+- Registrul de Guvernanță a Datelor;
+- Dovezile de Guvernanță a Datelor;
+- Declarația de Guvernanță a Datelor.
+
+---
+
+# 6. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 10, Articolul 27
+- Regulamentul (UE) 2016/679 (GDPR), Articolul 35
+- DOD-008 Politica de Guvernanță a Datelor
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-008 Registrul de Guvernanță a Datelor
+- EVID-008 Dovezile de Guvernanță a Datelor
+- DEC-008 Declarația de Guvernanță a Datelor
+
+---
+
+# 7. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

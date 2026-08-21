@@ -1,131 +1,127 @@
 # EVID-008
 
-# Data Governance Evidence
+# Dovezi de Guvernanță a Datelor
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | EVID-008 |
-| Title | Data Governance Evidence |
+| ID Document | EVID-008 |
+| Titlu | Dovezi de Guvernanță a Datelor |
 | Repository | RRVI™ |
-| Module | 08 – Data Governance |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Evidence Register |
+| Modul | 08 – Guvernanță Date |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru de Dovezi Activ |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This document records the objective evidence supporting the Data Governance controls implemented for Artificial Intelligence systems operated by {{COMPANY_NAME}}.
+Acest document înregistrează dovezile obiective care susțin controalele de Guvernanță a Datelor implementate pentru sistemele de Inteligență Artificială operate de {{COMPANY_NAME}}.
 
-The evidence demonstrates that data used by AI systems is identified, classified, protected and periodically reviewed in accordance with Regulation (EU) 2024/1689 (EU AI Act) and Regulation (EU) 2016/679 (GDPR).
+Dovezile demonstrează că datele folosite de sistemele AI sunt identificate, clasificate, protejate și revizuite periodic, conform Regulamentului (UE) 2024/1689 (EU AI Act) și Regulamentului (UE) 2016/679 (GDPR).
 
 ---
 
-# 2. Evidence Principles
+# 2. Principii ale Dovezilor
 
-Evidence shall be:
+Dovezile trebuie să fie:
 
-- objective;
-- verifiable;
-- traceable;
+- obiective;
+- verificabile;
+- trasabile;
 - complete;
-- version controlled;
-- retained according to company document retention requirements.
+- controlate ca versiune;
+- păstrate conform cerințelor de retenție a documentelor firmei.
 
 ---
 
-# 3. Data Governance Evidence Register
+# 3. Registrul de Dovezi de Guvernanță a Datelor
 
-| Evidence ID | AI ID | Evidence Description | Evidence Location | Status |
+| ID Dovadă | ID AI | Descrierea Dovezii | Locația Dovezii | Status |
 |--------------|-------|----------------------|-------------------|--------|
-| DG-001 | AI-001 | Data source documentation | GitHub Repository | Active |
-| DG-002 | AI-002 | Data source documentation | GitHub Repository | Active |
-| DG-003 | AI-003 | Data source documentation | GitHub Repository | Active |
-| DG-004 | AI-004 | Data source documentation | GitHub Repository | Active |
-| DG-005 | AI-005 | Data source documentation | GitHub Repository | Active |
-| DG-006 | AI-006 | Data architecture specification | GitHub Repository | Planned |
-| DG-007 | AI-007 | Vector database documentation | GitHub Repository | POC |
-| DG-008 | AI-008 | Source code repository controls | GitHub Repository | Active |
-| DG-009 | AI-009 | Data Governance design | GitHub Repository | Draft |
-| DG-010 | AI-010 | Data Governance design | GitHub Repository | Draft |
-| DG-011 | AI-011 | Data Governance design | GitHub Repository | Draft |
-| DG-012 | AI-012 | Data Governance design | GitHub Repository | Draft |
-| DG-013 | AI-013 | Data Governance design | GitHub Repository | Draft |
-| DG-014 | AI-014 | Data Governance design | GitHub Repository | Draft |
-| DG-015 | AI-015 | Data Governance design | GitHub Repository | Draft |
-| DG-016 | AI-016 | Data Governance design | GitHub Repository | Draft |
+| DG-001 | AI-001 | | | |
+| DG-002 | AI-002 | | | |
+| DG-003 | AI-003 | | | |
+| DG-004 | AI-004 | | | |
+| DG-005 | AI-005 | | | |
+| DG-006 | AI-006 | | | |
+| DG-007 | AI-007 | | | |
+| DG-008 | AI-008 | | | |
+| DG-009 | AI-009 | | | |
+| DG-010 | AI-010 | | | |
+
+*Rândurile se completează de fiecare firmă cu dovezile proprii, corespunzătoare sistemelor din REG-001.*
 
 ---
 
-# 4. Acceptable Evidence
+# 4. Dovezi Acceptabile
 
-Supporting evidence may include:
+Dovezile justificative pot include:
 
-- data flow diagrams;
-- data inventories;
-- database schemas;
-- API documentation;
-- data classification records;
-- access control documentation;
-- encryption configuration;
-- retention schedules;
-- backup procedures;
-- GDPR records;
-- security audit reports.
-
----
-
-# 5. Evidence Storage
-
-Evidence may be maintained in:
-
-- GitHub Repository;
-- Internal Documentation Repository;
-- Data Architecture Repository;
-- Compliance Documentation Repository;
-- Information Security Documentation;
-- GDPR Documentation.
+- diagrame de flux al datelor;
+- inventare de date;
+- scheme de baze de date;
+- documentație API;
+- înregistrări de clasificare a datelor;
+- documentație de control al accesului;
+- configurația de criptare;
+- planuri de retenție;
+- proceduri de backup;
+- înregistrări GDPR;
+- rapoarte de audit de securitate.
 
 ---
 
-# 6. Review Requirements
+# 5. Stocarea Dovezilor
 
-Evidence shall be reviewed:
+Dovezile pot fi menținute în:
 
-- annually;
-- after changes to data sources;
-- after security incidents;
-- after regulatory updates;
-- before regulatory inspections.
-
----
-
-# 7. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Regulation (EU) 2016/679 (GDPR)
-- DOD-008 Data Governance Policy
-- PROC-008 Data Governance Procedure
-- REG-008 Data Governance Register
-- DEC-008 Data Governance Declaration
+- Repository GitHub;
+- Repository Intern de Documentație;
+- Repository de Arhitectură a Datelor;
+- Repository de Documentație de Conformitate;
+- Documentație de Securitate a Informației;
+- Documentație GDPR.
 
 ---
 
-# 8. Approval
+# 6. Cerințe de Revizuire
 
-Prepared by
+Dovezile se revizuiesc:
+
+- anual;
+- după modificări ale surselor de date;
+- după incidente de securitate;
+- după actualizări de reglementare;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 7. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Regulamentul (UE) 2016/679 (GDPR)
+- DOD-008 Politica de Guvernanță a Datelor
+- PROC-008 Procedura de Guvernanță a Datelor
+- REG-008 Registrul de Guvernanță a Datelor
+- DEC-008 Declarația de Guvernanță a Datelor
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

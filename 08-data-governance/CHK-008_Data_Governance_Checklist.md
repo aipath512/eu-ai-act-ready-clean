@@ -1,77 +1,67 @@
 # CHK-008
 
-# Data Governance Checklist
+# Checklist de Guvernanță a Datelor
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-008 |
-| Title | Data Governance Checklist |
+| ID Document | CHK-008 |
+| Titlu | Checklist de Guvernanță a Datelor |
 | Repository | RRVI™ |
-| Module | 08 – Data Governance |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 08 – Guvernanță Date |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that Data Governance has been properly implemented for every Artificial Intelligence system in accordance with Regulation (EU) 2024/1689 (EU AI Act) and Regulation (EU) 2016/679 (GDPR).
+Acest checklist se utilizează pentru a verifica dacă Guvernanța Datelor a fost implementată corespunzător pentru fiecare sistem de Inteligență Artificială, conform Regulamentului (UE) 2024/1689 (EU AI Act) și Regulamentului (UE) 2016/679 (GDPR).
 
 ---
 
-# Data Governance Verification Checklist
+# Checklist de Verificare a Guvernanței Datelor
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI System exists in REG-001 AI System Inventory Register | ☐ | ☐ | ☐ | |
-| 2 | Data Owner has been assigned | ☐ | ☐ | ☐ | |
-| 3 | Data sources are documented | ☐ | ☐ | ☐ | |
-| 4 | Data categories are identified | ☐ | ☐ | ☐ | |
-| 5 | Personal data has been identified | ☐ | ☐ | ☐ | |
-| 6 | Data classification has been completed | ☐ | ☐ | ☐ | |
-| 7 | Data quality has been evaluated | ☐ | ☐ | ☐ | |
-| 8 | Data accuracy has been verified | ☐ | ☐ | ☐ | |
-| 9 | Data completeness has been verified | ☐ | ☐ | ☐ | |
-| 10 | Data integrity has been verified | ☐ | ☐ | ☐ | |
-| 11 | Data security controls are documented | ☐ | ☐ | ☐ | |
-| 12 | Access controls are implemented | ☐ | ☐ | ☐ | |
-| 13 | Data retention rules are defined | ☐ | ☐ | ☐ | |
-| 14 | GDPR compliance has been assessed | ☐ | ☐ | ☐ | |
-| 15 | Data limitations are documented | ☐ | ☐ | ☐ | |
-| 16 | Supporting evidence has been collected | ☐ | ☐ | ☐ | |
-| 17 | Data Governance Register has been updated | ☐ | ☐ | ☐ | |
-| 18 | Corrective actions are documented | ☐ | ☐ | ☐ | |
-| 19 | Next review date has been assigned | ☐ | ☐ | ☐ | |
-| 20 | Data Governance is inspection-ready | ☐ | ☐ | ☐ | |
+| 1 | Sistemul AI există în REG-001 Registrul de Inventar al Sistemelor AI | ☐ | ☐ | ☐ | |
+| 2 | Responsabilul de Date a fost desemnat | ☐ | ☐ | ☐ | |
+| 3 | Sursele de date sunt documentate | ☐ | ☐ | ☐ | |
+| 4 | Categoriile de date sunt identificate | ☐ | ☐ | ☐ | |
+| 5 | Datele personale au fost identificate | ☐ | ☐ | ☐ | |
+| 6 | Rolul firmei (provider/deployer) determină tipul corect de date documentate | ☐ | ☐ | ☐ | |
+| 7 | Clasificarea datelor a fost finalizată | ☐ | ☐ | ☐ | |
+| 8 | Calitatea datelor a fost evaluată | ☐ | ☐ | ☐ | |
+| 9 | Exactitatea datelor a fost verificată | ☐ | ☐ | ☐ | |
+| 10 | Completitudinea datelor a fost verificată | ☐ | ☐ | ☐ | |
+| 11 | Integritatea datelor a fost verificată | ☐ | ☐ | ☐ | |
+| 12 | Controalele de securitate a datelor sunt documentate | ☐ | ☐ | ☐ | |
+| 13 | Controalele de acces sunt implementate | ☐ | ☐ | ☐ | |
+| 14 | Regulile de retenție a datelor sunt definite | ☐ | ☐ | ☐ | |
+| 15 | Conformitatea GDPR a fost evaluată | ☐ | ☐ | ☐ | |
+| 16 | S-a stabilit dacă e necesară DPIA (Art. 35 GDPR) | ☐ | ☐ | ☐ | |
+| 17 | S-a stabilit dacă e necesară AIDF (Art. 27 EU AI Act) | ☐ | ☐ | ☐ | |
+| 18 | Limitările datelor sunt documentate | ☐ | ☐ | ☐ | |
+| 19 | Dovezile justificative au fost colectate | ☐ | ☐ | ☐ | |
+| 20 | Registrul de Guvernanță a Datelor a fost actualizat | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,38 +71,48 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Regulation (EU) 2016/679 (GDPR)
-- DOD-008 Data Governance Policy
-- PROC-008 Data Governance Procedure
-- WI-008 Data Governance Work Instruction
-- REG-008 Data Governance Register
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Regulamentul (UE) 2016/679 (GDPR)
+- DOD-008 Politica de Guvernanță a Datelor
+- PROC-008 Procedura de Guvernanță a Datelor
+- WI-008 Instrucțiune de Lucru — Guvernanță Date
+- REG-008 Registrul de Guvernanță a Datelor
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat
