@@ -1,217 +1,217 @@
 # WI-003
 
-# AI Literacy Work Instruction
+# Instrucțiune de Lucru — Alfabetizare AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-003 |
-| Title | AI Literacy Work Instruction |
+| ID Document | WI-003 |
+| Titlu | Instrucțiune de Lucru — Alfabetizare AI |
 | Repository | RRVI™ |
-| Module | 03 – AI Literacy |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 03 – Alfabetizare AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed guidance for planning, delivering, recording and reviewing AI Literacy activities within {{COMPANY_NAME}}.
+Această Instrucțiune de Lucru oferă îndrumări detaliate pentru planificarea, livrarea, înregistrarea și revizuirea activităților de Alfabetizare AI în cadrul {{COMPANY_NAME}}.
 
-It ensures that personnel using Artificial Intelligence systems possess an appropriate level of knowledge consistent with their responsibilities and the requirements of Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# 2. Preconditions
-
-Before initiating AI literacy activities, verify that:
-
-- personnel requiring AI literacy have been identified;
-- applicable AI systems have been identified;
-- training objectives have been defined;
-- training materials are available.
+Asigură că personalul care folosește sisteme de Inteligență Artificială are un nivel adecvat de cunoștințe, conform responsabilităților sale și cerințelor Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-For each participant record:
+Înainte de a iniția activitățile de alfabetizare AI, se verifică dacă:
 
-- Employee Name
-- Position
-- Department
-- AI Systems Used
-- Required Literacy Level
-- Training Activity
-- Trainer
-- Training Date
-- Completion Status
-- Assessment Result
-- Next Review Date
+- personalul care necesită alfabetizare AI a fost identificat;
+- sistemele AI aplicabile au fost identificate;
+- obiectivele de instruire au fost definite;
+- materialele de instruire sunt disponibile.
 
 ---
 
-# 4. Work Instructions
+# 3. Informații Necesare
 
-## Step 1
+Pentru fiecare participant se înregistrează:
 
-Identify personnel requiring AI literacy.
-
-Include:
-
-- Management
-- AI Users
-- AI Developers
-- AI Governance Personnel
-- Technical Staff
-
----
-
-## Step 2
-
-Determine the required competency level.
-
-Consider:
-
-- job responsibilities;
-- AI systems used;
-- regulatory obligations;
-- operational risks.
+- Numele Angajatului
+- Funcția
+- Departamentul
+- Sisteme AI Folosite
+- Nivelul de Alfabetizare Necesar
+- Activitatea de Instruire
+- Instructorul
+- Data Instruirii
+- Statusul de Finalizare
+- Rezultatul Evaluării
+- Data Următoarei Revizuiri
 
 ---
 
-## Step 3
+# 4. Instrucțiuni de Lucru
 
-Conduct the training.
+## Pasul 1
 
-Training may include:
+Se identifică personalul care necesită alfabetizare AI.
 
-- classroom sessions;
-- online courses;
-- workshops;
-- demonstrations;
-- practical exercises;
-- self-learning.
+Se includ:
 
----
-
-## Step 4
-
-Assess understanding.
-
-Verify that participants understand:
-
-- AI fundamentals;
-- AI capabilities;
-- AI limitations;
-- AI risks;
-- Human Oversight;
-- Data Protection;
-- Company AI Policies.
+- Conducerea
+- Utilizatorii AI
+- Dezvoltatorii AI
+- Personalul de Guvernanță AI
+- Personalul Tehnic
 
 ---
 
-## Step 5
+## Pasul 2
 
-Record completion.
+Se determină nivelul de competență necesar.
 
-Update:
+Se iau în considerare:
+
+- responsabilitățile postului;
+- sistemele AI folosite;
+- obligațiile de reglementare;
+- riscurile operaționale.
+
+---
+
+## Pasul 3
+
+Se desfășoară instruirea.
+
+Instruirea poate include:
+
+- sesiuni în sală;
+- cursuri online;
+- workshop-uri;
+- demonstrații;
+- exerciții practice;
+- autoinstruire.
+
+---
+
+## Pasul 4
+
+Se evaluează înțelegerea.
+
+Se verifică dacă participanții înțeleg:
+
+- noțiunile fundamentale de AI;
+- capabilitățile AI;
+- limitările AI;
+- riscurile AI;
+- Supravegherea Umană;
+- Protecția Datelor;
+- Politicile AI ale Firmei.
+
+---
+
+## Pasul 5
+
+Se înregistrează finalizarea.
+
+Se actualizează:
 
 REG-003_AI_Literacy_Register.md
 
-Record:
+Se înregistrează:
 
-- participant;
-- course;
-- completion date;
-- assessment result;
-- reviewer.
+- participantul;
+- cursul;
+- data finalizării;
+- rezultatul evaluării;
+- evaluatorul.
 
 ---
 
-## Step 6
+## Pasul 6
 
-Collect evidence.
+Se colectează dovezile.
 
-Store supporting evidence in:
+Dovezile justificative se stochează în:
 
 EVID-003_AI_Literacy_Evidence.md
 
-Examples:
+Exemple:
 
-- attendance lists;
-- certificates;
-- presentations;
-- quizzes;
-- screenshots;
-- training materials.
-
----
-
-## Step 7
-
-Review.
-
-Review AI literacy:
-
-- annually;
-- after introduction of new AI systems;
-- after major regulatory changes;
-- after significant AI-related incidents.
+- liste de prezență;
+- certificate;
+- prezentări;
+- teste;
+- capturi de ecran;
+- materiale de instruire.
 
 ---
 
-# 5. Quality Checks
+## Pasul 7
 
-Verify that:
+Revizuire.
 
-✓ Required personnel have been identified.
+Alfabetizarea AI se revizuiește:
 
-✓ Training has been completed.
-
-✓ Assessment results have been recorded.
-
-✓ Evidence has been collected.
-
-✓ Register has been updated.
-
-✓ Review date has been assigned.
+- anual;
+- după introducerea unor sisteme AI noi;
+- după modificări majore de reglementare;
+- după incidente semnificative legate de AI.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-003 AI Literacy Register
-- EVID-003 AI Literacy Evidence
-- DEC-003 AI Literacy Declaration
+✓ Personalul necesar a fost identificat.
+
+✓ Instruirea a fost finalizată.
+
+✓ Rezultatele evaluării au fost înregistrate.
+
+✓ Dovezile au fost colectate.
+
+✓ Registrul a fost actualizat.
+
+✓ Data de revizuire a fost alocată.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- Regulation (EU) 2024/1689 (EU AI Act), Article 4
-- DOD-003 AI Literacy Policy
-- PROC-003 AI Literacy Procedure
-- CHK-003 AI Literacy Checklist
+Această instrucțiune actualizează:
+
+- REG-003 Registrul de Alfabetizare AI
+- EVID-003 Dovezile de Alfabetizare AI
+- DEC-003 Declarația de Alfabetizare AI
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 4
+- DOD-003 Politica de Alfabetizare AI
+- PROC-003 Procedura de Alfabetizare AI
+- CHK-003 Checklist de Alfabetizare AI
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

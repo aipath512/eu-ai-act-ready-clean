@@ -1,120 +1,122 @@
 # EVID-003
 
-# AI Literacy Evidence
+# Dovezi de Alfabetizare AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | EVID-003 |
-| Title | AI Literacy Evidence |
+| ID Document | EVID-003 |
+| Titlu | Dovezi de Alfabetizare AI |
 | Repository | RRVI™ |
-| Module | 03 – AI Literacy |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Evidence Register |
+| Modul | 03 – Alfabetizare AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru de Dovezi Activ |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This document records the objective evidence demonstrating that personnel of {{COMPANY_NAME}} have achieved an appropriate level of AI literacy in accordance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
+Acest document înregistrează dovezile obiective care demonstrează că personalul {{COMPANY_NAME}} a atins un nivel adecvat de alfabetizare AI, conform Articolului 4 din Regulamentul (UE) 2024/1689 (EU AI Act).
 
-The evidence supports internal governance, external audits and regulatory inspections.
+Dovezile susțin guvernanța internă, auditurile externe și inspecțiile de reglementare.
 
 ---
 
-# 2. Evidence Principles
+# 2. Principii ale Dovezilor
 
-Evidence shall be:
+Dovezile trebuie să fie:
 
-- objective;
-- verifiable;
-- traceable;
+- obiective;
+- verificabile;
+- trasabile;
 - complete;
-- version controlled;
-- retained according to company record retention requirements.
+- controlate ca versiune;
+- păstrate conform cerințelor de retenție a înregistrărilor firmei.
 
 ---
 
-# 3. AI Literacy Evidence Register
+# 3. Registrul de Dovezi de Alfabetizare AI
 
-| Evidence ID | Participant | Evidence Description | Evidence Location | Status |
+| ID Dovadă | Participant | Descrierea Dovezii | Locația Dovezii | Status |
 |--------------|------------|----------------------|-------------------|--------|
-| AL-E001 | {{RESPONSIBLE_PERSON}} | AI Literacy self-training record | REG-003 | Active |
-| AL-E002 | {{RESPONSIBLE_PERSON}} | EU AI Act study notes | Internal Documentation | Active |
-| AL-E003 | {{RESPONSIBLE_PERSON}} | Governance documentation developed | GitHub Repository | Active |
-| AL-E004 | {{RESPONSIBLE_PERSON}} | AI Inventory implementation | GitHub Repository | Active |
-| AL-E005 | {{RESPONSIBLE_PERSON}} | Risk Classification implementation | GitHub Repository | Active |
-| AL-E006 | {{RESPONSIBLE_PERSON}} | Technical Documentation implementation | GitHub Repository | Active |
-| AL-E007 | {{RESPONSIBLE_PERSON}} | Human Oversight implementation | GitHub Repository | Active |
-| AL-E008 | {{RESPONSIBLE_PERSON}} | Practical AI usage evidence | OpenAI / Google / Anthropic Accounts | Active |
+| AL-E001 | | | | |
+| AL-E002 | | | | |
+| AL-E003 | | | | |
+| AL-E004 | | | | |
+| AL-E005 | | | | |
+| AL-E006 | | | | |
+| AL-E007 | | | | |
+| AL-E008 | | | | |
+
+*Rândurile se completează de fiecare firmă cu dovezile proprii de instruire/alfabetizare AI, nu cu exemple pre-completate.*
 
 ---
 
-# 4. Acceptable Evidence
+# 4. Dovezi Acceptabile
 
-Acceptable evidence may include:
+Dovezile acceptabile pot include:
 
-- attendance records;
-- certificates;
-- examination results;
-- practical exercises;
-- workshop materials;
-- presentations;
-- screenshots;
-- meeting minutes;
-- documented self-study;
-- completed governance documentation.
-
----
-
-# 5. Evidence Storage
-
-Evidence may be stored in:
-
-- GitHub Repository
-- Internal Documentation Repository
-- Company Knowledge Base
-- Learning Management System
-- Cloud Storage
-- Personnel Training Records
+- înregistrări de prezență;
+- certificate;
+- rezultate ale examinărilor;
+- exerciții practice;
+- materiale de workshop;
+- prezentări;
+- capturi de ecran;
+- procese-verbale de ședință;
+- studiu individual documentat;
+- documentație de guvernanță finalizată.
 
 ---
 
-# 6. Evidence Review
+# 5. Stocarea Dovezilor
 
-Evidence shall be reviewed:
+Dovezile pot fi stocate în:
 
-- annually;
-- after significant AI literacy activities;
-- before regulatory inspections;
-- following major regulatory updates.
-
----
-
-# 7. References
-
-- Regulation (EU) 2024/1689 (EU AI Act), Article 4
-- DOD-003 AI Literacy Policy
-- PROC-003 AI Literacy Procedure
-- REG-003 AI Literacy Register
-- DEC-003 AI Literacy Declaration
+- Repository GitHub
+- Repository Intern de Documentație
+- Baza de Cunoștințe a Firmei
+- Sistem de Management al Învățării
+- Stocare Cloud
+- Înregistrări de Instruire a Personalului
 
 ---
 
-# 8. Approval
+# 6. Revizuirea Dovezilor
 
-Prepared by
+Dovezile se revizuiesc:
+
+- anual;
+- după activități semnificative de alfabetizare AI;
+- înainte de inspecțiile de reglementare;
+- în urma actualizărilor majore de reglementare.
+
+---
+
+# 7. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 4
+- DOD-003 Politica de Alfabetizare AI
+- PROC-003 Procedura de Alfabetizare AI
+- REG-003 Registrul de Alfabetizare AI
+- DEC-003 Declarația de Alfabetizare AI
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

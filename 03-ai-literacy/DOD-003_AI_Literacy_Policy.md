@@ -1,164 +1,164 @@
 # DOD-003
 
-# AI Literacy Policy
+# Politica de Alfabetizare AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DOD-003 |
-| Title | AI Literacy Policy |
+| ID Document | DOD-003 |
+| Titlu | Politica de Alfabetizare AI |
 | Repository | RRVI™ |
-| Module | 03 – AI Literacy |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 03 – Alfabetizare AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-The purpose of this policy is to establish the principles and requirements for achieving and maintaining an appropriate level of Artificial Intelligence literacy within {{COMPANY_NAME}}.
+Scopul acestei politici este de a stabili principiile și cerințele pentru atingerea și menținerea unui nivel adecvat de alfabetizare în domeniul Inteligenței Artificiale în cadrul {{COMPANY_NAME}}.
 
-This policy supports compliance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act), requiring providers and deployers of AI systems to ensure that personnel possess sufficient AI literacy according to their roles and responsibilities.
-
----
-
-# 2. Scope
-
-This policy applies to:
-
-- all employees;
-- management;
-- contractors;
-- consultants;
-- interns;
-- temporary personnel;
-- any individual using AI systems on behalf of {{COMPANY_NAME}}.
+Această politică sprijină conformitatea cu Articolul 4 din Regulamentul (UE) 2024/1689 (EU AI Act), care cere furnizorilor și implementatorilor de sisteme AI să asigure că personalul are un nivel suficient de alfabetizare AI, adecvat rolurilor și responsabilităților lor.
 
 ---
 
-# 3. Policy Statements
+# 2. Domeniu de Aplicare
 
-{{COMPANY_NAME}} shall ensure that all personnel using AI systems possess an appropriate level of AI literacy.
+Această politică se aplică:
 
-AI literacy shall be appropriate to:
-
-- job responsibilities;
-- technical knowledge;
-- experience;
-- AI systems used;
-- potential impact of AI-assisted activities.
-
----
-
-# 4. AI Literacy Objectives
-
-Personnel shall understand:
-
-- AI fundamentals;
-- capabilities and limitations of AI systems;
-- AI risks;
-- Human Oversight;
-- responsible AI use;
-- data protection principles;
-- information security;
-- applicable requirements of the EU AI Act.
+- tuturor angajaților;
+- conducerii;
+- contractorilor;
+- consultanților;
+- stagiarilor;
+- personalului temporar;
+- oricărei persoane care folosește sisteme AI în numele {{COMPANY_NAME}}.
 
 ---
 
-# 5. Training Requirements
+# 3. Prevederi ale Politicii
 
-AI literacy may be achieved through:
+{{COMPANY_NAME}} asigură că tot personalul care folosește sisteme AI are un nivel adecvat de alfabetizare AI.
 
-- awareness sessions;
-- workshops;
-- online learning;
-- practical demonstrations;
-- guided exercises;
-- documented self-study.
+Alfabetizarea AI trebuie să fie adecvată în raport cu:
 
-Training activities shall be documented.
-
----
-
-# 6. Roles and Responsibilities
-
-## Managing Director
-
-Approves this policy.
+- responsabilitățile postului;
+- cunoștințele tehnice;
+- experiența;
+- sistemele AI folosite;
+- impactul potențial al activităților asistate de AI.
 
 ---
 
-## AI Governance Owner
+# 4. Obiectivele Alfabetizării AI
 
-Responsible for:
+Personalul trebuie să înțeleagă:
 
-- coordinating AI literacy activities;
-- maintaining AI literacy records;
-- reviewing competency levels.
-
----
-
-## Department Managers
-
-Responsible for:
-
-- identifying training needs;
-- ensuring personnel participation.
+- noțiunile fundamentale de AI;
+- capabilitățile și limitările sistemelor AI;
+- riscurile AI;
+- Supravegherea Umană;
+- utilizarea responsabilă a AI;
+- principiile de protecție a datelor;
+- securitatea informației;
+- cerințele aplicabile din EU AI Act.
 
 ---
 
-## Personnel
+# 5. Cerințe de Instruire
 
-Responsible for:
+Alfabetizarea AI poate fi realizată prin:
 
-- participating in assigned training;
-- applying AI responsibly;
-- reporting knowledge gaps.
+- sesiuni de conștientizare;
+- workshop-uri;
+- învățare online;
+- demonstrații practice;
+- exerciții ghidate;
+- studiu individual documentat.
 
----
-
-# 7. Review Requirements
-
-This policy shall be reviewed:
-
-- annually;
-- after introduction of significant AI systems;
-- after regulatory changes;
-- following major AI-related incidents.
+Activitățile de instruire se documentează.
 
 ---
 
-# 8. Compliance
+# 6. Roluri și Responsabilități
 
-Compliance with this policy is mandatory.
+## Director General
 
-Failure to maintain adequate AI literacy may increase operational, legal and regulatory risks.
-
----
-
-# 9. References
-
-- Regulation (EU) 2024/1689 (EU AI Act), Article 4
-- DOD-001 AI System Inventory Policy
-- DOD-002 Risk Classification Policy
-- REG-003 AI Literacy Register
+Aprobă această politică.
 
 ---
 
-# 10. Approval
+## Responsabilul de Guvernanță AI
 
-Prepared by
+Responsabil pentru:
+
+- coordonarea activităților de alfabetizare AI;
+- menținerea înregistrărilor de alfabetizare AI;
+- revizuirea nivelurilor de competență.
+
+---
+
+## Managerii de Departament
+
+Responsabili pentru:
+
+- identificarea nevoilor de instruire;
+- asigurarea participării personalului.
+
+---
+
+## Personal
+
+Responsabil pentru:
+
+- participarea la instruirea alocată;
+- aplicarea responsabilă a AI;
+- raportarea lacunelor de cunoștințe.
+
+---
+
+# 7. Cerințe de Revizuire
+
+Această politică se revizuiește:
+
+- anual;
+- după introducerea unor sisteme AI semnificative;
+- după modificări de reglementare;
+- în urma incidentelor majore legate de AI.
+
+---
+
+# 8. Conformitate
+
+Respectarea acestei politici este obligatorie.
+
+Neîndeplinirea unui nivel adecvat de alfabetizare AI poate crește riscurile operaționale, legale și de reglementare.
+
+---
+
+# 9. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 4
+- DOD-001 Politica de Inventar al Sistemelor AI
+- DOD-002 Politica de Clasificare a Riscului
+- REG-003 Registrul de Alfabetizare AI
+
+---
+
+# 10. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

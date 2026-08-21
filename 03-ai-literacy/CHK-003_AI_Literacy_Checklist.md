@@ -1,77 +1,67 @@
 # CHK-003
 
-# AI Literacy Checklist
+# Checklist de Alfabetizare AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-003 |
-| Title | AI Literacy Checklist |
+| ID Document | CHK-003 |
+| Titlu | Checklist de Alfabetizare AI |
 | Repository | RRVI™ |
-| Module | 03 – AI Literacy |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 03 – Alfabetizare AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that AI literacy requirements have been implemented and documented in accordance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
+Acest checklist se utilizează pentru a verifica dacă cerințele de alfabetizare AI au fost implementate și documentate conform Articolului 4 din Regulamentul (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# AI Literacy Verification Checklist
+# Checklist de Verificare a Alfabetizării AI
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI Literacy Policy exists | ☐ | ☐ | ☐ | |
-| 2 | AI Literacy Procedure exists | ☐ | ☐ | ☐ | |
-| 3 | AI Literacy Register exists | ☐ | ☐ | ☐ | |
-| 4 | Personnel using AI have been identified | ☐ | ☐ | ☐ | |
-| 5 | Required competency levels have been defined | ☐ | ☐ | ☐ | |
-| 6 | AI systems used by personnel are identified | ☐ | ☐ | ☐ | |
-| 7 | AI training has been delivered | ☐ | ☐ | ☐ | |
-| 8 | Attendance has been recorded | ☐ | ☐ | ☐ | |
-| 9 | Training materials are available | ☐ | ☐ | ☐ | |
-| 10 | Training completion has been documented | ☐ | ☐ | ☐ | |
-| 11 | Knowledge has been assessed | ☐ | ☐ | ☐ | |
-| 12 | Assessment results are recorded | ☐ | ☐ | ☐ | |
-| 13 | AI risks have been explained | ☐ | ☐ | ☐ | |
-| 14 | Human Oversight responsibilities are understood | ☐ | ☐ | ☐ | |
-| 15 | AI limitations have been explained | ☐ | ☐ | ☐ | |
-| 16 | AI Governance responsibilities are understood | ☐ | ☐ | ☐ | |
-| 17 | AI Literacy Register is up to date | ☐ | ☐ | ☐ | |
-| 18 | Supporting evidence has been collected | ☐ | ☐ | ☐ | |
-| 19 | Annual review has been scheduled | ☐ | ☐ | ☐ | |
-| 20 | AI Literacy programme is inspection-ready | ☐ | ☐ | ☐ | |
+| 1 | Politica de Alfabetizare AI există | ☐ | ☐ | ☐ | |
+| 2 | Procedura de Alfabetizare AI există | ☐ | ☐ | ☐ | |
+| 3 | Registrul de Alfabetizare AI există | ☐ | ☐ | ☐ | |
+| 4 | Personalul care folosește AI a fost identificat | ☐ | ☐ | ☐ | |
+| 5 | Nivelurile de competență necesare au fost definite | ☐ | ☐ | ☐ | |
+| 6 | Sistemele AI folosite de personal sunt identificate | ☐ | ☐ | ☐ | |
+| 7 | Instruirea AI a fost livrată | ☐ | ☐ | ☐ | |
+| 8 | Prezența a fost înregistrată | ☐ | ☐ | ☐ | |
+| 9 | Materialele de instruire sunt disponibile | ☐ | ☐ | ☐ | |
+| 10 | Finalizarea instruirii a fost documentată | ☐ | ☐ | ☐ | |
+| 11 | Cunoștințele au fost evaluate | ☐ | ☐ | ☐ | |
+| 12 | Rezultatele evaluării sunt înregistrate | ☐ | ☐ | ☐ | |
+| 13 | Riscurile AI au fost explicate | ☐ | ☐ | ☐ | |
+| 14 | Responsabilitățile de Supraveghere Umană sunt înțelese | ☐ | ☐ | ☐ | |
+| 15 | Limitările AI au fost explicate | ☐ | ☐ | ☐ | |
+| 16 | Responsabilitățile de Guvernanță AI sunt înțelese | ☐ | ☐ | ☐ | |
+| 17 | Registrul de Alfabetizare AI este actualizat | ☐ | ☐ | ☐ | |
+| 18 | Dovezile justificative au fost colectate | ☐ | ☐ | ☐ | |
+| 19 | Revizuirea anuală a fost programată | ☐ | ☐ | ☐ | |
+| 20 | Programul de Alfabetizare AI este pregătit pentru inspecție | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,37 +71,47 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act), Article 4
-- DOD-003 AI Literacy Policy
-- PROC-003 AI Literacy Procedure
-- WI-003 AI Literacy Work Instruction
-- REG-003 AI Literacy Register
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 4
+- DOD-003 Politica de Alfabetizare AI
+- PROC-003 Procedura de Alfabetizare AI
+- WI-003 Instrucțiune de Lucru — Alfabetizare AI
+- REG-003 Registrul de Alfabetizare AI
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

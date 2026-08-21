@@ -1,125 +1,127 @@
 # REG-003
 
-# AI Literacy Register
+# Registrul de Alfabetizare AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | REG-003 |
-| Title | AI Literacy Register |
+| ID Document | REG-003 |
+| Titlu | Registrul de Alfabetizare AI |
 | Repository | RRVI™ |
-| Module | 03 – AI Literacy |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Register |
+| Modul | 03 – Alfabetizare AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru Activ |
 
 ---
 
-# Purpose
+# Scop
 
-This register records all AI Literacy activities performed by {{COMPANY_NAME}}.
+Acest registru înregistrează toate activitățile de Alfabetizare AI realizate de {{COMPANY_NAME}}.
 
-It provides objective evidence that personnel using Artificial Intelligence systems possess an appropriate level of AI literacy in accordance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
+Oferă dovada obiectivă că personalul care folosește sisteme de Inteligență Artificială are un nivel adecvat de alfabetizare AI, conform Articolului 4 din Regulamentul (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# AI Literacy Register
+# Registrul de Alfabetizare AI
 
-| Record ID | Name | Position | AI Systems Used | Training | Completion Date | Result | Next Review | Status |
+| ID Înregistrare | Nume | Funcție | Sisteme AI Folosite | Instruire | Data Finalizării | Rezultat | Revizuire Următoare | Status |
 |-----------|------|----------|-----------------|----------|-----------------|--------|-------------|--------|
-| AL-001 | {{RESPONSIBLE_PERSON}} | Managing Director | ChatGPT, Gemini, Claude, DeepSeek, Perplexity | EU AI Act AI Literacy | 2026-07-02 | Passed | 2027-07-02 | Active |
+| AL-001 | | | | | | | | |
+
+*Rândul se completează de fiecare firmă cu datele reale ale participantului la instruire.*
 
 ---
 
-# Required Competencies
+# Competențe Necesare
 
-Personnel shall demonstrate understanding of:
+Personalul trebuie să demonstreze înțelegerea:
 
-- Artificial Intelligence fundamentals;
-- capabilities of AI systems;
-- limitations of AI systems;
-- AI risks;
-- Human Oversight;
-- AI governance principles;
-- AI security;
-- data protection;
-- responsible AI use;
-- applicable EU AI Act obligations.
-
----
-
-# Approved Training Methods
-
-The following methods may be used:
-
-- instructor-led training;
-- online courses;
-- workshops;
-- demonstrations;
-- guided practical exercises;
-- self-study supported by company documentation.
+- noțiunilor fundamentale de Inteligență Artificială;
+- capabilităților sistemelor AI;
+- limitărilor sistemelor AI;
+- riscurilor AI;
+- Supravegherii Umane;
+- principiilor de guvernanță AI;
+- securității AI;
+- protecției datelor;
+- utilizării responsabile a AI;
+- obligațiilor aplicabile din EU AI Act.
 
 ---
 
-# Assessment Methods
+# Metode de Instruire Aprobate
 
-Competency may be demonstrated through:
+Se pot folosi următoarele metode:
 
-- written assessment;
-- practical exercise;
-- interview;
-- management review;
-- completion certificate;
-- documented observation.
-
----
-
-# Review Requirements
-
-The register shall be reviewed:
-
-- annually;
-- after introduction of significant AI systems;
-- after major regulatory changes;
-- after significant AI-related incidents.
+- instruire cu formator;
+- cursuri online;
+- workshop-uri;
+- demonstrații;
+- exerciții practice ghidate;
+- studiu individual sprijinit de documentația firmei.
 
 ---
 
-# Register Owner
+# Metode de Evaluare
 
-| Field | Value |
+Competența poate fi demonstrată prin:
+
+- evaluare scrisă;
+- exercițiu practic;
+- interviu;
+- revizuire de conducere;
+- certificat de finalizare;
+- observație documentată.
+
+---
+
+# Cerințe de Revizuire
+
+Registrul se revizuiește:
+
+- anual;
+- după introducerea unor sisteme AI semnificative;
+- după modificări majore de reglementare;
+- după incidente semnificative legate de AI.
+
+---
+
+# Responsabilul Registrului
+
+| Câmp | Valoare |
 |--------|-------|
-| Register Owner | AI Governance Owner |
-| Custodian | {{RESPONSIBLE_PERSON}} |
-| Company | {{COMPANY_NAME}} |
-| Review Frequency | Annual |
+| Responsabil Registru | Responsabilul de Guvernanță AI |
+| Custode | {{RESPONSIBLE_PERSON}} |
+| Firma | {{COMPANY_NAME}} |
+| Frecvența Revizuirii | Anual |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act), Article 4
-- DOD-003 AI Literacy Policy
-- PROC-003 AI Literacy Procedure
-- WI-003 AI Literacy Work Instruction
-- EVID-003 AI Literacy Evidence
-- DEC-003 AI Literacy Declaration
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 4
+- DOD-003 Politica de Alfabetizare AI
+- PROC-003 Procedura de Alfabetizare AI
+- WI-003 Instrucțiune de Lucru — Alfabetizare AI
+- EVID-003 Dovezile de Alfabetizare AI
+- DEC-003 Declarația de Alfabetizare AI
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved Register
+Registru Aprobat

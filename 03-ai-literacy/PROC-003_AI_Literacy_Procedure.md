@@ -1,184 +1,184 @@
 # PROC-003
 
-# AI Literacy Procedure
+# Procedura de Alfabetizare AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | PROC-003 |
-| Title | AI Literacy Procedure |
+| ID Document | PROC-003 |
+| Titlu | Procedura de Alfabetizare AI |
 | Repository | RRVI™ |
-| Module | 03 – AI Literacy |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 03 – Alfabetizare AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This procedure defines the process used by {{COMPANY_NAME}} to establish, maintain, evaluate and continuously improve AI literacy among personnel using Artificial Intelligence systems.
+Această procedură definește procesul folosit de {{COMPANY_NAME}} pentru a stabili, menține, evalua și îmbunătăți continuu alfabetizarea AI în rândul personalului care folosește sisteme de Inteligență Artificială.
 
-The procedure supports compliance with Article 4 of Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# 2. Scope
-
-This procedure applies to:
-
-- all employees;
-- company management;
-- contractors;
-- consultants;
-- interns;
-- temporary personnel;
-- any individual using AI systems on behalf of {{COMPANY_NAME}}.
+Procedura sprijină conformitatea cu Articolul 4 din Regulamentul (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 3. Responsibilities
+# 2. Domeniu de Aplicare
 
-## Managing Director
+Această procedură se aplică:
 
-- approves the AI Literacy Programme;
-- allocates required resources.
-
----
-
-## AI Governance Owner
-
-Responsible for:
-
-- coordinating AI literacy activities;
-- maintaining the AI Literacy Register;
-- monitoring training completion.
+- tuturor angajaților;
+- conducerii firmei;
+- contractorilor;
+- consultanților;
+- stagiarilor;
+- personalului temporar;
+- oricărei persoane care folosește sisteme AI în numele {{COMPANY_NAME}}.
 
 ---
 
-## Department Managers
+# 3. Responsabilități
 
-Responsible for:
+## Director General
 
-- identifying training needs;
-- ensuring personnel participation.
-
----
-
-## Personnel
-
-Responsible for:
-
-- attending assigned training;
-- applying acquired knowledge;
-- reporting additional learning needs.
+- aprobă Programul de Alfabetizare AI;
+- alocă resursele necesare.
 
 ---
 
-# 4. Procedure
+## Responsabilul de Guvernanță AI
 
-## Step 1 — Identify Personnel
+Responsabil pentru:
 
-Identify all personnel who use, supervise, develop or manage AI systems.
-
----
-
-## Step 2 — Assess AI Literacy Needs
-
-Determine the required AI literacy level based on:
-
-- job role;
-- AI systems used;
-- responsibilities;
-- associated risks.
+- coordonarea activităților de alfabetizare AI;
+- menținerea Registrului de Alfabetizare AI;
+- monitorizarea finalizării instruirii.
 
 ---
 
-## Step 3 — Deliver Training
+## Managerii de Departament
 
-Training may include:
+Responsabili pentru:
 
-- awareness sessions;
-- internal workshops;
-- online courses;
-- practical exercises;
-- guided demonstrations;
-- self-learning activities.
+- identificarea nevoilor de instruire;
+- asigurarea participării personalului.
 
 ---
 
-## Step 4 — Record Completion
+## Personal
 
-Record all completed activities in:
+Responsabil pentru:
+
+- participarea la instruirea alocată;
+- aplicarea cunoștințelor dobândite;
+- raportarea nevoilor suplimentare de învățare.
+
+---
+
+# 4. Procedura
+
+## Pasul 1 — Identificarea Personalului
+
+Se identifică tot personalul care folosește, supraveghează, dezvoltă sau gestionează sisteme AI.
+
+---
+
+## Pasul 2 — Evaluarea Nevoilor de Alfabetizare AI
+
+Se determină nivelul necesar de alfabetizare AI, pe baza:
+
+- rolului postului;
+- sistemelor AI folosite;
+- responsabilităților;
+- riscurilor asociate.
+
+---
+
+## Pasul 3 — Livrarea Instruirii
+
+Instruirea poate include:
+
+- sesiuni de conștientizare;
+- workshop-uri interne;
+- cursuri online;
+- exerciții practice;
+- demonstrații ghidate;
+- activități de autoinstruire.
+
+---
+
+## Pasul 4 — Înregistrarea Finalizării
+
+Se înregistrează toate activitățile finalizate în:
 
 REG-003_AI_Literacy_Register.md
 
-Record:
+Se înregistrează:
 
-- participant;
-- training title;
-- completion date;
-- trainer;
-- result.
-
----
-
-## Step 5 — Evaluate Competence
-
-Verify that participants understand:
-
-- AI fundamentals;
-- AI limitations;
-- AI risks;
-- human oversight;
-- applicable company policies;
-- regulatory obligations.
+- participantul;
+- titlul instruirii;
+- data finalizării;
+- instructorul;
+- rezultatul.
 
 ---
 
-## Step 6 — Review
+## Pasul 5 — Evaluarea Competenței
 
-Review AI literacy annually or whenever:
+Se verifică dacă participanții înțeleg:
 
-- significant AI systems are introduced;
-- regulatory requirements change;
-- new responsibilities are assigned.
-
----
-
-# 5. Records
-
-This procedure produces:
-
-- AI Literacy Register;
-- AI Literacy Evidence;
-- AI Literacy Declaration.
+- noțiunile fundamentale de AI;
+- limitările AI;
+- riscurile AI;
+- supravegherea umană;
+- politicile aplicabile ale firmei;
+- obligațiile de reglementare.
 
 ---
 
-# 6. References
+## Pasul 6 — Revizuire
 
-- Regulation (EU) 2024/1689 (EU AI Act), Article 4
-- DOD-003 AI Literacy Policy
-- REG-003 AI Literacy Register
-- EVID-003 AI Literacy Evidence
-- DEC-003 AI Literacy Declaration
+Alfabetizarea AI se revizuiește anual sau ori de câte ori:
+
+- sunt introduse sisteme AI semnificative;
+- se modifică cerințele de reglementare;
+- sunt alocate responsabilități noi.
 
 ---
 
-# 7. Approval
+# 5. Înregistrări
 
-Prepared by
+Această procedură produce:
+
+- Registrul de Alfabetizare AI;
+- Dovezile de Alfabetizare AI;
+- Declarația de Alfabetizare AI.
+
+---
+
+# 6. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 4
+- DOD-003 Politica de Alfabetizare AI
+- REG-003 Registrul de Alfabetizare AI
+- EVID-003 Dovezile de Alfabetizare AI
+- DEC-003 Declarația de Alfabetizare AI
+
+---
+
+# 7. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat
