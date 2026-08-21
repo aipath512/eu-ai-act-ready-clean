@@ -1,230 +1,230 @@
 # WI-006
 
-# Technical Documentation Work Instruction
+# Instrucțiune de Lucru — Documentație Tehnică
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-006 |
-| Title | Technical Documentation Work Instruction |
+| ID Document | WI-006 |
+| Titlu | Instrucțiune de Lucru — Documentație Tehnică |
 | Repository | RRVI™ |
-| Module | 06 – Technical Documentation |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 06 – Documentație Tehnică |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed guidance for preparing, maintaining and reviewing Technical Documentation for Artificial Intelligence systems used, developed or deployed by {{COMPANY_NAME}}.
+Această Instrucțiune de Lucru oferă îndrumări detaliate pentru pregătirea, menținerea și revizuirea Documentației Tehnice pentru sistemele de Inteligență Artificială utilizate, dezvoltate sau implementate de {{COMPANY_NAME}}.
 
-The objective is to ensure that Technical Documentation remains complete, accurate, consistent and inspection-ready throughout the AI system lifecycle.
-
----
-
-# 2. Preconditions
-
-Before preparing Technical Documentation, verify that:
-
-- the AI System exists in the AI System Inventory;
-- the intended purpose has been defined;
-- the system owner has been assigned;
-- Risk Classification has been completed;
-- High-Risk Assessment has been completed where applicable.
+Obiectivul este să asigure că Documentația Tehnică rămâne completă, exactă, consecventă și pregătită pentru inspecție pe tot parcursul ciclului de viață al sistemului AI.
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-Collect the following information:
+Înainte de a pregăti Documentația Tehnică, se verifică dacă:
 
-- AI System ID
-- AI System Name
-- Provider
-- Version
-- Intended Purpose
-- Business Process
-- System Architecture
-- Inputs
-- Outputs
-- Human Oversight
-- Risk Classification
-- High-Risk Assessment
-- Known Limitations
-- Security Controls
-- Version Number
-- Approval Date
+- Sistemul AI există în Inventarul Sistemelor AI;
+- scopul preconizat a fost definit;
+- responsabilul sistemului a fost desemnat;
+- Clasificarea Riscului a fost finalizată;
+- Evaluarea Risc Ridicat a fost finalizată, unde e cazul.
 
 ---
 
-# 4. Work Instructions
+# 3. Informații Necesare
 
-## Step 1
+Se colectează următoarele informații:
 
-Open:
+- ID Sistem AI
+- Nume Sistem AI
+- Furnizor
+- Versiune
+- Scop Preconizat
+- Proces de Business
+- Arhitectura Sistemului
+- Date de Intrare
+- Date de Ieșire
+- Supraveghere Umană
+- Clasificarea Riscului
+- Evaluarea Risc Ridicat
+- Limitările Cunoscute
+- Controalele de Securitate
+- Numărul Versiunii
+- Data Aprobării
+
+---
+
+# 4. Instrucțiuni de Lucru
+
+## Pasul 1
+
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
-Locate the AI system.
+Se localizează sistemul AI.
 
 ---
 
-## Step 2
+## Pasul 2
 
-Collect all available technical information.
+Se colectează toate informațiile tehnice disponibile.
 
-Verify consistency with:
+Se verifică consecvența cu:
 
-- AI Inventory;
-- Risk Classification;
-- High-Risk Assessment;
-- Human Oversight documentation.
-
----
-
-## Step 3
-
-Prepare Technical Documentation.
-
-Include:
-
-- identification;
-- purpose;
-- architecture;
-- operational workflow;
-- inputs;
-- outputs;
-- dependencies;
-- limitations;
-- assumptions;
-- human oversight.
+- Inventarul AI;
+- Clasificarea Riscului;
+- Evaluarea Risc Ridicat;
+- documentația Supravegherii Umane.
 
 ---
 
-## Step 4
+## Pasul 3
 
-Verify consistency.
+Se pregătește Documentația Tehnică.
 
-Ensure that:
+Se include:
 
-- identifiers match the Inventory;
-- intended purpose matches operational use;
-- documentation reflects the current implementation.
+- identificare;
+- scop;
+- arhitectură;
+- fluxul operațional;
+- date de intrare;
+- date de ieșire;
+- dependențe;
+- limitări;
+- ipoteze;
+- supraveghere umană.
 
 ---
 
-## Step 5
+## Pasul 4
 
-Update Register.
+Se verifică consecvența.
 
-Open:
+Se asigură că:
+
+- identificatorii corespund Inventarului;
+- scopul preconizat corespunde utilizării operaționale;
+- documentația reflectă implementarea curentă.
+
+---
+
+## Pasul 5
+
+Se actualizează Registrul.
+
+Se deschide:
 
 REG-006_Technical_Documentation_Register.md
 
-Record:
+Se înregistrează:
 
-- document title;
-- version;
-- owner;
-- approval date;
-- next review date.
+- titlul documentului;
+- versiunea;
+- responsabilul;
+- data aprobării;
+- data următoarei revizuiri.
 
 ---
 
-## Step 6
+## Pasul 6
 
-Collect supporting evidence.
+Se colectează dovezile justificative.
 
-Store evidence in:
+Dovezile se stochează în:
 
 EVID-006_Technical_Documentation_Evidence.md
 
-Examples include:
+Exemple:
 
-- architecture diagrams;
-- design documents;
-- screenshots;
-- configuration files;
-- deployment documentation;
-- version history.
-
----
-
-## Step 7
-
-Review.
-
-Technical Documentation shall be reviewed whenever:
-
-- functionality changes;
-- architecture changes;
-- provider changes;
-- regulatory requirements change;
-- production deployment changes.
+- diagrame de arhitectură;
+- documente de proiectare;
+- capturi de ecran;
+- fișiere de configurare;
+- documentație de implementare;
+- istoricul versiunilor.
 
 ---
 
-# 5. Quality Checks
+## Pasul 7
 
-Verify that:
+Revizuire.
 
-✓ AI System exists.
+Documentația Tehnică se revizuiește ori de câte ori:
 
-✓ Technical Documentation is complete.
-
-✓ Architecture is documented.
-
-✓ Inputs are documented.
-
-✓ Outputs are documented.
-
-✓ Human Oversight is documented.
-
-✓ Risk Classification is referenced.
-
-✓ High-Risk Assessment is referenced.
-
-✓ Version is recorded.
-
-✓ Review Date is assigned.
+- se schimbă funcționalitatea;
+- se schimbă arhitectura;
+- se schimbă furnizorul;
+- se modifică cerințele de reglementare;
+- se schimbă implementarea în producție.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-006 Technical Documentation Register
-- EVID-006 Technical Documentation Evidence
-- DEC-006 Technical Documentation Declaration
+✓ Sistemul AI există.
+
+✓ Documentația Tehnică este completă.
+
+✓ Arhitectura este documentată.
+
+✓ Datele de Intrare sunt documentate.
+
+✓ Datele de Ieșire sunt documentate.
+
+✓ Supravegherea Umană este documentată.
+
+✓ Clasificarea Riscului este referențiată.
+
+✓ Evaluarea Risc Ridicat este referențiată.
+
+✓ Versiunea este înregistrată.
+
+✓ Data de Revizuire este alocată.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- DOD-006 Technical Documentation Policy
-- PROC-006 Technical Documentation Procedure
-- REG-001 AI System Inventory Register
-- REG-002 Risk Classification Register
-- REG-005 High-Risk Assessment Register
-- Regulation (EU) 2024/1689 (EU AI Act)
+Această instrucțiune actualizează:
+
+- REG-006 Registrul de Documentație Tehnică
+- EVID-006 Dovezile de Documentație Tehnică
+- DEC-006 Declarația de Documentație Tehnică
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- DOD-006 Politica de Documentație Tehnică
+- PROC-006 Procedura de Documentație Tehnică
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-002 Registrul de Clasificare a Riscului
+- REG-005 Registrul de Evaluare Risc Ridicat
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

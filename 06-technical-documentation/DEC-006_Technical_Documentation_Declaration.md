@@ -1,118 +1,118 @@
 # DEC-006
 
-# Technical Documentation Declaration
+# Declarație de Documentație Tehnică
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DEC-006 |
-| Title | Technical Documentation Declaration |
+| ID Document | DEC-006 |
+| Titlu | Declarație de Documentație Tehnică |
 | Repository | RRVI™ |
-| Module | 06 – Technical Documentation |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 06 – Documentație Tehnică |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This declaration confirms that {{COMPANY_NAME}} has established, implemented and maintains Technical Documentation for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Această declarație confirmă că {{COMPANY_NAME}} a stabilit, implementat și menține Documentație Tehnică pentru sistemele de Inteligență Artificială, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-The declaration demonstrates management commitment to maintaining complete, accurate, traceable and inspection-ready technical documentation throughout the lifecycle of AI systems.
-
----
-
-# 2. Declaration
-
-{{COMPANY_NAME}} declares that:
-
-- Technical Documentation has been established for all identified AI systems;
-- documentation is maintained under version control;
-- documentation reflects the current operational implementation;
-- documentation is reviewed periodically;
-- documentation is supported by objective evidence;
-- documentation is available for internal audits and regulatory inspections.
+Declarația demonstrează angajamentul conducerii de a menține documentație tehnică completă, exactă, trasabilă și pregătită pentru inspecție, pe tot parcursul ciclului de viață al sistemelor AI.
 
 ---
 
-# 3. Management Commitment
+# 2. Declarație
 
-Management commits to:
+{{COMPANY_NAME}} declară că:
 
-- maintain complete Technical Documentation;
-- allocate adequate resources for documentation maintenance;
-- ensure documentation is reviewed after significant changes;
-- preserve documentation integrity and traceability;
-- maintain supporting evidence;
-- continuously improve documentation quality.
-
----
-
-# 4. Scope
-
-This declaration applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- proof-of-concept AI systems;
-- production AI systems;
-- AI services integrated into products;
-- future AI developments.
+- Documentația Tehnică a fost stabilită pentru toate sistemele AI identificate;
+- documentația este menținută sub control de versiune;
+- documentația reflectă implementarea operațională curentă;
+- documentația este revizuită periodic;
+- documentația este susținută de dovezi obiective;
+- documentația este disponibilă pentru audituri interne și inspecții de reglementare.
 
 ---
 
-# 5. Review Frequency
+# 3. Angajamentul Conducerii
 
-Technical Documentation shall be reviewed:
+Conducerea se angajează să:
 
-- annually;
-- before production deployment;
-- after significant functional or architectural changes;
-- after regulatory updates;
-- before regulatory inspections.
-
----
-
-# 6. Related Documents
-
-- DOD-006 Technical Documentation Policy
-- PROC-006 Technical Documentation Procedure
-- WI-006 Technical Documentation Work Instruction
-- CHK-006 Technical Documentation Checklist
-- REG-006 Technical Documentation Register
-- EVID-006 Technical Documentation Evidence
-- REG-001 AI System Inventory Register
-- REG-002 Risk Classification Register
-- REG-005 High-Risk AI System Assessment Register
+- mențină Documentație Tehnică completă;
+- aloce resurse adecvate pentru menținerea documentației;
+- asigure revizuirea documentației după modificări semnificative;
+- păstreze integritatea și trasabilitatea documentației;
+- mențină dovezile justificative;
+- îmbunătățească continuu calitatea documentației.
 
 ---
 
-# 7. Declaration
+# 4. Domeniu de Aplicare
 
-I declare that, to the best of my knowledge, the Technical Documentation maintained by {{COMPANY_NAME}} accurately describes the Artificial Intelligence systems currently identified in the AI System Inventory.
+Această declarație se aplică:
 
-The organization commits to maintaining this documentation throughout the AI system lifecycle and updating it whenever technical, operational or regulatory changes occur.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- serviciilor AI integrate în produse;
+- dezvoltărilor AI viitoare.
 
 ---
 
-# 8. Approval
+# 5. Frecvența Revizuirii
 
-| Field | Value |
+Documentația Tehnică se revizuiește:
+
+- anual;
+- înainte de implementarea în producție;
+- după modificări funcționale sau arhitecturale semnificative;
+- după actualizări de reglementare;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 6. Documente Conexe
+
+- DOD-006 Politica de Documentație Tehnică
+- PROC-006 Procedura de Documentație Tehnică
+- WI-006 Instrucțiune de Lucru — Documentație Tehnică
+- CHK-006 Checklist de Documentație Tehnică
+- REG-006 Registrul de Documentație Tehnică
+- EVID-006 Dovezile de Documentație Tehnică
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-002 Registrul de Clasificare a Riscului
+- REG-005 Registrul de Evaluare a Sistemelor AI cu Risc Ridicat
+
+---
+
+# 7. Declarație
+
+Declar că, după cunoștințele mele, Documentația Tehnică menținută de {{COMPANY_NAME}} descrie cu exactitate sistemele de Inteligență Artificială identificate curent în Inventarul Sistemelor AI.
+
+Organizația se angajează să mențină această documentație pe tot parcursul ciclului de viață al sistemelor AI și să o actualizeze ori de câte ori apar modificări tehnice, operaționale sau de reglementare.
+
+---
+
+# 8. Aprobare
+
+| Câmp | Valoare |
 |--------|-------|
-| Approved By | {{RESPONSIBLE_PERSON}} |
-| Position | Managing Director |
-| Company | {{COMPANY_NAME}} |
-| Approval Date | 2026-07-02 |
-| Status | Approved |
+| Aprobat de | {{RESPONSIBLE_PERSON}} |
+| Funcție | Director General |
+| Firma | {{COMPANY_NAME}} |
+| Data Aprobării | |
+| Status | Aprobat |
 
 ---
 
-# Document Control
+# Control Document
 
-| Version | Date | Description |
+| Versiune | Data | Descriere |
 |---------|------|-------------|
-| 1.0.0 | 2026-07-02 | Initial release |
+| 1.0.0 | | Versiune inițială |

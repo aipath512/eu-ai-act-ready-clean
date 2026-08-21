@@ -1,196 +1,196 @@
 # PROC-006
 
-# Technical Documentation Procedure
+# Procedura de Documentație Tehnică
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | PROC-006 |
-| Title | Technical Documentation Procedure |
+| ID Document | PROC-006 |
+| Titlu | Procedura de Documentație Tehnică |
 | Repository | RRVI™ |
-| Module | 06 – Technical Documentation |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 06 – Documentație Tehnică |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This procedure defines the process for creating, reviewing, approving, maintaining and updating Technical Documentation for Artificial Intelligence systems used, developed or deployed by {{COMPANY_NAME}}.
+Această procedură definește procesul de creare, revizuire, aprobare, menținere și actualizare a Documentației Tehnice pentru sistemele de Inteligență Artificială utilizate, dezvoltate sau implementate de {{COMPANY_NAME}}.
 
-The objective is to ensure that Technical Documentation remains complete, accurate, traceable and available for regulatory inspections throughout the AI system lifecycle.
-
----
-
-# 2. Scope
-
-This procedure applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- AI systems under evaluation;
-- AI systems integrated into products or services;
-- proof-of-concept projects;
-- production AI systems.
+Obiectivul este să asigure că Documentația Tehnică rămâne completă, exactă, trasabilă și disponibilă pentru inspecțiile de reglementare pe tot parcursul ciclului de viață al sistemului AI.
 
 ---
 
-# 3. Responsibilities
+# 2. Domeniu de Aplicare
 
-## Managing Director
+Această procedură se aplică:
 
-- approves major documentation changes when required.
-
----
-
-## AI Governance Owner
-
-Responsible for:
-
-- coordinating Technical Documentation;
-- maintaining the Technical Documentation Register;
-- ensuring periodic reviews.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI în evaluare;
+- sistemelor AI integrate în produse sau servicii;
+- proiectelor de tip proof-of-concept;
+- sistemelor AI de producție.
 
 ---
 
-## AI System Owner
+# 3. Responsabilități
 
-Responsible for:
+## Director General
 
-- preparing Technical Documentation;
-- maintaining documentation accuracy;
-- reporting significant changes.
+- aprobă modificările majore de documentație, când e necesar.
 
 ---
 
-## Compliance Owner
+## Responsabilul de Guvernanță AI
 
-Responsible for:
+Responsabil pentru:
 
-- verifying documentation completeness;
-- monitoring regulatory requirements;
-- supporting audits and inspections.
+- coordonarea Documentației Tehnice;
+- menținerea Registrului de Documentație Tehnică;
+- asigurarea revizuirilor periodice.
 
 ---
 
-# 4. Procedure
+## Responsabilul de Sistem AI
 
-## Step 1 — Identify AI System
+Responsabil pentru:
 
-Locate the AI system in:
+- pregătirea Documentației Tehnice;
+- menținerea exactității documentației;
+- raportarea modificărilor semnificative.
+
+---
+
+## Responsabilul de Conformitate
+
+Responsabil pentru:
+
+- verificarea completitudinii documentației;
+- monitorizarea cerințelor de reglementare;
+- sprijinirea auditurilor și inspecțiilor.
+
+---
+
+# 4. Procedura
+
+## Pasul 1 — Identificarea Sistemului AI
+
+Se localizează sistemul AI în:
 
 REG-001_AI_System_Inventory_Register.md
 
 ---
 
-## Step 2 — Create Documentation
+## Pasul 2 — Crearea Documentației
 
-Prepare documentation describing:
+Se pregătește documentația care descrie:
 
-- AI System Identification;
-- Intended Purpose;
-- Architecture;
-- Functional Description;
-- Inputs;
-- Outputs;
-- Human Oversight;
-- Risk Classification;
-- High-Risk Assessment;
-- Known Limitations.
-
----
-
-## Step 3 — Review Documentation
-
-Verify that documentation is:
-
-- complete;
-- accurate;
-- technically correct;
-- consistent with the AI System Inventory.
+- Identificarea Sistemului AI;
+- Scopul Preconizat;
+- Arhitectura;
+- Descrierea Funcțională;
+- Datele de Intrare;
+- Datele de Ieșire;
+- Supravegherea Umană;
+- Clasificarea Riscului;
+- Evaluarea Risc Ridicat;
+- Limitările Cunoscute.
 
 ---
 
-## Step 4 — Record Documentation
+## Pasul 3 — Revizuirea Documentației
 
-Update:
+Se verifică dacă documentația este:
+
+- completă;
+- exactă;
+- corectă tehnic;
+- consecventă cu Inventarul Sistemelor AI.
+
+---
+
+## Pasul 4 — Înregistrarea Documentației
+
+Se actualizează:
 
 REG-006_Technical_Documentation_Register.md
 
-Record:
+Se înregistrează:
 
-- document reference;
-- version;
-- owner;
-- approval date;
-- review date.
-
----
-
-## Step 5 — Approval
-
-The completed documentation shall be reviewed and approved by the AI Governance Owner.
+- referința documentului;
+- versiunea;
+- responsabilul;
+- data aprobării;
+- data revizuirii.
 
 ---
 
-## Step 6 — Maintenance
+## Pasul 5 — Aprobare
 
-Update documentation whenever:
-
-- functionality changes;
-- architecture changes;
-- provider changes;
-- intended purpose changes;
-- regulatory requirements change.
+Documentația completată este revizuită și aprobată de Responsabilul de Guvernanță AI.
 
 ---
 
-## Step 7 — Periodic Review
+## Pasul 6 — Mentenanță
 
-Review documentation:
+Documentația se actualizează ori de câte ori:
 
-- annually;
-- before regulatory inspections;
-- before production deployment;
-- after significant system modifications.
-
----
-
-# 5. Records
-
-This procedure produces:
-
-- Technical Documentation Register;
-- Technical Documentation Evidence;
-- Technical Documentation Declaration.
+- se schimbă funcționalitatea;
+- se schimbă arhitectura;
+- se schimbă furnizorul;
+- se schimbă scopul preconizat;
+- se modifică cerințele de reglementare.
 
 ---
 
-# 6. References
+## Pasul 7 — Revizuire Periodică
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-006 Technical Documentation Policy
-- REG-001 AI System Inventory Register
-- REG-006 Technical Documentation Register
-- EVID-006 Technical Documentation Evidence
-- DEC-006 Technical Documentation Declaration
+Documentația se revizuiește:
+
+- anual;
+- înainte de inspecțiile de reglementare;
+- înainte de implementarea în producție;
+- după modificări semnificative ale sistemului.
 
 ---
 
-# 7. Approval
+# 5. Înregistrări
 
-Prepared by
+Această procedură produce:
+
+- Registrul de Documentație Tehnică;
+- Dovezile de Documentație Tehnică;
+- Declarația de Documentație Tehnică.
+
+---
+
+# 6. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-006 Politica de Documentație Tehnică
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-006 Registrul de Documentație Tehnică
+- EVID-006 Dovezile de Documentație Tehnică
+- DEC-006 Declarația de Documentație Tehnică
+
+---
+
+# 7. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

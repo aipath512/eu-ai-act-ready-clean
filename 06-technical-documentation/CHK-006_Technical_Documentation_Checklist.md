@@ -1,77 +1,67 @@
 # CHK-006
 
-# Technical Documentation Checklist
+# Checklist de Documentație Tehnică
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-006 |
-| Title | Technical Documentation Checklist |
+| ID Document | CHK-006 |
+| Titlu | Checklist de Documentație Tehnică |
 | Repository | RRVI™ |
-| Module | 06 – Technical Documentation |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 06 – Documentație Tehnică |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that the Technical Documentation for every Artificial Intelligence system is complete, accurate, traceable and compliant with Regulation (EU) 2024/1689 (EU AI Act).
+Acest checklist se utilizează pentru a verifica dacă Documentația Tehnică pentru fiecare sistem de Inteligență Artificială este completă, exactă, trasabilă și conformă cu Regulamentul (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# Technical Documentation Verification Checklist
+# Checklist de Verificare a Documentației Tehnice
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI System exists in REG-001 AI System Inventory Register | ☐ | ☐ | ☐ | |
-| 2 | AI System ID is correct | ☐ | ☐ | ☐ | |
-| 3 | AI System Name is documented | ☐ | ☐ | ☐ | |
-| 4 | Provider is identified | ☐ | ☐ | ☐ | |
-| 5 | Intended Purpose is documented | ☐ | ☐ | ☐ | |
-| 6 | Functional Description is complete | ☐ | ☐ | ☐ | |
-| 7 | System Architecture is documented | ☐ | ☐ | ☐ | |
-| 8 | Inputs are documented | ☐ | ☐ | ☐ | |
-| 9 | Outputs are documented | ☐ | ☐ | ☐ | |
-| 10 | Human Oversight is documented | ☐ | ☐ | ☐ | |
-| 11 | Risk Classification is referenced | ☐ | ☐ | ☐ | |
-| 12 | High-Risk Assessment is referenced | ☐ | ☐ | ☐ | |
-| 13 | Known Limitations are documented | ☐ | ☐ | ☐ | |
-| 14 | Security considerations are documented | ☐ | ☐ | ☐ | |
-| 15 | Supporting evidence exists | ☐ | ☐ | ☐ | |
-| 16 | Version number is recorded | ☐ | ☐ | ☐ | |
-| 17 | Approval information is recorded | ☐ | ☐ | ☐ | |
-| 18 | Review date is assigned | ☐ | ☐ | ☐ | |
-| 19 | Documentation is consistent with current implementation | ☐ | ☐ | ☐ | |
-| 20 | Documentation is ready for audit or regulatory inspection | ☐ | ☐ | ☐ | |
+| 1 | Sistemul AI există în REG-001 Registrul de Inventar al Sistemelor AI | ☐ | ☐ | ☐ | |
+| 2 | ID-ul Sistemului AI este corect | ☐ | ☐ | ☐ | |
+| 3 | Numele Sistemului AI este documentat | ☐ | ☐ | ☐ | |
+| 4 | Furnizorul este identificat | ☐ | ☐ | ☐ | |
+| 5 | Scopul Preconizat este documentat | ☐ | ☐ | ☐ | |
+| 6 | Descrierea Funcțională este completă | ☐ | ☐ | ☐ | |
+| 7 | Arhitectura Sistemului este documentată | ☐ | ☐ | ☐ | |
+| 8 | Datele de intrare sunt documentate | ☐ | ☐ | ☐ | |
+| 9 | Datele de ieșire sunt documentate | ☐ | ☐ | ☐ | |
+| 10 | Supravegherea Umană este documentată | ☐ | ☐ | ☐ | |
+| 11 | Clasificarea Riscului este referențiată | ☐ | ☐ | ☐ | |
+| 12 | Evaluarea Risc Ridicat este referențiată | ☐ | ☐ | ☐ | |
+| 13 | Limitările cunoscute sunt documentate | ☐ | ☐ | ☐ | |
+| 14 | Considerentele de securitate sunt documentate | ☐ | ☐ | ☐ | |
+| 15 | Există dovezi justificative | ☐ | ☐ | ☐ | |
+| 16 | Numărul versiunii este înregistrat | ☐ | ☐ | ☐ | |
+| 17 | Informațiile de aprobare sunt înregistrate | ☐ | ☐ | ☐ | |
+| 18 | Data de revizuire este alocată | ☐ | ☐ | ☐ | |
+| 19 | Documentația este consecventă cu implementarea curentă | ☐ | ☐ | ☐ | |
+| 20 | Documentația este pregătită pentru audit sau inspecție de reglementare | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,37 +71,47 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-006 Technical Documentation Policy
-- PROC-006 Technical Documentation Procedure
-- WI-006 Technical Documentation Work Instruction
-- REG-006 Technical Documentation Register
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-006 Politica de Documentație Tehnică
+- PROC-006 Procedura de Documentație Tehnică
+- WI-006 Instrucțiune de Lucru — Documentație Tehnică
+- REG-006 Registrul de Documentație Tehnică
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

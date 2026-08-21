@@ -1,122 +1,118 @@
 # REG-006
 
-# Technical Documentation Register
+# Registrul de Documentație Tehnică
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | REG-006 |
-| Title | Technical Documentation Register |
+| ID Document | REG-006 |
+| Titlu | Registrul de Documentație Tehnică |
 | Repository | RRVI™ |
-| Module | 06 – Technical Documentation |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Register |
+| Modul | 06 – Documentație Tehnică |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru Activ |
 
 ---
 
-# Purpose
+# Scop
 
-This register records all Technical Documentation maintained for Artificial Intelligence systems used, developed, deployed or integrated by {{COMPANY_NAME}}.
+Acest registru înregistrează toată Documentația Tehnică menținută pentru sistemele de Inteligență Artificială utilizate, dezvoltate, implementate sau integrate de {{COMPANY_NAME}}.
 
-The register provides a complete inventory of Technical Documentation and demonstrates compliance with Regulation (EU) 2024/1689 (EU AI Act).
+Registrul oferă un inventar complet al Documentației Tehnice și demonstrează conformitatea cu Regulamentul (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# Technical Documentation Register
+# Registrul de Documentație Tehnică
 
-| AI ID | AI System | Technical Documentation | Current Version | Owner | Last Review | Status |
+| ID AI | Sistem AI | Documentație Tehnică | Versiune Curentă | Responsabil | Ultima Revizuire | Status |
 |-------|-----------|-------------------------|-----------------|-------|-------------|--------|
-| AI-001 | ChatGPT | Technical Description | 1.0.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Approved |
-| AI-002 | Gemini | Technical Description | 1.0.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Approved |
-| AI-003 | Claude | Technical Description | 1.0.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Approved |
-| AI-004 | DeepSeek | Technical Description | 1.0.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Approved |
-| AI-005 | Perplexity | Technical Description | 1.0.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Approved |
-| AI-006 | Cloudflare Workers AI | Technical Description | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Planned |
-| AI-007 | Cloudflare Vectorize | Technical Description | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | POC |
-| AI-008 | GitHub Copilot | Technical Description | 1.0.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Optional |
-| AI-009 | EU-112™ AI Governance Agent | Technical Specification | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Design |
-| AI-010 | Economic Twins™ Engine | Technical Specification | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Design |
-| AI-011 | Business Discovery Engine™ | Technical Specification | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Design |
-| AI-012 | Business Change Intelligence™ | Technical Specification | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Design |
-| AI-013 | AI Market Intelligence Agent™ | Technical Specification | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Design |
-| AI-014 | EU AI Act Intelligence Agent™ | Technical Specification | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Design |
-| AI-015 | Remote Inspection Agent™ | Technical Specification | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Concept |
-| AI-016 | Compliance Documentation Generator™ | Technical Specification | 0.1.0 | {{RESPONSIBLE_PERSON}} | 2026-07-02 | Concept |
+| AI-001 | | | | | | |
+| AI-002 | | | | | | |
+| AI-003 | | | | | | |
+| AI-004 | | | | | | |
+| AI-005 | | | | | | |
+| AI-006 | | | | | | |
+| AI-007 | | | | | | |
+| AI-008 | | | | | | |
+| AI-009 | | | | | | |
+| AI-010 | | | | | | |
+
+*Rândurile se completează de fiecare firmă cu documentația proprie, corespunzătoare sistemelor din REG-001.*
 
 ---
 
-# Documentation Categories
+# Categorii de Documentație
 
-Each Technical Documentation package should include, where applicable:
+Fiecare pachet de Documentație Tehnică ar trebui să includă, unde e cazul:
 
-- AI System Identification
-- Intended Purpose
-- Functional Description
-- System Architecture
-- Inputs
-- Outputs
-- Human Oversight
-- Risk Classification
-- High-Risk Assessment
-- Known Limitations
-- Security Controls
-- Version History
-- Change Log
-
----
-
-# Review Requirements
-
-Technical Documentation shall be reviewed:
-
-- annually;
-- before production deployment;
-- after significant system modifications;
-- after provider changes;
-- after regulatory updates;
-- before regulatory inspections.
+- Identificarea Sistemului AI
+- Scopul Preconizat
+- Descrierea Funcțională
+- Arhitectura Sistemului
+- Datele de Intrare
+- Datele de Ieșire
+- Supravegherea Umană
+- Clasificarea Riscului
+- Evaluarea Risc Ridicat
+- Limitările Cunoscute
+- Controalele de Securitate
+- Istoricul Versiunilor
+- Jurnalul de Modificări
 
 ---
 
-# Register Owner
+# Cerințe de Revizuire
 
-| Field | Value |
+Documentația Tehnică se revizuiește:
+
+- anual;
+- înainte de implementarea în producție;
+- după modificări semnificative ale sistemului;
+- după schimbarea furnizorului;
+- după actualizări de reglementare;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# Responsabilul Registrului
+
+| Câmp | Valoare |
 |--------|-------|
-| Register Owner | AI Governance Owner |
-| Custodian | {{RESPONSIBLE_PERSON}} |
-| Company | {{COMPANY_NAME}} |
-| Review Frequency | Annual or upon significant change |
+| Responsabil Registru | Responsabilul de Guvernanță AI |
+| Custode | {{RESPONSIBLE_PERSON}} |
+| Firma | {{COMPANY_NAME}} |
+| Frecvența Revizuirii | Anual sau la modificare semnificativă |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-006 Technical Documentation Policy
-- PROC-006 Technical Documentation Procedure
-- WI-006 Technical Documentation Work Instruction
-- REG-001 AI System Inventory Register
-- REG-002 Risk Classification Register
-- REG-005 High-Risk Assessment Register
-- EVID-006 Technical Documentation Evidence
-- DEC-006 Technical Documentation Declaration
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-006 Politica de Documentație Tehnică
+- PROC-006 Procedura de Documentație Tehnică
+- WI-006 Instrucțiune de Lucru — Documentație Tehnică
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-002 Registrul de Clasificare a Riscului
+- REG-005 Registrul de Evaluare Risc Ridicat
+- EVID-006 Dovezile de Documentație Tehnică
+- DEC-006 Declarația de Documentație Tehnică
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved Register
+Registru Aprobat
