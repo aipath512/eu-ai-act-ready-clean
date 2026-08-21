@@ -1,131 +1,127 @@
 # EVID-007
 
-# Human Oversight Evidence
+# Dovezi de Supraveghere Umană
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | EVID-007 |
-| Title | Human Oversight Evidence |
+| ID Document | EVID-007 |
+| Titlu | Dovezi de Supraveghere Umană |
 | Repository | RRVI™ |
-| Module | 07 – Human Oversight |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Evidence Register |
+| Modul | 07 – Supraveghere Umană |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru de Dovezi Activ |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This document records the objective evidence supporting the Human Oversight measures implemented for Artificial Intelligence systems used by {{COMPANY_NAME}}.
+Acest document înregistrează dovezile obiective care susțin măsurile de Supraveghere Umană implementate pentru sistemele de Inteligență Artificială folosite de {{COMPANY_NAME}}.
 
-The evidence demonstrates that Human Oversight is effectively implemented, documented and maintained in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Dovezile demonstrează că Supravegherea Umană este implementată efectiv, documentată și menținută conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 2. Evidence Principles
+# 2. Principii ale Dovezilor
 
-Evidence shall be:
+Dovezile trebuie să fie:
 
-- objective;
-- verifiable;
-- traceable;
+- obiective;
+- verificabile;
+- trasabile;
 - complete;
-- version controlled;
-- retained according to the company's document retention policy.
+- controlate ca versiune;
+- păstrate conform politicii de retenție a documentelor firmei.
 
 ---
 
-# 3. Human Oversight Evidence Register
+# 3. Registrul de Dovezi de Supraveghere Umană
 
-| Evidence ID | AI ID | Evidence Description | Evidence Location | Status |
+| ID Dovadă | ID AI | Descrierea Dovezii | Locația Dovezii | Status |
 |--------------|-------|----------------------|-------------------|--------|
-| HO-001 | AI-001 | Human review procedure | GitHub Repository | Active |
-| HO-002 | AI-002 | Human review procedure | GitHub Repository | Active |
-| HO-003 | AI-003 | Human review procedure | GitHub Repository | Active |
-| HO-004 | AI-004 | Human review procedure | GitHub Repository | Active |
-| HO-005 | AI-005 | Human review procedure | GitHub Repository | Active |
-| HO-006 | AI-006 | Oversight design specification | GitHub Repository | Planned |
-| HO-007 | AI-007 | Oversight architecture | GitHub Repository | POC |
-| HO-008 | AI-008 | Code review process | GitHub Repository | Active |
-| HO-009 | AI-009 | Human Oversight design | GitHub Repository | Draft |
-| HO-010 | AI-010 | Human Oversight design | GitHub Repository | Draft |
-| HO-011 | AI-011 | Human Oversight design | GitHub Repository | Draft |
-| HO-012 | AI-012 | Human Oversight design | GitHub Repository | Draft |
-| HO-013 | AI-013 | Human Oversight design | GitHub Repository | Draft |
-| HO-014 | AI-014 | Human Oversight design | GitHub Repository | Draft |
-| HO-015 | AI-015 | Human Oversight design | GitHub Repository | Draft |
-| HO-016 | AI-016 | Human Oversight design | GitHub Repository | Draft |
+| HO-001 | AI-001 | | | |
+| HO-002 | AI-002 | | | |
+| HO-003 | AI-003 | | | |
+| HO-004 | AI-004 | | | |
+| HO-005 | AI-005 | | | |
+| HO-006 | AI-006 | | | |
+| HO-007 | AI-007 | | | |
+| HO-008 | AI-008 | | | |
+| HO-009 | AI-009 | | | |
+| HO-010 | AI-010 | | | |
+
+*Rândurile se completează de fiecare firmă cu dovezile proprii, corespunzătoare sistemelor din REG-001.*
 
 ---
 
-# 4. Acceptable Evidence
+# 4. Dovezi Acceptabile
 
-Supporting evidence may include:
+Dovezile justificative pot include:
 
-- review records;
-- approval records;
-- decision logs;
-- meeting minutes;
-- operator instructions;
-- screenshots;
-- audit reports;
-- incident reports;
-- training records;
-- architecture documentation;
-- version history.
-
----
-
-# 5. Evidence Storage
-
-Evidence may be maintained in:
-
-- GitHub Repository;
-- Internal Documentation Repository;
-- AI Governance Documentation;
-- Compliance Documentation;
-- Architecture Repository;
-- Audit Records.
+- înregistrări de revizuire;
+- înregistrări de aprobare;
+- jurnale de decizii;
+- procese-verbale de ședință;
+- instrucțiuni pentru operatori;
+- capturi de ecran;
+- rapoarte de audit;
+- rapoarte de incident;
+- înregistrări de instruire;
+- documentație de arhitectură;
+- istoricul versiunilor.
 
 ---
 
-# 6. Review Requirements
+# 5. Stocarea Dovezilor
 
-Evidence shall be reviewed:
+Dovezile pot fi menținute în:
 
-- annually;
-- after significant AI system changes;
-- after Human Oversight changes;
-- after regulatory updates;
-- before regulatory inspections.
-
----
-
-# 7. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Article 14 – Human Oversight
-- DOD-007 Human Oversight Policy
-- PROC-007 Human Oversight Procedure
-- REG-007 Human Oversight Register
-- DEC-007 Human Oversight Declaration
+- Repository GitHub;
+- Repository Intern de Documentație;
+- Documentație de Guvernanță AI;
+- Documentație de Conformitate;
+- Repository de Arhitectură;
+- Înregistrări de Audit.
 
 ---
 
-# 8. Approval
+# 6. Cerințe de Revizuire
 
-Prepared by
+Dovezile se revizuiesc:
+
+- anual;
+- după modificări semnificative ale sistemelor AI;
+- după modificări ale Supravegherii Umane;
+- după actualizări de reglementare;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 7. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Articolul 14 — Supraveghere Umană
+- DOD-007 Politica de Supraveghere Umană
+- PROC-007 Procedura de Supraveghere Umană
+- REG-007 Registrul de Supraveghere Umană
+- DEC-007 Declarația de Supraveghere Umană
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

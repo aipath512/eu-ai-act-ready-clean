@@ -1,77 +1,69 @@
 # CHK-007
 
-# Human Oversight Checklist
+# Checklist de Supraveghere Umană
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-007 |
-| Title | Human Oversight Checklist |
+| ID Document | CHK-007 |
+| Titlu | Checklist de Supraveghere Umană |
 | Repository | RRVI™ |
-| Module | 07 – Human Oversight |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 07 – Supraveghere Umană |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that appropriate Human Oversight has been implemented for every Artificial Intelligence system in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Acest checklist se utilizează pentru a verifica dacă a fost implementată o Supraveghere Umană adecvată pentru fiecare sistem de Inteligență Artificială, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# Human Oversight Verification Checklist
+# Checklist de Verificare a Supravegherii Umane
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI System exists in REG-001 AI System Inventory Register | ☐ | ☐ | ☐ | |
-| 2 | Intended purpose is documented | ☐ | ☐ | ☐ | |
-| 3 | Human Operator has been assigned | ☐ | ☐ | ☐ | |
-| 4 | AI System Owner has been assigned | ☐ | ☐ | ☐ | |
-| 5 | Oversight responsibilities are documented | ☐ | ☐ | ☐ | |
-| 6 | Human review process is defined | ☐ | ☐ | ☐ | |
-| 7 | Override mechanism exists | ☐ | ☐ | ☐ | |
-| 8 | Escalation process is documented | ☐ | ☐ | ☐ | |
-| 9 | Human approval is required where appropriate | ☐ | ☐ | ☐ | |
-| 10 | AI limitations are communicated to operators | ☐ | ☐ | ☐ | |
-| 11 | AI Literacy requirements are fulfilled | ☐ | ☐ | ☐ | |
-| 12 | Risk Classification has been considered | ☐ | ☐ | ☐ | |
-| 13 | High-Risk Assessment has been considered | ☐ | ☐ | ☐ | |
-| 14 | Human Oversight documentation is complete | ☐ | ☐ | ☐ | |
-| 15 | Supporting evidence exists | ☐ | ☐ | ☐ | |
-| 16 | Human Oversight Register is updated | ☐ | ☐ | ☐ | |
-| 17 | Oversight effectiveness has been reviewed | ☐ | ☐ | ☐ | |
-| 18 | Corrective actions have been implemented where necessary | ☐ | ☐ | ☐ | |
-| 19 | Next review date has been assigned | ☐ | ☐ | ☐ | |
-| 20 | Human Oversight is inspection-ready | ☐ | ☐ | ☐ | |
+| 1 | Sistemul AI există în REG-001 Registrul de Inventar al Sistemelor AI | ☐ | ☐ | ☐ | |
+| 2 | Scopul preconizat este documentat | ☐ | ☐ | ☐ | |
+| 3 | Operatorul Uman a fost desemnat | ☐ | ☐ | ☐ | |
+| 4 | Responsabilul Sistemului AI a fost desemnat | ☐ | ☐ | ☐ | |
+| 5 | Responsabilitățile de supraveghere sunt documentate | ☐ | ☐ | ☐ | |
+| 6 | Procesul de revizuire umană este definit | ☐ | ☐ | ☐ | |
+| 7 | Mecanismul de infirmare există | ☐ | ☐ | ☐ | |
+| 8 | Procesul de escaladare este documentat | ☐ | ☐ | ☐ | |
+| 9 | Aprobarea umană este cerută unde e cazul | ☐ | ☐ | ☐ | |
+| 10 | Limitările AI sunt comunicate operatorilor | ☐ | ☐ | ☐ | |
+| 11 | Cerințele de Alfabetizare AI sunt îndeplinite | ☐ | ☐ | ☐ | |
+| 12 | Operatorul are competența necesară (test 3 puncte) | ☐ | ☐ | ☐ | |
+| 13 | Operatorul are autoritatea de a infirma (test 3 puncte) | ☐ | ☐ | ☐ | |
+| 14 | Operatorul dispune de timp suficient (test 3 puncte) | ☐ | ☐ | ☐ | |
+| 15 | Rata de infirmare este monitorizată | ☐ | ☐ | ☐ | |
+| 16 | Măsuri împotriva biasului de automatizare există | ☐ | ☐ | ☐ | |
+| 17 | Clasificarea Riscului a fost luată în considerare | ☐ | ☐ | ☐ | |
+| 18 | Evaluarea Risc Ridicat a fost luată în considerare | ☐ | ☐ | ☐ | |
+| 19 | Documentația de Supraveghere Umană este completă | ☐ | ☐ | ☐ | |
+| 20 | Supravegherea Umană este pregătită pentru inspecție | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
+
+*Conform Politicii (DOD-007), lipsa oricărui element din testul de 3 puncte (rândurile 12-14) face automat rezultatul NECONFORM.*
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,38 +73,48 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Article 14 – Human Oversight
-- DOD-007 Human Oversight Policy
-- PROC-007 Human Oversight Procedure
-- WI-007 Human Oversight Work Instruction
-- REG-007 Human Oversight Register
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Articolul 14 — Supraveghere Umană
+- DOD-007 Politica de Supraveghere Umană
+- PROC-007 Procedura de Supraveghere Umană
+- WI-007 Instrucțiune de Lucru — Supraveghere Umană
+- REG-007 Registrul de Supraveghere Umană
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

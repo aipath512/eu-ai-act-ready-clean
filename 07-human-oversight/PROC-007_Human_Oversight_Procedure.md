@@ -1,203 +1,208 @@
 # PROC-007
 
-# Human Oversight Procedure
+# Procedura de Supraveghere Umană
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | PROC-007 |
-| Title | Human Oversight Procedure |
+| ID Document | PROC-007 |
+| Titlu | Procedura de Supraveghere Umană |
 | Repository | RRVI™ |
-| Module | 07 – Human Oversight |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 07 – Supraveghere Umană |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This procedure defines how {{COMPANY_NAME}} establishes, performs, monitors and documents Human Oversight for Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Această procedură definește cum {{COMPANY_NAME}} stabilește, efectuează, monitorizează și documentează Supravegherea Umană pentru sistemele de Inteligență Artificială, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-The procedure ensures that AI supports human decision-making while responsibility and accountability remain with designated human personnel.
-
----
-
-# 2. Scope
-
-This procedure applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- proof-of-concept AI systems;
-- production AI systems;
-- future AI deployments.
+Procedura asigură că AI sprijină luarea deciziilor umane, în timp ce responsabilitatea rămâne la personalul uman desemnat.
 
 ---
 
-# 3. Responsibilities
+# 2. Domeniu de Aplicare
 
-## Managing Director
+Această procedură se aplică:
 
-- approves Human Oversight arrangements where required.
-
----
-
-## AI Governance Owner
-
-Responsible for:
-
-- coordinating Human Oversight activities;
-- maintaining the Human Oversight Register;
-- reviewing effectiveness.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- implementărilor AI viitoare.
 
 ---
 
-## AI System Owner
+# 3. Responsabilități
 
-Responsible for:
+## Director General
 
-- implementing Human Oversight controls;
-- documenting oversight measures;
-- reporting significant changes.
+- aprobă măsurile de Supraveghere Umană, unde e cazul.
 
 ---
 
-## Human Operator
+## Responsabilul de Guvernanță AI
 
-Responsible for:
+Responsabil pentru:
 
-- reviewing AI outputs;
-- applying professional judgement;
-- overriding AI decisions when necessary;
-- reporting anomalies.
-
----
-
-## Compliance Owner
-
-Responsible for:
-
-- verifying compliance with the EU AI Act;
-- supporting internal audits and inspections.
+- coordonarea activităților de Supraveghere Umană;
+- menținerea Registrului de Supraveghere Umană;
+- revizuirea eficacității, inclusiv a ratei de infirmare.
 
 ---
 
-# 4. Procedure
+## Responsabilul de Sistem AI
 
-## Step 1 — Identify AI System
+Responsabil pentru:
 
-Locate the AI system in:
+- implementarea controalelor de Supraveghere Umană;
+- documentarea măsurilor de supraveghere;
+- raportarea modificărilor semnificative.
+
+---
+
+## Operatorul Uman
+
+Responsabil pentru:
+
+- revizuirea outputurilor AI;
+- aplicarea judecății profesionale;
+- infirmarea deciziilor AI atunci când este necesar;
+- raportarea anomaliilor.
+
+---
+
+## Responsabilul de Conformitate
+
+Responsabil pentru:
+
+- verificarea conformității cu EU AI Act;
+- sprijinirea auditurilor și inspecțiilor interne.
+
+---
+
+# 4. Procedura
+
+## Pasul 1 — Identificarea Sistemului AI
+
+Se localizează sistemul AI în:
 
 REG-001_AI_System_Inventory_Register.md
 
 ---
 
-## Step 2 — Determine Human Oversight Requirements
+## Pasul 2 — Determinarea Cerințelor de Supraveghere Umană
 
-Identify:
+Se identifică:
 
-- intended purpose;
-- operational context;
-- decision impact;
-- required level of supervision.
-
----
-
-## Step 3 — Assign Responsible Personnel
-
-Assign qualified personnel responsible for:
-
-- supervising AI operation;
-- validating AI outputs;
-- approving significant decisions.
+- scopul preconizat;
+- contextul operațional;
+- impactul deciziei;
+- nivelul necesar de supraveghere.
 
 ---
 
-## Step 4 — Define Oversight Controls
+## Pasul 3 — Desemnarea Personalului Responsabil
 
-Document:
+Se desemnează personal calificat, responsabil pentru:
 
-- review process;
-- approval process;
-- override mechanism;
-- escalation process;
-- incident reporting process.
+- supravegherea funcționării AI;
+- validarea outputurilor AI;
+- aprobarea deciziilor semnificative.
+
+Se verifică, pentru fiecare persoană desemnată, îndeplinirea celor 3 condiții din DOD-007 (competență, autoritate de a infirma, timp).
 
 ---
 
-## Step 5 — Record Oversight
+## Pasul 4 — Definirea Controalelor de Supraveghere
 
-Update:
+Se documentează:
+
+- procesul de revizuire;
+- procesul de aprobare;
+- mecanismul de infirmare;
+- procesul de escaladare;
+- procesul de raportare a incidentelor.
+
+---
+
+## Pasul 5 — Înregistrarea Supravegherii
+
+Se actualizează:
 
 REG-007_Human_Oversight_Register.md
 
-Record:
+Se înregistrează:
 
-- responsible person;
-- oversight level;
-- review frequency;
-- approval date.
-
----
-
-## Step 6 — Monitor
-
-Monitor:
-
-- AI performance;
-- operator feedback;
-- incidents;
-- abnormal behaviour.
+- persoana responsabilă;
+- nivelul de supraveghere;
+- frecvența revizuirii;
+- data aprobării.
 
 ---
 
-## Step 7 — Review
+## Pasul 6 — Monitorizare
 
-Review Human Oversight whenever:
+Se monitorizează:
 
-- intended purpose changes;
-- AI functionality changes;
-- legislation changes;
-- significant incidents occur.
+- performanța AI;
+- feedback-ul operatorilor;
+- incidentele;
+- comportamentul anormal;
+- **rata de infirmare** (proporția deciziilor AI respinse sau modificate de operatori).
 
----
-
-# 5. Records
-
-This procedure produces:
-
-- Human Oversight Register;
-- Human Oversight Evidence;
-- Human Oversight Declaration.
+O rată de infirmare constant apropiată de zero declanșează o revizuire suplimentară — poate indica bias de automatizare.
 
 ---
 
-# 6. References
+## Pasul 7 — Revizuire
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Article 14 – Human Oversight
-- DOD-007 Human Oversight Policy
-- REG-001 AI System Inventory Register
-- REG-007 Human Oversight Register
-- EVID-007 Human Oversight Evidence
-- DEC-007 Human Oversight Declaration
+Supravegherea Umană se revizuiește ori de câte ori:
+
+- se schimbă scopul preconizat;
+- se schimbă funcționalitatea AI;
+- se modifică legislația;
+- apar incidente semnificative.
 
 ---
 
-# 7. Approval
+# 5. Înregistrări
 
-Prepared by
+Această procedură produce:
+
+- Registrul de Supraveghere Umană;
+- Dovezile de Supraveghere Umană;
+- Declarația de Supraveghere Umană.
+
+---
+
+# 6. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Articolul 14 — Supraveghere Umană
+- DOD-007 Politica de Supraveghere Umană
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-007 Registrul de Supraveghere Umană
+- EVID-007 Dovezile de Supraveghere Umană
+- DEC-007 Declarația de Supraveghere Umană
+
+---
+
+# 7. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

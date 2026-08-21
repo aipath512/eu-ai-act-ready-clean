@@ -1,113 +1,109 @@
 # REG-007
 
-# Human Oversight Register
+# Registrul de Supraveghere Umană
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | REG-007 |
-| Title | Human Oversight Register |
+| ID Document | REG-007 |
+| Titlu | Registrul de Supraveghere Umană |
 | Repository | RRVI™ |
-| Module | 07 – Human Oversight |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Register |
+| Modul | 07 – Supraveghere Umană |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru Activ |
 
 ---
 
-# Purpose
+# Scop
 
-This register records the Human Oversight arrangements implemented for every Artificial Intelligence system used by {{COMPANY_NAME}}.
+Acest registru înregistrează măsurile de Supraveghere Umană implementate pentru fiecare sistem de Inteligență Artificială folosit de {{COMPANY_NAME}}.
 
-The register demonstrates that appropriate human supervision is assigned, documented and maintained in accordance with Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# Human Oversight Register
-
-| AI ID | AI System | Human Operator | Oversight Level | Override Available | Review Frequency | Status |
-|-------|-----------|----------------|-----------------|-------------------|------------------|--------|
-| AI-001 | ChatGPT | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
-| AI-002 | Gemini | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
-| AI-003 | Claude | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
-| AI-004 | DeepSeek | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
-| AI-005 | Perplexity | {{RESPONSIBLE_PERSON}} | High | Yes | Before each significant use | Active |
-| AI-006 | Cloudflare Workers AI | {{RESPONSIBLE_PERSON}} | High | Yes | On deployment | Planned |
-| AI-007 | Cloudflare Vectorize | {{RESPONSIBLE_PERSON}} | High | Yes | On deployment | POC |
-| AI-008 | GitHub Copilot | {{RESPONSIBLE_PERSON}} | High | Yes | Before code integration | Active |
-| AI-009 | EU-112™ AI Governance Agent | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
-| AI-010 | Economic Twins™ Engine | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
-| AI-011 | Business Discovery Engine™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
-| AI-012 | Business Change Intelligence™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
-| AI-013 | AI Market Intelligence Agent™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
-| AI-014 | EU AI Act Intelligence Agent™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Design |
-| AI-015 | Remote Inspection Agent™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Concept |
-| AI-016 | Compliance Documentation Generator™ | {{RESPONSIBLE_PERSON}} | High | Yes | Design Review | Concept |
+Registrul demonstrează că o supraveghere umană adecvată este atribuită, documentată și menținută conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# Human Oversight Principles
+# Registrul de Supraveghere Umană
 
-For every AI system:
+| ID AI | Sistem AI | Operator Uman | Nivel de Supraveghere | Infirmare Disponibilă | Rata de Infirmare | Frecvența Revizuirii | Status |
+|-------|-----------|----------------|-----------------|-------------------|------------------|------------------|--------|
+| AI-001 | | | | | | | |
+| AI-002 | | | | | | | |
+| AI-003 | | | | | | | |
+| AI-004 | | | | | | | |
+| AI-005 | | | | | | | |
+| AI-006 | | | | | | | |
+| AI-007 | | | | | | | |
+| AI-008 | | | | | | | |
+| AI-009 | | | | | | | |
+| AI-010 | | | | | | | |
 
-- Human accountability remains mandatory.
-- AI outputs shall be reviewed before significant business use.
-- Human operators may override AI outputs at any time.
-- AI recommendations are advisory unless explicitly approved by a human.
-- Significant incidents shall be reported and investigated.
-
----
-
-# Review Requirements
-
-This register shall be updated whenever:
-
-- a new AI system is introduced;
-- Human Operator changes;
-- oversight responsibilities change;
-- operational context changes;
-- regulatory requirements change;
-- significant incidents occur.
+*Rândurile se completează de fiecare firmă cu datele reale ale sistemelor din REG-001. Rata de Infirmare se completează pe baza monitorizării din PROC-007 — o rată constant apropiată de zero necesită revizuire (posibil bias de automatizare).*
 
 ---
 
-# Register Owner
+# Principii de Supraveghere Umană
 
-| Field | Value |
+Pentru fiecare sistem AI:
+
+- Responsabilitatea umană rămâne obligatorie.
+- Outputurile AI se revizuiesc înainte de utilizarea în decizii semnificative de business.
+- Operatorii umani pot infirma outputurile AI în orice moment.
+- Recomandările AI sunt consultative, cu excepția cazului în care sunt aprobate explicit de un om.
+- Incidentele semnificative se raportează și se investighează.
+
+---
+
+# Cerințe de Revizuire
+
+Acest registru se actualizează ori de câte ori:
+
+- este introdus un sistem AI nou;
+- se schimbă Operatorul Uman;
+- se schimbă responsabilitățile de supraveghere;
+- se schimbă contextul operațional;
+- se modifică cerințele de reglementare;
+- apar incidente semnificative.
+
+---
+
+# Responsabilul Registrului
+
+| Câmp | Valoare |
 |--------|-------|
-| Register Owner | AI Governance Owner |
-| Custodian | {{RESPONSIBLE_PERSON}} |
-| Company | {{COMPANY_NAME}} |
-| Review Frequency | Annual or upon significant change |
+| Responsabil Registru | Responsabilul de Guvernanță AI |
+| Custode | {{RESPONSIBLE_PERSON}} |
+| Firma | {{COMPANY_NAME}} |
+| Frecvența Revizuirii | Anual sau la modificare semnificativă |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Article 14 – Human Oversight
-- DOD-007 Human Oversight Policy
-- PROC-007 Human Oversight Procedure
-- WI-007 Human Oversight Work Instruction
-- REG-001 AI System Inventory Register
-- EVID-007 Human Oversight Evidence
-- DEC-007 Human Oversight Declaration
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Articolul 14 — Supraveghere Umană
+- DOD-007 Politica de Supraveghere Umană
+- PROC-007 Procedura de Supraveghere Umană
+- WI-007 Instrucțiune de Lucru — Supraveghere Umană
+- REG-001 Registrul de Inventar al Sistemelor AI
+- EVID-007 Dovezile de Supraveghere Umană
+- DEC-007 Declarația de Supraveghere Umană
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved Register
+Registru Aprobat

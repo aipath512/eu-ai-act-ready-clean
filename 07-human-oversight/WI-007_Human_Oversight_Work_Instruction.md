@@ -1,214 +1,216 @@
 # WI-007
 
-# Human Oversight Work Instruction
+# Instrucțiune de Lucru — Supraveghere Umană
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-007 |
-| Title | Human Oversight Work Instruction |
+| ID Document | WI-007 |
+| Titlu | Instrucțiune de Lucru — Supraveghere Umană |
 | Repository | RRVI™ |
-| Module | 07 – Human Oversight |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 07 – Supraveghere Umană |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed guidance for implementing and documenting Human Oversight over Artificial Intelligence systems used by {{COMPANY_NAME}}.
+Această Instrucțiune de Lucru oferă îndrumări detaliate pentru implementarea și documentarea Supravegherii Umane asupra sistemelor de Inteligență Artificială folosite de {{COMPANY_NAME}}.
 
-Its objective is to ensure that AI systems remain under appropriate human supervision throughout their operational lifecycle in accordance with Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# 2. Preconditions
-
-Before implementing Human Oversight, verify that:
-
-- the AI system exists in the AI System Inventory;
-- Risk Classification has been completed;
-- High-Risk Assessment has been completed where applicable;
-- responsible personnel have been identified.
+Obiectivul este să asigure că sistemele AI rămân sub supraveghere umană adecvată pe tot parcursul ciclului lor de viață operațional, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-Collect the following information:
+Înainte de a implementa Supravegherea Umană, se verifică dacă:
 
-- AI System ID
-- AI System Name
-- Intended Purpose
-- Business Process
-- Human Operator
-- AI System Owner
-- Oversight Level
-- Decision Authority
-- Escalation Contact
-- Review Frequency
+- sistemul AI există în Inventarul Sistemelor AI;
+- Clasificarea Riscului a fost finalizată;
+- Evaluarea Risc Ridicat a fost finalizată, unde e cazul;
+- personalul responsabil a fost identificat.
 
 ---
 
-# 4. Work Instructions
+# 3. Informații Necesare
 
-## Step 1
+Se colectează următoarele informații:
 
-Open:
+- ID Sistem AI
+- Nume Sistem AI
+- Scop Preconizat
+- Proces de Business
+- Operator Uman
+- Responsabilul Sistemului AI
+- Nivelul de Supraveghere
+- Autoritatea Decizională
+- Contactul de Escaladare
+- Frecvența Revizuirii
+
+---
+
+# 4. Instrucțiuni de Lucru
+
+## Pasul 1
+
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
-Locate the AI system.
+Se localizează sistemul AI.
 
 ---
 
-## Step 2
+## Pasul 2
 
-Identify the decisions supported by the AI system.
+Se identifică deciziile susținute de sistemul AI.
 
-Determine:
+Se determină:
 
-- advisory decisions;
-- operational decisions;
-- business decisions;
-- customer-impacting decisions.
-
----
-
-## Step 3
-
-Assign Human Oversight.
-
-Identify:
-
-- Human Operator;
-- AI System Owner;
-- Approver;
-- Escalation Authority.
+- decizii consultative;
+- decizii operaționale;
+- decizii de business;
+- decizii cu impact asupra clienților.
 
 ---
 
-## Step 4
+## Pasul 3
 
-Define Oversight Controls.
+Se desemnează Supravegherea Umană.
 
-Document:
+Se identifică:
 
-- review activities;
-- approval requirements;
-- override capability;
-- suspension mechanism;
-- escalation procedure.
+- Operatorul Uman;
+- Responsabilul Sistemului AI;
+- Aprobatorul;
+- Autoritatea de Escaladare.
+
+Pentru fiecare persoană, se verifică îndeplinirea celor 3 condiții din DOD-007.
 
 ---
 
-## Step 5
+## Pasul 4
 
-Record Human Oversight.
+Se definesc Controalele de Supraveghere.
 
-Update:
+Se documentează:
+
+- activitățile de revizuire;
+- cerințele de aprobare;
+- capacitatea de infirmare;
+- mecanismul de suspendare;
+- procedura de escaladare.
+
+---
+
+## Pasul 5
+
+Se înregistrează Supravegherea Umană.
+
+Se actualizează:
 
 REG-007_Human_Oversight_Register.md
 
-Record:
+Se înregistrează:
 
-- responsible personnel;
-- oversight level;
-- review frequency;
-- approval date.
+- personalul responsabil;
+- nivelul de supraveghere;
+- frecvența revizuirii;
+- data aprobării.
 
 ---
 
-## Step 6
+## Pasul 6
 
-Collect Supporting Evidence.
+Se colectează Dovezile Justificative.
 
-Store evidence in:
+Dovezile se stochează în:
 
 EVID-007_Human_Oversight_Evidence.md
 
-Examples include:
+Exemple:
 
-- approval records;
-- review logs;
-- screenshots;
-- meeting minutes;
-- incident reports;
-- training records.
-
----
-
-## Step 7
-
-Periodic Review.
-
-Review Human Oversight whenever:
-
-- AI functionality changes;
-- operational context changes;
-- legislation changes;
-- significant incidents occur.
+- înregistrări de aprobare;
+- jurnale de revizuire;
+- capturi de ecran;
+- procese-verbale de ședință;
+- rapoarte de incident;
+- înregistrări de instruire.
 
 ---
 
-# 5. Quality Checks
+## Pasul 7
 
-Verify that:
+Revizuire Periodică.
 
-✓ AI System exists.
+Supravegherea Umană se revizuiește ori de câte ori:
 
-✓ Human Operator assigned.
-
-✓ AI Owner assigned.
-
-✓ Review process documented.
-
-✓ Override mechanism documented.
-
-✓ Escalation path defined.
-
-✓ Review frequency assigned.
-
-✓ Supporting evidence collected.
-
-✓ Register updated.
+- se schimbă funcționalitatea AI;
+- se schimbă contextul operațional;
+- se modifică legislația;
+- apar incidente semnificative.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-007 Human Oversight Register
-- EVID-007 Human Oversight Evidence
-- DEC-007 Human Oversight Declaration
+✓ Sistemul AI există.
+
+✓ Operatorul Uman este desemnat.
+
+✓ Responsabilul AI este desemnat.
+
+✓ Procesul de revizuire este documentat.
+
+✓ Mecanismul de infirmare este documentat.
+
+✓ Calea de escaladare este definită.
+
+✓ Frecvența revizuirii este alocată.
+
+✓ Dovezile justificative au fost colectate.
+
+✓ Registrul a fost actualizat.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- Article 14 – Human Oversight
-- DOD-007 Human Oversight Policy
-- PROC-007 Human Oversight Procedure
-- REG-001 AI System Inventory Register
+Această instrucțiune actualizează:
+
+- REG-007 Registrul de Supraveghere Umană
+- EVID-007 Dovezile de Supraveghere Umană
+- DEC-007 Declarația de Supraveghere Umană
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- Articolul 14 — Supraveghere Umană
+- DOD-007 Politica de Supraveghere Umană
+- PROC-007 Procedura de Supraveghere Umană
+- REG-001 Registrul de Inventar al Sistemelor AI
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat
