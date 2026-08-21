@@ -1,168 +1,168 @@
 # PROC-001
 
-# AI System Inventory Procedure
+# Procedura de Inventar al Sistemelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | PROC-001 |
-| Title | AI System Inventory Procedure |
+| ID Document | PROC-001 |
+| Titlu | Procedura de Inventar al Sistemelor AI |
 | Repository | RRVI™ |
-| Module | 01 – AI System Inventory |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 01 – Inventar Sisteme AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This procedure describes the process for creating, maintaining, reviewing and updating the AI System Inventory of {{COMPANY_NAME}}.
+Această procedură descrie procesul de creare, menținere, revizuire și actualizare a Inventarului Sistemelor AI al {{COMPANY_NAME}}.
 
-The procedure ensures that every Artificial Intelligence system used, developed, integrated or deployed by the company is properly identified and documented.
-
----
-
-# 2. Scope
-
-This procedure applies to:
-
-- Internal AI systems
-- Third-party AI systems
-- Cloud AI services
-- AI-enabled software
-- AI development platforms
-- Experimental AI systems
-- Production AI systems
+Procedura asigură că fiecare sistem de Inteligență Artificială utilizat, dezvoltat, integrat sau implementat de firmă este identificat și documentat corespunzător.
 
 ---
 
-# 3. Responsibilities
+# 2. Domeniu de Aplicare
 
-## Managing Director
+Această procedură se aplică:
 
-- approves the inventory.
-
-## AI Governance Owner
-
-- maintains the inventory;
-- coordinates periodic reviews.
-
-## AI System Owner
-
-- provides accurate information;
-- reports changes.
-
-## Employees
-
-- notify the introduction of any new AI system.
+- Sistemelor AI interne
+- Sistemelor AI terțe
+- Serviciilor AI în cloud
+- Software-ului cu capabilități AI
+- Platformelor de dezvoltare AI
+- Sistemelor AI experimentale
+- Sistemelor AI de producție
 
 ---
 
-# 4. Procedure
+# 3. Responsabilități
 
-## Step 1 — Identify AI System
+## Director General
 
-Determine whether the software or service includes Artificial Intelligence capabilities.
+- aprobă inventarul.
 
-Examples include:
+## Responsabilul de Guvernanță AI
 
-- Large Language Models
+- menține inventarul;
+- coordonează revizuirile periodice.
+
+## Responsabilul de Sistem AI
+
+- furnizează informații exacte;
+- raportează modificările.
+
+## Angajați
+
+- notifică introducerea oricărui sistem AI nou.
+
+---
+
+# 4. Procedura
+
+## Pasul 1 — Identificarea Sistemului AI
+
+Se stabilește dacă software-ul sau serviciul include capabilități de Inteligență Artificială.
+
+Exemple:
+
+- Modele de Limbaj de Mari Dimensiuni (LLM)
 - Machine Learning
-- Generative AI
-- Semantic Search
-- AI Agents
-- Recommendation Systems
+- AI Generativă
+- Căutare Semantică
+- Agenți AI
+- Sisteme de Recomandare
 
 ---
 
-## Step 2 — Collect Information
+## Pasul 2 — Colectarea Informațiilor
 
-Record:
+Se înregistrează:
 
-- System Name
-- Provider
-- Owner
-- Business Purpose
-- Intended Use
-- Deployment Status
-- AI Act Role
-- Initial Risk
-- Human Oversight
+- Numele Sistemului
+- Furnizor
+- Responsabil
+- Scop de Business
+- Utilizare Preconizată
+- Status de Implementare
+- Rol conform AI Act
+- Risc Inițial
+- Supraveghere Umană
 
 ---
 
-## Step 3 — Register
+## Pasul 3 — Înregistrare
 
-Create or update the corresponding record in:
+Se creează sau se actualizează înregistrarea corespunzătoare în:
 
 REG-001_AI_System_Inventory_Register.md
 
 ---
 
-## Step 4 — Review
+## Pasul 4 — Revizuire
 
-Verify that:
+Se verifică dacă:
 
-- all mandatory fields are completed;
-- ownership is assigned;
-- business purpose is defined;
-- AI Act role is identified.
-
----
-
-## Step 5 — Approval
-
-The updated inventory shall be reviewed and approved by the AI Governance Owner.
+- toate câmpurile obligatorii sunt completate;
+- responsabilul este desemnat;
+- scopul de business este definit;
+- rolul conform AI Act este identificat.
 
 ---
 
-## Step 6 — Maintenance
+## Pasul 5 — Aprobare
 
-The inventory shall be updated whenever:
-
-- a new AI system is introduced;
-- an AI system is removed;
-- ownership changes;
-- provider changes;
-- functionality changes;
-- deployment status changes.
+Inventarul actualizat este revizuit și aprobat de Responsabilul de Guvernanță AI.
 
 ---
 
-# 5. Records
+## Pasul 6 — Mentenanță
 
-This procedure produces:
+Inventarul se actualizează ori de câte ori:
 
-- AI Inventory Register
-- AI Inventory Evidence
-- AI Inventory Declaration
-
----
-
-# 6. References
-
-- DOD-001 AI System Inventory Policy
-- REG-001 AI System Inventory Register
-- EVID-001 AI System Inventory Evidence
-- DEC-001 AI System Inventory Declaration
-- Regulation (EU) 2024/1689 (EU AI Act)
+- este introdus un sistem AI nou;
+- un sistem AI este eliminat;
+- se schimbă responsabilul;
+- se schimbă furnizorul;
+- se schimbă funcționalitatea;
+- se schimbă statusul de implementare.
 
 ---
 
-# 7. Approval
+# 5. Înregistrări
 
-Prepared by
+Această procedură produce:
+
+- Registrul de Inventar AI
+- Dovezile de Inventar AI
+- Declarația de Inventar AI
+
+---
+
+# 6. Referințe
+
+- DOD-001 Politica de Inventar al Sistemelor AI
+- REG-001 Registrul de Inventar al Sistemelor AI
+- EVID-001 Dovezile de Inventar al Sistemelor AI
+- DEC-001 Declarația de Inventar al Sistemelor AI
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+
+---
+
+# 7. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

@@ -1,77 +1,67 @@
 # CHK-001
 
-# AI System Inventory Checklist
+# Checklist de Inventar al Sistemelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-001 |
-| Title | AI System Inventory Checklist |
+| ID Document | CHK-001 |
+| Titlu | Checklist de Inventar al Sistemelor AI |
 | Repository | RRVI™ |
-| Module | 01 – AI System Inventory |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 01 – Inventar Sisteme AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that the AI System Inventory is complete, accurate and compliant with the AI System Inventory Policy and Procedure.
+Acest checklist se utilizează pentru a verifica dacă Inventarul Sistemelor AI este complet, exact și conform cu Politica și Procedura de Inventar al Sistemelor AI.
 
 ---
 
-# Inventory Verification Checklist
+# Checklist de Verificare a Inventarului
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI System Inventory Register exists | ☐ | ☐ | ☐ | |
-| 2 | Inventory has been reviewed | ☐ | ☐ | ☐ | |
-| 3 | Every AI system has a unique AI ID | ☐ | ☐ | ☐ | |
-| 4 | Every AI system has a name | ☐ | ☐ | ☐ | |
-| 5 | AI Provider is identified | ☐ | ☐ | ☐ | |
-| 6 | Business Owner is assigned | ☐ | ☐ | ☐ | |
-| 7 | Technical Owner is assigned | ☐ | ☐ | ☐ | |
-| 8 | Business purpose is documented | ☐ | ☐ | ☐ | |
-| 9 | Intended use is documented | ☐ | ☐ | ☐ | |
-| 10 | Deployment status is recorded | ☐ | ☐ | ☐ | |
-| 11 | EU AI Act role is identified | ☐ | ☐ | ☐ | |
-| 12 | Initial risk classification is completed | ☐ | ☐ | ☐ | |
-| 13 | Human oversight is documented | ☐ | ☐ | ☐ | |
-| 14 | Last review date is recorded | ☐ | ☐ | ☐ | |
-| 15 | Supporting evidence exists | ☐ | ☐ | ☐ | |
-| 16 | Evidence references are valid | ☐ | ☐ | ☐ | |
-| 17 | Inventory reflects current operational AI systems | ☐ | ☐ | ☐ | |
-| 18 | Obsolete AI systems have been removed | ☐ | ☐ | ☐ | |
-| 19 | Inventory is internally approved | ☐ | ☐ | ☐ | |
-| 20 | Inventory is ready for audit or inspection | ☐ | ☐ | ☐ | |
+| 1 | Registrul de Inventar al Sistemelor AI există | ☐ | ☐ | ☐ | |
+| 2 | Inventarul a fost revizuit | ☐ | ☐ | ☐ | |
+| 3 | Fiecare sistem AI are un ID AI unic | ☐ | ☐ | ☐ | |
+| 4 | Fiecare sistem AI are un nume | ☐ | ☐ | ☐ | |
+| 5 | Furnizorul AI este identificat | ☐ | ☐ | ☐ | |
+| 6 | Responsabilul de business este desemnat | ☐ | ☐ | ☐ | |
+| 7 | Responsabilul tehnic este desemnat | ☐ | ☐ | ☐ | |
+| 8 | Scopul de business este documentat | ☐ | ☐ | ☐ | |
+| 9 | Utilizarea preconizată este documentată | ☐ | ☐ | ☐ | |
+| 10 | Statusul de implementare este înregistrat | ☐ | ☐ | ☐ | |
+| 11 | Rolul conform EU AI Act este identificat | ☐ | ☐ | ☐ | |
+| 12 | Clasificarea inițială de risc este completă | ☐ | ☐ | ☐ | |
+| 13 | Supravegherea umană este documentată | ☐ | ☐ | ☐ | |
+| 14 | Data ultimei revizuiri este înregistrată | ☐ | ☐ | ☐ | |
+| 15 | Există dovezi justificative | ☐ | ☐ | ☐ | |
+| 16 | Referințele la dovezi sunt valide | ☐ | ☐ | ☐ | |
+| 17 | Inventarul reflectă sistemele AI operaționale curente | ☐ | ☐ | ☐ | |
+| 18 | Sistemele AI depășite au fost eliminate | ☐ | ☐ | ☐ | |
+| 19 | Inventarul este aprobat intern | ☐ | ☐ | ☐ | |
+| 20 | Inventarul este pregătit pentru audit sau inspecție | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,37 +71,47 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- DOD-001 AI System Inventory Policy
-- PROC-001 AI System Inventory Procedure
-- WI-001 AI System Inventory Work Instruction
-- REG-001 AI System Inventory Register
-- Regulation (EU) 2024/1689 (EU AI Act)
+- DOD-001 Politica de Inventar al Sistemelor AI
+- PROC-001 Procedura de Inventar al Sistemelor AI
+- WI-001 Instrucțiune de Lucru — Inventar Sisteme AI
+- REG-001 Registrul de Inventar al Sistemelor AI
+- Regulamentul (UE) 2024/1689 (EU AI Act)
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

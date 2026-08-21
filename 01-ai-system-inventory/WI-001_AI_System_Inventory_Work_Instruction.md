@@ -1,90 +1,90 @@
 # WI-001
 
-# AI System Inventory Work Instruction
+# Instrucțiune de Lucru — Inventar Sisteme AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-001 |
-| Title | AI System Inventory Work Instruction |
+| ID Document | WI-001 |
+| Titlu | Instrucțiune de Lucru — Inventar Sisteme AI |
 | Repository | RRVI™ |
-| Module | 01 – AI System Inventory |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 01 – Inventar Sisteme AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction explains how to create and maintain individual records within the AI System Inventory Register.
+Această Instrucțiune de Lucru explică modul de creare și menținere a înregistrărilor individuale din Registrul de Inventar al Sistemelor AI.
 
-It provides a standardized method to ensure that every AI system is documented consistently.
-
----
-
-# 2. Preconditions
-
-Before creating a new inventory record, verify that:
-
-- the AI system exists;
-- the system is used or planned for use by {{COMPANY_NAME}};
-- sufficient information is available to identify the system.
+Oferă o metodă standardizată pentru a asigura că fiecare sistem AI este documentat consecvent.
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-For each AI system collect:
+Înainte de a crea o înregistrare nouă în inventar, se verifică dacă:
 
-- AI System ID
-- AI System Name
-- Provider
-- Version (if applicable)
-- Business Purpose
-- Business Owner
-- Technical Owner
-- Deployment Status
-- EU AI Act Role
-- Initial Risk Classification
-- Human Oversight
-- Date Added
-- Last Review Date
+- sistemul AI există;
+- sistemul este utilizat sau planificat pentru utilizare de {{COMPANY_NAME}};
+- există suficiente informații pentru a identifica sistemul.
 
 ---
 
-# 4. Instructions
+# 3. Informații Necesare
 
-## Step 1
+Pentru fiecare sistem AI se colectează:
 
-Open:
+- ID Sistem AI
+- Nume Sistem AI
+- Furnizor
+- Versiune (dacă e cazul)
+- Scop de Business
+- Responsabil de Business
+- Responsabil Tehnic
+- Status de Implementare
+- Rol conform EU AI Act
+- Clasificare Inițială de Risc
+- Supraveghere Umană
+- Data Adăugării
+- Data Ultimei Revizuiri
+
+---
+
+# 4. Instrucțiuni
+
+## Pasul 1
+
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
 ---
 
-## Step 2
+## Pasul 2
 
-Check whether the AI system is already registered.
+Se verifică dacă sistemul AI este deja înregistrat.
 
-If yes:
+Dacă da:
 
-- update the existing record.
+- se actualizează înregistrarea existentă.
 
-If no:
+Dacă nu:
 
-- create a new record.
+- se creează o înregistrare nouă.
 
 ---
 
-## Step 3
+## Pasul 3
 
-Assign the next available AI System ID.
+Se atribuie următorul ID de Sistem AI disponibil.
 
-Example:
+Exemplu:
 
 - AI-001
 - AI-002
@@ -92,103 +92,103 @@ Example:
 
 ---
 
-## Step 4
+## Pasul 4
 
-Complete every mandatory field.
+Se completează fiecare câmp obligatoriu.
 
-No mandatory field shall be left blank.
+Niciun câmp obligatoriu nu rămâne necompletat.
 
-If information is unavailable, enter:
+Dacă informația nu e disponibilă, se introduce:
 
-"To Be Determined (TBD)"
-
----
-
-## Step 5
-
-Verify accuracy.
-
-Confirm:
-
-- Provider
-- Purpose
-- Owner
-- Deployment Status
-- AI Act Role
+„De Determinat (TBD)"
 
 ---
 
-## Step 6
+## Pasul 5
 
-Save the Register.
+Se verifică exactitatea.
+
+Se confirmă:
+
+- Furnizor
+- Scop
+- Responsabil
+- Status de Implementare
+- Rol conform AI Act
 
 ---
 
-## Step 7
+## Pasul 6
 
-Record supporting evidence in:
+Se salvează Registrul.
+
+---
+
+## Pasul 7
+
+Dovezile justificative se înregistrează în:
 
 EVID-001_AI_System_Inventory_Evidence.md
 
 ---
 
-## Step 8
+## Pasul 8
 
-If the inventory changes significantly, initiate review according to PROC-001.
-
----
-
-# 5. Quality Checks
-
-Verify that:
-
-✓ AI System ID is unique.
-
-✓ System Name is correct.
-
-✓ Provider is identified.
-
-✓ Owner is assigned.
-
-✓ Purpose is defined.
-
-✓ Human Oversight is documented.
-
-✓ Risk Classification is completed.
-
-✓ Review Date is recorded.
+Dacă inventarul se schimbă semnificativ, se inițiază revizuirea conform PROC-001.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-001 AI System Inventory Register
-- EVID-001 AI System Inventory Evidence
-- DEC-001 AI System Inventory Declaration
+✓ ID-ul Sistemului AI este unic.
+
+✓ Numele Sistemului este corect.
+
+✓ Furnizorul este identificat.
+
+✓ Responsabilul este desemnat.
+
+✓ Scopul este definit.
+
+✓ Supravegherea Umană este documentată.
+
+✓ Clasificarea de Risc este completă.
+
+✓ Data Revizuirii este înregistrată.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- DOD-001 AI System Inventory Policy
-- PROC-001 AI System Inventory Procedure
-- CHK-001 AI System Inventory Checklist
-- Regulation (EU) 2024/1689 (EU AI Act)
+Această instrucțiune actualizează:
+
+- REG-001 Registrul de Inventar al Sistemelor AI
+- EVID-001 Dovezile de Inventar al Sistemelor AI
+- DEC-001 Declarația de Inventar al Sistemelor AI
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- DOD-001 Politica de Inventar al Sistemelor AI
+- PROC-001 Procedura de Inventar al Sistemelor AI
+- CHK-001 Checklist de Inventar al Sistemelor AI
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

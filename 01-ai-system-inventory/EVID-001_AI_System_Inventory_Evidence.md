@@ -1,127 +1,123 @@
 # EVID-001
 
-# AI System Inventory Evidence
+# Dovezi de Inventar al Sistemelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | EVID-001 |
-| Title | AI System Inventory Evidence |
+| ID Document | EVID-001 |
+| Titlu | Dovezi de Inventar al Sistemelor AI |
 | Repository | RRVI™ |
-| Module | 01 – AI System Inventory |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Evidence Register |
+| Modul | 01 – Inventar Sisteme AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru de Dovezi Activ |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This document identifies the objective evidence supporting the AI System Inventory maintained by {{COMPANY_NAME}}.
+Acest document identifică dovezile obiective care susțin Inventarul Sistemelor AI menținut de {{COMPANY_NAME}}.
 
-The purpose of this evidence register is to demonstrate that every AI system recorded in the inventory is supported by verifiable documentation.
-
----
-
-# 2. Evidence Principles
-
-Evidence shall be:
-
-- objective;
-- traceable;
-- verifiable;
-- version controlled;
-- available for audit or inspection.
+Scopul acestui registru de dovezi este de a demonstra că fiecare sistem AI înregistrat în inventar este susținut de documentație verificabilă.
 
 ---
 
-# 3. Evidence Register
+# 2. Principii ale Dovezilor
 
-| Evidence ID | AI ID | Evidence | Location | Status |
+Dovezile trebuie să fie:
+
+- obiective;
+- trasabile;
+- verificabile;
+- controlate ca versiune;
+- disponibile pentru audit sau inspecție.
+
+---
+
+# 3. Registru de Dovezi
+
+| ID Dovadă | ID AI | Dovadă | Locație | Status |
 |--------------|-------|----------|----------|--------|
-| E-001 | AI-001 | ChatGPT subscription and configuration | OpenAI Account | Active |
-| E-002 | AI-002 | Gemini account | Google Account | Active |
-| E-003 | AI-003 | Claude account | Anthropic Account | Active |
-| E-004 | AI-004 | DeepSeek account | DeepSeek Platform | Active |
-| E-005 | AI-005 | Perplexity subscription | Perplexity Account | Active |
-| E-006 | AI-006 | Cloudflare Workers AI configuration | Cloudflare Dashboard | Planned |
-| E-007 | AI-007 | Cloudflare Vectorize configuration | Cloudflare Dashboard | POC |
-| E-008 | AI-008 | GitHub Copilot subscription | GitHub Account | Optional |
-| E-009 | AI-009 | Architecture specification | GitHub Repository | Draft |
-| E-010 | AI-010 | Architecture specification | GitHub Repository | Draft |
-| E-011 | AI-011 | Architecture specification | GitHub Repository | Draft |
-| E-012 | AI-012 | Architecture specification | GitHub Repository | Draft |
-| E-013 | AI-013 | Architecture specification | GitHub Repository | Draft |
-| E-014 | AI-014 | Architecture specification | GitHub Repository | Draft |
-| E-015 | AI-015 | Architecture specification | GitHub Repository | Draft |
-| E-016 | AI-016 | Architecture specification | GitHub Repository | Draft |
+| E-001 | AI-001 | | | |
+| E-002 | AI-002 | | | |
+| E-003 | AI-003 | | | |
+| E-004 | AI-004 | | | |
+| E-005 | AI-005 | | | |
+| E-006 | AI-006 | | | |
+| E-007 | AI-007 | | | |
+| E-008 | AI-008 | | | |
+| E-009 | AI-009 | | | |
+| E-010 | AI-010 | | | |
+
+*Rândurile registrului se completează de fiecare firmă cu propriile sisteme AI. Un registru pre-completat la generare ar afirma o dovadă inexistentă — practică incorectă în fața unui inspector.*
 
 ---
 
-# 4. Supporting Documentation
+# 4. Documentație Justificativă
 
-Supporting documentation may include:
+Documentația justificativă poate include:
 
-- configuration files;
-- architecture documents;
-- contracts;
-- subscriptions;
-- screenshots;
-- deployment records;
-- technical documentation;
-- test reports;
-- validation reports;
-- change records.
+- fișiere de configurare;
+- documente de arhitectură;
+- contracte;
+- abonamente;
+- capturi de ecran;
+- înregistrări de implementare;
+- documentație tehnică;
+- rapoarte de testare;
+- rapoarte de validare;
+- înregistrări de modificări.
 
 ---
 
-# 5. Storage Locations
+# 5. Locații de Stocare
 
-Evidence may be stored in:
+Dovezile pot fi stocate în:
 
-- GitHub Repository
+- Repository GitHub
 - Cloudflare Dashboard
 - OpenAI Dashboard
 - Google Workspace
 - Anthropic Console
-- Internal Documentation Repository
-- Project Documentation
+- Repository Intern de Documentație
+- Documentația Proiectului
 
 ---
 
-# 6. Evidence Review
+# 6. Revizuirea Dovezilor
 
-Evidence shall be reviewed:
+Dovezile se revizuiesc:
 
-- annually;
-- after major system changes;
-- before regulatory inspections;
-- after significant incidents.
-
----
-
-# 7. References
-
-- DOD-001 AI System Inventory Policy
-- PROC-001 AI System Inventory Procedure
-- REG-001 AI System Inventory Register
-- DEC-001 AI System Inventory Declaration
+- anual;
+- după modificări majore ale sistemului;
+- înainte de inspecțiile de reglementare;
+- după incidente semnificative.
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- DOD-001 Politica de Inventar al Sistemelor AI
+- PROC-001 Procedura de Inventar al Sistemelor AI
+- REG-001 Registrul de Inventar al Sistemelor AI
+- DEC-001 Declarația de Inventar al Sistemelor AI
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

@@ -1,124 +1,124 @@
 # DOD-001
 
-# AI System Inventory Policy
+# Politica de Inventar al Sistemelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DOD-001 |
-| Title | AI System Inventory Policy |
+| ID Document | DOD-001 |
+| Titlu | Politica de Inventar al Sistemelor AI |
 | Repository | RRVI™ |
-| Module | 01 – AI System Inventory |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 01 – Inventar Sisteme AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-The purpose of this policy is to establish the mandatory requirements for identifying, documenting, maintaining and reviewing all Artificial Intelligence systems used, developed, deployed or integrated by {{COMPANY_NAME}}.
+Scopul acestei politici este de a stabili cerințele obligatorii pentru identificarea, documentarea, menținerea și revizuirea tuturor sistemelor de Inteligență Artificială utilizate, dezvoltate, implementate sau integrate de {{COMPANY_NAME}}.
 
-The AI System Inventory serves as the authoritative source of information regarding AI systems within the organization and supports compliance with Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# 2. Scope
-
-This policy applies to:
-
-- all employees;
-- contractors;
-- consultants;
-- AI developers;
-- AI deployers;
-- AI providers;
-- third-party AI services used by {{COMPANY_NAME}}.
+Inventarul Sistemelor AI reprezintă sursa de referință a informațiilor privind sistemele AI din organizație și sprijină conformitatea cu Regulamentul (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 3. Policy Statements
+# 2. Domeniu de Aplicare
 
-{{COMPANY_NAME}} shall maintain a complete AI System Inventory.
+Această politică se aplică:
 
-Every AI system shall be registered before operational use.
-
-Every AI system shall have:
-
-- a unique identifier;
-- a system name;
-- an owner;
-- a business purpose;
-- an AI provider;
-- an intended use;
-- a deployment status;
-- a preliminary risk classification;
-- identified human oversight.
+- tuturor angajaților;
+- contractorilor;
+- consultanților;
+- dezvoltatorilor de AI;
+- implementatorilor de AI (deployers);
+- furnizorilor de AI (providers);
+- serviciilor AI terțe utilizate de {{COMPANY_NAME}}.
 
 ---
 
-# 4. Inventory Maintenance
+# 3. Prevederi ale Politicii
 
-The inventory shall be updated whenever:
+{{COMPANY_NAME}} menține un Inventar complet al Sistemelor AI.
 
-- a new AI system is introduced;
-- an AI system is retired;
-- ownership changes;
-- functionality changes;
-- deployment changes;
-- regulatory requirements change.
+Fiecare sistem AI se înregistrează înainte de utilizarea operațională.
 
----
+Fiecare sistem AI are:
 
-# 5. Roles and Responsibilities
-
-## Managing Director
-
-Approves the policy.
-
-## AI Governance Owner
-
-Maintains the AI Inventory.
-
-## System Owners
-
-Provide accurate inventory information.
-
-## Users
-
-Notify changes affecting AI systems.
+- un identificator unic;
+- un nume de sistem;
+- un responsabil;
+- un scop de business;
+- un furnizor AI;
+- o utilizare preconizată;
+- un status de implementare;
+- o clasificare preliminară de risc;
+- supraveghere umană identificată.
 
 ---
 
-# 6. Compliance
+# 4. Menținerea Inventarului
 
-Compliance with this policy is mandatory.
+Inventarul se actualizează ori de câte ori:
 
-Failure to maintain an accurate inventory may affect regulatory compliance and inspection readiness.
+- este introdus un sistem AI nou;
+- un sistem AI este retras;
+- se schimbă responsabilul;
+- se schimbă funcționalitatea;
+- se schimbă modul de implementare;
+- se modifică cerințele de reglementare.
 
 ---
 
-# 7. References
+# 5. Roluri și Responsabilități
 
-- EU AI Act (Regulation (EU) 2024/1689)
+## Director General
+
+Aprobă politica.
+
+## Responsabilul de Guvernanță AI
+
+Menține Inventarul AI.
+
+## Responsabilii de Sisteme
+
+Furnizează informații exacte pentru inventar.
+
+## Utilizatori
+
+Notifică modificările care afectează sistemele AI.
+
+---
+
+# 6. Conformitate
+
+Respectarea acestei politici este obligatorie.
+
+Neîndeplinirea obligației de menținere a unui inventar exact poate afecta conformitatea de reglementare și gradul de pregătire pentru inspecție.
+
+---
+
+# 7. Referințe
+
+- EU AI Act (Regulamentul (UE) 2024/1689)
 - RRVI™
-- AI System Inventory Register
+- Registrul de Inventar al Sistemelor AI
 
 ---
 
-# 8. Approval
+# 8. Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

@@ -1,100 +1,96 @@
 # REG-001
 
-# AI System Inventory Register
+# Registrul de Inventar al Sistemelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | REG-001 |
-| Title | AI System Inventory Register |
+| ID Document | REG-001 |
+| Titlu | Registrul de Inventar al Sistemelor AI |
 | Repository | RRVI™ |
-| Module | 01 – AI System Inventory |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Register |
+| Modul | 01 – Inventar Sisteme AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru Activ |
 
 ---
 
-# Purpose
+# Scop
 
-This register contains the complete inventory of all Artificial Intelligence systems used, developed, deployed, integrated or evaluated by {{COMPANY_NAME}}.
+Acest registru conține inventarul complet al tuturor sistemelor de Inteligență Artificială utilizate, dezvoltate, implementate, integrate sau evaluate de {{COMPANY_NAME}}.
 
-The register is the authoritative inventory required by the EU AI Act and shall be maintained throughout the lifecycle of each AI system.
+Registrul este inventarul de referință cerut de EU AI Act și se menține pe toată durata ciclului de viață al fiecărui sistem AI.
 
 ---
 
-# AI System Inventory
+# Inventarul Sistemelor AI
 
-| AI ID | AI System | Provider | Business Purpose | AI Act Role | Status | Initial Risk | Human Oversight | Last Review |
+| ID AI | Sistem AI | Furnizor | Scop de Business | Rol conform AI Act | Status | Risc Inițial | Supraveghere Umană | Ultima Revizuire |
 |-------|-----------|----------|------------------|-------------|--------|--------------|-----------------|-------------|
-| AI-001 | ChatGPT | OpenAI | Technical documentation, software engineering, architecture, content generation | Deployer | In Use | Minimal | Mandatory | 2026-07-02 |
-| AI-002 | Gemini | Google | Research, validation, technical analysis | Deployer | In Use | Minimal | Mandatory | 2026-07-02 |
-| AI-003 | Claude | Anthropic | Technical writing, reasoning, architecture review | Deployer | In Use | Minimal | Mandatory | 2026-07-02 |
-| AI-004 | DeepSeek | DeepSeek | Software engineering and code generation | Deployer | In Use | Minimal | Mandatory | 2026-07-02 |
-| AI-005 | Perplexity | Perplexity AI | Web research and intelligence | Deployer | In Use | Minimal | Mandatory | 2026-07-02 |
-| AI-006 | Cloudflare Workers AI | Cloudflare | AI inference platform | Provider / Deployer | Planned | Minimal | Mandatory | 2026-07-02 |
-| AI-007 | Cloudflare Vectorize | Cloudflare | Semantic search and vector retrieval | Provider | POC | Minimal | Mandatory | 2026-07-02 |
-| AI-008 | GitHub Copilot | GitHub | AI coding assistant | Deployer | Optional | Minimal | Mandatory | 2026-07-02 |
-| AI-009 | EU-112™ AI Governance Agent | {{COMPANY_NAME}} | Governance automation | Provider | Design | Preliminary Minimal | Mandatory | 2026-07-02 |
-| AI-010 | Economic Twins™ Engine | {{COMPANY_NAME}} | Business similarity analysis | Provider | Design | Preliminary Minimal | Mandatory | 2026-07-02 |
-| AI-011 | Business Discovery Engine™ | {{COMPANY_NAME}} | Semantic business discovery | Provider | Design | Preliminary Minimal | Mandatory | 2026-07-02 |
-| AI-012 | Business Change Intelligence™ | {{COMPANY_NAME}} | Business monitoring | Provider | Design | Preliminary Minimal | Mandatory | 2026-07-02 |
-| AI-013 | AI Market Intelligence Agent™ | {{COMPANY_NAME}} | Market intelligence | Provider | Design | Preliminary Minimal | Mandatory | 2026-07-02 |
-| AI-014 | EU AI Act Intelligence Agent™ | {{COMPANY_NAME}} | Regulatory intelligence | Provider | Design | Preliminary Minimal | Mandatory | 2026-07-02 |
-| AI-015 | Remote Inspection Agent™ | {{COMPANY_NAME}} | Inspection support | Provider | Concept | Preliminary Minimal | Mandatory | 2026-07-02 |
-| AI-016 | Compliance Documentation Generator™ | {{COMPANY_NAME}} | Compliance documentation automation | Provider | Concept | Preliminary Minimal | Mandatory | 2026-07-02 |
+| AI-001 | | | | | | | | |
+| AI-002 | | | | | | | | |
+| AI-003 | | | | | | | | |
+| AI-004 | | | | | | | | |
+| AI-005 | | | | | | | | |
+| AI-006 | | | | | | | | |
+| AI-007 | | | | | | | | |
+| AI-008 | | | | | | | | |
+| AI-009 | | | | | | | | |
+| AI-010 | | | | | | | | |
+
+*Rândurile registrului se completează de fiecare firmă cu propriile sisteme AI, nu cu exemple pre-completate — un registru care afirmă sisteme sau statusuri neexistente e mai grav decât unul gol în fața unui inspector.*
 
 ---
 
-# Register Maintenance Rules
+# Reguli de Menținere a Registrului
 
-The register shall be updated whenever:
+Registrul se actualizează ori de câte ori:
 
-- a new AI system is introduced;
-- an AI system is retired;
-- ownership changes;
-- provider changes;
-- intended purpose changes;
-- deployment status changes;
-- risk classification changes.
+- este introdus un sistem AI nou;
+- un sistem AI este retras;
+- se schimbă responsabilul;
+- se schimbă furnizorul;
+- se schimbă scopul preconizat;
+- se schimbă statusul de implementare;
+- se schimbă clasificarea de risc.
 
 ---
 
-# Register Owner
+# Responsabilul Registrului
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Register Owner | AI Governance Owner |
-| Custodian | {{RESPONSIBLE_PERSON}} |
-| Company | {{COMPANY_NAME}} |
-| Review Frequency | Quarterly or upon significant change |
+| Responsabil Registru | Responsabilul de Guvernanță AI |
+| Custode | {{RESPONSIBLE_PERSON}} |
+| Firma | {{COMPANY_NAME}} |
+| Frecvența Revizuirii | Trimestrial sau la modificare semnificativă |
 
 ---
 
-# References
+# Referințe
 
-- DOD-001 AI System Inventory Policy
-- PROC-001 AI System Inventory Procedure
-- WI-001 AI System Inventory Work Instruction
-- EVID-001 AI System Inventory Evidence
-- DEC-001 AI System Inventory Declaration
-- Regulation (EU) 2024/1689 (EU AI Act)
+- DOD-001 Politica de Inventar al Sistemelor AI
+- PROC-001 Procedura de Inventar al Sistemelor AI
+- WI-001 Instrucțiune de Lucru — Inventar Sisteme AI
+- EVID-001 Dovezile de Inventar al Sistemelor AI
+- DEC-001 Declarația de Inventar al Sistemelor AI
+- Regulamentul (UE) 2024/1689 (EU AI Act)
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved Register
+Registru Aprobat

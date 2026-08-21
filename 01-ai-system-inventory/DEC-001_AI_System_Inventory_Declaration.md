@@ -1,116 +1,116 @@
 # DEC-001
 
-# AI System Inventory Declaration
+# Declarație de Inventar al Sistemelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DEC-001 |
-| Title | AI System Inventory Declaration |
+| ID Document | DEC-001 |
+| Titlu | Declarație de Inventar al Sistemelor AI |
 | Repository | RRVI™ |
-| Module | 01 – AI System Inventory |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 01 – Inventar Sisteme AI |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This declaration confirms that {{COMPANY_NAME}} has established, maintains and periodically reviews an AI System Inventory as part of its AI governance framework.
+Această declarație confirmă că {{COMPANY_NAME}} a stabilit, menține și revizuiește periodic un Inventar al Sistemelor AI ca parte a cadrului său de guvernanță AI.
 
-The declaration demonstrates management commitment to maintaining an accurate inventory of Artificial Intelligence systems used, developed, integrated or deployed by the company.
-
----
-
-# 2. Declaration
-
-{{COMPANY_NAME}} declares that:
-
-- an AI System Inventory has been established;
-- every known AI system has been identified;
-- every AI system has an assigned business purpose;
-- every AI system has an identified provider;
-- every AI system has an identified owner;
-- every AI system has an initial risk classification;
-- human oversight requirements have been identified;
-- the inventory is maintained as a controlled governance document.
+Declarația demonstrează angajamentul conducerii de a menține un inventar exact al sistemelor de Inteligență Artificială utilizate, dezvoltate, integrate sau implementate de firmă.
 
 ---
 
-# 3. Management Commitment
+# 2. Declarație
 
-Management commits to:
+{{COMPANY_NAME}} declară că:
 
-- maintain the inventory;
-- periodically review the inventory;
-- register new AI systems before operational use;
-- retire obsolete AI systems from the inventory;
-- support regulatory inspections;
-- maintain objective evidence.
-
----
-
-# 4. Scope
-
-This declaration applies to all Artificial Intelligence systems:
-
-- used internally;
-- developed by {{COMPANY_NAME}};
-- integrated into products;
-- evaluated during proof-of-concept activities;
-- planned for future deployment.
+- a fost stabilit un Inventar al Sistemelor AI;
+- fiecare sistem AI cunoscut a fost identificat;
+- fiecare sistem AI are un scop de business atribuit;
+- fiecare sistem AI are un furnizor identificat;
+- fiecare sistem AI are un responsabil identificat;
+- fiecare sistem AI are o clasificare inițială de risc;
+- cerințele de supraveghere umană au fost identificate;
+- inventarul este menținut ca document de guvernanță controlat.
 
 ---
 
-# 5. Review Frequency
+# 3. Angajamentul Conducerii
 
-The AI System Inventory shall be reviewed:
+Conducerea se angajează să:
 
-- at least annually;
-- after introduction of a new AI system;
-- after significant architectural changes;
-- before regulatory inspections;
-- whenever required by management.
-
----
-
-# 6. Related Documents
-
-- DOD-001 AI System Inventory Policy
-- PROC-001 AI System Inventory Procedure
-- WI-001 AI System Inventory Work Instruction
-- CHK-001 AI System Inventory Checklist
-- REG-001 AI System Inventory Register
-- EVID-001 AI System Inventory Evidence
+- mențină inventarul;
+- revizuiască periodic inventarul;
+- înregistreze sistemele AI noi înainte de utilizarea operațională;
+- retragă din inventar sistemele AI depășite;
+- sprijine inspecțiile de reglementare;
+- mențină dovezi obiective.
 
 ---
 
-# 7. Declaration
+# 4. Domeniu de Aplicare
 
-I declare that, to the best of my knowledge, the AI System Inventory maintained by {{COMPANY_NAME}} accurately reflects the AI systems known to the organization at the date of approval.
+Această declarație se aplică tuturor sistemelor de Inteligență Artificială:
 
-Future changes shall be managed in accordance with the AI System Inventory Procedure.
+- utilizate intern;
+- dezvoltate de {{COMPANY_NAME}};
+- integrate în produse;
+- evaluate în cadrul activităților de proof-of-concept;
+- planificate pentru implementare viitoare.
 
 ---
 
-# 8. Approval
+# 5. Frecvența Revizuirii
 
-| Field | Value |
+Inventarul Sistemelor AI se revizuiește:
+
+- cel puțin anual;
+- după introducerea unui sistem AI nou;
+- după modificări arhitecturale semnificative;
+- înainte de inspecțiile de reglementare;
+- ori de câte ori conducerea solicită.
+
+---
+
+# 6. Documente Conexe
+
+- DOD-001 Politica de Inventar al Sistemelor AI
+- PROC-001 Procedura de Inventar al Sistemelor AI
+- WI-001 Instrucțiune de Lucru — Inventar Sisteme AI
+- CHK-001 Checklist de Inventar al Sistemelor AI
+- REG-001 Registrul de Inventar al Sistemelor AI
+- EVID-001 Dovezi de Inventar al Sistemelor AI
+
+---
+
+# 7. Declarație
+
+Declar că, după cunoștințele mele, Inventarul Sistemelor AI menținut de {{COMPANY_NAME}} reflectă cu exactitate sistemele AI cunoscute organizației la data aprobării.
+
+Modificările viitoare vor fi gestionate conform Procedurii de Inventar al Sistemelor AI.
+
+---
+
+# 8. Aprobare
+
+| Câmp | Valoare |
 |--------|-------|
-| Approved By | {{RESPONSIBLE_PERSON}} |
-| Position | Managing Director |
-| Company | {{COMPANY_NAME}} |
-| Approval Date | 2026-07-02 |
-| Status | Approved |
+| Aprobat de | {{RESPONSIBLE_PERSON}} |
+| Funcție | Director General |
+| Firma | {{COMPANY_NAME}} |
+| Data Aprobării | |
+| Status | Aprobat |
 
 ---
 
-# Document Control
+# Control Document
 
-| Version | Date | Description |
+| Versiune | Data | Descriere |
 |---------|------|-------------|
-| 1.0.0 | 2026-07-02 | Initial release |
+| 1.0.0 | | Versiune inițială |
