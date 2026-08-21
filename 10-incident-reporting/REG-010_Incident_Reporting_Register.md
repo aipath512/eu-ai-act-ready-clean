@@ -1,110 +1,98 @@
 # REG-010
 
-# AI Incident Reporting Register
+# Registrul de Raportare a Incidentelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | REG-010 |
-| Title | AI Incident Reporting Register |
+| ID Document | REG-010 |
+| Titlu | Registrul de Raportare a Incidentelor AI |
 | Repository | RRVI™ |
-| Module | 10 – Incident Reporting |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Register |
+| Modul | 10 – Raportare Incidente |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru Activ |
 
 ---
 
-# Purpose
+# Scop
 
-This register records all AI-related incidents identified, reported, investigated and resolved by {{COMPANY_NAME}}.
+Acest registru înregistrează toate incidentele legate de AI identificate, raportate, investigate și rezolvate de {{COMPANY_NAME}}.
 
-It provides objective evidence that incidents are managed in accordance with Regulation (EU) 2024/1689 (EU AI Act) and supports internal governance, external audits and regulatory inspections.
+Oferă dovada obiectivă că incidentele sunt gestionate conform Regulamentului (UE) 2024/1689 (EU AI Act) și sprijină guvernanța internă, auditurile externe și inspecțiile de reglementare.
 
----
-
-# Incident Reporting Register
-
-| Incident ID | Date | AI ID | AI System | Severity | Description | Status | Corrective Action | Closure Date |
-|-------------|------------|-------|----------------------------|----------|-------------------------------|-----------|-------------------------|--------------|
-| INC-001 | — | AI-001 | ChatGPT | None | No incidents reported | Closed | N/A | — |
-| INC-002 | — | AI-002 | Gemini | None | No incidents reported | Closed | N/A | — |
-| INC-003 | — | AI-003 | Claude | None | No incidents reported | Closed | N/A | — |
-| INC-004 | — | AI-004 | DeepSeek | None | No incidents reported | Closed | N/A | — |
-| INC-005 | — | AI-005 | Perplexity | None | No incidents reported | Closed | N/A | — |
-| INC-006 | — | AI-006 | Cloudflare Workers AI | N/A | Planned implementation | Planned | N/A | — |
-| INC-007 | — | AI-007 | Cloudflare Vectorize | N/A | POC implementation | POC | N/A | — |
-| INC-008 | — | AI-008 | GitHub Copilot | None | No incidents reported | Closed | N/A | — |
-| INC-009 | — | AI-009 | EU-112™ AI Governance Agent | N/A | Under development | Design | N/A | — |
-| INC-010 | — | AI-010 | Economic Twins™ Engine | N/A | Under development | Design | N/A | — |
-| INC-011 | — | AI-011 | Business Discovery Engine™ | N/A | Under development | Design | N/A | — |
-| INC-012 | — | AI-012 | Business Change Intelligence™ | N/A | Under development | Design | N/A | — |
-| INC-013 | — | AI-013 | AI Market Intelligence Agent™ | N/A | Under development | Design | N/A | — |
-| INC-014 | — | AI-014 | EU AI Act Intelligence Agent™ | N/A | Under development | Design | N/A | — |
-| INC-015 | — | AI-015 | Remote Inspection Agent™ | N/A | Concept phase | Concept | N/A | — |
-| INC-016 | — | AI-016 | Compliance Documentation Generator™ | N/A | Concept phase | Concept | N/A | — |
+**Important:** acest registru înregistrează EVENIMENTE, nu sisteme. Nu se completează câte un rând per sistem AI din inventar — un rând se adaugă DOAR când are loc efectiv un incident. Un registru gol e corect și de așteptat dacă firma nu a avut incidente.
 
 ---
 
-# Incident Severity Levels
+# Registrul de Raportare a Incidentelor
 
-| Level | Description |
+| ID Incident | Data | ID AI | Sistem AI | Gravitate (Art. 73) | Data Luării la Cunoștință | Termen Aplicabil | Notificare Transmisă | Descriere | Status | Acțiune Corectivă | Data Închiderii |
+|-------------|------|-------|-----------|----------|--------------------------|-------------------|----------------------|-------------|--------|---------------------|--------------|
+| | | | | | | | | | | | |
+
+*Se adaugă un rând nou doar la producerea unui incident real. Coloana „Gravitate" se completează cu GRAV (dacă îndeplinește criteriile Art. 73) sau MINOR. Pentru incidente grave, „Termen Aplicabil" e 15, 2 sau 10 zile de la Data Luării la Cunoștință.*
+
+---
+
+# Niveluri de Gravitate a Incidentului
+
+| Nivel | Descriere |
 |-------|-------------|
-| Critical | Major legal, safety or business impact |
-| High | Significant operational or compliance impact |
-| Medium | Moderate operational impact |
-| Low | Minor issue with limited impact |
-| None | No incident identified |
+| Grav (Art. 73) | Deces, vătămare gravă, perturbare de infrastructură critică, încălcare a drepturilor fundamentale, prejudicii grave — cu obligație legală de notificare |
+| Ridicat | Impact operațional sau de conformitate semnificativ, fără a îndeplini pragul Art. 73 |
+| Mediu | Impact operațional moderat |
+| Minor | Problemă minoră, impact limitat |
 
 ---
 
-# Review Requirements
+# Cerințe de Revizuire
 
-This register shall be updated whenever:
+Registrul se actualizează ori de câte ori:
 
-- an AI-related incident occurs;
-- an investigation is initiated;
-- corrective actions are completed;
-- incident status changes;
-- regulatory reporting is required.
+- are loc un incident legat de AI;
+- este inițiată o investigație;
+- sunt finalizate acțiuni corective;
+- se schimbă statusul incidentului;
+- este necesară raportarea de reglementare.
 
 ---
 
-# Register Owner
+# Responsabilul Registrului
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Register Owner | AI Governance Owner |
-| Custodian | {{RESPONSIBLE_PERSON}} |
-| Company | {{COMPANY_NAME}} |
-| Review Frequency | Continuous |
+| Responsabil Registru | Responsabilul de Guvernanță AI |
+| Custode | {{RESPONSIBLE_PERSON}} |
+| Firma | {{COMPANY_NAME}} |
+| Frecvența Revizuirii | Continuă |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-010 Incident Reporting Policy
-- PROC-010 Incident Reporting Procedure
-- WI-010 Incident Reporting Work Instruction
-- EVID-010 Incident Reporting Evidence
-- DEC-010 Incident Reporting Declaration
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 73
+- DOD-010 Politica de Raportare a Incidentelor AI
+- PROC-010 Procedura de Raportare a Incidentelor AI
+- WI-010 Instrucțiune de Lucru — Raportare Incidente
+- EVID-010 Dovezile de Raportare a Incidentelor
+- DEC-010 Declarația de Raportare a Incidentelor
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved Register
+Registru Aprobat

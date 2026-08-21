@@ -1,77 +1,69 @@
 # CHK-010
 
-# AI Incident Reporting Checklist
+# Checklist de Raportare a Incidentelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-010 |
-| Title | AI Incident Reporting Checklist |
+| ID Document | CHK-010 |
+| Titlu | Checklist de Raportare a Incidentelor AI |
 | Repository | RRVI™ |
-| Module | 10 – Incident Reporting |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 10 – Raportare Incidente |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that every AI-related incident has been properly identified, investigated, documented and closed in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Acest checklist se utilizează pentru a verifica dacă fiecare incident legat de AI a fost identificat, investigat, documentat și închis corespunzător, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# Incident Reporting Verification Checklist
+# Checklist de Verificare a Raportării Incidentelor
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | Incident ID assigned | ☐ | ☐ | ☐ | |
-| 2 | AI System identified | ☐ | ☐ | ☐ | |
-| 3 | Incident date and time recorded | ☐ | ☐ | ☐ | |
-| 4 | Reporter identified | ☐ | ☐ | ☐ | |
-| 5 | Incident description completed | ☐ | ☐ | ☐ | |
-| 6 | Severity classified | ☐ | ☐ | ☐ | |
-| 7 | Business impact assessed | ☐ | ☐ | ☐ | |
-| 8 | Regulatory impact assessed | ☐ | ☐ | ☐ | |
-| 9 | Root cause identified | ☐ | ☐ | ☐ | |
-| 10 | Supporting evidence preserved | ☐ | ☐ | ☐ | |
-| 11 | Logs reviewed | ☐ | ☐ | ☐ | |
-| 12 | Human Oversight reviewed | ☐ | ☐ | ☐ | |
-| 13 | Corrective actions defined | ☐ | ☐ | ☐ | |
-| 14 | Corrective actions implemented | ☐ | ☐ | ☐ | |
-| 15 | Corrective actions verified | ☐ | ☐ | ☐ | |
-| 16 | Incident Register updated | ☐ | ☐ | ☐ | |
-| 17 | Management informed | ☐ | ☐ | ☐ | |
-| 18 | Incident formally closed | ☐ | ☐ | ☐ | |
-| 19 | Lessons learned documented | ☐ | ☐ | ☐ | |
-| 20 | Incident ready for audit and inspection | ☐ | ☐ | ☐ | |
+| 1 | ID de Incident alocat | ☐ | ☐ | ☐ | |
+| 2 | Sistemul AI identificat | ☐ | ☐ | ☐ | |
+| 3 | Data și ora incidentului înregistrate | ☐ | ☐ | ☐ | |
+| 4 | Cel care a raportat este identificat | ☐ | ☐ | ☐ | |
+| 5 | Descrierea incidentului este completă | ☐ | ☐ | ☐ | |
+| 6 | Gravitatea este clasificată (grav conform Art. 73 / minor) | ☐ | ☐ | ☐ | |
+| 7 | Data luării la cunoștință a legăturii cauzale este înregistrată | ☐ | ☐ | ☐ | |
+| 8 | Dacă e grav: termenul de notificare aplicabil (15/2/10 zile) a fost determinat | ☐ | ☐ | ☐ | |
+| 9 | Dacă e grav: notificarea autorității a fost transmisă în termen | ☐ | ☐ | ☐ | |
+| 10 | Dacă implică date personale: notificarea GDPR de 72h a fost evaluată separat | ☐ | ☐ | ☐ | |
+| 11 | Dacă firma e deployer: providerul a fost informat (Art. 26 alin. 5) | ☐ | ☐ | ☐ | |
+| 12 | Impactul de business a fost evaluat | ☐ | ☐ | ☐ | |
+| 13 | Cauza principală a fost identificată | ☐ | ☐ | ☐ | |
+| 14 | Dovezile justificative au fost păstrate | ☐ | ☐ | ☐ | |
+| 15 | Jurnalele au fost revizuite | ☐ | ☐ | ☐ | |
+| 16 | Supravegherea Umană a fost revizuită | ☐ | ☐ | ☐ | |
+| 17 | Acțiunile corective au fost definite și implementate | ☐ | ☐ | ☐ | |
+| 18 | Registrul de Incidente a fost actualizat | ☐ | ☐ | ☐ | |
+| 19 | Incidentul a fost închis formal | ☐ | ☐ | ☐ | |
+| 20 | Incidentul este pregătit pentru audit și inspecție | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
+
+*Dacă incidentul e clasificat grav (Art. 73) și notificarea nu a fost transmisă în termen, rezultatul este automat NECONFORM.*
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,37 +73,47 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-010 Incident Reporting Policy
-- PROC-010 Incident Reporting Procedure
-- WI-010 Incident Reporting Work Instruction
-- REG-010 Incident Reporting Register
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 73
+- DOD-010 Politica de Raportare a Incidentelor AI
+- PROC-010 Procedura de Raportare a Incidentelor AI
+- WI-010 Instrucțiune de Lucru — Raportare Incidente
+- REG-010 Registrul de Raportare a Incidentelor
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

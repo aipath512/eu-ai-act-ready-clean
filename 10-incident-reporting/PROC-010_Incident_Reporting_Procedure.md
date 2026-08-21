@@ -1,213 +1,242 @@
 # PROC-010
 
-# AI Incident Reporting Procedure
+# Procedura de Raportare a Incidentelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | PROC-010 |
-| Title | AI Incident Reporting Procedure |
+| ID Document | PROC-010 |
+| Titlu | Procedura de Raportare a Incidentelor AI |
 | Repository | RRVI™ |
-| Module | 10 – Incident Reporting |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 10 – Raportare Incidente |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This procedure defines how {{COMPANY_NAME}} identifies, reports, investigates, documents and resolves incidents involving Artificial Intelligence systems.
+Această procedură definește cum {{COMPANY_NAME}} identifică, raportează, investighează, documentează și rezolvă incidentele legate de sistemele de Inteligență Artificială.
 
-The objective is to ensure that AI-related incidents are managed consistently, corrective actions are implemented, and objective evidence is maintained in accordance with Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# 2. Scope
-
-This procedure applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- proof-of-concept AI systems;
-- production AI systems;
-- AI infrastructure;
-- personnel using AI systems.
+Obiectivul este să asigure că incidentele legate de AI sunt gestionate consecvent, acțiunile corective sunt implementate, termenele legale de notificare (Art. 73) sunt respectate, și se mențin dovezi obiective, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 3. Responsibilities
+# 2. Domeniu de Aplicare
 
-## Managing Director
+Această procedură se aplică:
 
-Responsible for approving major corrective actions where required.
-
----
-
-## AI Governance Owner
-
-Responsible for:
-
-- coordinating incident management;
-- reviewing incident reports;
-- maintaining the Incident Reporting Register.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- infrastructurii AI;
+- personalului care folosește sisteme AI.
 
 ---
 
-## AI System Owner
+# 3. Responsabilități
 
-Responsible for:
+## Director General
 
-- reporting incidents;
-- supporting investigations;
-- implementing corrective actions.
+Responsabil pentru aprobarea acțiunilor corective majore, unde e cerută, și confirmarea notificării autorităților.
 
 ---
 
-## AI Users
+## Responsabilul de Guvernanță AI
 
-Responsible for:
+Responsabil pentru:
 
-- immediately reporting suspected incidents;
-- preserving available evidence;
-- cooperating during investigations.
-
----
-
-## Compliance Owner
-
-Responsible for:
-
-- assessing regulatory impact;
-- determining notification requirements;
-- supporting audits and inspections.
+- coordonarea managementului incidentelor;
+- revizuirea rapoartelor de incident;
+- menținerea Registrului de Raportare a Incidentelor;
+- calcularea și monitorizarea termenelor de notificare (15/2/10 zile, Art. 73).
 
 ---
 
-# 4. Procedure
+## Responsabilul de Sistem AI
 
-## Step 1 — Detect Incident
+Responsabil pentru:
 
-Identify any event involving an AI system that may affect:
-
-- availability;
-- integrity;
-- confidentiality;
-- accuracy;
-- compliance;
-- safety.
+- raportarea incidentelor;
+- informarea providerului, dacă {{COMPANY_NAME}} e deployer (Art. 26 alin. 5);
+- sprijinirea investigațiilor;
+- implementarea acțiunilor corective.
 
 ---
 
-## Step 2 — Report Incident
+## Utilizatorii AI
 
-Immediately notify the AI Governance Owner.
+Responsabili pentru:
 
-Record:
-
-- date;
-- time;
-- AI System;
-- incident description;
-- reporter.
+- raportarea imediată a suspiciunilor de incident;
+- păstrarea dovezilor disponibile;
+- cooperarea în timpul investigațiilor.
 
 ---
 
-## Step 3 — Classify Incident
+## Responsabilul de Conformitate
 
-Determine:
+Responsabil pentru:
 
-- severity;
-- business impact;
-- regulatory impact;
-- operational impact.
-
-Assign a priority.
+- evaluarea impactului de reglementare;
+- determinarea dacă incidentul este „grav" conform Art. 73;
+- determinarea cerințelor de notificare, inclusiv coordonarea cu termenul GDPR de 72h dacă e cazul;
+- sprijinirea auditurilor și inspecțiilor.
 
 ---
 
-## Step 4 — Investigate
+# 4. Procedura
 
-Determine:
+## Pasul 1 — Detectarea Incidentului
 
-- root cause;
-- affected systems;
-- affected data;
-- affected users;
-- corrective actions required.
+Se identifică orice eveniment care implică un sistem AI și care poate afecta:
 
----
-
-## Step 5 — Correct
-
-Implement corrective actions.
-
-Verify effectiveness.
-
-Document completion.
+- disponibilitatea;
+- integritatea;
+- confidențialitatea;
+- exactitatea;
+- conformitatea;
+- siguranța.
 
 ---
 
-## Step 6 — Update Register
+## Pasul 2 — Raportarea Incidentului
 
-Open:
+Se notifică imediat Responsabilul de Guvernanță AI.
+
+Se înregistrează:
+
+- data;
+- ora;
+- Sistemul AI;
+- descrierea incidentului;
+- cel care a raportat.
+
+---
+
+## Pasul 3 — Clasificarea Incidentului (Grav / Minor)
+
+Se determină dacă incidentul se încadrează în definiția „incident grav" din Articolul 73:
+
+- deces sau vătămare gravă a sănătății unei persoane;
+- perturbare gravă și ireversibilă a unei infrastructuri critice;
+- încălcarea obligațiilor de protejare a drepturilor fundamentale;
+- prejudicii grave aduse bunurilor sau mediului.
+
+Se înregistrează data luării la cunoștință a legăturii cauzale dintre sistemul AI și incident — de aici încep să curgă termenele legale.
+
+---
+
+## Pasul 4 — Determinarea Termenului de Notificare (dacă e grav)
+
+Se determină termenul aplicabil:
+
+- **15 zile** — termen standard;
+- **2 zile** — încălcare gravă și larg răspândită a drepturilor fundamentale, sau deces;
+- **10 zile** — deces care necesită investigație suplimentară.
+
+Se notifică autoritatea de supraveghere a pieței în termenul aplicabil.
+
+---
+
+## Pasul 5 — Informarea Providerului (dacă {{COMPANY_NAME}} e Deployer)
+
+Conform Art. 26 alin. (5), se informează imediat providerul sau distribuitorul. Se evaluează necesitatea suspendării utilizării sistemului până la clarificare.
+
+---
+
+## Pasul 6 — Coordonarea cu GDPR (dacă e cazul)
+
+Dacă incidentul implică și date cu caracter personal, se evaluează separat necesitatea notificării ANSPDCP în 72h (Art. 33 GDPR) — independent de notificarea EU AI Act.
+
+---
+
+## Pasul 7 — Investigare
+
+Se determină:
+
+- cauza principală;
+- sistemele afectate;
+- datele afectate;
+- utilizatorii afectați;
+- acțiunile corective necesare.
+
+---
+
+## Pasul 8 — Corectare
+
+Se implementează acțiunile corective.
+
+Se verifică eficacitatea.
+
+Se documentează finalizarea.
+
+---
+
+## Pasul 9 — Actualizarea Registrului
+
+Se deschide:
 
 REG-010_Incident_Reporting_Register.md
 
-Record:
+Se înregistrează:
 
-- incident number;
-- classification;
-- corrective actions;
-- closure date.
-
----
-
-## Step 7 — Review
-
-Review incidents:
-
-- after closure;
-- during management review;
-- after significant AI changes;
-- before regulatory inspections.
+- numărul incidentului;
+- clasificarea (grav/minor);
+- termenul de notificare aplicabil și respectarea lui;
+- acțiunile corective;
+- data închiderii.
 
 ---
 
-# 5. Records
+## Pasul 10 — Revizuire
 
-This procedure produces:
+Incidentele se revizuiesc:
 
-- Incident Reporting Register;
-- Incident Reporting Evidence;
-- Incident Reporting Declaration.
-
----
-
-# 6. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-010 Incident Reporting Policy
-- DOD-009 Logging and Monitoring Policy
-- REG-010 Incident Reporting Register
-- EVID-010 Incident Reporting Evidence
-- DEC-010 Incident Reporting Declaration
+- după închidere;
+- în timpul revizuirii de conducere;
+- după modificări semnificative ale AI;
+- înainte de inspecțiile de reglementare.
 
 ---
 
-# 7. Approval
+# 5. Înregistrări
 
-Prepared by
+Această procedură produce:
+
+- Registrul de Raportare a Incidentelor;
+- Dovezile de Raportare a Incidentelor;
+- Declarația de Raportare a Incidentelor.
+
+---
+
+# 6. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 73, Articolul 26 alin. (5)
+- Regulamentul (UE) 2016/679 (GDPR), Articolul 33
+- DOD-010 Politica de Raportare a Incidentelor AI
+- DOD-009 Politica de Logging și Monitorizare
+- REG-010 Registrul de Raportare a Incidentelor
+- EVID-010 Dovezile de Raportare a Incidentelor
+- DEC-010 Declarația de Raportare a Incidentelor
+
+---
+
+# 7. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

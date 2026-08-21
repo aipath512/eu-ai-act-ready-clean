@@ -1,130 +1,126 @@
 # EVID-010
 
-# AI Incident Reporting Evidence
+# Dovezi de Raportare a Incidentelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | EVID-010 |
-| Title | AI Incident Reporting Evidence |
+| ID Document | EVID-010 |
+| Titlu | Dovezi de Raportare a Incidentelor AI |
 | Repository | RRVI™ |
-| Module | 10 – Incident Reporting |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Evidence Register |
+| Modul | 10 – Raportare Incidente |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru de Dovezi Activ |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This document records the objective evidence supporting the identification, investigation, management and closure of AI-related incidents within {{COMPANY_NAME}}.
+Acest document înregistrează dovezile obiective care susțin identificarea, investigarea, gestionarea și închiderea incidentelor legate de AI din {{COMPANY_NAME}}.
 
-The evidence demonstrates that incidents are properly documented, investigated and resolved in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Dovezile demonstrează că incidentele sunt documentate, investigate și rezolvate corespunzător, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 2. Evidence Principles
+# 2. Principii ale Dovezilor
 
-Evidence shall be:
+Dovezile trebuie să fie:
 
-- objective;
-- verifiable;
-- traceable;
+- obiective;
+- verificabile;
+- trasabile;
 - complete;
-- version controlled;
-- retained according to the company's document retention policy.
+- controlate ca versiune;
+- păstrate conform politicii de retenție a documentelor firmei.
 
 ---
 
-# 3. Incident Evidence Register
+# 3. Registrul de Dovezi de Incidente
 
-| Evidence ID | Incident ID | Evidence Description | Evidence Location | Status |
+| ID Dovadă | ID Incident | Descrierea Dovezii | Locația Dovezii | Status |
 |--------------|-------------|----------------------|-------------------|--------|
-| IR-001 | INC-001 | Incident assessment record | GitHub Repository | Closed |
-| IR-002 | INC-002 | Incident assessment record | GitHub Repository | Closed |
-| IR-003 | INC-003 | Incident assessment record | GitHub Repository | Closed |
-| IR-004 | INC-004 | Incident assessment record | GitHub Repository | Closed |
-| IR-005 | INC-005 | Incident assessment record | GitHub Repository | Closed |
-| IR-006 | INC-006 | Planned implementation review | GitHub Repository | Planned |
-| IR-007 | INC-007 | Proof-of-concept review | GitHub Repository | POC |
-| IR-008 | INC-008 | Incident assessment record | GitHub Repository | Closed |
-| IR-009 | INC-009 | Design review | GitHub Repository | Draft |
-| IR-010 | INC-010 | Design review | GitHub Repository | Draft |
-| IR-011 | INC-011 | Design review | GitHub Repository | Draft |
-| IR-012 | INC-012 | Design review | GitHub Repository | Draft |
-| IR-013 | INC-013 | Design review | GitHub Repository | Draft |
-| IR-014 | INC-014 | Design review | GitHub Repository | Draft |
-| IR-015 | INC-015 | Concept review | GitHub Repository | Draft |
-| IR-016 | INC-016 | Concept review | GitHub Repository | Draft |
+| IR-001 | | | | |
+| IR-002 | | | | |
+| IR-003 | | | | |
+| IR-004 | | | | |
+| IR-005 | | | | |
+| IR-006 | | | | |
+| IR-007 | | | | |
+| IR-008 | | | | |
+| IR-009 | | | | |
+| IR-010 | | | | |
+
+*Rândurile se completează de fiecare firmă doar dacă a avut loc efectiv un incident, cu dovezi reale. Un registru care afirmă incidente „Închise" care nu au avut loc este mai grav decât unul gol.*
 
 ---
 
-# 4. Acceptable Evidence
+# 4. Dovezi Acceptabile
 
-Supporting evidence may include:
+Dovezile justificative pot include:
 
-- incident reports;
-- system logs;
-- monitoring alerts;
-- screenshots;
-- AI prompts and responses;
-- audit logs;
-- investigation reports;
-- root cause analyses;
-- corrective action records;
-- management approvals;
-- communication records.
-
----
-
-# 5. Evidence Storage
-
-Evidence may be maintained in:
-
-- GitHub Repository;
-- Internal Documentation Repository;
-- Incident Management System;
-- Cloudflare Logs;
-- Security Monitoring Platform;
-- Compliance Documentation Repository.
+- rapoarte de incident;
+- jurnale de sistem;
+- alerte de monitorizare;
+- capturi de ecran;
+- prompturi și răspunsuri AI;
+- jurnale de audit;
+- rapoarte de investigație;
+- analize de cauză principală;
+- înregistrări de acțiuni corective;
+- aprobări de conducere;
+- înregistrări de comunicare.
 
 ---
 
-# 6. Review Requirements
+# 5. Stocarea Dovezilor
 
-Evidence shall be reviewed:
+Dovezile pot fi menținute în:
 
-- after every incident;
-- after completion of corrective actions;
-- during management review;
-- before regulatory inspections;
-- annually.
-
----
-
-# 7. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-010 Incident Reporting Policy
-- PROC-010 Incident Reporting Procedure
-- REG-010 Incident Reporting Register
-- DEC-010 Incident Reporting Declaration
+- Repository GitHub;
+- Repository Intern de Documentație;
+- Sistemul de Management al Incidentelor;
+- Jurnale Cloudflare;
+- Platforma de Monitorizare a Securității;
+- Repository de Documentație de Conformitate.
 
 ---
 
-# 8. Approval
+# 6. Cerințe de Revizuire
 
-Prepared by
+Dovezile se revizuiesc:
+
+- după fiecare incident;
+- după finalizarea acțiunilor corective;
+- în timpul revizuirii de conducere;
+- înainte de inspecțiile de reglementare;
+- anual.
+
+---
+
+# 7. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 73
+- DOD-010 Politica de Raportare a Incidentelor AI
+- PROC-010 Procedura de Raportare a Incidentelor AI
+- REG-010 Registrul de Raportare a Incidentelor
+- DEC-010 Declarația de Raportare a Incidentelor
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

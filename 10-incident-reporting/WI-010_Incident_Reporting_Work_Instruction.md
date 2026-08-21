@@ -1,231 +1,250 @@
 # WI-010
 
-# AI Incident Reporting Work Instruction
+# Instrucțiune de Lucru — Raportare Incidente AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-010 |
-| Title | AI Incident Reporting Work Instruction |
+| ID Document | WI-010 |
+| Titlu | Instrucțiune de Lucru — Raportare Incidente AI |
 | Repository | RRVI™ |
-| Module | 10 – Incident Reporting |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 10 – Raportare Incidente |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed guidance for identifying, recording, investigating and closing Artificial Intelligence incidents within {{COMPANY_NAME}}.
+Această Instrucțiune de Lucru oferă îndrumări detaliate pentru identificarea, înregistrarea, investigarea și închiderea incidentelor de Inteligență Artificială din {{COMPANY_NAME}}.
 
-The objective is to ensure that every AI-related incident is managed consistently, documented objectively and resolved in a timely manner.
-
----
-
-# 2. Preconditions
-
-Before processing an incident verify that:
-
-- the AI System exists in the AI System Inventory;
-- the incident has been reported;
-- sufficient information is available to begin the investigation;
-- the AI System Owner has been notified.
+Obiectivul este să asigure că fiecare incident legat de AI este gestionat consecvent, documentat obiectiv, raportat la timp autorităților unde e cerut de lege, și rezolvat corespunzător.
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-Collect the following information:
+Înainte de a procesa un incident, se verifică dacă:
 
-- Incident ID
-- Date and Time
-- AI System ID
-- AI System Name
-- Reporter
-- Incident Description
-- Severity
-- Business Impact
-- Regulatory Impact
-- Corrective Action
+- Sistemul AI există în Inventarul Sistemelor AI;
+- incidentul a fost raportat;
+- există suficiente informații pentru a începe investigația;
+- Responsabilul Sistemului AI a fost notificat.
+
+---
+
+# 3. Informații Necesare
+
+Se colectează următoarele informații:
+
+- ID Incident
+- Data și Ora
+- ID Sistem AI
+- Nume Sistem AI
+- Cel care a raportat
+- Descrierea Incidentului
+- Gravitatea (Grav conform Art. 73 / Minor)
+- Data Luării la Cunoștință a legăturii cauzale
+- Termenul de Notificare Aplicabil (15/2/10 zile, dacă e grav)
+- Impactul de Business
+- Impactul de Reglementare
+- Acțiunea Corectivă
 - Status
-- Closure Date
+- Data Închiderii
 
 ---
 
-# 4. Work Instructions
+# 4. Instrucțiuni de Lucru
 
-## Step 1
+## Pasul 1
 
-Receive the incident report.
+Se primește raportul de incident.
 
-Assign a unique Incident ID.
+Se alocă un ID unic de Incident.
 
 ---
 
-## Step 2
+## Pasul 2
 
-Identify the affected AI system.
+Se identifică sistemul AI afectat.
 
-Open:
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
-Locate the corresponding AI System.
+Se localizează Sistemul AI corespunzător.
 
 ---
 
-## Step 3
+## Pasul 3
 
-Classify the incident.
+Se clasifică incidentul.
 
-Determine:
+Se determină mai întâi dacă îndeplinește criteriile de **incident grav** conform Articolului 73:
 
-- Critical
-- High
-- Medium
-- Low
+- deces sau vătămare gravă a sănătății;
+- perturbare gravă și ireversibilă a infrastructurii critice;
+- încălcare a obligațiilor de protejare a drepturilor fundamentale;
+- prejudicii grave aduse bunurilor sau mediului.
 
-Assess:
+Dacă e grav, se înregistrează data luării la cunoștință și se calculează termenul aplicabil (15/2/10 zile).
 
-- operational impact;
-- business impact;
-- compliance impact;
-- security impact.
+Dacă e minor, se clasifică: Ridicat / Mediu / Minor.
 
----
+Se evaluează:
 
-## Step 4
-
-Collect Evidence.
-
-Preserve:
-
-- logs;
-- screenshots;
-- AI prompts;
-- AI responses;
-- monitoring alerts;
-- configuration information;
-- witness statements where applicable.
+- impactul operațional;
+- impactul de business;
+- impactul de conformitate;
+- impactul de securitate.
 
 ---
 
-## Step 5
+## Pasul 4
 
-Investigate.
+Se colectează Dovezile.
 
-Determine:
+Se păstrează:
 
-- root cause;
-- affected systems;
-- affected data;
-- affected users;
-- regulatory implications.
-
----
-
-## Step 6
-
-Implement Corrective Actions.
-
-Document:
-
-- corrective action;
-- responsible person;
-- completion date;
-- verification result.
+- jurnale;
+- capturi de ecran;
+- prompturi AI;
+- răspunsuri AI;
+- alerte de monitorizare;
+- informații de configurare;
+- declarații ale martorilor, unde e cazul.
 
 ---
 
-## Step 7
+## Pasul 5
 
-Update Register.
+Se investighează.
 
-Open:
+Se determină:
+
+- cauza principală;
+- sistemele afectate;
+- datele afectate;
+- utilizatorii afectați;
+- implicațiile de reglementare.
+
+---
+
+## Pasul 6
+
+Dacă e incident grav — se transmite notificarea.
+
+Se notifică autoritatea de supraveghere a pieței, în termenul aplicabil.
+
+Dacă {{COMPANY_NAME}} e deployer, se informează imediat providerul (Art. 26 alin. 5).
+
+Dacă implică date personale, se evaluează separat notificarea GDPR de 72h.
+
+---
+
+## Pasul 7
+
+Se implementează Acțiunile Corective.
+
+Se documentează:
+
+- acțiunea corectivă;
+- persoana responsabilă;
+- data finalizării;
+- rezultatul verificării.
+
+---
+
+## Pasul 8
+
+Se actualizează Registrul.
+
+Se deschide:
 
 REG-010_Incident_Reporting_Register.md
 
-Record:
+Se înregistrează:
 
-- Incident ID;
-- AI System;
-- severity;
-- status;
-- closure date.
-
----
-
-## Step 8
-
-Close Incident.
-
-Verify:
-
-- corrective actions completed;
-- evidence stored;
-- management informed;
-- documentation updated.
+- ID Incident;
+- Sistemul AI;
+- gravitatea;
+- termenul aplicabil și respectarea lui;
+- statusul;
+- data închiderii.
 
 ---
 
-# 5. Quality Checks
+## Pasul 9
 
-Verify that:
+Se închide Incidentul.
 
-✓ Incident ID assigned.
+Se verifică:
 
-✓ AI System identified.
-
-✓ Severity classified.
-
-✓ Evidence preserved.
-
-✓ Root cause documented.
-
-✓ Corrective action completed.
-
-✓ Register updated.
-
-✓ Closure approved.
-
-✓ Supporting evidence retained.
+- acțiunile corective finalizate;
+- dovezile stocate;
+- conducerea informată;
+- documentația actualizată.
 
 ---
 
-# 6. Outputs
+# 5. Controale de Calitate
 
-This instruction updates:
+Se verifică dacă:
 
-- REG-010 Incident Reporting Register
-- EVID-010 Incident Reporting Evidence
-- DEC-010 Incident Reporting Declaration
+✓ ID-ul Incidentului este alocat.
+
+✓ Sistemul AI este identificat.
+
+✓ Gravitatea este clasificată corect (Grav Art. 73 / Minor).
+
+✓ Dacă e grav, notificarea a fost transmisă în termen.
+
+✓ Dovezile sunt păstrate.
+
+✓ Cauza principală este documentată.
+
+✓ Acțiunea corectivă este finalizată.
+
+✓ Registrul a fost actualizat.
+
+✓ Închiderea a fost aprobată.
 
 ---
 
-# 7. References
+# 6. Rezultate
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-010 Incident Reporting Policy
-- PROC-010 Incident Reporting Procedure
-- REG-001 AI System Inventory Register
-- REG-009 Logging and Monitoring Register
+Această instrucțiune actualizează:
+
+- REG-010 Registrul de Raportare a Incidentelor
+- EVID-010 Dovezile de Raportare a Incidentelor
+- DEC-010 Declarația de Raportare a Incidentelor
 
 ---
 
-# 8. Approval
+# 7. Referințe
 
-Prepared by
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 73
+- DOD-010 Politica de Raportare a Incidentelor AI
+- PROC-010 Procedura de Raportare a Incidentelor AI
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-009 Registrul de Logging și Monitorizare
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

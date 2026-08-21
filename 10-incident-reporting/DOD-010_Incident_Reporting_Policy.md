@@ -1,176 +1,225 @@
 # DOD-010
 
-# AI Incident Reporting Policy
+# Politica de Raportare a Incidentelor AI
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DOD-010 |
-| Title | AI Incident Reporting Policy |
+| ID Document | DOD-010 |
+| Titlu | Politica de Raportare a Incidentelor AI |
 | Repository | RRVI™ |
-| Module | 10 – Incident Reporting |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 10 – Raportare Incidente |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-The purpose of this policy is to establish the principles and requirements for identifying, reporting, recording, investigating and resolving incidents involving Artificial Intelligence systems used, developed or deployed by {{COMPANY_NAME}}.
+Scopul acestei politici este de a stabili principiile și cerințele pentru identificarea, raportarea, înregistrarea, investigarea și rezolvarea incidentelor legate de sistemele de Inteligență Artificială utilizate, dezvoltate sau implementate de {{COMPANY_NAME}}.
 
-This policy supports compliance with Regulation (EU) 2024/1689 (EU AI Act) by ensuring that AI-related incidents are managed consistently, documented objectively and resolved in a timely manner.
-
----
-
-# 2. Scope
-
-This policy applies to:
-
-- internally developed AI systems;
-- externally acquired AI systems;
-- proof-of-concept AI systems;
-- production AI systems;
-- AI infrastructure;
-- personnel using AI systems on behalf of {{COMPANY_NAME}}.
+Această politică sprijină conformitatea cu Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 73, asigurând că incidentele legate de AI sunt gestionate consecvent, documentate obiectiv și raportate la timp autorităților competente, unde este cerut de lege.
 
 ---
 
-# 3. Policy Statement
+# 2. Definiția Incidentului Grav (Articolul 73)
 
-{{COMPANY_NAME}} shall establish and maintain an Incident Reporting process for all AI systems.
+Un **incident grav** este un incident sau o defecțiune a unui sistem AI care, direct sau indirect, duce la oricare din următoarele:
 
-Every AI-related incident shall be:
+- decesul unei persoane sau vătămarea gravă a sănătății unei persoane;
+- o perturbare gravă și ireversibilă a gestionării sau funcționării unei infrastructuri critice;
+- încălcarea obligațiilor prevăzute de dreptul Uniunii menite să protejeze drepturile fundamentale;
+- prejudicii grave aduse bunurilor sau mediului.
 
-- identified;
-- reported;
-- documented;
-- investigated;
-- resolved;
-- reviewed.
+{{COMPANY_NAME}} distinge clar între un incident grav (cu obligație de notificare legală) și un incident minor (gestionat intern, fără notificare obligatorie).
 
 ---
 
-# 4. Incident Management Principles
+# 3. Termenele de Notificare (Articolul 73)
 
-Incident management shall ensure:
+Când {{COMPANY_NAME}} identifică sau ia cunoștință de un incident grav legat de un sistem AI cu risc ridicat pe care îl operează, se aplică următoarele termene, calculate de la momentul luării la cunoștință a legăturii cauzale dintre sistemul AI și incident:
 
-- rapid detection;
-- timely reporting;
-- objective investigation;
-- root cause analysis;
-- corrective actions;
-- preventive actions;
-- complete documentation.
+- **15 zile** — termenul standard de notificare către autoritatea de supraveghere a pieței.
+- **2 zile** — termen redus pentru incidente care implică o încălcare gravă a obligațiilor de protejare a drepturilor fundamentale, definite ca fiind larg răspândite, sau un deces.
+- **10 zile** — termen aplicabil în cazul decesului unei persoane, dacă evenimentul necesită investigație suplimentară înainte de raportarea completă.
+
+Momentul de la care încep să curgă termenele este **momentul luării la cunoștință a legăturii cauzale** dintre sistemul AI și incidentul grav (coloana „Prisă la Cunoștință" din registru), nu momentul producerii efective a incidentului, dacă acesta a fost diferit.
 
 ---
 
-# 5. Incident Categories
+# 4. Obligația Deployerului de a Informa Providerul
 
-Incidents may include:
+Conform Articolului 26 alin. (5), {{COMPANY_NAME}}, în calitate de deployer al unui sistem AI cu risc ridicat, are obligația să:
 
-- incorrect AI outputs;
-- security incidents;
-- data quality issues;
-- system failures;
-- human oversight failures;
-- unauthorized access;
-- regulatory non-compliance;
-- service interruption.
+- informeze imediat providerul sau distribuitorul despre incidentul grav identificat;
+- suspende utilizarea sistemului AI dacă există motive să considere că utilizarea în conformitate cu instrucțiunile poate duce la un risc, până la clarificarea situației cu providerul.
 
 ---
 
-# 6. Roles and Responsibilities
+# 5. Coordonarea cu Termenul GDPR de 72 de Ore
 
-## Managing Director
+Dacă incidentul implică și o încălcare a securității datelor cu caracter personal, se aplică simultan și separat termenul de **72 de ore** pentru notificarea autorității de protecție a datelor (ANSPDCP), conform Articolului 33 GDPR.
 
-Approves major corrective actions.
-
----
-
-## AI Governance Owner
-
-Responsible for:
-
-- coordinating incident management;
-- reviewing incident reports;
-- maintaining the Incident Register.
+Cele două notificări (EU AI Act către autoritatea de supraveghere a pieței, GDPR către autoritatea de protecție a datelor) sunt **distincte** și nu se substituie una pe alta — pot fi necesare ambele, pentru același eveniment, către autorități diferite.
 
 ---
 
-## AI System Owner
+# 6. Domeniu de Aplicare
 
-Responsible for:
+Această politică se aplică:
 
-- reporting incidents;
-- supporting investigations;
-- implementing corrective actions.
-
----
-
-## AI Users
-
-Responsible for:
-
-- immediately reporting suspected AI incidents;
-- preserving relevant evidence;
-- cooperating during investigations.
+- sistemelor AI dezvoltate intern;
+- sistemelor AI achiziționate extern;
+- sistemelor AI de tip proof-of-concept;
+- sistemelor AI de producție;
+- infrastructurii AI;
+- personalului care folosește sisteme AI în numele {{COMPANY_NAME}}.
 
 ---
 
-## Compliance Owner
+# 7. Declarația de Politică
 
-Responsible for:
+{{COMPANY_NAME}} stabilește și menține un proces de Raportare a Incidentelor pentru toate sistemele AI.
 
-- assessing regulatory impact;
-- supporting audits and inspections;
-- monitoring incident trends.
+Fiecare incident legat de AI este:
 
----
-
-# 7. Review Requirements
-
-This policy shall be reviewed:
-
-- annually;
-- after significant incidents;
-- after regulatory updates;
-- after major AI system changes;
-- before regulatory inspections.
+- identificat;
+- clasificat (grav / minor);
+- raportat (intern, și către autorități dacă e cazul, cu respectarea termenelor de la Secțiunea 3);
+- documentat;
+- investigat;
+- rezolvat;
+- revizuit.
 
 ---
 
-# 8. Compliance
+# 8. Principii de Management al Incidentelor
 
-Compliance with this policy is mandatory.
+Managementul incidentelor asigură:
 
-Failure to report significant AI incidents may result in corrective actions and compliance review.
-
----
-
-# 9. References
-
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-001 AI System Inventory Policy
-- DOD-002 Risk Classification Policy
-- DOD-009 Logging and Monitoring Policy
-- REG-010 Incident Reporting Register
+- detectare rapidă;
+- raportare la timp, cu respectarea termenelor legale;
+- investigare obiectivă;
+- analiza cauzei principale;
+- acțiuni corective;
+- acțiuni preventive;
+- documentare completă.
 
 ---
 
-# 10. Approval
+# 9. Categorii de Incidente
 
-Prepared by
+Incidentele pot include:
+
+- outputuri AI incorecte;
+- incidente de securitate;
+- probleme de calitate a datelor;
+- defecțiuni de sistem;
+- eșecuri de supraveghere umană;
+- acces neautorizat;
+- neconformitate de reglementare;
+- întreruperea serviciului;
+- **incidente grave conform Art. 73** (deces, vătămare gravă, perturbare de infrastructură critică, încălcare a drepturilor fundamentale, prejudicii grave).
+
+---
+
+# 10. Roluri și Responsabilități
+
+## Director General
+
+Aprobă acțiunile corective majore și confirmă notificarea autorităților, unde e cerută.
+
+---
+
+## Responsabilul de Guvernanță AI
+
+Responsabil pentru:
+
+- coordonarea managementului incidentelor;
+- revizuirea rapoartelor de incident;
+- menținerea Registrului de Incidente;
+- monitorizarea termenelor de notificare (15/2/10 zile).
+
+---
+
+## Responsabilul de Sistem AI
+
+Responsabil pentru:
+
+- raportarea incidentelor;
+- informarea providerului, dacă {{COMPANY_NAME}} e deployer;
+- sprijinirea investigațiilor;
+- implementarea acțiunilor corective.
+
+---
+
+## Utilizatorii AI
+
+Responsabili pentru:
+
+- raportarea imediată a suspiciunilor de incident AI;
+- păstrarea dovezilor relevante;
+- cooperarea în timpul investigațiilor.
+
+---
+
+## Responsabilul de Conformitate
+
+Responsabil pentru:
+
+- evaluarea impactului de reglementare;
+- verificarea încadrării ca incident grav conform Art. 73;
+- coordonarea cu notificarea GDPR de 72h, dacă e cazul;
+- sprijinirea auditurilor și inspecțiilor;
+- monitorizarea tendințelor de incidente.
+
+---
+
+# 11. Cerințe de Revizuire
+
+Această politică se revizuiește:
+
+- anual;
+- după incidente semnificative;
+- după actualizări de reglementare;
+- după modificări majore ale sistemelor AI;
+- înainte de inspecțiile de reglementare.
+
+---
+
+# 12. Conformitate
+
+Respectarea acestei politici este obligatorie.
+
+Neraportarea incidentelor AI semnificative, în termenele prevăzute de Articolul 73, poate duce la sancțiuni de reglementare, pe lângă acțiunile corective și revizuirea de conformitate.
+
+---
+
+# 13. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act), Articolul 73, Articolul 26 alin. (5)
+- Regulamentul (UE) 2016/679 (GDPR), Articolul 33
+- DOD-001 Politica de Inventar al Sistemelor AI
+- DOD-002 Politica de Clasificare a Riscului
+- DOD-009 Politica de Logging și Monitorizare
+- REG-010 Registrul de Raportare a Incidentelor
+
+---
+
+# 14. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat
