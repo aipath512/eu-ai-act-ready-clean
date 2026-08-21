@@ -1,113 +1,109 @@
 # REG-002
 
-# Risk Classification Register
+# Registrul de Clasificare a Riscului
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | REG-002 |
-| Title | Risk Classification Register |
+| ID Document | REG-002 |
+| Titlu | Registrul de Clasificare a Riscului |
 | Repository | RRVI™ |
-| Module | 02 – Risk Classification |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Active Register |
+| Modul | 02 – Clasificare Risc |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Registru Activ |
 
 ---
 
-# Purpose
+# Scop
 
-This register records the official EU AI Act risk classification of every Artificial Intelligence system identified in the AI System Inventory.
+Acest registru înregistrează clasificarea oficială de risc conform EU AI Act pentru fiecare sistem de Inteligență Artificială identificat în Inventarul Sistemelor AI.
 
-It provides the authoritative record of the regulatory classification, justification and approval status for each AI system operated, developed or deployed by {{COMPANY_NAME}}.
+Reprezintă înregistrarea de referință a clasificării de reglementare, justificării și statusului de aprobare pentru fiecare sistem AI operat, dezvoltat sau implementat de {{COMPANY_NAME}}.
 
 ---
 
-# Risk Classification Register
+# Registrul de Clasificare a Riscului
 
-| AI ID | AI System | AI Act Role | Intended Purpose | Initial Classification | Justification | Human Oversight | Assessment Date | Status |
+| ID AI | Sistem AI | Rol conform AI Act | Scop Preconizat | Clasificare Inițială | Justificare | Supraveghere Umană | Data Evaluării | Status |
 |-------|-----------|-------------|------------------|------------------------|---------------|-----------------|-----------------|--------|
-| AI-001 | ChatGPT | Deployer | Documentation, software engineering, architecture | Minimal Risk | General-purpose AI used with mandatory human review | Mandatory | 2026-07-02 | Approved |
-| AI-002 | Gemini | Deployer | Research and technical validation | Minimal Risk | Research assistance only | Mandatory | 2026-07-02 | Approved |
-| AI-003 | Claude | Deployer | Technical writing and architecture | Minimal Risk | Human-reviewed documentation | Mandatory | 2026-07-02 | Approved |
-| AI-004 | DeepSeek | Deployer | Software engineering | Minimal Risk | Development assistance | Mandatory | 2026-07-02 | Approved |
-| AI-005 | Perplexity | Deployer | Research and intelligence | Minimal Risk | Information retrieval with human validation | Mandatory | 2026-07-02 | Approved |
-| AI-006 | Cloudflare Workers AI | Provider / Deployer | AI execution platform | Minimal Risk (Planned) | Infrastructure component | Mandatory | 2026-07-02 | Planned |
-| AI-007 | Cloudflare Vectorize | Provider | Semantic search | Minimal Risk (POC) | Retrieval engine only | Mandatory | 2026-07-02 | POC |
-| AI-008 | GitHub Copilot | Deployer | Coding assistant | Minimal Risk | Developer assistance only | Mandatory | 2026-07-02 | Optional |
-| AI-009 | EU-112™ AI Governance Agent | Provider | Governance automation | To Be Assessed | Product under design | Mandatory | 2026-07-02 | Design |
-| AI-010 | Economic Twins™ Engine | Provider | Business intelligence | To Be Assessed | Product under design | Mandatory | 2026-07-02 | Design |
-| AI-011 | Business Discovery Engine™ | Provider | Semantic discovery | To Be Assessed | Product under design | Mandatory | 2026-07-02 | Design |
-| AI-012 | Business Change Intelligence™ | Provider | Monitoring platform | To Be Assessed | Product under design | Mandatory | 2026-07-02 | Design |
-| AI-013 | AI Market Intelligence Agent™ | Provider | Market intelligence | To Be Assessed | Product under design | Mandatory | 2026-07-02 | Design |
-| AI-014 | EU AI Act Intelligence Agent™ | Provider | Regulatory intelligence | To Be Assessed | Product under design | Mandatory | 2026-07-02 | Design |
-| AI-015 | Remote Inspection Agent™ | Provider | Inspection support | To Be Assessed | Product under design | Mandatory | 2026-07-02 | Concept |
-| AI-016 | Compliance Documentation Generator™ | Provider | Documentation automation | To Be Assessed | Product under design | Mandatory | 2026-07-02 | Concept |
+| AI-001 | | | | | | | | |
+| AI-002 | | | | | | | | |
+| AI-003 | | | | | | | | |
+| AI-004 | | | | | | | | |
+| AI-005 | | | | | | | | |
+| AI-006 | | | | | | | | |
+| AI-007 | | | | | | | | |
+| AI-008 | | | | | | | | |
+| AI-009 | | | | | | | | |
+| AI-010 | | | | | | | | |
+
+*Rândurile se completează de fiecare firmă, pentru sistemele proprii din REG-001. Un registru pre-completat cu clasificări sau verdicte inexistente e mai grav decât unul gol, în fața unui inspector.*
 
 ---
 
-# Classification Summary
+# Sumar de Clasificare
 
-| Risk Category | Number of AI Systems |
+| Categorie de Risc | Număr de Sisteme AI |
 |---------------|---------------------:|
-| Prohibited AI | 0 |
-| High-Risk AI | 0 |
-| Limited-Risk AI | 0 |
-| Minimal-Risk AI | 8 |
-| Pending Assessment | 8 |
+| AI Interzis | |
+| AI cu Risc Ridicat | |
+| AI cu Risc Limitat | |
+| AI cu Risc Minim | |
+| Evaluare în Așteptare | |
 
 ---
 
-# Review Rules
+# Reguli de Revizuire
 
-The classification shall be reviewed whenever:
+Clasificarea se revizuiește ori de câte ori:
 
-- a new AI system is introduced;
-- intended purpose changes;
-- deployment changes;
-- provider changes;
-- functionality changes;
-- applicable legislation changes;
-- new harmonised standards become applicable.
+- este introdus un sistem AI nou;
+- se schimbă scopul preconizat;
+- se schimbă modul de implementare;
+- se schimbă furnizorul;
+- se schimbă funcționalitatea;
+- se modifică legislația aplicabilă;
+- devin aplicabile standarde armonizate noi.
 
 ---
 
-# Register Owner
+# Responsabilul Registrului
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Register Owner | AI Governance Owner |
-| Custodian | {{RESPONSIBLE_PERSON}} |
-| Company | {{COMPANY_NAME}} |
-| Review Frequency | Quarterly |
+| Responsabil Registru | Responsabilul de Guvernanță AI |
+| Custode | {{RESPONSIBLE_PERSON}} |
+| Firma | {{COMPANY_NAME}} |
+| Frecvența Revizuirii | Trimestrial |
 
 ---
 
-# References
+# Referințe
 
-- DOD-002 Risk Classification Policy
-- PROC-002 Risk Classification Procedure
-- WI-002 Risk Classification Work Instruction
-- REG-001 AI System Inventory Register
-- EVID-002 Risk Classification Evidence
-- DEC-002 Risk Classification Declaration
-- Regulation (EU) 2024/1689 (EU AI Act)
+- DOD-002 Politica de Clasificare a Riscului
+- PROC-002 Procedura de Clasificare a Riscului
+- WI-002 Instrucțiune de Lucru — Clasificare Risc
+- REG-001 Registrul de Inventar al Sistemelor AI
+- EVID-002 Dovezile de Clasificare a Riscului
+- DEC-002 Declarația de Clasificare a Riscului
+- Regulamentul (UE) 2024/1689 (EU AI Act)
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved Register
+Registru Aprobat

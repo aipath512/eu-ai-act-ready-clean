@@ -1,165 +1,165 @@
 # DOD-002
 
-# Risk Classification Policy
+# Politica de Clasificare a Riscului
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | DOD-002 |
-| Title | Risk Classification Policy |
+| ID Document | DOD-002 |
+| Titlu | Politica de Clasificare a Riscului |
 | Repository | RRVI™ |
-| Module | 02 – Risk Classification |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 02 – Clasificare Risc |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-The purpose of this policy is to establish the principles, responsibilities and requirements for the classification of Artificial Intelligence systems in accordance with Regulation (EU) 2024/1689 (EU AI Act).
+Scopul acestei politici este de a stabili principiile, responsabilitățile și cerințele pentru clasificarea sistemelor de Inteligență Artificială, conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-This policy ensures that every AI system used, developed, integrated or deployed by {{COMPANY_NAME}} is consistently assessed, classified and documented according to its regulatory risk category.
-
----
-
-# 2. Scope
-
-This policy applies to:
-
-- all AI systems identified in the AI System Inventory;
-- internally developed AI systems;
-- third-party AI services;
-- AI components integrated into products or services;
-- proof-of-concept AI implementations;
-- future AI deployments.
+Această politică asigură că fiecare sistem AI utilizat, dezvoltat, integrat sau implementat de {{COMPANY_NAME}} este evaluat, clasificat și documentat consecvent, în funcție de categoria sa de risc din reglementare.
 
 ---
 
-# 3. Policy Statements
+# 2. Domeniu de Aplicare
 
-{{COMPANY_NAME}} shall classify every AI system before operational deployment.
+Această politică se aplică:
 
-Risk classification shall be based on:
-
-- intended purpose;
-- deployment context;
-- affected persons;
-- degree of autonomy;
-- human oversight;
-- applicable provisions of the EU AI Act.
+- tuturor sistemelor AI identificate în Inventarul Sistemelor AI;
+- sistemelor AI dezvoltate intern;
+- serviciilor AI terțe;
+- componentelor AI integrate în produse sau servicii;
+- implementărilor AI de tip proof-of-concept;
+- implementărilor AI viitoare.
 
 ---
 
-# 4. Risk Categories
+# 3. Prevederi ale Politicii
 
-The following categories shall be used.
+{{COMPANY_NAME}} clasifică fiecare sistem AI înainte de implementarea operațională.
 
-## 4.1 Prohibited AI Practices
+Clasificarea de risc se bazează pe:
 
-AI systems prohibited under the EU AI Act shall not be developed, deployed or used.
-
----
-
-## 4.2 High-Risk AI Systems
-
-High-risk AI systems shall be managed according to applicable regulatory obligations, including technical documentation, risk management and human oversight.
-
----
-
-## 4.3 Limited-Risk AI Systems
-
-Limited-risk AI systems shall comply with applicable transparency obligations.
+- scopul preconizat;
+- contextul de implementare;
+- persoanele afectate;
+- gradul de autonomie;
+- supravegherea umană;
+- prevederile aplicabile din EU AI Act.
 
 ---
 
-## 4.4 Minimal-Risk AI Systems
+# 4. Categorii de Risc
 
-Minimal-risk AI systems shall be documented within the AI System Inventory and periodically reviewed.
+Se utilizează următoarele categorii.
 
----
+## 4.1 Practici AI Interzise
 
-# 5. Review Requirements
-
-Risk classification shall be reviewed whenever:
-
-- a new AI system is introduced;
-- intended purpose changes;
-- deployment changes;
-- provider changes;
-- regulatory requirements change;
-- significant incidents occur.
+Sistemele AI interzise conform EU AI Act nu se dezvoltă, nu se implementează și nu se utilizează.
 
 ---
 
-# 6. Roles and Responsibilities
+## 4.2 Sisteme AI cu Risc Ridicat
 
-## Managing Director
-
-Approves the Risk Classification Policy.
+Sistemele AI cu risc ridicat se gestionează conform obligațiilor de reglementare aplicabile, inclusiv documentație tehnică, managementul riscului și supraveghere umană.
 
 ---
 
-## AI Governance Owner
+## 4.3 Sisteme AI cu Risc Limitat
 
-Responsible for:
-
-- coordinating risk classification;
-- maintaining related documentation;
-- initiating periodic reviews.
+Sistemele AI cu risc limitat respectă obligațiile de transparență aplicabile.
 
 ---
 
-## AI System Owner
+## 4.4 Sisteme AI cu Risc Minim
 
-Responsible for:
-
-- providing accurate technical information;
-- notifying relevant changes;
-- supporting reassessment activities.
+Sistemele AI cu risc minim se documentează în Inventarul Sistemelor AI și se revizuiesc periodic.
 
 ---
 
-## Compliance Owner
+# 5. Cerințe de Revizuire
 
-Responsible for:
+Clasificarea de risc se revizuiește ori de câte ori:
 
-- monitoring regulatory developments;
-- ensuring alignment with the EU AI Act;
-- supporting inspections and audits.
-
----
-
-# 7. Compliance
-
-Compliance with this policy is mandatory.
-
-Failure to classify AI systems appropriately may result in regulatory non-compliance and increased operational risk.
+- este introdus un sistem AI nou;
+- se schimbă scopul preconizat;
+- se schimbă modul de implementare;
+- se schimbă furnizorul;
+- se modifică cerințele de reglementare;
+- apar incidente semnificative.
 
 ---
 
-# 8. References
+# 6. Roluri și Responsabilități
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-001 AI System Inventory Policy
-- REG-001 AI System Inventory Register
-- REG-002 Risk Classification Register
+## Director General
+
+Aprobă Politica de Clasificare a Riscului.
 
 ---
 
-# 9. Approval
+## Responsabilul de Guvernanță AI
 
-Prepared by
+Responsabil pentru:
+
+- coordonarea clasificării de risc;
+- menținerea documentației conexe;
+- inițierea revizuirilor periodice.
+
+---
+
+## Responsabilul de Sistem AI
+
+Responsabil pentru:
+
+- furnizarea de informații tehnice exacte;
+- notificarea modificărilor relevante;
+- sprijinirea activităților de reevaluare.
+
+---
+
+## Responsabilul de Conformitate
+
+Responsabil pentru:
+
+- monitorizarea evoluțiilor de reglementare;
+- asigurarea alinierii cu EU AI Act;
+- sprijinirea inspecțiilor și auditurilor.
+
+---
+
+# 7. Conformitate
+
+Respectarea acestei politici este obligatorie.
+
+Neclasificarea corespunzătoare a sistemelor AI poate duce la neconformitate de reglementare și la creșterea riscului operațional.
+
+---
+
+# 8. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-001 Politica de Inventar al Sistemelor AI
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-002 Registrul de Clasificare a Riscului
+
+---
+
+# 9. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

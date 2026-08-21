@@ -1,188 +1,188 @@
 # PROC-002
 
-# Risk Classification Procedure
+# Procedura de Clasificare a Riscului
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | PROC-002 |
-| Title | Risk Classification Procedure |
+| ID Document | PROC-002 |
+| Titlu | Procedura de Clasificare a Riscului |
 | Repository | RRVI™ |
-| Module | 02 – Risk Classification |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 02 – Clasificare Risc |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This procedure defines the process used by {{COMPANY_NAME}} to classify Artificial Intelligence systems according to Regulation (EU) 2024/1689 (EU AI Act).
+Această procedură definește procesul folosit de {{COMPANY_NAME}} pentru clasificarea sistemelor de Inteligență Artificială conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
-The objective is to ensure that every AI system receives a documented and repeatable risk classification before operational deployment.
-
----
-
-# 2. Scope
-
-This procedure applies to:
-
-- all AI systems recorded in the AI System Inventory;
-- internally developed AI systems;
-- externally acquired AI services;
-- AI-enabled software;
-- proof-of-concept implementations;
-- production deployments.
+Obiectivul este să asigure că fiecare sistem AI primește o clasificare de risc documentată și repetabilă înainte de implementarea operațională.
 
 ---
 
-# 3. Responsibilities
+# 2. Domeniu de Aplicare
 
-## Managing Director
+Această procedură se aplică:
 
-- approves the overall classification process.
-
----
-
-## AI Governance Owner
-
-- coordinates risk classification;
-- maintains the Risk Classification Register;
-- initiates reviews.
+- tuturor sistemelor AI înregistrate în Inventarul Sistemelor AI;
+- sistemelor AI dezvoltate intern;
+- serviciilor AI achiziționate extern;
+- software-ului cu capabilități AI;
+- implementărilor de tip proof-of-concept;
+- implementărilor de producție.
 
 ---
 
-## AI System Owner
+# 3. Responsabilități
 
-- provides technical and business information;
-- supports the assessment process;
-- reports significant changes.
+## Director General
 
----
-
-## Compliance Owner
-
-- verifies regulatory alignment;
-- validates classification decisions;
-- supports inspections and audits.
+- aprobă procesul general de clasificare.
 
 ---
 
-# 4. Procedure
+## Responsabilul de Guvernanță AI
 
-## Step 1 — Identify the AI System
+- coordonează clasificarea de risc;
+- menține Registrul de Clasificare a Riscului;
+- inițiază revizuirile.
 
-Confirm that the AI system is recorded in:
+---
+
+## Responsabilul de Sistem AI
+
+- furnizează informații tehnice și de business;
+- sprijină procesul de evaluare;
+- raportează modificările semnificative.
+
+---
+
+## Responsabilul de Conformitate
+
+- verifică alinierea de reglementare;
+- validează deciziile de clasificare;
+- sprijină inspecțiile și auditurile.
+
+---
+
+# 4. Procedura
+
+## Pasul 1 — Identificarea Sistemului AI
+
+Se confirmă că sistemul AI este înregistrat în:
 
 REG-001_AI_System_Inventory_Register.md
 
-If the AI system is not registered, complete the AI System Inventory process before continuing.
+Dacă sistemul AI nu este înregistrat, se finalizează procesul de Inventar al Sistemelor AI înainte de a continua.
 
 ---
 
-## Step 2 — Collect Information
+## Pasul 2 — Colectarea Informațiilor
 
-Gather the following information:
+Se colectează următoarele informații:
 
-- AI System ID;
-- AI System Name;
-- Provider;
-- Intended Purpose;
-- Business Process;
-- Users;
-- Deployment Context;
-- Human Oversight;
-- Data Categories Processed.
-
----
-
-## Step 3 — Assess Risk
-
-Evaluate the AI system against the EU AI Act categories:
-
-- Prohibited AI Practices;
-- High-Risk AI Systems;
-- Limited-Risk AI Systems;
-- Minimal-Risk AI Systems.
+- ID Sistem AI;
+- Nume Sistem AI;
+- Furnizor;
+- Scop Preconizat;
+- Proces de Business;
+- Utilizatori;
+- Context de Implementare;
+- Supraveghere Umană;
+- Categorii de Date Prelucrate.
 
 ---
 
-## Step 4 — Record Classification
+## Pasul 3 — Evaluarea Riscului
 
-Document the assessment in:
+Se evaluează sistemul AI în raport cu categoriile din EU AI Act:
+
+- Practici AI Interzise;
+- Sisteme AI cu Risc Ridicat;
+- Sisteme AI cu Risc Limitat;
+- Sisteme AI cu Risc Minim.
+
+---
+
+## Pasul 4 — Înregistrarea Clasificării
+
+Evaluarea se documentează în:
 
 REG-002_Risk_Classification_Register.md
 
-Record:
+Se înregistrează:
 
-- classification result;
-- justification;
-- reviewer;
-- assessment date.
-
----
-
-## Step 5 — Independent Review
-
-The AI Governance Owner shall review the assessment for completeness and consistency.
-
-Where necessary, the Compliance Owner shall validate the regulatory interpretation.
+- rezultatul clasificării;
+- justificarea;
+- persoana care a revizuit;
+- data evaluării.
 
 ---
 
-## Step 6 — Approval
+## Pasul 5 — Revizuire Independentă
 
-The approved classification shall become the official classification for the AI system.
+Responsabilul de Guvernanță AI revizuiește evaluarea pentru completitudine și consecvență.
 
----
-
-## Step 7 — Reassessment
-
-Risk classification shall be repeated whenever:
-
-- intended purpose changes;
-- deployment changes;
-- provider changes;
-- functionality changes;
-- legislation changes;
-- significant incidents occur.
+Unde e necesar, Responsabilul de Conformitate validează interpretarea de reglementare.
 
 ---
 
-# 5. Records
+## Pasul 6 — Aprobare
 
-This procedure produces:
-
-- Risk Classification Register;
-- Risk Classification Evidence;
-- Risk Classification Declaration.
+Clasificarea aprobată devine clasificarea oficială a sistemului AI.
 
 ---
 
-# 6. References
+## Pasul 7 — Reevaluare
 
-- Regulation (EU) 2024/1689 (EU AI Act)
-- DOD-002 Risk Classification Policy
-- REG-001 AI System Inventory Register
-- REG-002 Risk Classification Register
-- EVID-002 Risk Classification Evidence
-- DEC-002 Risk Classification Declaration
+Clasificarea de risc se repetă ori de câte ori:
+
+- se schimbă scopul preconizat;
+- se schimbă modul de implementare;
+- se schimbă furnizorul;
+- se schimbă funcționalitatea;
+- se modifică legislația;
+- apar incidente semnificative.
 
 ---
 
-# 7. Approval
+# 5. Înregistrări
 
-Prepared by
+Această procedură produce:
+
+- Registrul de Clasificare a Riscului;
+- Dovezile de Clasificare a Riscului;
+- Declarația de Clasificare a Riscului.
+
+---
+
+# 6. Referințe
+
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+- DOD-002 Politica de Clasificare a Riscului
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-002 Registrul de Clasificare a Riscului
+- EVID-002 Dovezile de Clasificare a Riscului
+- DEC-002 Declarația de Clasificare a Riscului
+
+---
+
+# 7. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

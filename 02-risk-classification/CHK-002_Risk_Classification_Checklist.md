@@ -1,77 +1,67 @@
 # CHK-002
 
-# Risk Classification Checklist
+# Checklist de Clasificare a Riscului
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | CHK-002 |
-| Title | Risk Classification Checklist |
+| ID Document | CHK-002 |
+| Titlu | Checklist de Clasificare a Riscului |
 | Repository | RRVI™ |
-| Module | 02 – Risk Classification |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 02 – Clasificare Risc |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# Purpose
+# Scop
 
-This checklist shall be used to verify that the risk classification of each Artificial Intelligence system has been performed consistently, documented correctly and approved before operational deployment.
+Acest checklist se utilizează pentru a verifica dacă clasificarea de risc a fiecărui sistem de Inteligență Artificială a fost efectuată consecvent, documentată corect și aprobată înainte de implementarea operațională.
 
 ---
 
-# Risk Classification Verification Checklist
+# Checklist de Verificare a Clasificării Riscului
 
-| No. | Verification Item | Yes | No | N/A | Comments |
+| Nr. | Element de Verificare | Da | Nu | N/A | Comentarii |
 |-----|-------------------|:---:|:--:|:---:|----------|
-| 1 | AI System exists in REG-001 AI System Inventory Register | ☐ | ☐ | ☐ | |
-| 2 | AI System ID is correct | ☐ | ☐ | ☐ | |
-| 3 | AI System Name is correct | ☐ | ☐ | ☐ | |
-| 4 | AI Provider is identified | ☐ | ☐ | ☐ | |
-| 5 | Business Purpose is documented | ☐ | ☐ | ☐ | |
-| 6 | Intended Use is documented | ☐ | ☐ | ☐ | |
-| 7 | AI Act Role (Provider / Deployer) is identified | ☐ | ☐ | ☐ | |
-| 8 | Human Oversight has been evaluated | ☐ | ☐ | ☐ | |
-| 9 | Input data has been considered | ☐ | ☐ | ☐ | |
-| 10 | Output data has been considered | ☐ | ☐ | ☐ | |
-| 11 | Affected persons have been identified | ☐ | ☐ | ☐ | |
-| 12 | Prohibited AI assessment completed | ☐ | ☐ | ☐ | |
-| 13 | High-Risk AI assessment completed | ☐ | ☐ | ☐ | |
-| 14 | Limited-Risk AI assessment completed | ☐ | ☐ | ☐ | |
-| 15 | Minimal-Risk AI assessment completed | ☐ | ☐ | ☐ | |
-| 16 | Final classification is documented | ☐ | ☐ | ☐ | |
-| 17 | Classification justification is documented | ☐ | ☐ | ☐ | |
-| 18 | Assessment has been reviewed | ☐ | ☐ | ☐ | |
-| 19 | Evidence has been recorded | ☐ | ☐ | ☐ | |
-| 20 | Register is ready for audit or inspection | ☐ | ☐ | ☐ | |
+| 1 | Sistemul AI există în REG-001 Registrul de Inventar al Sistemelor AI | ☐ | ☐ | ☐ | |
+| 2 | ID-ul Sistemului AI este corect | ☐ | ☐ | ☐ | |
+| 3 | Numele Sistemului AI este corect | ☐ | ☐ | ☐ | |
+| 4 | Furnizorul AI este identificat | ☐ | ☐ | ☐ | |
+| 5 | Scopul de Business este documentat | ☐ | ☐ | ☐ | |
+| 6 | Utilizarea Preconizată este documentată | ☐ | ☐ | ☐ | |
+| 7 | Rolul conform AI Act (Provider / Deployer) este identificat | ☐ | ☐ | ☐ | |
+| 8 | Supravegherea Umană a fost evaluată | ☐ | ☐ | ☐ | |
+| 9 | Datele de intrare au fost luate în considerare | ☐ | ☐ | ☐ | |
+| 10 | Datele de ieșire au fost luate în considerare | ☐ | ☐ | ☐ | |
+| 11 | Persoanele afectate au fost identificate | ☐ | ☐ | ☐ | |
+| 12 | Evaluarea AI Interzis este completă | ☐ | ☐ | ☐ | |
+| 13 | Evaluarea AI cu Risc Ridicat este completă | ☐ | ☐ | ☐ | |
+| 14 | Evaluarea AI cu Risc Limitat este completă | ☐ | ☐ | ☐ | |
+| 15 | Evaluarea AI cu Risc Minim este completă | ☐ | ☐ | ☐ | |
+| 16 | Clasificarea finală este documentată | ☐ | ☐ | ☐ | |
+| 17 | Justificarea clasificării este documentată | ☐ | ☐ | ☐ | |
+| 18 | Evaluarea a fost revizuită | ☐ | ☐ | ☐ | |
+| 19 | Dovezile au fost înregistrate | ☐ | ☐ | ☐ | |
+| 20 | Registrul este pregătit pentru audit sau inspecție | ☐ | ☐ | ☐ | |
 
 ---
 
-# Review Result
+# Rezultatul Revizuirii
 
-| Result | Selection |
+| Rezultat | Selecție |
 |--------|-----------|
-| PASS | ☐ |
-| PASS WITH OBSERVATIONS | ☐ |
-| FAIL | ☐ |
+| CONFORM | ☐ |
+| CONFORM CU OBSERVAȚII | ☐ |
+| NECONFORM | ☐ |
 
 ---
 
-# Observations
-
-_____________________________________________________
-
-_____________________________________________________
-
-_____________________________________________________
-
----
-
-# Corrective Actions
+# Observații
 
 _____________________________________________________
 
@@ -81,38 +71,48 @@ _____________________________________________________
 
 ---
 
-# Review Information
+# Acțiuni Corective
 
-| Field | Value |
+_____________________________________________________
+
+_____________________________________________________
+
+_____________________________________________________
+
+---
+
+# Informații Revizuire
+
+| Câmp | Valoare |
 |--------|-------|
-| Reviewed By | |
-| Position | |
-| Date | |
-| Signature | |
+| Revizuit de | |
+| Funcție | |
+| Data | |
+| Semnătură | |
 
 ---
 
-# References
+# Referințe
 
-- DOD-002 Risk Classification Policy
-- PROC-002 Risk Classification Procedure
-- WI-002 Risk Classification Work Instruction
-- REG-001 AI System Inventory Register
-- REG-002 Risk Classification Register
-- Regulation (EU) 2024/1689 (EU AI Act)
+- DOD-002 Politica de Clasificare a Riscului
+- PROC-002 Procedura de Clasificare a Riscului
+- WI-002 Instrucțiune de Lucru — Clasificare Risc
+- REG-001 Registrul de Inventar al Sistemelor AI
+- REG-002 Registrul de Clasificare a Riscului
+- Regulamentul (UE) 2024/1689 (EU AI Act)
 
 ---
 
-# Approval
+# Aprobare
 
-Prepared by
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat

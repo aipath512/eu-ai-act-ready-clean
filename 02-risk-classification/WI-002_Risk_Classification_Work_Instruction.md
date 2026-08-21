@@ -1,195 +1,195 @@
 # WI-002
 
-# Risk Classification Work Instruction
+# Instrucțiune de Lucru — Clasificare Risc
 
 ---
 
-## Document Information
+## Informații Document
 
-| Field | Value |
+| Câmp | Valoare |
 |--------|-------|
-| Document ID | WI-002 |
-| Title | Risk Classification Work Instruction |
+| ID Document | WI-002 |
+| Titlu | Instrucțiune de Lucru — Clasificare Risc |
 | Repository | RRVI™ |
-| Module | 02 – Risk Classification |
-| Company | {{COMPANY_NAME}} |
-| Version | 1.0.0 |
-| Status | Approved |
+| Modul | 02 – Clasificare Risc |
+| Firma | {{COMPANY_NAME}} |
+| Versiune | 1.0.0 |
+| Status | Aprobat |
 
 ---
 
-# 1. Purpose
+# 1. Scop
 
-This Work Instruction provides detailed operational guidance for performing the risk classification of Artificial Intelligence systems used, developed or deployed by {{COMPANY_NAME}}.
+Această Instrucțiune de Lucru oferă îndrumări operaționale detaliate pentru realizarea clasificării de risc a sistemelor de Inteligență Artificială utilizate, dezvoltate sau implementate de {{COMPANY_NAME}}.
 
-The instruction ensures that every AI system is classified consistently, objectively and in accordance with Regulation (EU) 2024/1689 (EU AI Act).
-
----
-
-# 2. Preconditions
-
-Before starting the assessment, verify that:
-
-- the AI system exists in the AI System Inventory;
-- the AI system owner has been identified;
-- the intended purpose is documented;
-- sufficient technical and business information is available.
+Instrucțiunea asigură că fiecare sistem AI este clasificat consecvent, obiectiv și conform Regulamentului (UE) 2024/1689 (EU AI Act).
 
 ---
 
-# 3. Required Information
+# 2. Condiții Prealabile
 
-Collect the following information:
+Înainte de a începe evaluarea, se verifică dacă:
 
-- AI System ID
-- AI System Name
-- Provider
-- Business Purpose
-- Intended Users
-- Business Process
-- Deployment Status
-- Human Oversight
-- Input Data
-- Output Data
-- Affected Persons
-- Deployment Environment
+- sistemul AI există în Inventarul Sistemelor AI;
+- responsabilul sistemului AI a fost identificat;
+- scopul preconizat este documentat;
+- există suficiente informații tehnice și de business.
 
 ---
 
-# 4. Work Instructions
+# 3. Informații Necesare
 
-## Step 1
+Se colectează următoarele informații:
 
-Open:
+- ID Sistem AI
+- Nume Sistem AI
+- Furnizor
+- Scop de Business
+- Utilizatori Preconizați
+- Proces de Business
+- Status de Implementare
+- Supraveghere Umană
+- Date de Intrare
+- Date de Ieșire
+- Persoane Afectate
+- Mediu de Implementare
+
+---
+
+# 4. Instrucțiuni de Lucru
+
+## Pasul 1
+
+Se deschide:
 
 REG-001_AI_System_Inventory_Register.md
 
-Locate the AI system to be assessed.
+Se localizează sistemul AI de evaluat.
 
 ---
 
-## Step 2
+## Pasul 2
 
-Review the intended purpose.
+Se revizuiește scopul preconizat.
 
-Determine:
+Se determină:
 
-- why the AI system exists;
-- who uses it;
-- what decisions it supports;
-- whether decisions affect natural persons.
-
----
-
-## Step 3
-
-Determine the EU AI Act category.
-
-Evaluate whether the AI system falls into:
-
-- Prohibited AI Practices;
-- High-Risk AI Systems;
-- Limited-Risk AI Systems;
-- Minimal-Risk AI Systems.
+- de ce există sistemul AI;
+- cine îl folosește;
+- ce decizii sprijină;
+- dacă deciziile afectează persoane fizice.
 
 ---
 
-## Step 4
+## Pasul 3
 
-Document the assessment.
+Se determină categoria conform EU AI Act.
 
-Open:
+Se evaluează dacă sistemul AI se încadrează în:
+
+- Practici AI Interzise;
+- Sisteme AI cu Risc Ridicat;
+- Sisteme AI cu Risc Limitat;
+- Sisteme AI cu Risc Minim.
+
+---
+
+## Pasul 4
+
+Se documentează evaluarea.
+
+Se deschide:
 
 REG-002_Risk_Classification_Register.md
 
-Record:
+Se înregistrează:
 
-- Classification
-- Justification
-- Assessor
-- Assessment Date
-
----
-
-## Step 5
-
-Review the assessment.
-
-Verify that:
-
-- the classification is supported by facts;
-- justification is documented;
-- references are complete.
+- Clasificarea
+- Justificarea
+- Evaluatorul
+- Data Evaluării
 
 ---
 
-## Step 6
+## Pasul 5
 
-Submit for approval.
+Se revizuiește evaluarea.
 
-The completed assessment shall be reviewed by the AI Governance Owner.
+Se verifică dacă:
 
----
-
-## Step 7
-
-Maintain the Register.
-
-Whenever significant changes occur, repeat the assessment.
+- clasificarea este susținută de fapte;
+- justificarea este documentată;
+- referințele sunt complete.
 
 ---
 
-# 5. Quality Checks
+## Pasul 6
 
-Verify that:
+Se trimite spre aprobare.
 
-✓ AI System exists in the Inventory.
-
-✓ Intended Purpose is documented.
-
-✓ Provider is identified.
-
-✓ Human Oversight is defined.
-
-✓ Classification is supported.
-
-✓ Justification is documented.
-
-✓ Assessment Date is recorded.
-
-✓ Reviewer is identified.
+Evaluarea completată este revizuită de Responsabilul de Guvernanță AI.
 
 ---
 
-# 6. Outputs
+## Pasul 7
 
-This instruction updates:
+Se menține Registrul.
 
-- REG-002 Risk Classification Register
-- EVID-002 Risk Classification Evidence
-- DEC-002 Risk Classification Declaration
+Ori de câte ori apar modificări semnificative, evaluarea se repetă.
 
 ---
 
-# 7. References
+# 5. Controale de Calitate
 
-- DOD-002 Risk Classification Policy
-- PROC-002 Risk Classification Procedure
-- REG-001 AI System Inventory Register
-- Regulation (EU) 2024/1689 (EU AI Act)
+Se verifică dacă:
+
+✓ Sistemul AI există în Inventar.
+
+✓ Scopul Preconizat este documentat.
+
+✓ Furnizorul este identificat.
+
+✓ Supravegherea Umană este definită.
+
+✓ Clasificarea este susținută.
+
+✓ Justificarea este documentată.
+
+✓ Data Evaluării este înregistrată.
+
+✓ Evaluatorul este identificat.
 
 ---
 
-# 8. Approval
+# 6. Rezultate
 
-Prepared by
+Această instrucțiune actualizează:
+
+- REG-002 Registrul de Clasificare a Riscului
+- EVID-002 Dovezile de Clasificare a Riscului
+- DEC-002 Declarația de Clasificare a Riscului
+
+---
+
+# 7. Referințe
+
+- DOD-002 Politica de Clasificare a Riscului
+- PROC-002 Procedura de Clasificare a Riscului
+- REG-001 Registrul de Inventar al Sistemelor AI
+- Regulamentul (UE) 2024/1689 (EU AI Act)
+
+---
+
+# 8. Aprobare
+
+Întocmit de
 
 {{RESPONSIBLE_PERSON}}
 
-Company
+Firma
 
 {{COMPANY_NAME}}
 
 Status
 
-Approved
+Aprobat
